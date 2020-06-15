@@ -9,5 +9,6 @@ public class EnvironmentHealth
     public float currentHealth;
 
     public Color colorAlive;
+    public Color colorDead;
 
 }
