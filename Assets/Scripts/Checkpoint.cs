@@ -4,22 +4,26 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    Vector3 location;
 
     [SerializeField] int countdown;
     [SerializeField] int maxCountdown;
+    [SerializeField] GameObject setNewRespawn;
     bool broken = true;
     bool inRadius;
 
     GameObject fixedCheckpoint;
+    //SetNewRespwan setNewRespawn;
 
     // Start is called before the first frame update
     void Start()
     {
-        location = GetComponent<Transform>().position;
-        fixedCheckpoint = transform.GetChild(1).gameObject;
-        fixedCheckpoint.SetActive(false);
 
+        fixedCheckpoint = transform.GetChild(1).gameObject;
+
+        //setNewRespawn = transform.GetChild().gameObject;
+        //setNewRespawn.GetComponent<SetNewRespwan>().SetNewRespawn();
+        Debug.Log(setNewRespawn);
+        fixedCheckpoint.SetActive(false);
         //location
     }
 
@@ -35,7 +39,7 @@ public class Checkpoint : MonoBehaviour
     {
 
         countdown = 0;
-        Debug.Log("count down");
+
         // all enemys are triggered
         Countdown();
 
@@ -47,24 +51,23 @@ public class Checkpoint : MonoBehaviour
         {
 
             countdown++;
-            Debug.Log(countdown);
-         
+
+
 
             if (countdown == maxCountdown)
             {
-                Debug.Log("now!");
+
                 inRadius = false;
                 broken = false;
                 fixedCheckpoint.SetActive(true);
-                ResetPlayerLocation();
+               // setNewRespawn.GetComponent<SetNewRespwan>().SetNewLocation();
+
+
             }
         }
 
     }
-    void ResetPlayerLocation()
-    {
 
-    }
 
     private void OnTriggerEnter(Collider other)
     {
