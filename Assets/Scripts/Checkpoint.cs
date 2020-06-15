@@ -28,22 +28,27 @@ public class Checkpoint : MonoBehaviour
     {
         if (inRadius == true)
         {
-            StartCountdown();
+            Countdown();
         }
     }
     void StartCountdown()
     {
 
+        countdown = 0;
         Debug.Log("count down");
         // all enemys are triggered
-        if (countdown <=maxCountdown+1)
-        {
-            if (inRadius == true)
-            {
-                countdown++;
-            }
+        Countdown();
 
+    }
+    void Countdown()
+    {
+
+        if (inRadius == true)
+        {
+
+            countdown++;
             Debug.Log(countdown);
+         
 
             if (countdown == maxCountdown)
             {
@@ -51,8 +56,14 @@ public class Checkpoint : MonoBehaviour
                 inRadius = false;
                 broken = false;
                 fixedCheckpoint.SetActive(true);
+                ResetPlayerLocation();
             }
         }
+
+    }
+    void ResetPlayerLocation()
+    {
+
     }
 
     private void OnTriggerEnter(Collider other)
