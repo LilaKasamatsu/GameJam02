@@ -6,10 +6,14 @@ public class Environment : MonoBehaviour
 {
     public EnvironmentHealth health;
 
+    private Material material;
+    private float lerpDuration = 1.5f;
+    private float time;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        material = GetComponent<MeshRenderer>().material;
     }
 
     // Update is called once per frame
@@ -24,4 +28,14 @@ public class Environment : MonoBehaviour
     }
 
 
+
+    void ColorChange(Color start, Color end)
+    {
+        material.color = Color.Lerp(start, end, time);
+
+        if(time < 1)
+        {
+            time += Time.deltaTime / lerpDuration;
+        }
+    }
 }
