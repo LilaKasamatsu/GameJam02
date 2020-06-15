@@ -6,6 +6,8 @@ public class MouseMovement : MonoBehaviour
 {
     public float speed = 5.0f;
 
+    public bool moveOnClick = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,10 +22,19 @@ public class MouseMovement : MonoBehaviour
         if (Physics.Raycast(mouseRay, out hit))
         {
             this.transform.LookAt(hit.point);
-            if(Input.GetMouseButton(0) && Vector3.Distance(this.transform.position, hit.point) > 0.0f)
+            if (moveOnClick)
+            {
+                if (Input.GetMouseButton(0) && Vector3.Distance(this.transform.position, hit.point) > 0.0f)
+                {
+                    this.transform.Translate(Vector3.forward * Time.deltaTime * this.speed);
+                }
+            }
+            else
             {
                 this.transform.Translate(Vector3.forward * Time.deltaTime * this.speed);
+
             }
+
         }
     }
 }
