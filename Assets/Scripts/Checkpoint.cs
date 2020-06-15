@@ -5,9 +5,10 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
 
-    [SerializeField] int countdown;
+     int countdown;
     [SerializeField] int maxCountdown;
     [SerializeField] GameObject setNewRespawn;
+    [SerializeField] GameObject radiusExpaning;
     bool broken = true;
     bool inRadius;
 
@@ -60,7 +61,8 @@ public class Checkpoint : MonoBehaviour
                 inRadius = false;
                 broken = false;
                 fixedCheckpoint.SetActive(true);
-               // setNewRespawn.GetComponent<SetNewRespwan>().SetNewLocation();
+                setNewRespawn.GetComponent<SetNewRespwan>().SetNewLocation();
+                radiusExpaning.GetComponent<CheckpointRadiusxpanding>().Expanding();
 
 
             }
