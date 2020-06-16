@@ -24,7 +24,16 @@ public class Environment : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        this.GetComponent<MeshRenderer>().material.color = health.colorAlive;
+        if (collision.transform.CompareTag("Player"))
+        {
+            //this.GetComponent<MeshRenderer>().material.color = health.colorAlive;
+            ColorChange(material.color, health.colorAlive);
+        }
+        else if (collision.transform.CompareTag("Enemy"))
+        {
+            this.GetComponent<MeshRenderer>().material.color = health.colorDead;
+            ColorChange(material.color, health.colorDead);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
