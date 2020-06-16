@@ -14,6 +14,7 @@ public class Environment : MonoBehaviour
     void Start()
     {
         material = GetComponent<MeshRenderer>().material;
+        material.color = health.colorAlive;
     }
 
     // Update is called once per frame
