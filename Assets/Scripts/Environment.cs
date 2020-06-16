@@ -27,6 +27,10 @@ public class Environment : MonoBehaviour
         this.GetComponent<MeshRenderer>().material.color = health.colorAlive;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        this.GetComponent<MeshRenderer>().material.color = health.colorAlive;
+    }
 
 
     void ColorChange(Color start, Color end)
