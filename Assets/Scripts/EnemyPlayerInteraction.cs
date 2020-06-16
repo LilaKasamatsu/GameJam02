@@ -5,57 +5,114 @@ using UnityEngine;
 public class EnemyPlayerInteraction : MonoBehaviour
 {
     Rigidbody rb;
-    [SerializeField] bool sleeping;
-    [SerializeField] List<Vector3> location = new List<Vector3>();
-    [SerializeField] float speed;
-    Vector3 currLocation;
-    Transform newTransform;
-    Vector3 newLocation;
 
+    [SerializeField] List<Vector3> location = new List<Vector3>();
+    [SerializeField] bool sleeping;
+    [SerializeField] float patroulingSpeed;
+    [SerializeField] float Attackspeed;
+    [SerializeField] bool sleepingEnemy;
+    public bool attack;
+    [SerializeField] bool holdingPlayer;
+
+    Vector3 currLocation;
+    Vector3 newLocation;
+    int a;
+
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        //curr
-        
+        SetNewLocation(0);
+        player = GameObject.FindGameObjectWithTag("Player");
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (sleeping)
+        Debug.Log(attack);
+        if (holdingPlayer == false)
         {
-           // Sleeping();
+
+
+            if (sleeping)
+            {
+                Sleeping();
+            }
+            else
+            {
+                Moving();
+            }
         }
-        else
-        {
-          //  Moving();
-        }
-        
+
     }
     void Moving()
     {
-        transform.position = Vector3.MoveTowards(transform.position, newTransform.position,speed );
-        if (transform.position == newTransform.position)
+        if (attack == false)
         {
-            Debug.Log("ssss");
+            if (sleepingEnemy == false)
+            {
+
+
+
+                transform.position = Vector3.MoveTowards(transform.position, newLocation, patroulingSpeed);
+
+                if (transform.position == newLocation)
+                {
+                    // Debug.Log("ssss");
+                    SetNewLocation(a);
+                }
+            }
+            else
+            {
+              // joa darüber müssen wa nochma schnacken
+
+            }
+
         }
-        //foreach (Vector3 element in location)
-        //{
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, patroulingSpeed);
+        }
+    }
+    void SetNewLocation(int i)
+    {
+        // Debug.Log(i);
+        newLocation = location[i];
+        a++;
+        if (a == location.Count)
+        {
+            a = 0;
+        }
+        sleeping = true;
 
         //}
-
-    }
-    void SetNewLocation()
-    {
-        for (int i=0; i<location.Count; i++)
-        {
-            newLocation = location[i];
-            newTransform.position = newLocation;
-        }
     }
     void Sleeping()
     {
+        StartCoroutine(RandomSleep());
+    }
+    void Attack()
+    {
+        //run towards player
+    }
+    void SearchForPlayer()
+    {
 
     }
+    IEnumerator RandomSleep()
+    {
+        yield return new WaitForSecondsRealtime(Random.Range(1, 3));
+        sleeping = false;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            //stop
+            holdingPlayer = true;
+        }
+    }
+
 }

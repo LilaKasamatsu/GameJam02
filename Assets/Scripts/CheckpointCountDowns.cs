@@ -25,7 +25,7 @@ public class CheckpointCountDowns : MonoBehaviour
     private void OnEnable()
     {
         t = 0;
-        Debug.Log(t);
+       // Debug.Log(t);
         startTime = Time.time;
 
     }
@@ -36,7 +36,7 @@ public class CheckpointCountDowns : MonoBehaviour
             //Debug.Log("2");
 
             t++;
-            Debug.Log(t);
+           // Debug.Log(t);
             float b = t/maxCountdown;
 
             GetComponent<Renderer>().material.color = Color.Lerp(startColor, endColor, b);
