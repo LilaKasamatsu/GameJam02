@@ -36,6 +36,22 @@ public class Environment : MonoBehaviour
         }
     }
 
+    IEnumerator ChangeColor(Color start, Color end)
+    {
+        while (true)
+        {
+            material.color = Color.Lerp(start, end, time);
+
+            if (time < 1)
+            {
+                time += Time.deltaTime / lerpDuration;
+            }
+
+            yield return new WaitForEndOfFrame();
+        }
+        yield return null;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         this.GetComponent<MeshRenderer>().material.color = health.colorAlive;
@@ -44,11 +60,6 @@ public class Environment : MonoBehaviour
 
     void ColorChange(Color start, Color end)
     {
-        material.color = Color.Lerp(start, end, time);
-
-        if(time < 1)
-        {
-            time += Time.deltaTime / lerpDuration;
-        }
+       
     }
 }

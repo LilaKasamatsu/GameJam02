@@ -34,30 +34,35 @@ public class NudgeMovement : MonoBehaviour
     private void OnMouseEnter()
     {
         startPosition = Input.mousePosition;
-
-        //startPosition.z = -Camera.main.transform.position.z;
-        //startPosition = Camera.main.ScreenToWorldPoint(startPosition);       
-    }
+        Vector3 dir = new Vector3(Input.GetAxis("Mouse X"),0, Input.GetAxis("Mouse Y"));
 
 
-    private void OnMouseExit()
-    {
-        endPosition = Input.mousePosition;
-        //endPosition.z = -Camera.main.transform.position.z;
-        //endPosition = Camera.main.ScreenToWorldPoint(endPosition);
-
-
-        //Debug.Log(startPosition);
-        //Debug.Log(endPosition);
-
-        dir = endPosition - startPosition;
 
 
         dir = dir.normalized;
 
-        dir = new Vector3(dir.x, 0, dir.y);
-        Debug.Log("Dir " + dir);
-
-        rb.AddForce(dir * pushForce, ForceMode.Impulse);
+        rb.AddForce(dir * pushForce, ForceMode.Impulse);    
     }
+
+
+    //private void OnMouseExit()
+    //{
+    //    endPosition = Input.mousePosition;
+    //    //endPosition.z = -Camera.main.transform.position.z;
+    //    //endPosition = Camera.main.ScreenToWorldPoint(endPosition);
+
+
+    //    //Debug.Log(startPosition);
+    //    //Debug.Log(endPosition);
+
+    //    dir = endPosition - startPosition;
+
+
+    //    dir = dir.normalized;
+
+    //    dir = new Vector3(dir.x, 0, dir.y);
+    //    Debug.Log("Dir " + dir);
+
+    //    rb.AddForce(dir * pushForce, ForceMode.Impulse);
+    //}
 }
