@@ -57,7 +57,8 @@ public class Checkpoint : MonoBehaviour
         //if (countdown == maxCountdown)
         //  {
 
-       // inRadius = false;
+        // inRadius = false;
+        Debug.Log("now");
         broken = false;
         setNewRespawn.GetComponent<SetNewRespwan>().SetNewLocation();
         radiusExpaning.GetComponent<CheckpointRadiusxpanding>().Expanding();
