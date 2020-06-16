@@ -5,25 +5,23 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
 
-     int countdown;
-    [SerializeField] int maxCountdown;
+    // float countdown;
+    public float maxCountdown;
     [SerializeField] GameObject setNewRespawn;
     [SerializeField] GameObject radiusExpaning;
     bool broken = true;
     bool inRadius;
 
     GameObject fixedCheckpoint;
+    //CheckpointCountDowns cPcD;
     //SetNewRespwan setNewRespawn;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        //cPcD = fixedCheckpoint.GetComponent<CheckpointCountDowns>();
         fixedCheckpoint = transform.GetChild(1).gameObject;
-
-        //setNewRespawn = transform.GetChild().gameObject;
-        //setNewRespawn.GetComponent<SetNewRespwan>().SetNewRespawn();
-        Debug.Log(setNewRespawn);
+        //  Debug.Log(setNewRespawn);
         fixedCheckpoint.SetActive(false);
         //location
     }
@@ -31,42 +29,42 @@ public class Checkpoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inRadius == true)
-        {
-            Countdown();
-        }
+        //if (inRadius == true)
+        //{
+        //    Countdown();
+        //}
     }
     void StartCountdown()
     {
 
-        countdown = 0;
-
+        //countdown = 0;
+        fixedCheckpoint.SetActive(true);
         // all enemys are triggered
-        Countdown();
+        // Countdown();
+
 
     }
-    void Countdown()
+    public void CountdownFinish()
     {
 
-        if (inRadius == true)
-        {
+        // if (inRadius == true)
+        //{
 
-            countdown++;
-
-
-
-            if (countdown == maxCountdown)
-            {
-
-                inRadius = false;
-                broken = false;
-                fixedCheckpoint.SetActive(true);
-                setNewRespawn.GetComponent<SetNewRespwan>().SetNewLocation();
-                radiusExpaning.GetComponent<CheckpointRadiusxpanding>().Expanding();
+        //  countdown++;
 
 
-            }
-        }
+
+        //if (countdown == maxCountdown)
+        //  {
+
+       // inRadius = false;
+        broken = false;
+        setNewRespawn.GetComponent<SetNewRespwan>().SetNewLocation();
+        radiusExpaning.GetComponent<CheckpointRadiusxpanding>().Expanding();
+
+
+        // }
+        //}
 
     }
 
@@ -91,6 +89,7 @@ public class Checkpoint : MonoBehaviour
         {
             Debug.Log("Player");
             inRadius = false;
+            fixedCheckpoint.SetActive(false);
         }
     }
 }

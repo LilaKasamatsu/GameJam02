@@ -17,7 +17,7 @@ public class CheckpointRadiusxpanding : MonoBehaviour
 
    public void Expanding()
     {
-        Debug.Log("now");
+        //Debug.Log("now");
         StartCoroutine(WaitForExpansion());
       
     }
@@ -27,7 +27,7 @@ public class CheckpointRadiusxpanding : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(0.2f);
 
-            Debug.Log(expansion);
+          //  Debug.Log(expansion);
 
             expansion = new Vector3(expansion.x += expansionWIP.x, expansion.y += expansionWIP.y, expansion.z += expansionWIP.z);
             transform.localScale = expansion;
