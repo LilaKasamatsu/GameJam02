@@ -32,6 +32,7 @@ public class Environment : MonoBehaviour
         else if (collision.transform.CompareTag("Enemy"))
         {
             this.GetComponent<MeshRenderer>().material.color = health.colorDead;
+            //StartCoroutine(ChangeColor(material.color, health.colorDead));
             ColorChange(material.color, health.colorDead);
         }
     }
@@ -60,6 +61,11 @@ public class Environment : MonoBehaviour
 
     void ColorChange(Color start, Color end)
     {
-       
+        material.color = Color.Lerp(start, end, time);
+
+        if (time < 1)
+        {
+            time += Time.deltaTime / lerpDuration;
+        }
     }
 }
