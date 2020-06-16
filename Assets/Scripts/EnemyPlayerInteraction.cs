@@ -9,7 +9,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     [SerializeField] List<Vector3> location = new List<Vector3>();
     [SerializeField] bool sleeping;
     [SerializeField] float patroulingSpeed;
-    [SerializeField] float Attackspeed;
+    [SerializeField] float attackspeed;
     [SerializeField] bool sleepingEnemy;
     public bool attack;
     [SerializeField] bool holdingPlayer;
@@ -45,6 +45,10 @@ public class EnemyPlayerInteraction : MonoBehaviour
                 Moving();
             }
         }
+        else
+        {
+            transform.position = transform.position;
+        }
 
     }
     void Moving()
@@ -73,7 +77,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         }
         else
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, patroulingSpeed);
+            Attack();
         }
     }
     void SetNewLocation(int i)
@@ -95,12 +99,10 @@ public class EnemyPlayerInteraction : MonoBehaviour
     }
     void Attack()
     {
-        //run towards player
-    }
-    void SearchForPlayer()
-    {
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, attackspeed);
 
     }
+
     IEnumerator RandomSleep()
     {
         yield return new WaitForSecondsRealtime(Random.Range(1, 3));
@@ -112,6 +114,16 @@ public class EnemyPlayerInteraction : MonoBehaviour
         {
             //stop
             holdingPlayer = true;
+            Debug.Log("innen");
+        }
+    } private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            //stop
+            holdingPlayer = false;
+            attack = true;
+            Debug.Log("draussen");
         }
     }
 

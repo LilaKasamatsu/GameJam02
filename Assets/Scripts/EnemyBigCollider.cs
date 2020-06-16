@@ -31,4 +31,8 @@ public class EnemyBigCollider : MonoBehaviour
     {
         enemyMain.attack = false;
     }
+    private void OnTriggerStay(Collider other)
+    {
+        enemyMain.attack = true;
+    }
 }
