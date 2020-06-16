@@ -17,6 +17,7 @@ public class SetNewRespwan : MonoBehaviour
     {
         //  respwanPlayer.location = respawnLoc;
         Debug.Log("wsd");
+        respwanPlayer.location = respawnLoc;
     }
 
 }
