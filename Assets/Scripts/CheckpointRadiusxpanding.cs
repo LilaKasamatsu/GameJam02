@@ -12,9 +12,10 @@ public class CheckpointRadiusxpanding : MonoBehaviour
     {
         expansionWIP = transform.localScale;
         expansionWIP = new Vector3(expansionWIP.x / 20, expansionWIP.y / 20, expansionWIP.z / 20);
-        transform.localScale = new Vector3(0f, 0f, 05f);
+        transform.localScale = new Vector3(0f, 0f, 0f);
     }
 
+    
    public void Expanding()
     {
         //Debug.Log("now");
@@ -34,12 +35,17 @@ public class CheckpointRadiusxpanding : MonoBehaviour
 
         }
     }
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.CompareTag("Environment"))
+        if (other.CompareTag("Enemy"))
         {
-            Debug.Log("BODEN");
+            Debug.Log("enemy tod");
+        }
+    }   private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            Debug.Log("enemy tod");
         }
     }
 }

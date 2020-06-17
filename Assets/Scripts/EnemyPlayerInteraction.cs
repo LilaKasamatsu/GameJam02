@@ -11,7 +11,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     [SerializeField] float patroulingSpeed;
     [SerializeField] float attackspeed;
     [SerializeField] bool sleepingEnemy;
-    public bool attack=false;
+    public bool attack = false;
     [SerializeField] bool holdingPlayer;
 
     Vector3 currLocation;
@@ -27,7 +27,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         SetNewLocation(0);
         player = GameObject.FindGameObjectWithTag("Player");
         enemyDeath = GetComponent<EnemyDeath>();
-        
+
 
     }
 
@@ -37,13 +37,12 @@ public class EnemyPlayerInteraction : MonoBehaviour
         //Debug.Log(attack);
         //Debug.Log(holdingPlayer);
 
-        if (holdingPlayer==false)
+        if (holdingPlayer == false)
         {
-            Debug.Log("HOLDING FALSE");
-           // attack = true;
-            if (sleeping)
+            // attack = true;
+            if (attack == true)
             {
-                Sleeping();
+                Attack();
             }
             else
             {
@@ -59,8 +58,11 @@ public class EnemyPlayerInteraction : MonoBehaviour
     void Moving()
     {
         Debug.Log("moving");
-        if (attack == false)
+        if (sleeping == false)
         {
+
+            Debug.Log("movingggg");
+            transform.position = Vector3.MoveTowards(transform.position, newLocation, patroulingSpeed * Time.deltaTime);
             if (sleepingEnemy == false)
             {
 
@@ -71,17 +73,21 @@ public class EnemyPlayerInteraction : MonoBehaviour
                     // Debug.Log("ssss");
                     SetNewLocation(a);
                 }
+
             }
             else
             {
                 // joa darüber müssen wa nochma schnacken
-                
+
+
 
             }
+
+
         }
         else
         {
-            Attack();
+            Sleeping();
         }
     }
     void SetNewLocation(int i)
@@ -104,10 +110,9 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     void Attack()
     {
-        //Debug.Log("attacking");
+        Debug.Log("attacking");
         Vector3 playerPos = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
         transform.position = Vector3.MoveTowards(transform.position, playerPos, attackspeed * Time.deltaTime);
-    }
 
     void Hold()
     {
