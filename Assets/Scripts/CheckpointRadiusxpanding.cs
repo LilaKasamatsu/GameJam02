@@ -34,4 +34,12 @@ public class CheckpointRadiusxpanding : MonoBehaviour
 
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.CompareTag("Environment"))
+        {
+            Debug.Log("BODEN");
+        }
+    }
 }
