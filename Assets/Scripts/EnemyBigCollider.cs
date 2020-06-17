@@ -20,19 +20,19 @@ public class EnemyBigCollider : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        
-            //stop
-            // detected = true;
-            enemyMain.attack = true;
-            Debug.Log("aweqwe");
-        
+
+        //stop
+        // detected = true;
+        enemyMain.attack = true;
+        // Debug.Log("aweqwe");
+
     }
     private void OnTriggerExit(Collider other)
     {
         enemyMain.attack = false;
     }
-    private void OnTriggerStay(Collider other)
-    {
-        enemyMain.attack = true;
-    }
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    enemyMain.attack = true;
+    //}
 }

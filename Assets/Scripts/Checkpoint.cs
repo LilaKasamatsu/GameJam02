@@ -13,17 +13,20 @@ public class Checkpoint : MonoBehaviour
     bool inRadius;
 
     GameObject fixedCheckpoint;
+    FinalWinning finalWinning;
     //CheckpointCountDowns cPcD;
     //SetNewRespwan setNewRespawn;
 
     // Start is called before the first frame update
     void Start()
     {
+        finalWinning = GameObject.Find("Winning Condition").GetComponent<FinalWinning>();
         //cPcD = fixedCheckpoint.GetComponent<CheckpointCountDowns>();
         fixedCheckpoint = transform.GetChild(1).gameObject;
         //  Debug.Log(setNewRespawn);
         fixedCheckpoint.SetActive(false);
         //location
+        finalWinning.checkpoints.Add(false);
     }
 
     // Update is called once per frame
@@ -60,6 +63,7 @@ public class Checkpoint : MonoBehaviour
         // inRadius = false;
         Debug.Log("now");
         broken = false;
+        finalWinning.SetToTrue();
         setNewRespawn.GetComponent<SetNewRespwan>().SetNewLocation();
         radiusExpaning.GetComponent<CheckpointRadiusxpanding>().Expanding();
 

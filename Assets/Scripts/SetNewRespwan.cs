@@ -14,13 +14,13 @@ public class SetNewRespwan : MonoBehaviour
         respawnLoc = GetComponent<Transform>().position;
         respwanPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Respwan>();
         player = GameObject.FindGameObjectWithTag("Player");
-        Debug.Log(player);
-        Debug.Log(respwanPlayer.location);
+       // Debug.Log(player);
+       // Debug.Log(respwanPlayer.location);
     }
     public void SetNewLocation()
     {
         //  respwanPlayer.location = respawnLoc;
-        Debug.Log("wsd");
+      //  Debug.Log("wsd");
         respwanPlayer.location = respawnLoc;
     }
 

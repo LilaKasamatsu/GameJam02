@@ -11,7 +11,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     [SerializeField] float patroulingSpeed;
     [SerializeField] float attackspeed;
     [SerializeField] bool sleepingEnemy;
-    public bool attack;
+    public bool attack = false;
     [SerializeField] bool holdingPlayer;
 
     Vector3 currLocation;
@@ -19,12 +19,15 @@ public class EnemyPlayerInteraction : MonoBehaviour
     int a;
 
     GameObject player;
+    EnemyDeath enemyDeath;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         SetNewLocation(0);
         player = GameObject.FindGameObjectWithTag("Player");
+        enemyDeath = GetComponent<EnemyDeath>();
+
 
     }
 
@@ -32,13 +35,15 @@ public class EnemyPlayerInteraction : MonoBehaviour
     void Update()
     {
         Debug.Log(attack);
+        Debug.Log(holdingPlayer);
+
         if (holdingPlayer == false)
         {
 
-
-            if (sleeping)
+            // attack = true;
+            if (attack == true)
             {
-                Sleeping();
+                Attack();
             }
             else
             {
@@ -47,37 +52,42 @@ public class EnemyPlayerInteraction : MonoBehaviour
         }
         else
         {
-            transform.position = transform.position;
+            Hold();
         }
 
     }
     void Moving()
     {
-        if (attack == false)
+        Debug.Log("moving");
+        if (sleeping == false)
         {
+
+            Debug.Log("movingggg");
+            transform.position = Vector3.MoveTowards(transform.position, newLocation, patroulingSpeed * Time.deltaTime);
             if (sleepingEnemy == false)
             {
 
-
-
-                transform.position = Vector3.MoveTowards(transform.position, newLocation, patroulingSpeed);
 
                 if (transform.position == newLocation)
                 {
                     // Debug.Log("ssss");
                     SetNewLocation(a);
                 }
+
             }
             else
             {
-              // joa darüber müssen wa nochma schnacken
+                // joa darüber müssen wa nochma schnacken
+
+
 
             }
+
 
         }
         else
         {
-            Attack();
+            Sleeping();
         }
     }
     void SetNewLocation(int i)
@@ -99,8 +109,15 @@ public class EnemyPlayerInteraction : MonoBehaviour
     }
     void Attack()
     {
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, attackspeed);
+        Vector3 playerPos = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+        transform.position = Vector3.MoveTowards(transform.position, playerPos, attackspeed * Time.deltaTime);
 
+    }
+    void Hold()
+    {
+        Debug.Log("HOLD");
+        transform.position = transform.position;
+        attack = false;
     }
 
     IEnumerator RandomSleep()
@@ -112,11 +129,24 @@ public class EnemyPlayerInteraction : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //stop
+
             holdingPlayer = true;
             Debug.Log("innen");
         }
-    } private void OnTriggerExit(Collider other)
+        if (other.CompareTag("EnemyDeath"))
+        {
+            Debug.Log("killlll");
+            enemyDeath.Kill();
+            holdingPlayer = true;
+        }
+
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        attack = false;
+        holdingPlayer = true;
+    }
+    private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {

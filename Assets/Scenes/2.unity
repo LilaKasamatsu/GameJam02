@@ -170,7 +170,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &16163995
 BoxCollider:
@@ -281,7 +281,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &59748036
 BoxCollider:
@@ -392,7 +392,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &89441621
 BoxCollider:
@@ -503,7 +503,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &117383445
 BoxCollider:
@@ -614,7 +614,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &148436058
 BoxCollider:
@@ -725,7 +725,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &151397467
 BoxCollider:
@@ -836,7 +836,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &164166841
 BoxCollider:
@@ -947,7 +947,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &171770050
 BoxCollider:
@@ -1058,7 +1058,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &257682489
 BoxCollider:
@@ -1169,7 +1169,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &260429459
 BoxCollider:
@@ -1280,7 +1280,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &322476433
 BoxCollider:
@@ -1391,7 +1391,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &368396048
 BoxCollider:
@@ -1502,7 +1502,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &400560244
 BoxCollider:
@@ -1613,7 +1613,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &476673175
 BoxCollider:
@@ -1816,7 +1816,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &552857121
 BoxCollider:
@@ -1927,7 +1927,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &593340847
 BoxCollider:
@@ -2038,7 +2038,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &617279637
 BoxCollider:
@@ -2149,7 +2149,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &656966481
 BoxCollider:
@@ -2260,7 +2260,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &684738038
 BoxCollider:
@@ -2511,7 +2511,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &774059422
 BoxCollider:
@@ -2622,7 +2622,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &820173427
 BoxCollider:
@@ -2733,7 +2733,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &858598382
 BoxCollider:
@@ -2844,7 +2844,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &896118328
 BoxCollider:
@@ -2955,7 +2955,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &906531734
 BoxCollider:
@@ -3066,7 +3066,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &935440757
 BoxCollider:
@@ -3177,7 +3177,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &942404776
 BoxCollider:
@@ -3288,7 +3288,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &955350142
 BoxCollider:
@@ -3399,7 +3399,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &963947677
 BoxCollider:
@@ -3510,7 +3510,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &990378570
 BoxCollider:
@@ -3621,7 +3621,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1017779867
 BoxCollider:
@@ -3847,7 +3847,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 0.8584906, g: 0.16602883, b: 0.16602883, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1086182425
 GameObject:
@@ -3992,7 +3992,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1103762029
 BoxCollider:
@@ -4103,7 +4103,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1110748974
 BoxCollider:
@@ -4214,7 +4214,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1119516882
 BoxCollider:
@@ -4325,7 +4325,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1197068702
 BoxCollider:
@@ -4436,7 +4436,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1295216207
 BoxCollider:
@@ -4736,7 +4736,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1420466878
 BoxCollider:
@@ -4847,7 +4847,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1447513403
 BoxCollider:
@@ -4958,7 +4958,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1487484213
 BoxCollider:
@@ -5069,7 +5069,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1487671010
 BoxCollider:
@@ -5180,7 +5180,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1497912019
 BoxCollider:
@@ -5291,7 +5291,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1505197403
 BoxCollider:
@@ -5402,7 +5402,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1523324290
 BoxCollider:
@@ -5513,7 +5513,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1547220504
 BoxCollider:
@@ -5624,7 +5624,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1551121018
 BoxCollider:
@@ -5735,7 +5735,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1561535157
 BoxCollider:
@@ -5940,7 +5940,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1666793624
 BoxCollider:
@@ -6051,7 +6051,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1764333308
 BoxCollider:
@@ -6162,7 +6162,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1773284225
 BoxCollider:
@@ -6236,8 +6236,10 @@ GameObject:
   - component: {fileID: 1788890788}
   - component: {fileID: 1788890787}
   - component: {fileID: 1788890786}
+  - component: {fileID: 1788890789}
+  - component: {fileID: 1788890790}
   m_Layer: 0
-  m_Name: 1
+  m_Name: Head + Big Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6269,7 +6271,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788890784}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -6322,6 +6324,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788890784}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!135 &1788890789
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788890784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 14.304099
+  m_Center: {x: 0, y: -7.998271, z: 0}
+--- !u!114 &1788890790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788890784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a1b16eb4a7204e4bb6edfe072dc2d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1790272852
 GameObject:
   m_ObjectHideFlags: 0
@@ -6371,7 +6398,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1790272855
 BoxCollider:
@@ -6482,7 +6509,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1837553673
 BoxCollider:
@@ -6634,6 +6661,7 @@ GameObject:
   - component: {fileID: 1863219414}
   - component: {fileID: 1863219413}
   - component: {fileID: 1863219412}
+  - component: {fileID: 1863219415}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -6653,6 +6681,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667a37c4ee248e64aa138e8cc197be2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  location:
+  - {x: 11.46, y: 4.58, z: 5.47}
+  - {x: 4.59, y: 4.58, z: 14.67}
+  sleeping: 0
+  patroulingSpeed: 0.1
+  attackspeed: 0.1
+  sleepingEnemy: 0
+  attack: 0
+  holdingPlayer: 0
 --- !u!136 &1863219413
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6661,12 +6698,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863219411}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.6463618
-  m_Height: 8.071375
+  m_Radius: 3.3835316
+  m_Height: 10.319735
   m_Direction: 1
-  m_Center: {x: 0.0016841888, y: -6.8148627, z: 0}
+  m_Center: {x: 0.012846947, y: -6.4975305, z: -0.09546089}
 --- !u!4 &1863219414
 Transform:
   m_ObjectHideFlags: 0
@@ -6675,13 +6712,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863219411}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.47, y: 4.58, z: 1.45}
+  m_LocalPosition: {x: 14.5, y: 4.58, z: 15.41}
   m_LocalScale: {x: 1, y: 0.65574, z: 1}
   m_Children:
   - {fileID: 1788890785}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1863219415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863219411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa94ec48129be45468a32e379df0f6bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1896262503
 GameObject:
   m_ObjectHideFlags: 0
@@ -6825,7 +6874,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1919840188
 BoxCollider:
@@ -6936,7 +6985,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1954822946
 BoxCollider:
@@ -7047,7 +7096,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &2041360457
 BoxCollider:
@@ -7158,7 +7207,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &2044989487
 BoxCollider:
@@ -7269,7 +7318,7 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {r: 1, g: 1, b: 1, a: 0}
     colorDead: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &2084558348
 BoxCollider:
@@ -7437,6 +7486,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint Radius
       objectReference: {fileID: 0}
+    - target: {fileID: 912408655726874832, guid: d04bb704efb6f454f8c0a2f549287f90,
+        type: 3}
+      propertyPath: m_TagString
+      value: EnemyDeath
+      objectReference: {fileID: 0}
     - target: {fileID: 912408655726874833, guid: d04bb704efb6f454f8c0a2f549287f90,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7491,6 +7545,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 912408656116885355, guid: d04bb704efb6f454f8c0a2f549287f90,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d04bb704efb6f454f8c0a2f549287f90, type: 3}
