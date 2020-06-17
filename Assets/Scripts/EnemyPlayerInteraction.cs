@@ -109,8 +109,8 @@ public class EnemyPlayerInteraction : MonoBehaviour
     }
     void Attack()
     {
-        Debug.Log("attacking");
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, attackspeed * Time.deltaTime);
+        Vector3 playerPos = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+        transform.position = Vector3.MoveTowards(transform.position, playerPos, attackspeed * Time.deltaTime);
 
     }
     void Hold()
