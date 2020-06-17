@@ -23,13 +23,13 @@ public class EnemyBigCollider : MonoBehaviour
 
         //stop
         // detected = true;
-        enemyMain.attack = true;
+        enemyMain.isAttacking = true;
         // Debug.Log("aweqwe");
 
     }
     private void OnTriggerExit(Collider other)
     {
-        enemyMain.attack = false;
+        enemyMain.isAttacking = false;
     }
     //private void OnTriggerStay(Collider other)
     //{

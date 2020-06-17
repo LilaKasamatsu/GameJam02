@@ -39,6 +39,8 @@ public class Environment : MonoBehaviour
         }
     }
 
+    
+
     IEnumerator ChangeColor(Color start, Color end)
     {
         while (true)

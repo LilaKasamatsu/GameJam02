@@ -7,6 +7,7 @@ public class CheckpointRadiusxpanding : MonoBehaviour
     Vector3 expansion;
     [SerializeField] float expansionSpeed;
     Vector3 expansionWIP;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,16 +33,22 @@ public class CheckpointRadiusxpanding : MonoBehaviour
 
             expansion = new Vector3(expansion.x += expansionWIP.x, expansion.y += expansionWIP.y, expansion.z += expansionWIP.z);
             transform.localScale = expansion;
-
         }
     }
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("HIT SOMETHING");
         if (other.CompareTag("Enemy"))
         {
             Debug.Log("enemy tod");
         }
-    }   private void OnTriggerStay(Collider other)
+        if (other.CompareTag("Environment"))
+        {
+            Debug.Log("ENVIRONMENT HIT");
+        }
+    }   
+    
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {

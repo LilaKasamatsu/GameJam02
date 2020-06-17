@@ -58,12 +58,12 @@ public class Checkpoint : MonoBehaviour
         //  {
 
         // inRadius = false;
-        Debug.Log("now");
+        Debug.Log("Countdown Finished");
         broken = false;
         setNewRespawn.GetComponent<SetNewRespwan>().SetNewLocation();
         radiusExpaning.GetComponent<CheckpointRadiusxpanding>().Expanding();
 
-
+         
         // }
         //}
 

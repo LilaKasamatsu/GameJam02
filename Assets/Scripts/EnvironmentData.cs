@@ -10,5 +10,4 @@ public class EnvironmentData
 
     public Color colorAlive;
     public Color colorDead;
-
 }

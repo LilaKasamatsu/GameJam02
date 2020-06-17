@@ -7,12 +7,14 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] PlayerData player;
     
     Rigidbody rb;
+    Respwan respawnScript;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        respawnScript = GetComponent<Respwan>();
         rb = GetComponent<Rigidbody>();
-        player = GetComponent<PlayerData>();
     }
 
     // Update is called once per frame
@@ -23,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
             player.deathTimer += Time.deltaTime;
             if(player.deathTimer >= player.deathTime)
             {
+                Debug.Log("GAME OVER");
                 //GAMEOVER
             }
         }
@@ -30,5 +33,10 @@ public class PlayerHealth : MonoBehaviour
         {
             player.deathTimer = 0;
         }    
+    }
+
+    private void Respawn()
+    {
+        transform.position = respawnScript.location;
     }
 }
