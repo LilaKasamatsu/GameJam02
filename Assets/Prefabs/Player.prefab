@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: -814651173068526073}
   - component: {fileID: 6549877100579565975}
   - component: {fileID: 8924153747232320915}
-  - component: {fileID: 4254449813893304660}
   - component: {fileID: 2072622151}
   m_Layer: 0
   m_Name: Player
@@ -34,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 5052043999930341523}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.1586008, y: -1.486453, z: 1.4574337}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.03035, y: 0.34345, z: 1.03035}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -123,7 +122,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5052043999930341523}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f5095d8a8fd96046a1b06cf6d1ed06c, type: 3}
   m_Name: 
@@ -136,7 +135,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5052043999930341523}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c547c5e720ff6f4eb1d02ed2a322d87, type: 3}
   m_Name: 
@@ -156,30 +155,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   location: {x: 0, y: 0, z: 0}
---- !u!114 &4254449813893304660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5052043999930341523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffc53fc052cde404d81025d516856289, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player:
-    deathTimer: 0
-    deathTime: 3
-    attackRadius: 5
-    standardColor:
-      serializedVersion: 2
-      rgba: 14399894
-    attackColor:
-      serializedVersion: 2
-      rgba: 5526773
-    isMovable: 1
-  enemy: {fileID: 0}
 --- !u!114 &2072622151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,4 +177,5 @@ MonoBehaviour:
     attackColor:
       serializedVersion: 2
       rgba: 0
+    attackStartPos: {x: 0, y: 0, z: 0}
     isMovable: 1
