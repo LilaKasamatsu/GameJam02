@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Environment : MonoBehaviour
 {
-    public EnvironmentHealth health;
+    public EnvironmentData health;
 
     private Material material;
     private float lerpDuration = 1.5f;

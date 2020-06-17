@@ -34,12 +34,12 @@ public class EnemyPlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(attack);
-        Debug.Log(holdingPlayer);
+        //Debug.Log(attack);
+        //Debug.Log(holdingPlayer);
 
         if (holdingPlayer==false)
         {
-
+            Debug.Log("HOLDING FALSE");
            // attack = true;
             if (sleeping)
             {
@@ -64,9 +64,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
             if (sleepingEnemy == false)
             {
 
-
-
-                transform.position = Vector3.MoveTowards(transform.position, newLocation, patroulingSpeed);
+                transform.position = Vector3.MoveTowards(transform.position, newLocation, patroulingSpeed * Time.deltaTime);
 
                 if (transform.position == newLocation)
                 {
@@ -103,17 +101,19 @@ public class EnemyPlayerInteraction : MonoBehaviour
     {
         StartCoroutine(RandomSleep());
     }
+
     void Attack()
     {
-        Debug.Log("attacking");
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, attackspeed);
-
+        //Debug.Log("attacking");
+        Vector3 playerPos = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+        transform.position = Vector3.MoveTowards(transform.position, playerPos, attackspeed * Time.deltaTime);
     }
+
     void Hold()
     {
         Debug.Log("HOLD");
         transform.position = transform.position;
-       // attack = false;
+        attack = false;
     }
 
     IEnumerator RandomSleep()
@@ -121,6 +121,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         yield return new WaitForSecondsRealtime(Random.Range(1, 3));
         sleeping = false;
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

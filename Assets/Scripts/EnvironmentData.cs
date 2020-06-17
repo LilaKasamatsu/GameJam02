@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class EnvironmentHealth
+public class EnvironmentData
 {
     public float maxHealth;
     public float currentHealth;

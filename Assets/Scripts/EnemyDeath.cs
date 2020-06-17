@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyDeath : MonoBehaviour
 {
+
     // Start is called before the first frame update
     public void Kill()
     {
