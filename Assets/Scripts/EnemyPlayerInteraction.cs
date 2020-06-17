@@ -11,7 +11,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     [SerializeField] float patroulingSpeed;
     [SerializeField] float attackspeed;
     [SerializeField] bool sleepingEnemy;
-    public bool attack=false;
+    public bool attack = false;
     [SerializeField] bool holdingPlayer;
 
     Vector3 currLocation;
@@ -27,7 +27,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         SetNewLocation(0);
         player = GameObject.FindGameObjectWithTag("Player");
         enemyDeath = GetComponent<EnemyDeath>();
-        
+
 
     }
 
@@ -37,13 +37,13 @@ public class EnemyPlayerInteraction : MonoBehaviour
         Debug.Log(attack);
         Debug.Log(holdingPlayer);
 
-        if (holdingPlayer==false)
+        if (holdingPlayer == false)
         {
 
-           // attack = true;
-            if (sleeping)
+            // attack = true;
+            if (attack == true)
             {
-                Sleeping();
+                Attack();
             }
             else
             {
@@ -59,31 +59,35 @@ public class EnemyPlayerInteraction : MonoBehaviour
     void Moving()
     {
         Debug.Log("moving");
-        if (attack == false)
+        if (sleeping == false)
         {
+
+            Debug.Log("movingggg");
+            transform.position = Vector3.MoveTowards(transform.position, newLocation, patroulingSpeed * Time.deltaTime);
             if (sleepingEnemy == false)
             {
 
-
-
-                transform.position = Vector3.MoveTowards(transform.position, newLocation, patroulingSpeed);
 
                 if (transform.position == newLocation)
                 {
                     // Debug.Log("ssss");
                     SetNewLocation(a);
                 }
+
             }
             else
             {
                 // joa darüber müssen wa nochma schnacken
-                
+
+
 
             }
+
+
         }
         else
         {
-            Attack();
+            Sleeping();
         }
     }
     void SetNewLocation(int i)
@@ -106,14 +110,14 @@ public class EnemyPlayerInteraction : MonoBehaviour
     void Attack()
     {
         Debug.Log("attacking");
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, attackspeed);
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, attackspeed * Time.deltaTime);
 
     }
     void Hold()
     {
         Debug.Log("HOLD");
         transform.position = transform.position;
-       // attack = false;
+        attack = false;
     }
 
     IEnumerator RandomSleep()
