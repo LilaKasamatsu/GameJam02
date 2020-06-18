@@ -16,4 +16,6 @@ public class PlayerData
 
     public bool isMovable = true;
 
+    public float breathRadius;
+
 }

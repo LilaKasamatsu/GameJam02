@@ -122,12 +122,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5052043999930341523}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f5095d8a8fd96046a1b06cf6d1ed06c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushForce: 7
+  pushForce: 5
 --- !u!114 &6549877100579565975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5052043999930341523}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c547c5e720ff6f4eb1d02ed2a322d87, type: 3}
   m_Name: 
@@ -179,3 +179,4 @@ MonoBehaviour:
       rgba: 0
     attackStartPos: {x: 0, y: 0, z: 0}
     isMovable: 1
+    breathRadius: 0
