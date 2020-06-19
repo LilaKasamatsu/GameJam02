@@ -120,16 +120,22 @@ public class EnemyPlayerInteraction : MonoBehaviour
  
     void Attack()
     {
-        Debug.Log("ATTACKING");
+       // Debug.Log("ATTACKING");
         Vector3 playerPos = new Vector3(player.position.x, transform.position.y, player.position.z);
         transform.position = Vector3.MoveTowards(transform.position, playerPos, attackspeed * Time.deltaTime);
     }
 
     void Hold()
     {
-        Debug.Log("HOLD");
+        //  Debug.Log("HOLD");
+        StartCoroutine(HoldPlayer());
         transform.position = transform.position;
         //isAttacking = false;
+    }
+    IEnumerator HoldPlayer()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+      //  Debug.Log("killing now");
     }
 
     IEnumerator RandomSleep()
@@ -144,14 +150,18 @@ public class EnemyPlayerInteraction : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isHoldingPlayer = true;
-            Debug.Log("CAUGHT");
+           // Debug.Log("CAUGHT");
         }
         if (other.CompareTag("EnemyDeath"))
         {
-            Debug.Log("killlll");
+           // Debug.Log("killlll");
             enemyDeath.Kill();
             isHoldingPlayer = true;
         }
+        //if (other.CompareTag("Environment"))
+        //{
+           
+        //}
 
     }
 
@@ -161,7 +171,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         {
             //stop
             isHoldingPlayer = false;
-            Debug.Log("draussen");
+           // Debug.Log("draussen");
         }
     }
 
@@ -169,4 +179,8 @@ public class EnemyPlayerInteraction : MonoBehaviour
     {
         return Vector3.Distance(player.position, transform.position) < enemy.actionRadius;
     }
+    //public void EnemyDeath()
+    //{
+
+    //}
 }
