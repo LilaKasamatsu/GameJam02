@@ -14,6 +14,9 @@ public class VertexColoring : MonoBehaviour
     public Transform player;
 
     Vector3 _playerPos;
+
+    float coloringRadius = .4f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +36,7 @@ public class VertexColoring : MonoBehaviour
         vertexColors[randomIndex] = lightUpColor;
         vertexColors[randomIndex + 1] = lightUpColor;
         
-        mesh.SetColors(vertexColors);
+        //mesh.SetColors(vertexColors);
 
         
     }
@@ -50,6 +53,7 @@ public class VertexColoring : MonoBehaviour
     {
         int index = FindClosestVertexIndex();
         vertexColors[index] = lightUpColor;
+        //FindVerticesInRadius();
         mesh.SetColors(vertexColors);
     }
 
@@ -65,7 +69,7 @@ public class VertexColoring : MonoBehaviour
             Vector3 diff = playerPos - vertex;
             float distSqr = diff.sqrMagnitude;
 
-            if(distSqr < minDistanceSqr)
+            if (distSqr < minDistanceSqr)
             {
                 minDistanceSqr = distSqr;
                 nearestVertex = vertex;
@@ -77,5 +81,21 @@ public class VertexColoring : MonoBehaviour
         return nearestVertexIndex;
     }
 
-
+    private void FindVerticesInRadius()
+    {
+        Vector3 playerPos = transform.InverseTransformPoint(_playerPos);
+        float minDistanceSqr = Mathf.Infinity;
+        Vector3 nearestVertex = Vector3.zero;
+        int nearestVertexIndex = 0;
+        int i = 0;
+        foreach (Vector3 vertex in vertices)
+        {
+            
+            if(Vector3.Distance(playerPos, vertex) < coloringRadius)
+            {
+                vertexColors[i] = lightUpColor;
+            }
+            i++;
+        }
+    }
 }
