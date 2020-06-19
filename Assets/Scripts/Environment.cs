@@ -10,14 +10,18 @@ public class Environment : MonoBehaviour
     private float lerpDuration = 1.5f;
     private float time;
     private bool dead = true;
+    private bool isChanging = true;
+    private bool on;
 
     private PlayerEnergyLvl playerEnergy;
+    private PlayerHealth playerHealth;
 
     // Start is called before the first frame update
     void Start()
     {
 
         playerEnergy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnergyLvl>();
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         material = GetComponent<MeshRenderer>().material;
         material.color = health.colorDead;
         //material.color = health.colorAlive;
@@ -27,7 +31,29 @@ public class Environment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (on == true)
+        {
+            if (dead == false)
+            {
+                if (isChanging == false && playerHealth.isDying == true)
+                {
 
+                    Debug.Log("jetzte");
+                    StartCoroutine(NoAir());
+                    dead = true;
+
+                }
+            }
+        }
+    }
+    IEnumerator NoAir()
+    {
+        yield return new WaitForSecondsRealtime(0f);
+        if (on == true)
+        {
+            Debug.Log("ffff");
+            StartCoroutine(ChangeColor(material.color, health.colorDead));
+        }
     }
 
     //private void OnCollisionEnter(Collision collision)
@@ -56,21 +82,21 @@ public class Environment : MonoBehaviour
 
     IEnumerator ChangeColor(Color start, Color end)
     {
+        isChanging = true;
         while (true)
         {
             material.color = Color.Lerp(start, end, time);
-           // Debug.Log("1");
-            //if (time < 1)
-            //{
             time += Time.deltaTime / lerpDuration;
             if (time >= 1.2)
             {
                 break;
-                //yield return null;
             }
-
             yield return new WaitForEndOfFrame();
         }
+        time = 0;
+        isChanging = false;
+        Debug.Log("finish");
+
         yield return null;
     }
 
@@ -78,8 +104,12 @@ public class Environment : MonoBehaviour
     {
         if (other.transform.CompareTag("Player"))
         {
+            on = true;
             if (dead == true)
             {
+
+                Debug.Log("start coroutne");
+
                 StartCoroutine(ChangeColor(material.color, health.colorAlive));
                 playerEnergy.AddEnergy(2);
                 dead = false;
@@ -87,32 +117,44 @@ public class Environment : MonoBehaviour
         }
         if (other.transform.CompareTag("Enemy"))
         {
-            Debug.Log("enemy");
+            //  Debug.Log("enemy");
             if (dead == false) ;
             {
                 dead = true;
                 this.GetComponent<MeshRenderer>().material.color = health.colorDead;
-                //StartCoroutine(ChangeColor(material.color, health.colorDead));
                 StartCoroutine(ChangeColor(material.color, health.colorDead));
             }
 
 
         }
-        //void EnemyEnters()
-        //{
-        //    Debug.Log("enemy enters");
-        //}
-
-
-        void ColorChange(Color start, Color end)
-        {
-            material.color = Color.Lerp(start, end, time);
-
-            if (time < 1.2)
-            {
-                time += Time.deltaTime / lerpDuration;
-            }
-        }
-
     }
+    private void OnTriggerExit(Collider other)
+    {
+        on = false;
+    }
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    if (other.transform.CompareTag("Player"))
+    //    {
+
+
+    //        if (isChanging == false && on == true)
+    //        {
+    //            StartCoroutine(ChangeColor(material.color, health.colorDead));
+    //            Debug.Log("sterben");
+
+    //        }
+    //    }
+    //}
+    void ColorChange(Color start, Color end)
+    {
+        material.color = Color.Lerp(start, end, time);
+
+        if (time < 1.2)
+        {
+            time += Time.deltaTime / lerpDuration;
+        }
+    }
+
+
 }
