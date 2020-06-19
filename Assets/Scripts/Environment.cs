@@ -9,11 +9,17 @@ public class Environment : MonoBehaviour
     private Material material;
     private float lerpDuration = 1.5f;
     private float time;
+    private bool dead = true;
+
+    private PlayerEnergyLvl playerEnergy;
 
     // Start is called before the first frame update
     void Start()
     {
+
+        playerEnergy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnergyLvl>();
         material = GetComponent<MeshRenderer>().material;
+        material.color = health.colorDead;
         //material.color = health.colorAlive;
 
     }
@@ -21,35 +27,46 @@ public class Environment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.transform.CompareTag("Player"))
-        {
-            //this.GetComponent<MeshRenderer>().material.color = health.colorAlive;
-            ColorChange(material.color, health.colorAlive);
-        }
-        else if (collision.transform.CompareTag("Enemy"))
-        {
-            this.GetComponent<MeshRenderer>().material.color = health.colorDead;
-            //StartCoroutine(ChangeColor(material.color, health.colorDead));
-            ColorChange(material.color, health.colorDead);
-        }
-    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.transform.CompareTag("Player"))
+    //    {
+    //        if (dead == true)
+    //        {
+    //            //this.GetComponent<MeshRenderer>().material.color = health.colorAlive;
+    //            StartCoroutine(ChangeColor(material.color, health.colorAlive));
 
-    
+    //            playerEnergy.AddEnergy(2);
+    //            dead = false;
+    //        }
+
+
+    //    }
+    //    if (collision.transform.CompareTag("Enemy"))
+    //    {
+    //        Debug.Log("enemy");
+    //    }
+
+    //}
+
+
 
     IEnumerator ChangeColor(Color start, Color end)
     {
         while (true)
         {
             material.color = Color.Lerp(start, end, time);
-
-            if (time < 1)
+           // Debug.Log("1");
+            //if (time < 1)
+            //{
+            time += Time.deltaTime / lerpDuration;
+            if (time >= 1.2)
             {
-                time += Time.deltaTime / lerpDuration;
+                break;
+                //yield return null;
             }
 
             yield return new WaitForEndOfFrame();
@@ -59,17 +76,43 @@ public class Environment : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        this.GetComponent<MeshRenderer>().material.color = health.colorAlive;
-    }
-
-
-    void ColorChange(Color start, Color end)
-    {
-        material.color = Color.Lerp(start, end, time);
-
-        if (time < 1)
+        if (other.transform.CompareTag("Player"))
         {
-            time += Time.deltaTime / lerpDuration;
+            if (dead == true)
+            {
+                StartCoroutine(ChangeColor(material.color, health.colorAlive));
+                playerEnergy.AddEnergy(2);
+                dead = false;
+            }
         }
+        if (other.transform.CompareTag("Enemy"))
+        {
+            Debug.Log("enemy");
+            if (dead == false) ;
+            {
+                dead = true;
+                this.GetComponent<MeshRenderer>().material.color = health.colorDead;
+                //StartCoroutine(ChangeColor(material.color, health.colorDead));
+                StartCoroutine(ChangeColor(material.color, health.colorDead));
+            }
+
+
+        }
+        //void EnemyEnters()
+        //{
+        //    Debug.Log("enemy enters");
+        //}
+
+
+        void ColorChange(Color start, Color end)
+        {
+            material.color = Color.Lerp(start, end, time);
+
+            if (time < 1.2)
+            {
+                time += Time.deltaTime / lerpDuration;
+            }
+        }
+
     }
 }
