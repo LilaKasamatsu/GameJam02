@@ -71,6 +71,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6408593017240200427}
     m_Modifications:
+    - target: {fileID: 7664860056904664289, guid: 37658269cd103214380aa2fce283a9ba,
+        type: 3}
+      propertyPath: orthographic size
+      value: 8.22
+      objectReference: {fileID: 0}
     - target: {fileID: 7664860056904664861, guid: 37658269cd103214380aa2fce283a9ba,
         type: 3}
       propertyPath: m_Name
@@ -84,12 +89,12 @@ PrefabInstance:
     - target: {fileID: 7664860056904664862, guid: 37658269cd103214380aa2fce283a9ba,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.18
+      value: 11.3
       objectReference: {fileID: 0}
     - target: {fileID: 7664860056904664862, guid: 37658269cd103214380aa2fce283a9ba,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.8
+      value: -9.7
       objectReference: {fileID: 0}
     - target: {fileID: 7664860056904664862, guid: 37658269cd103214380aa2fce283a9ba,
         type: 3}

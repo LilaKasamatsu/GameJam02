@@ -143,8 +143,8 @@ MonoBehaviour:
     isMovable: 1
     energyLVL: 0
     maxEnergyLVL: 100
-    minVelocity: -15
-    maxVelocity: 15
+    minVelocity: -4
+    maxVelocity: 4
   rb: {fileID: 0}
 --- !u!114 &2567666768602471152
 MonoBehaviour:
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f5095d8a8fd96046a1b06cf6d1ed06c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushForce: 7
+  pushForce: 10
 --- !u!114 &8924153747232320915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,5 +234,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.5411611
-  m_Center: {x: 0, y: 1.6234828, z: 0}
+  m_Radius: 1.652343
+  m_Center: {x: 0, y: -2.74, z: 0}

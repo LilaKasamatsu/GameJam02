@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5042377693616561056}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bend1Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 8108047162318338785}
   - component: {fileID: 1468344354}
   - component: {fileID: 1468344353}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pusherTest
   m_TagString: Pusher
   m_Icon: {fileID: 0}
@@ -89,24 +89,23 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
---- !u!64 &1468344353
-MeshCollider:
+--- !u!65 &1468344353
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7911955661285421631}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.5539312, y: 1.7184008, z: 2.840119}
+  m_Center: {x: -1.7742686, y: 0.35920042, z: 0.018331766}
 --- !u!1 &8494117608345163246
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +117,7 @@ GameObject:
   - component: {fileID: 2990293744380425940}
   - component: {fileID: 4009837005996249489}
   - component: {fileID: 1951631218100576914}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
