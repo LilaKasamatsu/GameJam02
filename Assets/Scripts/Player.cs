@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public PlayerData data;
+
+    [HideInInspector]
     public Rigidbody rb;
 
     // Start is called before the first frame update
@@ -17,13 +19,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (data.isMovable)
-        {
-            rb.isKinematic = false;
-        }
-        else
-        {
-            rb.isKinematic = true;
-        }
+        
     }
 }

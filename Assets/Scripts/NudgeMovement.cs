@@ -5,10 +5,9 @@ using UnityEngine;
 public class NudgeMovement : MonoBehaviour
 {
     #region Attributes
-
+    Player player;
     public float pushForce = 3f;
 
-    private Rigidbody rb;
 
     private Vector3 startPosition;
     private Vector3 endPosition;
@@ -19,17 +18,8 @@ public class NudgeMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        player = GetComponent<Player>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-
-
 
     private void OnMouseEnter()
     {
@@ -37,12 +27,13 @@ public class NudgeMovement : MonoBehaviour
         Vector3 dir = new Vector3(Input.GetAxis("Mouse X"),0, Input.GetAxis("Mouse Y"));
 
 
-
-
-        dir = dir.normalized;
-
-        rb.AddForce(dir * pushForce, ForceMode.Impulse);    
+        //dir = dir.normalized;
+        
+        player.rb.AddForce(dir * pushForce, ForceMode.Impulse);
+        player.rb.velocity = new Vector3(Mathf.Clamp(dir.x, player.data.minVelocity, player.data.maxVelocity), 0, Mathf.Clamp(dir.z, player.data.minVelocity, player.data.maxVelocity));
+        Debug.Log("FORCE: " + player.rb.velocity);
     }
+
 
 
     //private void OnMouseExit()

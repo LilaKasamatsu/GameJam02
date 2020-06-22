@@ -6,8 +6,7 @@ using UnityEngine.Rendering.Universal;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] PlayerData player;
-
+    PlayerData player;
     Rigidbody rb;
     Respwan respawnScript;
 
@@ -21,6 +20,7 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GetComponent<Player>().data;
         respawnScript = GetComponent<Respwan>();
         rb = GetComponent<Rigidbody>();
         cam = Camera.main;

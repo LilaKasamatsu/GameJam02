@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PlayerEnemyInteraction : MonoBehaviour
 {
-
-
     public Player player;
 
-    float attackStartAngle;
+    Coroutine freePlayer;
+
 
     // Start is called before the first frame update
     void Start()
@@ -46,8 +45,6 @@ public class PlayerEnemyInteraction : MonoBehaviour
         currentEnemy = enemy;
         if (player.data.isMovable)
         {
-            Debug.Log("HOLD");
-
             player.data.isMovable = false;
             freePlayer = StartCoroutine(EscapeEnemy());
             GetComponent<Rigidbody>().isKinematic = true;
@@ -55,8 +52,6 @@ public class PlayerEnemyInteraction : MonoBehaviour
         
     }
 
-    Coroutine freePlayer;
-    int buttonClickCounter = 0;
 
     private IEnumerator EscapeEnemy()
     {
@@ -69,10 +64,9 @@ public class PlayerEnemyInteraction : MonoBehaviour
             }
             if (buttonClickCounter >= 5)
             {
-                Debug.Log("RELEASE!");
                 OnRelease();
             }
-            yield return null;
+            yield return new WaitForFixedUpdate();
         }
         
     }

@@ -4,28 +4,22 @@ using UnityEngine;
 
 public class PlayerEnergyLvl : MonoBehaviour
 {
-    public int energyLVL;
-    [SerializeField] int maxEnergyLVL;
-    // Start is called before the first frame update
+    PlayerData player;
+
     void Start()
     {
-
+        player = GetComponent<Player>().data;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     public void AddEnergy(int add)
     {
-        if (energyLVL <= maxEnergyLVL)
+        if (player.energyLVL <= player.maxEnergyLVL)
         {
-            energyLVL += add;
+            player.energyLVL += add;
         }
         else
         {
-            energyLVL = maxEnergyLVL;
+            player.energyLVL = player.maxEnergyLVL;
         }
     }
 }
