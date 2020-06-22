@@ -20,7 +20,7 @@ public class PusherNudgeMovement : MonoBehaviour
     void LookTowardsPlayer()
     {
         transform.LookAt(player.transform);
-        transform.Rotate(new Vector3(0, 90, 0));
+        transform.Rotate(new Vector3(0, -90, 0));
     }
 
     void FollowMouse()
