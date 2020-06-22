@@ -15,6 +15,9 @@ public class PlayerHealth : MonoBehaviour
     Camera cam;
     Volume camVolume;
 
+    private float b;
+    public bool isDying;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,15 +30,16 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        // Debug.Log(rb.velocity.magnitude);
-        //if (rb.velocity.x < 0.05f && rb.velocity.z < 0.05f)
+        camVolume.weight = b;
         if (rb.velocity.magnitude < 0.5)
         {
-
+            isDying = true;
             player.deathTimer += Time.deltaTime;
-            camVolume.weight += Time.deltaTime;
-            Debug.Log("2");
+            if (b <=0.9)
+            {
+
+                b += Time.deltaTime;
+            }
             if (player.deathTimer >= player.deathTime)
             {
                 Debug.Log("GAME OVER");
@@ -45,10 +49,16 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
+            isDying = false;
             player.deathTimer = 0;
-            // camVolume.weight = 0;
-            camVolume.weight -= Time.deltaTime;
-            if (camVolume.weight >= 1) { camVolume.weight = 0; }
+            if (b >= 0.1)
+            {
+                
+                b -= Time.deltaTime;
+            }
+            //else { b = 0; }
+            
+           // if (camVolume.weight >= 1) { camVolume.weight = 0; }
         }
     }
 
