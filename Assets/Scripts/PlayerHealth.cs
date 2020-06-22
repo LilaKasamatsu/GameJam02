@@ -49,7 +49,7 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
-            isDying = false;
+           isDying = false;
             player.deathTimer = 0;
             if (b >= 0.1)
             {
