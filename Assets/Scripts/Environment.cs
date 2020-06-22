@@ -9,9 +9,9 @@ public class Environment : MonoBehaviour
     private Material material;
     private float lerpDuration = 1.5f;
     private float time;
-    private bool dead = true;
+    private bool isDead = true;
     private bool isChanging = true;
-    private bool on;
+    private bool isOntop;
 
     private PlayerEnergyLvl playerEnergy;
     private PlayerHealth playerHealth;
@@ -31,16 +31,16 @@ public class Environment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (on == true)
+        if (isOntop == true)
         {
-            if (dead == false)
+            if (isDead == false)
             {
                 if (isChanging == false && playerHealth.isDying == true)
                 {
 
                     Debug.Log("jetzte");
                     StartCoroutine(NoAir());
-                    dead = true;
+                    isDead = true;
 
                 }
             }
@@ -49,7 +49,7 @@ public class Environment : MonoBehaviour
     IEnumerator NoAir()
     {
         yield return new WaitForSecondsRealtime(0f);
-        if (on == true)
+        if (isOntop == true)
         {
             Debug.Log("ffff");
             StartCoroutine(ChangeColor(material.color, health.colorDead));
@@ -104,23 +104,23 @@ public class Environment : MonoBehaviour
     {
         if (other.transform.CompareTag("Player"))
         {
-            on = true;
-            if (dead == true)
+            isOntop = true;
+            if (isDead == true)
             {
 
                 Debug.Log("start coroutne");
 
                 StartCoroutine(ChangeColor(material.color, health.colorAlive));
                 playerEnergy.AddEnergy(2);
-                dead = false;
+                isDead = false;
             }
         }
         if (other.transform.CompareTag("Enemy"))
         {
             //  Debug.Log("enemy");
-            if (dead == false) ;
+            if (isDead == false)
             {
-                dead = true;
+                isDead = true;
                 this.GetComponent<MeshRenderer>().material.color = health.colorDead;
                 StartCoroutine(ChangeColor(material.color, health.colorDead));
             }
@@ -130,8 +130,9 @@ public class Environment : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        on = false;
+        isOntop = false;
     }
+
     //private void OnTriggerStay(Collider other)
     //{
     //    if (other.transform.CompareTag("Player"))
@@ -146,6 +147,7 @@ public class Environment : MonoBehaviour
     //        }
     //    }
     //}
+
     void ColorChange(Color start, Color end)
     {
         material.color = Color.Lerp(start, end, time);
@@ -155,6 +157,5 @@ public class Environment : MonoBehaviour
             time += Time.deltaTime / lerpDuration;
         }
     }
-
 
 }

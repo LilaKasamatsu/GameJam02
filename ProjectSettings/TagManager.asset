@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - EnemyDeath
+  - Pusher
   layers:
   - Default
   - TransparentFX
