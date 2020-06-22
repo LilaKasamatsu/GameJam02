@@ -20,8 +20,12 @@ public class EnemyPlayerInteraction : MonoBehaviour
     Vector3 newLocation;
     int a;
 
+    public float attackCooldown = 0f;
+
     EnemyDeath enemyDeath;
     Transform player;
+
+    Vector3 groundPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -35,29 +39,52 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        groundPosition = new Vector3(transform.position.x, 0, transform.position.z);
         Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(transform.position, enemy.actionRadius);
+        Gizmos.DrawWireSphere(groundPosition, enemy.actionRadius);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(groundPosition, enemy.attackRadius);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isHoldingPlayer == false)
+        if(attackCooldown <= 0f)
         {
-            isAttacking = IsInRange();
-            if (isAttacking == true)
+            groundPosition = new Vector3(transform.position.x, 0, transform.position.z);
+            if (isHoldingPlayer == false)
             {
-                Attack();
+                isAttacking = IsInRange(enemy.actionRadius);
+                if (isAttacking == true)
+                {
+                    Attack();
+                }
+                else if (isWaiting == false)
+                {
+                    Move();
+                }
             }
-            else if(isWaiting == false)
+            else
             {
-                Move();
+                isHoldingPlayer = IsInRange(enemy.attackRadius);
+                if (isHoldingPlayer)
+                {
+                    Hold();
+                }
+
             }
         }
         else
         {
-            Hold();
+            attackCooldown -= Time.deltaTime;
         }
+        
+    }
+
+    void Attack()
+    {
+        Vector3 playerPos = new Vector3(player.position.x, transform.position.y, player.position.z);
+        transform.position = Vector3.MoveTowards(transform.position, playerPos, attackspeed * Time.deltaTime);
     }
 
     private void Move()
@@ -67,8 +94,26 @@ public class EnemyPlayerInteraction : MonoBehaviour
         if (transform.position == newLocation)
         {
             SetNewLocation(a);
-            Sleeping();
+            StartCoroutine(RandomWait());
         }
+    }
+
+    void SetNewLocation(int i)
+    {
+        // Debug.Log(i);
+        newLocation = location[i];
+        a++;
+        if (a == location.Count)
+        {
+            a = 0;
+        }
+    }
+
+    IEnumerator RandomWait()
+    {
+        isWaiting = true;
+        yield return new WaitForSecondsRealtime(Random.Range(1, 3));
+        isWaiting = false;
     }
 
     //void Moving()
@@ -78,7 +123,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     //    {
     //        //Debug.Log("movingggg");
     //        transform.position = Vector3.MoveTowards(transform.position, newLocation, patrollingSpeed * Time.deltaTime);
-            
+
     //        if (isSleepingEnemy == false)
     //        {
     //            transform.position = Vector3.MoveTowards(transform.position, newLocation, patrollingSpeed * Time.deltaTime);
@@ -101,48 +146,10 @@ public class EnemyPlayerInteraction : MonoBehaviour
     //}
 
 
-    void SetNewLocation(int i)
-    {
-        // Debug.Log(i);
-        newLocation = location[i];
-        a++;
-        if (a == location.Count)
-        {
-            a = 0;
-        }
-        //isWaiting = true;
-
-    }
-    void Sleeping()
-    {
-        StartCoroutine(RandomSleep());
-    }
- 
-    void Attack()
-    {
-       // Debug.Log("ATTACKING");
-        Vector3 playerPos = new Vector3(player.position.x, transform.position.y, player.position.z);
-        transform.position = Vector3.MoveTowards(transform.position, playerPos, attackspeed * Time.deltaTime);
-    }
-
     void Hold()
     {
-        //  Debug.Log("HOLD");
-        StartCoroutine(HoldPlayer());
+        player.GetComponent<PlayerEnemyInteraction>().OnHold(this.transform);
         transform.position = transform.position;
-        //isAttacking = false;
-    }
-    IEnumerator HoldPlayer()
-    {
-        yield return new WaitForSecondsRealtime(1f);
-      //  Debug.Log("killing now");
-    }
-
-    IEnumerator RandomSleep()
-    {
-        isWaiting = true;
-        yield return new WaitForSecondsRealtime(Random.Range(1, 3));
-        isWaiting = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -156,13 +163,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         {
            // Debug.Log("killlll");
             enemyDeath.Kill();
-            isHoldingPlayer = true;
         }
-        //if (other.CompareTag("Environment"))
-        //{
-           
-        //}
-
     }
 
     private void OnTriggerExit(Collider other)
@@ -175,12 +176,8 @@ public class EnemyPlayerInteraction : MonoBehaviour
         }
     }
 
-    bool IsInRange()
+    bool IsInRange(float range)
     {
-        return Vector3.Distance(player.position, transform.position) < enemy.actionRadius;
+        return Vector3.Distance(player.position, groundPosition) < range;
     }
-    //public void EnemyDeath()
-    //{
-
-    //}
 }

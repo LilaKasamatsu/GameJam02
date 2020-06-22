@@ -22238,6 +22238,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1496146948410667928, guid: e11953fcf4abc0647887dd0d984bad04,
+        type: 3}
+      propertyPath: enemy.actionRadius
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1496146948410667930, guid: e11953fcf4abc0647887dd0d984bad04,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22298,7 +22303,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1496146948319823337, guid: e11953fcf4abc0647887dd0d984bad04, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e11953fcf4abc0647887dd0d984bad04, type: 3}
 --- !u!1 &1770498854
 GameObject:

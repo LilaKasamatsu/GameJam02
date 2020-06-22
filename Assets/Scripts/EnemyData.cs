@@ -15,6 +15,7 @@ public class EnemyData
     //public float patrollingSpeed;
     //public float attackSpeed;
     public float actionRadius;
+    public float attackRadius;
 
     //public EnemyDeath enemyDeath;
 
