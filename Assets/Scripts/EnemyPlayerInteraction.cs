@@ -14,7 +14,9 @@ public class EnemyPlayerInteraction : MonoBehaviour
     [SerializeField] float patrollingSpeed;
     [SerializeField] float attackspeed;
 
-    [SerializeField] EnemyData enemy;
+    EnemyData enemy;
+
+    
     
     Vector3 currLocation;
     Vector3 newLocation;
@@ -35,6 +37,8 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
         enemyDeath = GetComponent<EnemyDeath>();
+
+        enemy = GetComponent<Enemy>().data;
     }
 
     private void OnDrawGizmos()
