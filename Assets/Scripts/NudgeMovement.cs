@@ -37,16 +37,20 @@ public class NudgeMovement : MonoBehaviour
     {
         if (other.CompareTag("Pusher"))
         {
-            Debug.Log("Entered");
+            float mouseX = Input.GetAxis("Mouse X");
+            float mouseY = Input.GetAxis("Mouse Y");
+
             Transform pusher = FindObjectOfType<PusherNudgeMovement>().transform;
             Vector3 dir = transform.position - pusher.position;
             dir.y = 0;
             dir = dir.normalized;
+
+            dir.x = dir.x;
+            dir.y = dir.y;
+
             player.rb.AddForce(dir * pushForce, ForceMode.Impulse);
-            //lastVelocity = lastVelocity.normalized;
-            //player.rb.AddForce(lastVelocity * pushForce, ForceMode.Impulse);
             player.rb.velocity = new Vector3(Mathf.Clamp(dir.x, player.data.minVelocity, player.data.maxVelocity), 0, Mathf.Clamp(dir.z, player.data.minVelocity, player.data.maxVelocity));
-          //  Debug.Log("FORCE: " + player.rb.velocity);
+            Debug.Log("FORCE: " + player.rb.velocity);
         }
     }
 
@@ -69,18 +73,18 @@ public class NudgeMovement : MonoBehaviour
 
     //private void OnMouseEnter()
     //{
-    //    //startPosition = Input.mousePosition;
-    //    //Vector3 dir = new Vector3(Input.GetAxis("Mouse X"),0, Input.GetAxis("Mouse Y"));
+    //    startPosition = Input.mousePosition;
+    //    Vector3 dir = new Vector3(Input.GetAxis("Mouse X"), 0, Input.GetAxis("Mouse Y"));
 
-    //    //Vector3 mPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-    //    //mPos = new Vector3(mPos.x, transform.position.y, mPos.z);
+    //    Vector3 mPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+    //    mPos = new Vector3(mPos.x, transform.position.y, mPos.z);
 
 
     //    //dir = dir.normalized;
 
-    //    player.rb.AddForce(lastVelocity * pushForce, ForceMode.Impulse);
+    //    //player.rb.AddForce(lastVelocity * pushForce, ForceMode.Impulse);
     //    player.rb.velocity = new Vector3(Mathf.Clamp(dir.x, player.data.minVelocity, player.data.maxVelocity), 0, Mathf.Clamp(dir.z, player.data.minVelocity, player.data.maxVelocity));
-    //    Debug.Log("FORCE: " + player.rb.velocity);
+    //    //Debug.Log("FORCE: " + player.rb.velocity);
     //}
 
 
