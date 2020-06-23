@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 1496146948410667928}
   - component: {fileID: 7833294120437887911}
   - component: {fileID: 1496146948410667931}
+  - component: {fileID: 9141366979160037255}
   - component: {fileID: 1496146948410667924}
   m_Layer: 2
   m_Name: Enemy
@@ -195,9 +196,6 @@ MonoBehaviour:
   isAttacking: 0
   patrollingSpeed: 0
   attackspeed: 6
-  enemy:
-    actionRadius: 10
-    attackRadius: 4
   attackCooldown: 0
 --- !u!114 &7833294120437887911
 MonoBehaviour:
@@ -211,6 +209,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de809066e1661f0408c0a6250d910933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visualRadius: {fileID: 4376631784843453536}
+  aliveColor: {r: 1, g: 0, b: 0, a: 1}
+  deadColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!114 &1496146948410667931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,6 +224,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa94ec48129be45468a32e379df0f6bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9141366979160037255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496146948410667935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f059a39d1f38454c9490b17d3f253da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    actionRadius: 10
+    attackRadius: 10
+    maxHealth: 100
+    currHealth: 0
 --- !u!65 &1496146948410667924
 BoxCollider:
   m_ObjectHideFlags: 0
