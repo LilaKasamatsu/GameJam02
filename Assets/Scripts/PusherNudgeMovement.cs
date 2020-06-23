@@ -5,10 +5,12 @@ using UnityEngine;
 public class PusherNudgeMovement : MonoBehaviour
 {
     private GameObject player;
+    private Rigidbody rb;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        rb = GetComponent<Rigidbody>();
     }
 
     private void Update()
@@ -20,7 +22,7 @@ public class PusherNudgeMovement : MonoBehaviour
     void LookTowardsPlayer()
     {
         transform.LookAt(player.transform);
-        transform.Rotate(new Vector3(0, -90, 0));
+        transform.Rotate(new Vector3(0, 90, 0));
     }
 
     void FollowMouse()
