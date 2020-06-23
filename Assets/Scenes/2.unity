@@ -170,8 +170,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &16163995
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -203,7 +204,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -350,8 +351,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &30705365
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -383,7 +385,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -461,8 +463,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &38587512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -494,7 +497,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -572,8 +575,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &59748036
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -605,7 +609,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -683,8 +687,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &60992757
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -716,7 +721,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -794,8 +799,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &77267875
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -827,7 +833,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -905,8 +911,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &79487346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -938,7 +945,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1016,8 +1023,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &84415847
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1049,7 +1057,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1127,8 +1135,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &89441621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1160,7 +1169,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1238,8 +1247,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &97666708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1271,7 +1281,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1349,8 +1359,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &102495226
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1382,7 +1393,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1460,8 +1471,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &104556127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1493,7 +1505,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1571,8 +1583,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &117383445
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1604,7 +1617,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1682,8 +1695,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &123698375
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1715,7 +1729,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1793,8 +1807,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &126529918
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1826,7 +1841,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1904,8 +1919,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &140203966
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1937,7 +1953,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2015,8 +2031,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &148436058
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2048,7 +2065,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2126,8 +2143,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &151397467
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2159,7 +2177,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2237,8 +2255,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &159868469
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2270,7 +2289,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2348,8 +2367,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &164166841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2381,7 +2401,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2459,8 +2479,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &165626778
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2492,7 +2513,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2570,8 +2591,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &166885176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2603,7 +2625,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2681,8 +2703,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &171770050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2714,7 +2737,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2792,8 +2815,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &180063409
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2825,7 +2849,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2903,8 +2927,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &206693999
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2936,7 +2961,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3014,8 +3039,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &208862416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3047,7 +3073,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3125,8 +3151,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &229100476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3158,7 +3185,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3236,8 +3263,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &237506019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3269,7 +3297,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3347,8 +3375,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &255331439
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3380,7 +3409,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3458,8 +3487,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &257682489
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3491,7 +3521,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3569,8 +3599,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &260429459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3602,7 +3633,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3680,8 +3711,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &265265740
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3713,7 +3745,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3791,8 +3823,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &268175952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3824,7 +3857,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3902,8 +3935,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &285304959
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3935,7 +3969,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4013,8 +4047,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &295417725
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4046,7 +4081,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4124,8 +4159,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &303071489
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4157,7 +4193,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4235,8 +4271,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &315103586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4268,7 +4305,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4346,8 +4383,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &322476433
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4379,7 +4417,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4457,8 +4495,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &324628169
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4490,7 +4529,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4568,8 +4607,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &350223351
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4601,7 +4641,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4679,8 +4719,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &361920689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4712,7 +4753,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4790,8 +4831,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &366931536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4823,7 +4865,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4901,8 +4943,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &368213267
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4934,7 +4977,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5012,8 +5055,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &368396048
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5045,7 +5089,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5123,8 +5167,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &381207649
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5156,7 +5201,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5234,8 +5279,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &382115091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5267,7 +5313,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5345,8 +5391,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &387619163
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5378,7 +5425,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5456,8 +5503,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &393671828
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5489,7 +5537,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5567,8 +5615,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &400560244
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5600,7 +5649,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5771,8 +5820,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &429484324
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5804,7 +5854,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5882,8 +5932,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &434120834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5915,7 +5966,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5993,8 +6044,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &451768991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6026,7 +6078,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6104,8 +6156,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &459126207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6137,7 +6190,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6215,8 +6268,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &470284210
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6248,7 +6302,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6326,8 +6380,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &470347371
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6359,7 +6414,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6437,8 +6492,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &470620931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6470,7 +6526,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6548,8 +6604,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &476228477
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6581,7 +6638,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6659,8 +6716,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &476673175
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6692,7 +6750,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6770,8 +6828,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &487464130
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6803,7 +6862,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6881,8 +6940,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &504209825
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6914,7 +6974,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6992,8 +7052,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &520006380
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7025,7 +7086,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7103,8 +7164,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &525103536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7136,7 +7198,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7214,8 +7276,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &527215666
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7247,7 +7310,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7325,8 +7388,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &537192859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7358,7 +7422,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7529,8 +7593,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &549390140
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7562,7 +7627,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7640,8 +7705,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &551363014
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7673,7 +7739,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7751,8 +7817,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &552857121
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7784,7 +7851,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7862,8 +7929,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &555801983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7895,7 +7963,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7973,8 +8041,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &576772834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8006,7 +8075,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8084,8 +8153,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &579645773
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8117,7 +8187,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8195,8 +8265,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &593340847
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8228,7 +8299,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8306,8 +8377,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &608327328
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8339,7 +8411,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8417,8 +8489,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &609815834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8450,7 +8523,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8528,8 +8601,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &617279637
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8561,7 +8635,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8639,8 +8713,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &621158695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8672,7 +8747,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8750,8 +8825,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &656062694
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8783,7 +8859,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8861,8 +8937,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &656966481
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8894,7 +8971,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8972,8 +9049,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &665203690
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9005,7 +9083,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9083,8 +9161,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &669406464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9116,7 +9195,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9194,8 +9273,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &674417223
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9227,7 +9307,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9305,8 +9385,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &684738038
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9338,7 +9419,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9416,8 +9497,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &710119302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9449,7 +9531,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9527,8 +9609,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &712598824
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9560,7 +9643,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9638,8 +9721,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &726748342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9671,7 +9755,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9749,8 +9833,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &727052586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9782,7 +9867,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9860,8 +9945,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &733936175
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9893,7 +9979,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9971,8 +10057,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &738443647
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10004,7 +10091,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10082,8 +10169,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &738522739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10115,7 +10203,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10193,8 +10281,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &765877105
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10226,7 +10315,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10304,8 +10393,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &769079955
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10337,7 +10427,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10415,8 +10505,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &774059422
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10448,7 +10539,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10526,8 +10617,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &775362176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10559,7 +10651,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10637,8 +10729,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &802040908
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10670,7 +10763,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10754,8 +10847,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &820173427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10787,7 +10881,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10865,8 +10959,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &821322818
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10898,7 +10993,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10976,8 +11071,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &839338821
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11009,7 +11105,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11087,8 +11183,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &854043624
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11120,7 +11217,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11198,8 +11295,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &858598382
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11231,7 +11329,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11309,8 +11407,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &861527431
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11342,7 +11441,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11420,8 +11519,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &861765105
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11453,7 +11553,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11531,8 +11631,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &883927278
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11564,7 +11665,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11642,8 +11743,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &887476632
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11675,7 +11777,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11753,8 +11855,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &896118328
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11786,7 +11889,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11864,8 +11967,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &906531734
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11897,7 +12001,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11975,8 +12079,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &909026828
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12008,7 +12113,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12224,8 +12329,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &929641549
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12257,7 +12363,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12335,8 +12441,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &935440757
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12368,7 +12475,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12446,8 +12553,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &942404776
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12479,7 +12587,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12557,8 +12665,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &950461808
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12590,7 +12699,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12668,8 +12777,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &955350142
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12701,7 +12811,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12779,8 +12889,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &963947677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12812,7 +12923,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12890,8 +13001,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &964191975
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12923,7 +13035,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13001,8 +13113,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &975051544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13034,7 +13147,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13112,8 +13225,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &975119480
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13145,7 +13259,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13223,8 +13337,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &990378570
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13256,7 +13371,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13334,8 +13449,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &999074435
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13367,7 +13483,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13445,8 +13561,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1014855368
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13478,7 +13595,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13556,8 +13673,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1017779867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13589,7 +13707,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13667,8 +13785,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1038852777
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13700,7 +13819,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13778,8 +13897,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1043651366
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13811,7 +13931,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13889,8 +14009,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1049910059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13922,7 +14043,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14281,8 +14402,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 0.8584906, g: 0.16602883, b: 0.16602883, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 0}
+    colorDead: {fileID: 0}
+  mat: {fileID: 0}
 --- !u!1 &1087883113
 GameObject:
   m_ObjectHideFlags: 0
@@ -14332,8 +14454,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1087883116
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14365,7 +14488,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14443,8 +14566,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1092884983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14476,7 +14600,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14554,8 +14678,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1103762029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14587,7 +14712,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14665,8 +14790,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1105796823
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14698,7 +14824,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14776,8 +14902,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1107229235
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14809,7 +14936,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14887,8 +15014,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1110748974
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14920,7 +15048,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14998,8 +15126,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1119516882
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15031,7 +15160,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15109,8 +15238,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1126226260
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15142,7 +15272,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15220,8 +15350,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1129106015
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15253,7 +15384,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15331,8 +15462,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1142250484
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15364,7 +15496,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15442,8 +15574,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1143671707
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15475,7 +15608,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15553,8 +15686,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1147577240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15586,7 +15720,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15664,8 +15798,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1194284533
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15697,7 +15832,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15775,8 +15910,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1196972616
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15808,7 +15944,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15886,8 +16022,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1197068702
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15919,7 +16056,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15997,8 +16134,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1217566181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16030,7 +16168,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16108,8 +16246,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1220204457
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16141,7 +16280,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16219,8 +16358,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1227094079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16252,7 +16392,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16330,8 +16470,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1232683176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16363,7 +16504,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16441,8 +16582,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1254743479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16474,7 +16616,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16552,8 +16694,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1266167576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16585,7 +16728,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16663,8 +16806,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1295216207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16696,7 +16840,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16853,8 +16997,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1310766512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16886,7 +17031,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16964,8 +17109,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1324474753
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16997,7 +17143,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17075,8 +17221,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1327709105
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17108,7 +17255,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17186,8 +17333,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1341487072
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17219,7 +17367,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17297,8 +17445,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1349154136
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17330,7 +17479,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17408,8 +17557,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1352551538
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17441,7 +17591,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17519,8 +17669,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1394694109
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17552,7 +17703,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17630,8 +17781,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1420466878
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17663,7 +17815,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17741,8 +17893,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1425328185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17774,7 +17927,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17852,8 +18005,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1431075146
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17885,7 +18039,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17963,8 +18117,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1435718313
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17996,7 +18151,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18074,8 +18229,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1440752563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18107,7 +18263,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18185,8 +18341,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1447513403
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18218,7 +18375,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18296,8 +18453,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1448828550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18329,7 +18487,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18476,8 +18634,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1476118876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18509,7 +18668,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18587,8 +18746,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1480328227
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18620,7 +18780,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18790,8 +18950,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1487484213
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18823,7 +18984,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18901,8 +19062,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1487671010
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18934,7 +19096,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19012,8 +19174,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1489862668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19045,7 +19208,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19123,8 +19286,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1494360188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19156,7 +19320,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19234,8 +19398,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1496392944
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19267,7 +19432,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19345,8 +19510,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1497912019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19378,7 +19544,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19456,8 +19622,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1505197403
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19489,7 +19656,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19641,8 +19808,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1514715016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19674,7 +19842,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19752,8 +19920,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1520487305
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19785,7 +19954,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19863,8 +20032,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1523324290
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19896,7 +20066,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19974,8 +20144,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1531780835
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20007,7 +20178,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20085,8 +20256,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1543499076
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20118,7 +20290,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20196,8 +20368,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1545840072
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20229,7 +20402,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20307,8 +20480,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1547220504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20340,7 +20514,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20418,8 +20592,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1551121018
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20451,7 +20626,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20529,8 +20704,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1554717846
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20562,7 +20738,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20640,8 +20816,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1556757306
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20673,7 +20850,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20751,8 +20928,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1561535157
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20784,7 +20962,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20862,8 +21040,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1562303379
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20895,7 +21074,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20973,8 +21152,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1580396717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21006,7 +21186,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21084,8 +21264,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1587026208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21117,7 +21298,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21195,8 +21376,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1600817215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21228,7 +21410,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21306,8 +21488,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1623799324
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21339,7 +21522,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21417,8 +21600,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1666793624
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21450,7 +21634,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21528,8 +21712,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1680113540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21561,7 +21746,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21597,6 +21782,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5408558458813553457, guid: 4d18f69102177bb4aab52f5ca065392a,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5.32
+      objectReference: {fileID: 0}
     - target: {fileID: 731822525, guid: 4d18f69102177bb4aab52f5ca065392a, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -21716,8 +21906,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1703911836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21749,7 +21940,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21827,8 +22018,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1722923791
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21860,7 +22052,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21938,8 +22130,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1726316074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21971,7 +22164,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22049,8 +22242,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1730685817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22082,7 +22276,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22160,8 +22354,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1735771661
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22193,7 +22388,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22271,8 +22466,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1753999147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22304,7 +22500,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22382,8 +22578,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1764333308
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22415,7 +22612,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22493,8 +22690,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1769038683
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22526,7 +22724,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22679,8 +22877,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1770498857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22712,7 +22911,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22790,8 +22989,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1773284225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22823,7 +23023,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22901,8 +23101,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1781636028
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22934,7 +23135,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23012,8 +23213,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1786172111
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23045,7 +23247,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23123,8 +23325,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1790272855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23156,7 +23359,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23234,8 +23437,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1808915113
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23267,7 +23471,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23414,8 +23618,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1820327230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23447,7 +23652,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23525,8 +23730,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1835575263
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23558,7 +23764,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23636,8 +23842,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1837553673
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23669,7 +23876,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23826,8 +24033,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1846175333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23859,7 +24067,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23937,8 +24145,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1882520222
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23970,7 +24179,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24048,8 +24257,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1919840188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24081,7 +24291,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24159,8 +24369,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1928917001
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24192,7 +24403,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24270,8 +24481,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1932811964
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24303,7 +24515,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24381,8 +24593,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1938118125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24414,7 +24627,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24492,8 +24705,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1938195122
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24525,7 +24739,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24603,8 +24817,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1954374532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24636,7 +24851,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24714,8 +24929,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1954822946
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24747,7 +24963,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24825,8 +25041,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1960943255
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24858,7 +25075,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24936,8 +25153,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &1993912670
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24969,7 +25187,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25047,8 +25265,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &2041360457
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25080,7 +25299,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25158,8 +25377,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &2044989487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25191,7 +25411,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25269,8 +25489,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &2054365492
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25302,7 +25523,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25380,8 +25601,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &2078679682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25413,7 +25635,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25491,8 +25713,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &2084558348
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25524,7 +25747,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25602,8 +25825,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &2114747411
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25635,7 +25859,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25713,8 +25937,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &2114779791
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25746,7 +25971,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25824,8 +26049,9 @@ MonoBehaviour:
   health:
     maxHealth: 0
     currentHealth: 0
-    colorAlive: {r: 1, g: 1, b: 1, a: 0}
-    colorDead: {r: 0, g: 0, b: 0, a: 0}
+    colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
+    colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  mat: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
 --- !u!65 &2130764002
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25857,7 +26083,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 60dff365af4577542979dae8e88d3bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -8,6 +8,6 @@ public class EnvironmentData
     public float maxHealth;
     public float currentHealth;
 
-    public Color colorAlive;
-    public Color colorDead;
+    public Material colorAlive;
+    public Material colorDead;
 }

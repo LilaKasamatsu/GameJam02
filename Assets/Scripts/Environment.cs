@@ -6,25 +6,28 @@ public class Environment : MonoBehaviour
 {
     public EnvironmentData health;
 
-    private Material material;
+    private Renderer rend;
+    //private Renderer rend;
     private float lerpDuration = 1.5f;
     private float time;
     private bool isDead = true;
     private bool isChanging = true;
     private bool isOntop;
 
+   // [SerializeField]
+
     private PlayerEnergyLvl playerEnergy;
     private PlayerHealth playerHealth;
 
+   
     // Start is called before the first frame update
     void Start()
     {
 
         playerEnergy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnergyLvl>();
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
-        material = GetComponent<MeshRenderer>().material;
-        material.color = health.colorDead;
-        //material.color = health.colorAlive;
+        rend = GetComponent<Renderer>();
+        rend.material = health.colorDead;
 
     }
 
@@ -52,40 +55,19 @@ public class Environment : MonoBehaviour
         if (isOntop == true)
         {
             Debug.Log("ffff");
-            StartCoroutine(ChangeColor(material.color, health.colorDead));
+            StartCoroutine(ChangeColor(rend.material, health.colorDead));
         }
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.transform.CompareTag("Player"))
-    //    {
-    //        if (dead == true)
-    //        {
-    //            //this.GetComponent<MeshRenderer>().material.color = health.colorAlive;
-    //            StartCoroutine(ChangeColor(material.color, health.colorAlive));
 
-    //            playerEnergy.AddEnergy(2);
-    //            dead = false;
-    //        }
-
-
-    //    }
-    //    if (collision.transform.CompareTag("Enemy"))
-    //    {
-    //        Debug.Log("enemy");
-    //    }
-
-    //}
-
-
-
-    IEnumerator ChangeColor(Color start, Color end)
+    IEnumerator ChangeColor(Material start, Material end)
     {
+        Debug.Log("11");
         isChanging = true;
         while (true)
         {
-            material.color = Color.Lerp(start, end, time);
+            rend.material.Lerp(start, end, time);
+           // rend.material = end;
             time += Time.deltaTime / lerpDuration;
             if (time >= 1.2)
             {
@@ -110,7 +92,7 @@ public class Environment : MonoBehaviour
 
                 Debug.Log("start coroutne");
 
-                StartCoroutine(ChangeColor(material.color, health.colorAlive));
+                StartCoroutine(ChangeColor(rend.material, health.colorAlive));
                 playerEnergy.AddEnergy(2);
                 isDead = false;
             }
@@ -121,8 +103,8 @@ public class Environment : MonoBehaviour
             if (isDead == false)
             {
                 isDead = true;
-                this.GetComponent<MeshRenderer>().material.color = health.colorDead;
-                StartCoroutine(ChangeColor(material.color, health.colorDead));
+                this.GetComponent<MeshRenderer>().material = health.colorDead;
+                StartCoroutine(ChangeColor(rend.material, health.colorDead));
             }
 
 
@@ -133,29 +115,15 @@ public class Environment : MonoBehaviour
         isOntop = false;
     }
 
-    //private void OnTriggerStay(Collider other)
+
+    //void ColorChange(Color start, Color end)
     //{
-    //    if (other.transform.CompareTag("Player"))
+    //    rend.color = Color.Lerp(start, end, time);
+
+    //    if (time < 1.2)
     //    {
-
-
-    //        if (isChanging == false && on == true)
-    //        {
-    //            StartCoroutine(ChangeColor(material.color, health.colorDead));
-    //            Debug.Log("sterben");
-
-    //        }
+    //        time += Time.deltaTime / lerpDuration;
     //    }
     //}
-
-    void ColorChange(Color start, Color end)
-    {
-        material.color = Color.Lerp(start, end, time);
-
-        if (time < 1.2)
-        {
-            time += Time.deltaTime / lerpDuration;
-        }
-    }
 
 }
