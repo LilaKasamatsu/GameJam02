@@ -42,8 +42,6 @@ public class NudgeMovement : MonoBehaviour
     {
         if (other.CompareTag("Pusher"))
         {
-
-            Debug.Log("Entered");
             Transform pusher = FindObjectOfType<PusherNudgeMovement>().transform;
             Vector3 dir = transform.position - pusher.position;
             dir.y = 0;
@@ -51,7 +49,6 @@ public class NudgeMovement : MonoBehaviour
             Vector2 acc = endPosition - startPosition;
 
             player.rb.AddForce(dir * pushForce, ForceMode.Impulse);
-            Debug.Log("FORCE" + player.rb.velocity);
 
             player.rb.velocity = new Vector3(Mathf.Clamp(player.rb.velocity.x, player.data.minVelocity, player.data.maxVelocity), 0, Mathf.Clamp(player.rb.velocity.z, player.data.minVelocity, player.data.maxVelocity));
 

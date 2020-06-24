@@ -8,11 +8,21 @@ public class PlayerEnemyInteraction : MonoBehaviour
 
     Coroutine freePlayer;
 
+    private bool isUsingSpecialAttack;
+    PlayerSpecialAttack specialAttack;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        specialAttack = GetComponentInChildren<PlayerSpecialAttack>();
+
+    }
+
+    private void OnDrawGizmos()
+    {
+        Vector3 groundPosition = new Vector3(transform.position.x, 0, transform.position.z);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(groundPosition, player.data.specialAttackRadius);
     }
 
     // Update is called once per frame
@@ -25,8 +35,13 @@ public class PlayerEnemyInteraction : MonoBehaviour
         }
         else
         {
-            this.GetComponent<MeshRenderer>().material.color = Color.grey;
+            this.GetComponent<MeshRenderer>().material.color = Color.gray;
             player.data.isAttacking = false;
+        }
+
+        if(Input.GetMouseButtonDown(1))
+        {
+            OnSpecialAttack();
         }
     }
 
@@ -46,15 +61,24 @@ public class PlayerEnemyInteraction : MonoBehaviour
         }
     }
 
+    public void OnSpecialAttack()
+    {
+        // Do some animation magic.
+        isUsingSpecialAttack = true;
+        StartCoroutine(specialAttack.Expand());
+
+    }
 
     public void OnRelease()
     {
+        this.GetComponent<MeshRenderer>().material.color = Color.gray;
         GetComponent<Rigidbody>().isKinematic = false;
         StopCoroutine(freePlayer);
         player.data.isMovable = true;
-        currentEnemy.GetComponent<EnemyPlayerInteraction>().stunnedCooldown = 1f;
-        //maybe set an enemy cooldown to prevent instant recapture?
-
+        if(currentEnemy != null)
+        {
+            currentEnemy.GetComponent<EnemyPlayerInteraction>().stunnedCooldown = 1f;
+        }
     }
 
     Transform currentEnemy;
@@ -67,16 +91,20 @@ public class PlayerEnemyInteraction : MonoBehaviour
             player.data.isMovable = false;
             freePlayer = StartCoroutine(EscapeEnemy());
             GetComponent<Rigidbody>().isKinematic = true;
-        }
-        
+        }   
     }
-
 
     private IEnumerator EscapeEnemy()
     {
+        this.GetComponent<MeshRenderer>().material.color = Color.black;
         int buttonClickCounter = 0;
         while (true)
         {
+            if(currentEnemy == null)
+            {
+                OnRelease();
+            }
+
             if (Input.GetMouseButtonDown(0))
             {
                 buttonClickCounter++;
