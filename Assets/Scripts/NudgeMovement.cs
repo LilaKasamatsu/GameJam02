@@ -50,7 +50,7 @@ public class NudgeMovement : MonoBehaviour
 
             player.rb.AddForce(dir * pushForce, ForceMode.Impulse);
             player.rb.velocity = new Vector3(Mathf.Clamp(dir.x, player.data.minVelocity, player.data.maxVelocity), 0, Mathf.Clamp(dir.z, player.data.minVelocity, player.data.maxVelocity));
-            Debug.Log("FORCE: " + player.rb.velocity);
+          //  Debug.Log("FORCE: " + player.rb.velocity);
         }
     }
 
