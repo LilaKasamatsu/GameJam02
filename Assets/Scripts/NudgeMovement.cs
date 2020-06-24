@@ -24,43 +24,59 @@ public class NudgeMovement : MonoBehaviour
         player = GetComponent<Player>();
     }
 
-
-    private void OnMouseEnter()
+    private void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X");
-        float mouseY = Input.GetAxis("Mouse Y");
+        // for better control of player velocity
+        if (Input.GetMouseButtonDown(0))
+        {
+            startPosition = Input.mousePosition;
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            endPosition = Input.mousePosition;
+        }
 
-        player.rb.AddForce(mouseX*10, 0, mouseY* 10, ForceMode.Impulse);
-        Debug.Log("Mouse Entered");
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Pusher"))
+        {
+
+            Debug.Log("Entered");
+            Transform pusher = FindObjectOfType<PusherNudgeMovement>().transform;
+            Vector3 dir = transform.position - pusher.position;
+            dir.y = 0;
+            dir = dir.normalized;
+            Vector2 acc = endPosition - startPosition;
+
+            player.rb.AddForce(dir * pushForce, ForceMode.Impulse);
+            Debug.Log("FORCE" + player.rb.velocity);
+
+            player.rb.velocity = new Vector3(Mathf.Clamp(player.rb.velocity.x, player.data.minVelocity, player.data.maxVelocity), 0, Mathf.Clamp(player.rb.velocity.z, player.data.minVelocity, player.data.maxVelocity));
+
+
+            //float mouseX = Input.GetAxis("Mouse X");
+            //float mouseY = Input.GetAxis("Mouse Y");
+            //player.rb.velocity = new Vector3(Mathf.Clamp(dir.x* mouseY*pushForce, player.data.minVelocity, player.data.maxVelocity), 0, Mathf.Clamp(dir.z* mouseX*pushForce, player.data.minVelocity, player.data.maxVelocity));
+            //Debug.Log("FORCE: " + player.rb.velocity);
+        }
+    }
 
     //private void OnCollisionEnter(Collision collision)
     //{
-    //    if (collision.gameObject.CompareTag("Pusher"))
+    //    if (collision.transform.CompareTag("Pusher"))
     //    {
-    //        float mouseX = Input.GetAxis("Mouse X");
-    //        float mouseY = Input.GetAxis("Mouse Y");
-    //        dir = collision.collider.transform.position - transform.position;
+    //        Debug.Log("Entered");
+    //        Transform pusher = FindObjectOfType<PusherNudgeMovement>().transform;
+    //        Vector3 dir = transform.position - pusher.position;
+    //        dir.y = 0;
     //        dir = dir.normalized;
-
-    //        //dir = new Vector3(mouseX, 0, mouseY);
-    //        //dir = dir.normalized;
-    //        this.GetComponent<Rigidbody>().AddForce(dir * pushForce, ForceMode.Impulse);
-    //        Debug.Log("PLAYER HIT" + this.GetComponent<Rigidbody>().velocity);
-    //    }
-    //}
-
-    //private void OnTriggerEnter(Collider collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Pusher"))
-    //    {
-    //        float mouseX = Input.GetAxis("Mouse X");
-    //        float mouseY = Input.GetAxis("Mouse Y");
-    //        dir = collision.transform.position;
-    //        dir = -dir.normalized;
-    //        this.GetComponent<Rigidbody>().AddForce(dir * pushForce, ForceMode.Impulse);
-    //        Debug.Log("PLAYER HIT" + this.GetComponent<Rigidbody>().velocity);
+    //        player.rb.AddForce(dir * pushForce, ForceMode.Impulse);
+    //        //lastVelocity = lastVelocity.normalized;
+    //        //player.rb.AddForce(lastVelocity * pushForce, ForceMode.Impulse);
+    //        player.rb.velocity = new Vector3(Mathf.Clamp(dir.x, player.data.minVelocity, player.data.maxVelocity), 0, Mathf.Clamp(dir.z, player.data.minVelocity, player.data.maxVelocity));
+    //        Debug.Log("FORCE: " + player.rb.velocity);
     //    }
     //}
 
