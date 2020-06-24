@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 581633632469739463}
   m_Layer: 2
   m_Name: Pusher
-  m_TagString: Untagged
+  m_TagString: Pusher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +54,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581633632469739456}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.978437, y: 3.5288525, z: 3.3790317}

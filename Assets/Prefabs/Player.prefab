@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 2072622151}
   - component: {fileID: 1342116496}
   - component: {fileID: 7296332537891670884}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ Transform:
   m_GameObject: {fileID: 5052043999930341523}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.1586008, y: -1.486453, z: 1.4574337}
-  m_LocalScale: {x: 1.8644912, y: 0.62149704, z: 1.8644912}
+  m_LocalScale: {x: 2, y: 0.62149704, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -142,8 +142,8 @@ MonoBehaviour:
     isMovable: 1
     energyLVL: 0
     maxEnergyLVL: 100
-    minVelocity: -4
-    maxVelocity: 4
+    minVelocity: -20
+    maxVelocity: 20
   rb: {fileID: 0}
 --- !u!114 &2567666768602471152
 MonoBehaviour:
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f5095d8a8fd96046a1b06cf6d1ed06c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushForce: 5
+  pushForce: 3
 --- !u!114 &8924153747232320915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5052043999930341523}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1c94dbdfa25ba446be05b74423132a8, type: 3}
   m_Name: 
@@ -220,5 +220,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.7040855
+  m_Radius: 1.18
   m_Center: {x: 0, y: 0, z: 0}
