@@ -26,10 +26,15 @@ public class NudgeMovement : MonoBehaviour
 
     private void Update()
     {
-        Vector3 mPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-        mPos = new Vector3(mPos.x, transform.position.y, mPos.z);
-        lastVelocity = mPos - lastPos;
-        lastPos = mPos;
+        // for better control of player velocity
+        if (Input.GetMouseButtonDown(0))
+        {
+            startPosition = Input.mousePosition;
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            endPosition = Input.mousePosition;
+        }
 
     }
 
@@ -37,76 +42,42 @@ public class NudgeMovement : MonoBehaviour
     {
         if (other.CompareTag("Pusher"))
         {
-            float mouseX = Input.GetAxis("Mouse X");
-            float mouseY = Input.GetAxis("Mouse Y");
 
-            Transform pusher = FindObjectOfType<PusherNudgeMovement>().transform;
-            Vector3 dir = transform.position - pusher.position;
-            dir.y = 0;
-            dir = dir.normalized;
-
-            dir.x = dir.x;
-            dir.y = dir.y;
-
-            player.rb.AddForce(dir * pushForce, ForceMode.Impulse);
-            player.rb.velocity = new Vector3(Mathf.Clamp(dir.x, player.data.minVelocity, player.data.maxVelocity), 0, Mathf.Clamp(dir.z, player.data.minVelocity, player.data.maxVelocity));
-          //  Debug.Log("FORCE: " + player.rb.velocity);
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.transform.CompareTag("Pusher"))
-        {
             Debug.Log("Entered");
             Transform pusher = FindObjectOfType<PusherNudgeMovement>().transform;
             Vector3 dir = transform.position - pusher.position;
             dir.y = 0;
             dir = dir.normalized;
+            Vector2 acc = endPosition - startPosition;
+
             player.rb.AddForce(dir * pushForce, ForceMode.Impulse);
-            //lastVelocity = lastVelocity.normalized;
-            //player.rb.AddForce(lastVelocity * pushForce, ForceMode.Impulse);
-            player.rb.velocity = new Vector3(Mathf.Clamp(dir.x, player.data.minVelocity, player.data.maxVelocity), 0, Mathf.Clamp(dir.z, player.data.minVelocity, player.data.maxVelocity));
-            Debug.Log("FORCE: " + player.rb.velocity);
+            Debug.Log("FORCE" + player.rb.velocity);
+
+            player.rb.velocity = new Vector3(Mathf.Clamp(player.rb.velocity.x, player.data.minVelocity, player.data.maxVelocity), 0, Mathf.Clamp(player.rb.velocity.z, player.data.minVelocity, player.data.maxVelocity));
+
+
+            //float mouseX = Input.GetAxis("Mouse X");
+            //float mouseY = Input.GetAxis("Mouse Y");
+            //player.rb.velocity = new Vector3(Mathf.Clamp(dir.x* mouseY*pushForce, player.data.minVelocity, player.data.maxVelocity), 0, Mathf.Clamp(dir.z* mouseX*pushForce, player.data.minVelocity, player.data.maxVelocity));
+            //Debug.Log("FORCE: " + player.rb.velocity);
         }
     }
 
-    //private void OnMouseEnter()
+    //private void OnCollisionEnter(Collision collision)
     //{
-    //    startPosition = Input.mousePosition;
-    //    Vector3 dir = new Vector3(Input.GetAxis("Mouse X"), 0, Input.GetAxis("Mouse Y"));
-
-    //    Vector3 mPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-    //    mPos = new Vector3(mPos.x, transform.position.y, mPos.z);
-
-
-    //    //dir = dir.normalized;
-
-    //    //player.rb.AddForce(lastVelocity * pushForce, ForceMode.Impulse);
-    //    player.rb.velocity = new Vector3(Mathf.Clamp(dir.x, player.data.minVelocity, player.data.maxVelocity), 0, Mathf.Clamp(dir.z, player.data.minVelocity, player.data.maxVelocity));
-    //    //Debug.Log("FORCE: " + player.rb.velocity);
+    //    if (collision.transform.CompareTag("Pusher"))
+    //    {
+    //        Debug.Log("Entered");
+    //        Transform pusher = FindObjectOfType<PusherNudgeMovement>().transform;
+    //        Vector3 dir = transform.position - pusher.position;
+    //        dir.y = 0;
+    //        dir = dir.normalized;
+    //        player.rb.AddForce(dir * pushForce, ForceMode.Impulse);
+    //        //lastVelocity = lastVelocity.normalized;
+    //        //player.rb.AddForce(lastVelocity * pushForce, ForceMode.Impulse);
+    //        player.rb.velocity = new Vector3(Mathf.Clamp(dir.x, player.data.minVelocity, player.data.maxVelocity), 0, Mathf.Clamp(dir.z, player.data.minVelocity, player.data.maxVelocity));
+    //        Debug.Log("FORCE: " + player.rb.velocity);
+    //    }
     //}
 
-
-
-    ////private void OnMouseExit()
-    ////{
-    ////    endPosition = Input.mousePosition;
-    ////    //endPosition.z = -Camera.main.transform.position.z;
-    ////    //endPosition = Camera.main.ScreenToWorldPoint(endPosition);
-
-
-    ////    //Debug.Log(startPosition);
-    ////    //Debug.Log(endPosition);
-
-    ////    dir = endPosition - startPosition;
-
-
-    ////    dir = dir.normalized;
-
-    ////    dir = new Vector3(dir.x, 0, dir.y);
-    ////    Debug.Log("Dir " + dir);
-
-    ////    rb.AddForce(dir * pushForce, ForceMode.Impulse);
-    ////}
 }
