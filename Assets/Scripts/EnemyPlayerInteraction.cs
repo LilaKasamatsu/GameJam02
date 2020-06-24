@@ -22,10 +22,10 @@ public class EnemyPlayerInteraction : MonoBehaviour
     Vector3 newLocation;
     int a;
 
-    public float attackCooldown = 0f;
+    public float stunnedCooldown = 0f;
 
     EnemyDeath enemyDeath;
-    Transform player;
+    Player player;
 
     Vector3 groundPosition;
 
@@ -35,7 +35,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         SetNewLocation(0);
 
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         enemyDeath = GetComponent<EnemyDeath>();
 
         enemy = GetComponent<Enemy>().data;
@@ -51,9 +51,9 @@ public class EnemyPlayerInteraction : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if(attackCooldown <= 0f)
+        if(stunnedCooldown <= 0f)
         {
             groundPosition = new Vector3(transform.position.x, 0, transform.position.z);
             if (isHoldingPlayer == false)
@@ -71,23 +71,22 @@ public class EnemyPlayerInteraction : MonoBehaviour
             else
             {
                 isHoldingPlayer = IsInRange(enemy.attackRadius);
+                isHoldingPlayer = !player.GetComponent<PlayerEnemyInteraction>().IsAttackVelocity();
                 if (isHoldingPlayer)
                 {
                     Hold();
                 }
-
             }
         }
         else
         {
-            attackCooldown -= Time.deltaTime;
+            stunnedCooldown -= Time.deltaTime;
         }
-        
     }
 
     void Attack()
     {
-        Vector3 playerPos = new Vector3(player.position.x, transform.position.y, player.position.z);
+        Vector3 playerPos = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
         transform.position = Vector3.MoveTowards(transform.position, playerPos, attackspeed * Time.deltaTime);
     }
 
@@ -119,36 +118,6 @@ public class EnemyPlayerInteraction : MonoBehaviour
         yield return new WaitForSecondsRealtime(Random.Range(1, 3));
         isWaiting = false;
     }
-
-    //void Moving()
-    //{
-    //    //Debug.Log("moving");
-    //    if (isWaiting == false)
-    //    {
-    //        //Debug.Log("movingggg");
-    //        transform.position = Vector3.MoveTowards(transform.position, newLocation, patrollingSpeed * Time.deltaTime);
-
-    //        if (isSleepingEnemy == false)
-    //        {
-    //            transform.position = Vector3.MoveTowards(transform.position, newLocation, patrollingSpeed * Time.deltaTime);
-
-    //            if (transform.position == newLocation)
-    //            {
-    //                // Debug.Log("ssss");
-    //                SetNewLocation(a);
-    //            }
-    //        }
-    //        else
-    //        {
-    //            // joa darüber müssen wa nochma schnacken
-    //        }
-    //    }
-    //    else
-    //    {
-    //        Sleeping();
-    //    }
-    //}
-
 
     void Hold()
     {
@@ -182,6 +151,37 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     bool IsInRange(float range)
     {
-        return Vector3.Distance(player.position, groundPosition) < range;
+        return Vector3.Distance(player.transform.position, groundPosition) < range;
     }
+
+
+
+    //void Moving()
+    //{
+    //    //Debug.Log("moving");
+    //    if (isWaiting == false)
+    //    {
+    //        //Debug.Log("movingggg");
+    //        transform.position = Vector3.MoveTowards(transform.position, newLocation, patrollingSpeed * Time.deltaTime);
+
+    //        if (isSleepingEnemy == false)
+    //        {
+    //            transform.position = Vector3.MoveTowards(transform.position, newLocation, patrollingSpeed * Time.deltaTime);
+
+    //            if (transform.position == newLocation)
+    //            {
+    //                // Debug.Log("ssss");
+    //                SetNewLocation(a);
+    //            }
+    //        }
+    //        else
+    //        {
+    //            // joa darüber müssen wa nochma schnacken
+    //        }
+    //    }
+    //    else
+    //    {
+    //        Sleeping();
+    //    }
+    //}
 }
