@@ -18,22 +18,35 @@ public class PlayerEnemyInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (IsAttackVelocity())
+        {
+            this.GetComponent<MeshRenderer>().material.color = Color.red;
+        }
+        else
+        {
+            this.GetComponent<MeshRenderer>().material.color = Color.grey;
+        }
+    }
+
+    public bool IsAttackVelocity()
+    {
+        return (player.rb.velocity.x > 10 && player.rb.velocity.z > 10
+             && player.rb.velocity.x < -10 && player.rb.velocity.z < -10);
     }
 
 
-    private void OnAttack()
+    private void OnCollisionEnter(Collision collision)
     {
         
-
     }
+
 
     public void OnRelease()
     {
         GetComponent<Rigidbody>().isKinematic = false;
         StopCoroutine(freePlayer);
         player.data.isMovable = true;
-        currentEnemy.GetComponent<EnemyPlayerInteraction>().attackCooldown = 1f;
+        currentEnemy.GetComponent<EnemyPlayerInteraction>().stunnedCooldown = 1f;
         //maybe set an enemy cooldown to prevent instant recapture?
 
     }
