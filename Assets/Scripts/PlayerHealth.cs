@@ -31,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         camVolume.weight = b;
+      //  Debug.Log(rb.velocity.magnitude);
         if (rb.velocity.magnitude < 0.5)
         {
             isDying = true;

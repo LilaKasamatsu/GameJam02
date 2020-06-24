@@ -14,12 +14,12 @@ public class Environment : MonoBehaviour
     private bool isChanging = true;
     private bool isOntop;
 
-   // [SerializeField]
+    // [SerializeField]
 
     private PlayerEnergyLvl playerEnergy;
     private PlayerHealth playerHealth;
 
-   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,14 +34,19 @@ public class Environment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (isOntop == true)
         {
+           // Debug.Log("jetzte2");
             if (isDead == false)
             {
+               // Debug.Log("jetzte1");
+                //Debug.Log(isChanging);
+              //  Debug.Log(playerHealth.isDying);
                 if (isChanging == false && playerHealth.isDying == true)
                 {
 
-                    Debug.Log("jetzte");
+                   // Debug.Log("jetzte");
                     StartCoroutine(NoAir());
                     isDead = true;
 
@@ -54,7 +59,7 @@ public class Environment : MonoBehaviour
         yield return new WaitForSecondsRealtime(0f);
         if (isOntop == true)
         {
-            Debug.Log("ffff");
+            // Debug.Log("ffff");
             StartCoroutine(ChangeColor(rend.material, health.colorDead));
         }
     }
@@ -62,12 +67,13 @@ public class Environment : MonoBehaviour
 
     IEnumerator ChangeColor(Material start, Material end)
     {
-        Debug.Log("11");
+        // Debug.Log("11");
         isChanging = true;
         while (true)
         {
             rend.material.Lerp(start, end, time);
-           // rend.material = end;
+            rend.material.SetFloat("MinMovement", 0.5f);
+            rend.material.SetFloat("MaxMovement", 4f);
             time += Time.deltaTime / lerpDuration;
             if (time >= 1.2)
             {
