@@ -21,23 +21,29 @@ public class PlayerEnemyInteraction : MonoBehaviour
         if (IsAttackVelocity())
         {
             this.GetComponent<MeshRenderer>().material.color = Color.red;
+            player.data.isAttacking = true;
         }
         else
         {
             this.GetComponent<MeshRenderer>().material.color = Color.grey;
+            player.data.isAttacking = false;
         }
     }
 
     public bool IsAttackVelocity()
     {
-        return (player.rb.velocity.x > 10 && player.rb.velocity.z > 10
-             && player.rb.velocity.x < -10 && player.rb.velocity.z < -10);
+        return (player.rb.velocity.x > player.data.minAttackVelocity || player.rb.velocity.z > player.data.minAttackVelocity
+             || player.rb.velocity.x < -player.data.minAttackVelocity || player.rb.velocity.z < -player.data.minAttackVelocity);
     }
 
 
     private void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.CompareTag("Enemy") && player.data.isAttacking)
+        {
+            EnemyHealth enemy = collision.gameObject.GetComponent<EnemyHealth>();
+            enemy.MinusHealth(1);         
+        }
     }
 
 

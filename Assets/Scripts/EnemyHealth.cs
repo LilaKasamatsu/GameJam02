@@ -53,8 +53,6 @@ public class EnemyHealth : MonoBehaviour
     }
     IEnumerator MinusHealthCoroutine()
     {
-        
-
         while (true)
         {
             Debug.Log("ee");

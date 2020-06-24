@@ -24,6 +24,8 @@ public class PlayerData
     public float minVelocity;
     public float maxVelocity;
 
+    public float minAttackVelocity;
+    [HideInInspector] public bool isAttacking;
    // public float breathRadius;
 
 }
