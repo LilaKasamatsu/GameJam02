@@ -14,7 +14,8 @@ public class EnemyDeath : MonoBehaviour
 
     IEnumerator Enemydying()
     {
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(.5f);
+        Destroy(gameObject);
         gameObject.SetActive(false);
 
     }
