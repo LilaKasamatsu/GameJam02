@@ -94,9 +94,9 @@ Material:
     - MaxMovement: 5
     - MinMovement: 1
     - Vector1_4A30F324: 1
-    - Vector1_5938FE3: 0.05
+    - Vector1_5938FE3: 0.03
     - Vector1_7A91B02: 0.5
-    - Vector1_90F2F8F7: 0.05
+    - Vector1_90F2F8F7: 0.03
     - Vector1_9330CB6A: 2
     - _AlphaClip: 0
     - _Blend: 0
