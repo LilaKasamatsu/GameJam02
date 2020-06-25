@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     // PostProcessingData
     Camera cam;
     Volume camVolume;
+    Vignette viginetti=null;
 
     private float b;
     public bool isDying;
@@ -25,12 +26,15 @@ public class PlayerHealth : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         cam = Camera.main;
         camVolume = cam.GetComponent<Volume>();
+       // viginetti = camVolume.profile.TryGetSubclassOf(out viginetti);
+       
+    
     }
 
     // Update is called once per frame
     void Update()
     {
-        camVolume.weight = b;
+       // camVolume.weight = b;
       //  Debug.Log(rb.velocity.magnitude);
         if (rb.velocity.magnitude < 0.5)
         {
@@ -39,7 +43,7 @@ public class PlayerHealth : MonoBehaviour
             if (b <=0.9)
             {
 
-                b += Time.deltaTime;
+           //     b += Time.deltaTime;
             }
             if (player.deathTimer >= player.deathTime)
             {
