@@ -100,7 +100,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_4FD2246C: {r: 1, g: 1, b: 1, a: 0}
-    - Color_99082AE6: {r: 0.5471698, g: 0, b: 0.12959288, a: 0}
+    - Color_99082AE6: {r: 0.47551894, g: 0, b: 0.10699176, a: 0}
     - Color_E6CEC0EC: {r: 0.8490566, g: 0.38047346, b: 0.44849354, a: 0}
     - Vector2_6EB11A08: {r: 0.5, g: 0.5, b: 0, a: 0}
     - Vector2_9362F9D8: {r: 0.5, g: 1, b: 0, a: 0}
