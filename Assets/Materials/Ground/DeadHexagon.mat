@@ -49,7 +49,12 @@ Material:
     - Vector1_7170C5FC: 0
     - Vector1_7A91B02: 0.5
     m_Colors:
+<<<<<<< HEAD
     - Color_4FD2246C: {r: 0.4244332, g: 0.21057315, b: 0.49056602, a: 0}
+=======
+    - Amount: {r: 0, g: 0, b: 0, a: 0}
+    - Color_4FD2246C: {r: 0.26699895, g: 0.30688733, b: 0.4528302, a: 0}
+>>>>>>> master
     - Color_99082AE6: {r: 0, g: 0, b: 0, a: 0}
     - Color_E6CEC0EC: {r: 0.21780108, g: 0.15036489, b: 0.2924528, a: 0}
     - Vector2_9362F9D8: {r: 0, g: 0, b: 0, a: 0}

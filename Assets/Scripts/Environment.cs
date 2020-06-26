@@ -76,7 +76,12 @@ public class Environment : MonoBehaviour
         while (true)
         {
             rend.material.Lerp(start, end, time);
+<<<<<<< HEAD
             rend.material.Lerp(rend.material.GetTexture("Normal"), textureEnd, time);
+=======
+
+            time += Time.deltaTime / lerpDuration;
+>>>>>>> master
             rend.material.SetFloat("MinMovement", 0.5f);
             rend.material.SetFloat("MaxMovement", 4f);
             rend.material.SetFloat("Seed", 1f);
@@ -84,7 +89,11 @@ public class Environment : MonoBehaviour
           
             if (time >= 1.2)
             {
+<<<<<<< HEAD
                 //rend.material.SetTexture("Normal", textureEnd);
+=======
+                rend.material = end;
+>>>>>>> master
                 break;
             }
             yield return new WaitForEndOfFrame();
