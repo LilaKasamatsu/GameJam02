@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Environment : MonoBehaviour
 {
+    [SerializeField] Texture textureDead;
+    [SerializeField] Texture textureAlive;
+
+
     public EnvironmentData health;
 
     private Renderer rend;
@@ -60,23 +64,25 @@ public class Environment : MonoBehaviour
         if (isOntop == true)
         {
             // Debug.Log("ffff");
-            StartCoroutine(ChangeColor(rend.material, health.colorDead));
+            StartCoroutine(ChangeColor(rend.material, health.colorDead, textureDead));
         }
     }
 
 
-    IEnumerator ChangeColor(Material start, Material end)
+    IEnumerator ChangeColor(Material start, Material end, Texture textureEnd)
     {
         // Debug.Log("11");
         isChanging = true;
         while (true)
         {
             rend.material.Lerp(start, end, time);
+            rend.material.Lerp(rend.material.GetTexture("Normal"), textureEnd, time);
             rend.material.SetFloat("MinMovement", 0.5f);
             rend.material.SetFloat("MaxMovement", 4f);
             time += Time.deltaTime / lerpDuration;
             if (time >= 1.2)
             {
+                //rend.material.SetTexture("Normal", textureEnd);
                 break;
             }
             yield return new WaitForEndOfFrame();
@@ -98,7 +104,7 @@ public class Environment : MonoBehaviour
 
                 Debug.Log("start coroutne");
 
-                StartCoroutine(ChangeColor(rend.material, health.colorAlive));
+                StartCoroutine(ChangeColor(rend.material, health.colorAlive, textureAlive));
                 playerEnergy.AddEnergy(2);
                 isDead = false;
             }
@@ -110,7 +116,7 @@ public class Environment : MonoBehaviour
             {
                 isDead = true;
                 this.GetComponent<MeshRenderer>().material = health.colorDead;
-                StartCoroutine(ChangeColor(rend.material, health.colorDead));
+                StartCoroutine(ChangeColor(rend.material, health.colorDead, textureDead));
             }
 
 

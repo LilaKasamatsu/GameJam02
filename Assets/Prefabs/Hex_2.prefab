@@ -93,6 +93,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9777e04777f6d6944a58547bbc082d85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textureDead: {fileID: 2800000, guid: 93ea3b0b376c2794e86d51fc6aed2901, type: 3}
+  textureAlive: {fileID: 2800000, guid: 2a658300cfc081741a69acf6bfccfd5b, type: 3}
   health:
     maxHealth: 0
     currentHealth: 0
