@@ -90,16 +90,15 @@ public class Environment : MonoBehaviour
             if (time >= 1.2)
             {
                 
-                rend.material = end;
+             //   rend.material = end;
                // rend.material.SetTexture("Normal", textureEnd);
                 break;
             }
             yield return new WaitForEndOfFrame();
         }
         time = 0;
-       // rend.material.SetFloat("MaxMovement", 10f);
         isChanging = false;
-        Debug.Log("finish");
+       // Debug.Log("finish");
 
         yield return null;
     }
@@ -119,9 +118,9 @@ public class Environment : MonoBehaviour
                 isDead = false;
             }
         }
-        if (other.transform.CompareTag("Enemy"))
+        if (other.transform.CompareTag("Enemy2"))
         {
-            //  Debug.Log("enemy");
+             Debug.Log("enemy");
             if (isDead == false)
             {
                 isDead = true;

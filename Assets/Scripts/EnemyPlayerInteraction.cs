@@ -186,6 +186,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     //}
     void MovingFeedback()
     {
+        Debug.Log("moving");
         //movingFeedback = true;
         sleepingFeedback = true;
         idleFeedback = true;
@@ -197,18 +198,21 @@ public class EnemyPlayerInteraction : MonoBehaviour
     }
     void HoldingFeedback()
     {
+        Debug.Log("holding");
         movingFeedback = true;
         anim.SetBool("moving", false);
 
     }
     void SleepingFeedback()
     {
+        Debug.Log("sleeping");
         movingFeedback = true;
 
         anim.SetBool("moving", false);
     }
     void IdleFeedback()
     {
+        Debug.Log("idle");
         movingFeedback = true;
 
         anim.SetBool("moving", false);
