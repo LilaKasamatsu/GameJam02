@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine; 
+using UnityEngine;
 
 public class EnemyPlayerInteraction : MonoBehaviour
 {
@@ -11,13 +11,19 @@ public class EnemyPlayerInteraction : MonoBehaviour
     [SerializeField] bool isHoldingPlayer;
     public bool isAttacking = false;
 
+    private bool attackingFeedback;
+    private bool movingFeedback;
+    private bool holdingFeedback;
+    private bool idleFeedback;
+    private bool sleepingFeedback;
+
     [SerializeField] float patrollingSpeed;
     [SerializeField] float attackspeed;
 
     EnemyData enemy;
 
-    
-    
+
+
     Vector3 currLocation;
     Vector3 newLocation;
     int a;
@@ -28,6 +34,8 @@ public class EnemyPlayerInteraction : MonoBehaviour
     Player player;
 
     Vector3 groundPosition;
+
+    [SerializeField] Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +61,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(stunnedCooldown <= 0f)
+        if (stunnedCooldown <= 0f)
         {
             groundPosition = new Vector3(transform.position.x, 0, transform.position.z);
             if (isHoldingPlayer == false)
@@ -62,9 +70,11 @@ public class EnemyPlayerInteraction : MonoBehaviour
                 if (isAttacking == true)
                 {
                     Attack();
+                    if (movingFeedback == true) { MovingFeedback(); }
                 }
                 else if (isWaiting == false)
                 {
+                    if (movingFeedback == true) { MovingFeedback(); }
                     Move();
                 }
             }
@@ -75,6 +85,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
                 if (isHoldingPlayer)
                 {
                     Hold();
+                    if (holdingFeedback == true) { HoldingFeedback(); }
                 }
             }
         }
@@ -93,11 +104,21 @@ public class EnemyPlayerInteraction : MonoBehaviour
     private void Move()
     {
         transform.position = Vector3.MoveTowards(transform.position, newLocation, patrollingSpeed * Time.deltaTime);
-
         if (transform.position == newLocation)
         {
-            SetNewLocation(a);
-            StartCoroutine(RandomWait());
+            if (isSleepingEnemy == true)
+            {
+
+                if (sleepingFeedback == true) { SleepingFeedback(); }
+
+
+            }
+            else
+            {
+                if (idleFeedback == true) { IdleFeedback(); }
+                SetNewLocation(a);
+                StartCoroutine(RandomWait());
+            }
         }
     }
 
@@ -130,11 +151,11 @@ public class EnemyPlayerInteraction : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isHoldingPlayer = true;
-           // Debug.Log("CAUGHT");
+            // Debug.Log("CAUGHT");
         }
         if (other.CompareTag("EnemyDeath"))
         {
-           // Debug.Log("killlll");
+            // Debug.Log("killlll");
             enemyDeath.Kill();
         }
     }
@@ -145,7 +166,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         {
             //stop
             isHoldingPlayer = false;
-           // Debug.Log("draussen");
+            // Debug.Log("draussen");
         }
     }
 
@@ -154,34 +175,49 @@ public class EnemyPlayerInteraction : MonoBehaviour
         return Vector3.Distance(player.transform.position, groundPosition) < range;
     }
 
-
-
-    //void Moving()
+    //void AttackingFeedback()
     //{
-    //    //Debug.Log("moving");
-    //    if (isWaiting == false)
-    //    {
-    //        //Debug.Log("movingggg");
-    //        transform.position = Vector3.MoveTowards(transform.position, newLocation, patrollingSpeed * Time.deltaTime);
+    //    attackingFeedback = true;
+    //    movingFeedback = true;
+    //    holdingFeedback = true;
 
-    //        if (isSleepingEnemy == false)
-    //        {
-    //            transform.position = Vector3.MoveTowards(transform.position, newLocation, patrollingSpeed * Time.deltaTime);
+    //    anim.SetBool("attacking", true);
 
-    //            if (transform.position == newLocation)
-    //            {
-    //                // Debug.Log("ssss");
-    //                SetNewLocation(a);
-    //            }
-    //        }
-    //        else
-    //        {
-    //            // joa darüber müssen wa nochma schnacken
-    //        }
-    //    }
-    //    else
-    //    {
-    //        Sleeping();
-    //    }
     //}
+    void MovingFeedback()
+    {
+        //movingFeedback = true;
+        sleepingFeedback = true;
+        idleFeedback = true;
+
+        anim.SetBool("moving", true);
+        anim.SetBool("attacking", false);
+        anim.SetBool("sleeping", false);
+
+    }
+    void HoldingFeedback()
+    {
+        movingFeedback = true;
+        anim.SetBool("moving", false);
+
+    }
+    void SleepingFeedback()
+    {
+        movingFeedback = true;
+
+        anim.SetBool("moving", false);
+    }
+    void IdleFeedback()
+    {
+        movingFeedback = true;
+
+        anim.SetBool("moving", false);
+        anim.SetBool("sleep", false);
+        anim.SetBool("attacking", false);
+
+    }
+    public void KillFeedback()
+    {
+        anim.SetTrigger("death");
+    }
 }

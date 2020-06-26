@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Environment : MonoBehaviour
 {
+    [SerializeField] Texture textureDead;
+    [SerializeField] Texture textureAlive;
+
+
     public EnvironmentData health;
 
     private Renderer rend;
@@ -29,6 +33,7 @@ public class Environment : MonoBehaviour
         rend = GetComponent<Renderer>();
         rend.material = health.colorDead;
 
+      //  rend.material.SetTexture("Normal", textureAlive);
     }
 
     // Update is called once per frame
@@ -60,28 +65,39 @@ public class Environment : MonoBehaviour
         if (isOntop == true)
         {
             // Debug.Log("ffff");
-            StartCoroutine(ChangeColor(rend.material, health.colorDead));
+            StartCoroutine(ChangeColor(rend.material, health.colorDead, textureDead));
         }
     }
 
 
-    IEnumerator ChangeColor(Material start, Material end)
+    IEnumerator ChangeColor(Material start, Material end, Texture textureEnd)
     {
         // Debug.Log("11");
         isChanging = true;
+        end.SetTexture("Normal", textureEnd);
         while (true)
         {
+          
+
+
             rend.material.Lerp(start, end, time);
+            time += Time.deltaTime / lerpDuration;
             rend.material.SetFloat("MinMovement", 0.5f);
             rend.material.SetFloat("MaxMovement", 4f);
-            time += Time.deltaTime / lerpDuration;
+            rend.material.SetVector("Amount", new Vector2 (0.5f,1));
+          
+
             if (time >= 1.2)
             {
+                
+                rend.material = end;
+               // rend.material.SetTexture("Normal", textureEnd);
                 break;
             }
             yield return new WaitForEndOfFrame();
         }
         time = 0;
+       // rend.material.SetFloat("MaxMovement", 10f);
         isChanging = false;
         Debug.Log("finish");
 
@@ -98,7 +114,7 @@ public class Environment : MonoBehaviour
 
                 Debug.Log("start coroutne");
 
-                StartCoroutine(ChangeColor(rend.material, health.colorAlive));
+                StartCoroutine(ChangeColor(rend.material, health.colorAlive, textureAlive));
                 playerEnergy.AddEnergy(2);
                 isDead = false;
             }
@@ -110,7 +126,7 @@ public class Environment : MonoBehaviour
             {
                 isDead = true;
                 this.GetComponent<MeshRenderer>().material = health.colorDead;
-                StartCoroutine(ChangeColor(rend.material, health.colorDead));
+                StartCoroutine(ChangeColor(rend.material, health.colorDead, textureDead));
             }
 
 
