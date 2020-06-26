@@ -58,12 +58,12 @@ public class EnemyHealth : MonoBehaviour
     {
         while (true)
         {
-            Debug.Log("ee");
+           // Debug.Log("ee");
             colorRadius.color = Color.Lerp(aliveColor, deadColor, a);
             a += 0.01f;
             if (a >= b)
             {
-                Debug.Log(a);
+              //  Debug.Log(a);
                 b += 0.33f;
                 break;
 

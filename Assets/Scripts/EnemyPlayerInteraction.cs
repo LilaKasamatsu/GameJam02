@@ -12,7 +12,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     public bool isAttacking = false;
 
     private bool attackingFeedback;
-    private bool movingFeedback;
+    private bool movingFeedback=true;
     private bool holdingFeedback;
     private bool idleFeedback;
     private bool sleepingFeedback;
@@ -35,7 +35,9 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     Vector3 groundPosition;
 
+    public Transform target;
     [SerializeField] Animator anim;
+ 
 
     // Start is called before the first frame update
     void Start()
@@ -61,6 +63,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        
         if (stunnedCooldown <= 0f)
         {
             groundPosition = new Vector3(transform.position.x, 0, transform.position.z);
@@ -94,15 +97,24 @@ public class EnemyPlayerInteraction : MonoBehaviour
             stunnedCooldown -= Time.deltaTime;
         }
     }
+    void Rotation( Transform target)
+    {
+        //Vector3 relativePos = target.position - transform.position;
 
+        //Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
+        //transform.rotation = rotation;
+        transform.LookAt(target);
+    }
     void Attack()
     {
+        //Rotation(player.transform);
         Vector3 playerPos = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
         transform.position = Vector3.MoveTowards(transform.position, playerPos, attackspeed * Time.deltaTime);
     }
 
     private void Move()
     {
+      // Rotation(target);
         transform.position = Vector3.MoveTowards(transform.position, newLocation, patrollingSpeed * Time.deltaTime);
         if (transform.position == newLocation)
         {
@@ -131,6 +143,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         {
             a = 0;
         }
+      //  target.position = new Vector3(newLocation.x, newLocation.y, newLocation.z);
     }
 
     IEnumerator RandomWait()
@@ -175,49 +188,49 @@ public class EnemyPlayerInteraction : MonoBehaviour
         return Vector3.Distance(player.transform.position, groundPosition) < range;
     }
 
-    //void AttackingFeedback()
-    //{
-    //    attackingFeedback = true;
-    //    movingFeedback = true;
-    //    holdingFeedback = true;
-
-    //    anim.SetBool("attacking", true);
-
-    //}
     void MovingFeedback()
     {
+        movingFeedback = false;
         Debug.Log("moving");
-        //movingFeedback = true;
         sleepingFeedback = true;
         idleFeedback = true;
 
-        anim.SetBool("moving", true);
-        anim.SetBool("attacking", false);
+        anim.SetBool("holding", false);
+        anim.SetBool("moving", false);
+    
         anim.SetBool("sleeping", false);
 
     }
     void HoldingFeedback()
     {
+
+        holdingFeedback = false;
         Debug.Log("holding");
         movingFeedback = true;
         anim.SetBool("moving", false);
+        anim.SetBool("holding", false);
 
     }
     void SleepingFeedback()
     {
         Debug.Log("sleeping");
+
+        sleepingFeedback = false;
         movingFeedback = true;
 
-        anim.SetBool("moving", false);
+        anim.SetBool("sleeping", false);
+        anim.SetBool("moving", true);
     }
     void IdleFeedback()
     {
+        idleFeedback = false;
         Debug.Log("idle");
         movingFeedback = true;
 
+
         anim.SetBool("moving", false);
-        anim.SetBool("sleep", false);
-        anim.SetBool("attacking", false);
+        anim.SetBool("sleeping", false);
+       
 
     }
     public void KillFeedback()

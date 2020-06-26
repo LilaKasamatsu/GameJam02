@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
 
     private float b;
     public bool isDying;
+    [SerializeField] GameObject playerVFX;
 
     // Start is called before the first frame update
     void Start()
