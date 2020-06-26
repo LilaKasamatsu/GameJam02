@@ -33,6 +33,7 @@ public class Environment : MonoBehaviour
         rend = GetComponent<Renderer>();
         rend.material = health.colorDead;
 
+      //  rend.material.SetTexture("Normal", textureAlive);
     }
 
     // Update is called once per frame
@@ -73,21 +74,24 @@ public class Environment : MonoBehaviour
     {
         // Debug.Log("11");
         isChanging = true;
+        end.SetTexture("Normal", textureEnd);
         while (true)
         {
-            rend.material.Lerp(start, end, time);
-            rend.material.Lerp(rend.material.GetTexture("Normal"), textureEnd, time);
+          
 
+
+            rend.material.Lerp(start, end, time);
             time += Time.deltaTime / lerpDuration;
             rend.material.SetFloat("MinMovement", 0.5f);
             rend.material.SetFloat("MaxMovement", 4f);
-            rend.material.SetFloat("Seed", 1f);
             rend.material.SetVector("Amount", new Vector2 (0.5f,1));
           
+
             if (time >= 1.2)
             {
-                //rend.material.SetTexture("Normal", textureEnd);
+                
                 rend.material = end;
+               // rend.material.SetTexture("Normal", textureEnd);
                 break;
             }
             yield return new WaitForEndOfFrame();
