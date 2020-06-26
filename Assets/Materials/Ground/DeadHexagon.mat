@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: DeadHexagon
-  m_Shader: {fileID: -6465566751694194690, guid: 697b5717c747d3b4e9db4340d0c91028,
+  m_Shader: {fileID: -6465566751694194690, guid: f4bf4feda70660243938ce0e0488a8dd,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -43,6 +43,7 @@ Material:
     m_Floats:
     - MaxMovement: 0
     - MinMovement: 0
+    - Seed: 0
     - Vector1_15BCD961: 0
     - Vector1_4A30F324: 0
     - Vector1_7170C5FC: 0

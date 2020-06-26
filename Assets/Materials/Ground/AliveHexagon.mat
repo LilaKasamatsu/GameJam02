@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AliveHexagon
-  m_Shader: {fileID: -6465566751694194690, guid: 697b5717c747d3b4e9db4340d0c91028,
+  m_Shader: {fileID: -6465566751694194690, guid: f4bf4feda70660243938ce0e0488a8dd,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -75,11 +75,12 @@ Material:
     m_Floats:
     - MaxMovement: 0
     - MinMovement: 0
+    - Seed: 0
     - Vector1_15BCD961: 4
     - Vector1_45DFDD7B: 1
     - Vector1_4A30F324: 1
     - Vector1_7170C5FC: 0.5
-    - Vector1_7A91B02: 0.1
+    - Vector1_7A91B02: 0.01
     - Vector1_845AE091: 10
     - _AlphaClip: 0
     - _Blend: 0
@@ -103,6 +104,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Amount: {r: 0, g: 0, b: 0, a: 0}
     - Color_4FD2246C: {r: 1, g: 1, b: 1, a: 0}
     - Color_99082AE6: {r: 0.24705882, g: 0.03529412, b: 0.1509804, a: 0}
     - Color_E6CEC0EC: {r: 0.8490566, g: 0.38047346, b: 0.44849354, a: 0}
