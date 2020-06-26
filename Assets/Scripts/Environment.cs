@@ -72,16 +72,22 @@ public class Environment : MonoBehaviour
         while (true)
         {
             rend.material.Lerp(start, end, time);
+
+            time += Time.deltaTime / lerpDuration;
             rend.material.SetFloat("MinMovement", 0.5f);
             rend.material.SetFloat("MaxMovement", 4f);
-            time += Time.deltaTime / lerpDuration;
+            rend.material.SetFloat("Seed", 1f);
+            rend.material.SetVector("Amount", new Vector2 (0.5f,1));
+          
             if (time >= 1.2)
             {
+                rend.material = end;
                 break;
             }
             yield return new WaitForEndOfFrame();
         }
         time = 0;
+       // rend.material.SetFloat("MaxMovement", 10f);
         isChanging = false;
         Debug.Log("finish");
 
