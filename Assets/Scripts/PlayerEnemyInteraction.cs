@@ -15,6 +15,8 @@ public class PlayerEnemyInteraction : MonoBehaviour
     //[HideInInspector] public bool canAttack = true;
     [HideInInspector] public bool can2Attack = true;
 
+    public bool enemyHit = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -77,6 +79,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
         {
             EnemyHealth enemy = collision.gameObject.GetComponent<EnemyHealth>();
             enemy.MinusHealth(1);
+            enemyHit = true;
         }
     }
 
