@@ -12,7 +12,7 @@ public class PlayerSpecialAttack : MonoBehaviour
     private void Start()
     {
         //  scaleOG = transform.localScale;
-        transform.localScale = Vector3.one;
+        transform.localScale = Vector3.zero;
         player = GetComponentInParent<Player>().data;
         playerEnemy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnemyInteraction>();
     }
