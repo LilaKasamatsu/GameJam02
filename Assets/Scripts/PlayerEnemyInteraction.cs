@@ -11,6 +11,10 @@ public class PlayerEnemyInteraction : MonoBehaviour
     private bool isUsingSpecialAttack;
     PlayerSpecialAttack specialAttack;
 
+    Transform enemyHold;
+    //[HideInInspector] public bool canAttack = true;
+    [HideInInspector] public bool can2Attack = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +32,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(can2Attack);
         if (IsAttackVelocity())
         {
             this.GetComponent<MeshRenderer>().material.color = Color.red;
@@ -39,9 +44,23 @@ public class PlayerEnemyInteraction : MonoBehaviour
             player.data.isAttacking = false;
         }
 
-        if(Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1))
         {
-            OnSpecialAttack();
+            if (can2Attack == true)
+            {
+                Debug.Log("no");
+                if (player.data.energyLVL >= player.data.energyLVLforSpecialAttack)
+                {
+                    OnSpecialAttack();
+                    can2Attack = false;
+                   // canAttack = false;
+                    player.data.energyLVL -= player.data.energyLVLforSpecialAttack;
+                }
+                else
+                {
+                    Debug.Log("no energy :(");
+                }
+            }
         }
     }
 
@@ -57,7 +76,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy") && player.data.isAttacking)
         {
             EnemyHealth enemy = collision.gameObject.GetComponent<EnemyHealth>();
-            enemy.MinusHealth(1);         
+            enemy.MinusHealth(1);
         }
     }
 
@@ -75,7 +94,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
         GetComponent<Rigidbody>().isKinematic = false;
         StopCoroutine(freePlayer);
         player.data.isMovable = true;
-        if(currentEnemy != null)
+        if (currentEnemy != null)
         {
             currentEnemy.GetComponent<EnemyPlayerInteraction>().stunnedCooldown = 1f;
         }
@@ -83,24 +102,33 @@ public class PlayerEnemyInteraction : MonoBehaviour
 
     Transform currentEnemy;
 
-    public void OnHold(Transform enemy)
+    public void OnHold(Transform enemy, Transform target)
     {
         currentEnemy = enemy;
+        MoveToEnemy(target);
         if (player.data.isMovable)
         {
+
+            Debug.Log("2");
             player.data.isMovable = false;
             freePlayer = StartCoroutine(EscapeEnemy());
             GetComponent<Rigidbody>().isKinematic = true;
-        }   
+        }
+        Debug.Log("1");
     }
+    void MoveToEnemy(Transform target)
+    {
 
+        Vector3 i = new Vector3(target.position.x, target.position.y, target.position.z);
+        transform.position = Vector3.MoveTowards(transform.position, i, 3 * Time.deltaTime);
+    }
     private IEnumerator EscapeEnemy()
     {
         this.GetComponent<MeshRenderer>().material.color = Color.black;
         int buttonClickCounter = 0;
         while (true)
         {
-            if(currentEnemy == null)
+            if (currentEnemy == null)
             {
                 OnRelease();
             }
@@ -115,7 +143,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
             }
             yield return new WaitForFixedUpdate();
         }
-        
+
     }
 
 }

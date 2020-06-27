@@ -19,6 +19,7 @@ public class PlayerData
     [Header("Energy")]
     public int energyLVL;
     public int maxEnergyLVL;
+    public int energyLVLforSpecialAttack;
 
     [Header("Movement")]
     public float minVelocity;

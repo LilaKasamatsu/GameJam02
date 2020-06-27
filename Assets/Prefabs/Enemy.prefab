@@ -195,9 +195,7 @@ MonoBehaviour:
   location:
   - {x: 11.46, y: 4.58, z: 5.47}
   - {x: 4.59, y: 4.58, z: 14.67}
-  isWaiting: 0
   isSleepingEnemy: 0
-  isHoldingPlayer: 0
   isAttacking: 0
   patrollingSpeed: 3
   attackspeed: 6
@@ -409,7 +407,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5354334310292614750}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.13557073, y: -3.0399308, z: 0.5946694}
+  m_LocalPosition: {x: 0.43, y: -6.631, z: 0.94}
   m_LocalScale: {x: 0.61996275, y: 0.94543993, z: 0.61996275}
   m_Children: []
   m_Father: {fileID: 1496146948410667930}
@@ -9962,7 +9960,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ddb0a5cff8e669e4d863813e444d0a00,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.96
+      value: -7.14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ddb0a5cff8e669e4d863813e444d0a00,
         type: 3}
@@ -9972,22 +9970,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ddb0a5cff8e669e4d863813e444d0a00,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ddb0a5cff8e669e4d863813e444d0a00,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.77162457
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ddb0a5cff8e669e4d863813e444d0a00,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ddb0a5cff8e669e4d863813e444d0a00,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.63607824
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ddb0a5cff8e669e4d863813e444d0a00,
         type: 3}
@@ -10002,7 +10000,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ddb0a5cff8e669e4d863813e444d0a00,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -101
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ddb0a5cff8e669e4d863813e444d0a00,
         type: 3}
