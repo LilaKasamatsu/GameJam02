@@ -28,7 +28,7 @@ public class CameraRig : MonoBehaviour
     {
         currentMousePosition = Input.mousePosition;
 
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(0))
         {
             mouseDelta = lastMousePosition - currentMousePosition;
 

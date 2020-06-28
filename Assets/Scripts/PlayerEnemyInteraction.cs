@@ -34,7 +34,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(can2Attack);
+       // Debug.Log(can2Attack);
         if (IsAttackVelocity())
         {
             this.GetComponent<MeshRenderer>().material.color = Color.red;

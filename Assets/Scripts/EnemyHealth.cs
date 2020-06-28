@@ -8,43 +8,49 @@ public class EnemyHealth : MonoBehaviour
 
     EnemyDeath enemyDeath;
     EnemyData enemy;
+    EnemyPlayerInteraction enemyPlayerInteraction;
 
-    [SerializeField] GameObject visualRadius;
+    //[SerializeField] GameObject visualRadius;
     private SpriteRenderer colorRadius;
-    [SerializeField] Color aliveColor;
-    [SerializeField] Color deadColor;
+   // [SerializeField] Color aliveColor;
+   //[SerializeField] Color deadColor;
     float a;
     float b = 0.33f;
 
     // Start is called before the first frame update
     void Start()
     {
+        enemyPlayerInteraction = GetComponent<EnemyPlayerInteraction>();
         enemyDeath = GetComponent<EnemyDeath>();
-        colorRadius = visualRadius.GetComponent<SpriteRenderer>();
+        //colorRadius = visualRadius.GetComponent<SpriteRenderer>();
         enemy = GetComponent<Enemy>().data;
-        colorRadius.color = aliveColor;
+       //colorRadius.color = aliveColor;
         enemy.currHealth = enemy.maxHealth;
-      
+        Debug.Log(enemy);
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(enemy.currHealth);
+        Debug.Log(enemy.maxHealth);
         if (Input.GetKeyDown(KeyCode.E))
         {
             MinusHealth(1);
-            Debug.Log("minushealth");
+            enemyPlayerInteraction.DamageFeedback();
+            //            Debug.Log(enemy.currHealth);
         }
     }
     public void MinusHealth(int health)
     {
         enemy.currHealth -= health;
 
-        
+
         if (enemy.currHealth <= 0)
         {
-           // Debug.Log("enemy Death");
+            Debug.Log(enemy.currHealth);
             enemyDeath.Kill();
         }
 
