@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class EnemyDeath : MonoBehaviour
 {
+    public bool isDying = false;
 
     // Start is called before the first frame update
     public void Kill()
     {
         StartCoroutine(Enemydying());
+        isDying = true;
         Debug.Log("kill");
     }
 

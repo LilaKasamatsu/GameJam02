@@ -8,7 +8,6 @@ public class EnemyHealth : MonoBehaviour
 
     EnemyDeath enemyDeath;
     EnemyData enemy;
-    EnemyPlayerInteraction enemyPlayerInteraction;
 
     [SerializeField] GameObject visualRadius;
     private SpriteRenderer colorRadius;
@@ -22,7 +21,6 @@ public class EnemyHealth : MonoBehaviour
     {
         enemyDeath = GetComponent<EnemyDeath>();
         colorRadius = visualRadius.GetComponent<SpriteRenderer>();
-        enemyPlayerInteraction = GetComponent<EnemyPlayerInteraction>();
         enemy = GetComponent<Enemy>().data;
         colorRadius.color = aliveColor;
         enemy.currHealth = enemy.maxHealth;
@@ -35,35 +33,43 @@ public class EnemyHealth : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            MinusHealth(33);
+            MinusHealth(1);
+            Debug.Log("minushealth");
         }
     }
     public void MinusHealth(int health)
     {
         enemy.currHealth -= health;
+
+        
         if (enemy.currHealth <= 0)
         {
-            enemyPlayerInteraction.KillFeedback();
            // Debug.Log("enemy Death");
             enemyDeath.Kill();
         }
+
+        /*
         else
         {
 
             StartCoroutine(MinusHealthCoroutine());
 
         }
+        */
+
     }
+
+    /*
     IEnumerator MinusHealthCoroutine()
     {
         while (true)
         {
-            Debug.Log("ee");
+           // Debug.Log("ee");
             colorRadius.color = Color.Lerp(aliveColor, deadColor, a);
             a += 0.01f;
             if (a >= b)
             {
-                Debug.Log(a);
+              //  Debug.Log(a);
                 b += 0.33f;
                 break;
 
@@ -73,4 +79,5 @@ public class EnemyHealth : MonoBehaviour
         yield return null;
 
     }
+    */
 }

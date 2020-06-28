@@ -90,16 +90,15 @@ public class Environment : MonoBehaviour
             if (time >= 1.2)
             {
                 
-                rend.material = end;
+             //   rend.material = end;
                // rend.material.SetTexture("Normal", textureEnd);
                 break;
             }
             yield return new WaitForEndOfFrame();
         }
         time = 0;
-       // rend.material.SetFloat("MaxMovement", 10f);
         isChanging = false;
-        Debug.Log("finish");
+       // Debug.Log("finish");
 
         yield return null;
     }
@@ -112,7 +111,7 @@ public class Environment : MonoBehaviour
             if (isDead == true)
             {
 
-                Debug.Log("start coroutne");
+                //Debug.Log("start coroutne");
 
                 StartCoroutine(ChangeColor(rend.material, health.colorAlive, textureAlive));
                 playerEnergy.AddEnergy(2);
@@ -121,11 +120,11 @@ public class Environment : MonoBehaviour
         }
         if (other.transform.CompareTag("Enemy"))
         {
-            Debug.Log("enemy");
+             Debug.Log("enemy");
             if (isDead == false)
             {
                 isDead = true;
-                this.GetComponent<MeshRenderer>().material = health.colorDead;
+              //  this.GetComponent<MeshRenderer>().material = health.colorDead;
                 StartCoroutine(ChangeColor(rend.material, health.colorDead, textureDead));
             }
 

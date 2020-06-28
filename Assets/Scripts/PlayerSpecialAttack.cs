@@ -5,15 +5,21 @@ using UnityEngine;
 public class PlayerSpecialAttack : MonoBehaviour
 {
     PlayerData player;
+    // Vector3 scaleOG;
+    PlayerEnemyInteraction playerEnemy;
+
 
     private void Start()
     {
-        transform.localScale = Vector3.one;
+        //  scaleOG = transform.localScale;
+        transform.localScale = Vector3.zero;
         player = GetComponentInParent<Player>().data;
+        playerEnemy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnemyInteraction>();
     }
 
 
-    float duration = .5f;
+    float duration = 2f;
+    float durationInvert = 0.5f;
 
     public IEnumerator Expand()
     {
@@ -28,9 +34,35 @@ public class PlayerSpecialAttack : MonoBehaviour
             {
                 t += Time.deltaTime / duration;
             }
+            Debug.Log("4");
+            yield return null;
+
+        }
+        StartCoroutine(Invert());
+        Debug.Log("5");
+        //sphere.localScale = scaleOG;
+    }
+    IEnumerator Invert()
+    {
+        yield return new WaitForSeconds(0.1f);
+        float t = 0f;
+        Transform sphere = transform;
+        Vector3 specialAttackVector = new Vector3(0, 0, 0);
+
+        while (sphere.localScale.x > specialAttackVector.x)
+        {
+            sphere.localScale = Vector3.Lerp(sphere.localScale, specialAttackVector, t);
+            Debug.Log("1");
+            if (t < 1)
+            {
+                Debug.Log("2");
+                t += Time.deltaTime / durationInvert;
+            }
+            sphere.localScale = specialAttackVector;
+            playerEnemy.can2Attack = true;
             yield return null;
         }
-        sphere.localScale = Vector3.zero;
+
     }
 
     private void OnTriggerEnter(Collider other)
