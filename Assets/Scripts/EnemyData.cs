@@ -16,7 +16,7 @@ public class EnemyData
     //public float attackSpeed;
     public float actionRadius;
     public float attackRadius;
-    public int maxHealth;
+    public int maxHealth = 3;
     public int currHealth;
     //public EnemyDeath enemyDeath;
 
