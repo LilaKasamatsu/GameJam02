@@ -237,7 +237,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     void MovingFeedback()
     {
         movingFeedback = false;
-        Debug.Log("moving");
+       // Debug.Log("moving");
         sleepingFeedback = true;
         idleFeedback = true;
         holdingFeedback = true;
@@ -252,7 +252,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     {
         
         holdingFeedback = false;
-        Debug.Log("holding");
+      //  Debug.Log("holding");
         movingFeedback = true;
 
 
@@ -262,7 +262,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     }
     void SleepingFeedback()
     {
-        Debug.Log("sleeping");
+       // Debug.Log("sleeping");
 
         sleepingFeedback = false;
         movingFeedback = false;
@@ -274,7 +274,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     void IdleFeedback()
     {
         idleFeedback = false;
-        Debug.Log("idle");
+       // Debug.Log("idle");
         //  movingFeedback = true;
 
 

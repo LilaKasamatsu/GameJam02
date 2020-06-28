@@ -111,7 +111,7 @@ public class Environment : MonoBehaviour
             if (isDead == true)
             {
 
-                Debug.Log("start coroutne");
+                //Debug.Log("start coroutne");
 
                 StartCoroutine(ChangeColor(rend.material, health.colorAlive, textureAlive));
                 playerEnergy.AddEnergy(2);
@@ -124,7 +124,7 @@ public class Environment : MonoBehaviour
             if (isDead == false)
             {
                 isDead = true;
-                this.GetComponent<MeshRenderer>().material = health.colorDead;
+              //  this.GetComponent<MeshRenderer>().material = health.colorDead;
                 StartCoroutine(ChangeColor(rend.material, health.colorDead, textureDead));
             }
 

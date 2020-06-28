@@ -20,7 +20,7 @@ public class RandomGlow : MonoBehaviour
     {
         float value = Random.Range(valueMin, valueMax);
         rend.material.SetFloat("GlowSpeed", value);
-        Debug.Log(rend.material.GetFloat("GlowSpeed"));
+        //Debug.Log(rend.material.GetFloat("GlowSpeed"));
 
     }
 
