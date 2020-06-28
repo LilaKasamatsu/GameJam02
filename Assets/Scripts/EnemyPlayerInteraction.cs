@@ -218,6 +218,6 @@ public class EnemyPlayerInteraction : MonoBehaviour
     }
     public void KillFeedback()
     {
-        anim.SetTrigger("death");
+        //anim.SetTrigger("death");
     }
 }

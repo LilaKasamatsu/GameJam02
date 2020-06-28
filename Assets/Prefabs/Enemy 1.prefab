@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 8638918738914129949}
   - component: {fileID: 8638918738914129954}
   - component: {fileID: 8638918738914129955}
-  - component: {fileID: 8638918738914129950}
+  - component: {fileID: 1924597724}
   m_Layer: 0
   m_Name: Enemy 1
   m_TagString: Untagged
@@ -226,6 +226,7 @@ MonoBehaviour:
   patrollingSpeed: 0
   attackspeed: 6
   stunnedCooldown: 0
+  anim: {fileID: 0}
 --- !u!114 &8638918738914129954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa94ec48129be45468a32e379df0f6bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8638918738914129950
+--- !u!114 &1924597724
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -262,59 +263,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8638918738914129952}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ca28239415e26c4da3e3adbf2b40f0b, type: 3}
+  m_Script: {fileID: 11500000, guid: ed2ee9583bc71fa42bca656463deb93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {x: 28, y: 0, z: 0}
-  moveInputFactor: 10
-  inputVelocity: {x: 0, y: 0, z: 0}
-  worldVelocity: {x: 0, y: 0, z: 0}
-  walkSpeed: 10
-  sprintSpeed: 40
-  rotateInputFactor: 90
-  rotationSpeed: 90
-  averageRotationRadius: 3
-  legs:
-  - {fileID: 1749847575151632214}
-  - {fileID: 1935693351315809677}
-  - {fileID: 4191294509906817334}
-  - {fileID: 9125433283102165270}
-  - {fileID: 3241286963623236111}
-  index: 0
-  dynamicGait: 1
-  timeBetweenSteps: 2
-  stepDurationRatio: 1.5
-  maxTargetDistance: 2
-  lastStep: 0
-  useAlignment: 1
-  nextLegTri: 0000000001000000020000000300000004000000
-  sensitivityCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  desiredSufaceDist: 0
-  dist: 0
-  grounded: 0
+  target: {fileID: 0}
+  headBone: {fileID: 586523289919714909}
+  headMaxTurnAngle: 50
+  headTrackingSpeed: 4
 --- !u!1001 &6905069048523902204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -727,6 +682,12 @@ GameObject:
 --- !u!1 &1207452021937757252 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5697617030348443832, guid: d604f9ede62dab140991ecfd76192d8e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6905069048523902204}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &586523289919714909 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6336569503637813921, guid: d604f9ede62dab140991ecfd76192d8e,
     type: 3}
   m_PrefabInstance: {fileID: 6905069048523902204}
   m_PrefabAsset: {fileID: 0}
