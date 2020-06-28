@@ -265,7 +265,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
        // Debug.Log("sleeping");
 
         sleepingFeedback = false;
-        movingFeedback = false;
+        movingFeedback = true;
 
         anim.SetBool("sleeping", true);
         anim.SetBool("moving", false);
@@ -274,8 +274,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     void IdleFeedback()
     {
         idleFeedback = false;
-       // Debug.Log("idle");
-        //  movingFeedback = true;
+        movingFeedback = true;
 
 
         anim.SetBool("moving", false);
@@ -286,5 +285,9 @@ public class EnemyPlayerInteraction : MonoBehaviour
     public void KillFeedback()
     {
         anim.SetTrigger("death");
+    }
+    public void DamageFeedback()
+    {
+        anim.SetTrigger("damage");
     }
 }

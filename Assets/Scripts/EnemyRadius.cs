@@ -13,6 +13,7 @@ public class EnemyRadius : MonoBehaviour
 
     ParticleSystem circleParticles;
     ParticleSystem verticalParticles;
+    ParticleSystem hitParticles;
 
     // Start is called before the first frame update
     void Start()
@@ -26,17 +27,21 @@ public class EnemyRadius : MonoBehaviour
 
         circleParticles = transform.GetChild(0).GetComponentInChildren<ParticleSystem>();
         verticalParticles = transform.GetChild(2).GetComponentInChildren<ParticleSystem>();
+        hitParticles = transform.GetChild(3).GetComponentInChildren<ParticleSystem>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //enemy dies
         if(enemyDeath.isDying == true)
         {
             circleParticles.Stop();
             verticalParticles.Stop();
         }
         
+
+        //Enemy loses health
         if(enemy.currHealth >= 3)
         {
             var main = circleParticles.main;
@@ -55,17 +60,22 @@ public class EnemyRadius : MonoBehaviour
             main.maxParticles = Mathf.RoundToInt(1);
         }
 
+        
+        //Enemy is hit by player
         if(peiScript.enemyHit == true)
         {
-            //hit feedback from particle system
+            hitParticles.Play();
 
             StartCoroutine(EnemyHit());
         }
+        
     }
 
+    
     IEnumerator EnemyHit()
     {
         yield return new WaitForSecondsRealtime(1f);
         peiScript.enemyHit = false;
     }
+    
 }

@@ -63,7 +63,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 // rend.material.Lerp(materialStart, materialToLerpTo, Time.deltaTime / 2);
               //  rend.material = materialToLerpTo;
-                b += Time.deltaTime / 2;
+                b += Time.deltaTime / 4;
             }
             if (player.deathTimer >= player.deathTime)
             {
