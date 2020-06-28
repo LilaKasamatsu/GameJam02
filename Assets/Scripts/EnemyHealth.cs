@@ -33,24 +33,33 @@ public class EnemyHealth : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            MinusHealth(33);
+            MinusHealth(1);
+            Debug.Log("minushealth");
         }
     }
     public void MinusHealth(int health)
     {
         enemy.currHealth -= health;
+
+        
         if (enemy.currHealth <= 0)
         {
            // Debug.Log("enemy Death");
             enemyDeath.Kill();
         }
+
+        /*
         else
         {
 
             StartCoroutine(MinusHealthCoroutine());
 
         }
+        */
+
     }
+
+    /*
     IEnumerator MinusHealthCoroutine()
     {
         while (true)
@@ -70,4 +79,5 @@ public class EnemyHealth : MonoBehaviour
         yield return null;
 
     }
+    */
 }

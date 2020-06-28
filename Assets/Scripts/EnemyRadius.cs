@@ -9,6 +9,7 @@ public class EnemyRadius : MonoBehaviour
     PlayerEnemyInteraction peiScript;
     EnemyHealth enemyHealth;
     EnemyDeath enemyDeath;
+    EnemyData enemy;
 
     ParticleSystem circleParticles;
     ParticleSystem verticalParticles;
@@ -21,6 +22,7 @@ public class EnemyRadius : MonoBehaviour
 
         enemyHealth = transform.parent.GetComponent<EnemyHealth>();
         enemyDeath = transform.parent.GetComponent<EnemyDeath>();
+        enemy = transform.parent.GetComponent<Enemy>().data;
 
         circleParticles = transform.GetChild(0).GetComponentInChildren<ParticleSystem>();
         verticalParticles = transform.GetChild(2).GetComponentInChildren<ParticleSystem>();
@@ -33,6 +35,24 @@ public class EnemyRadius : MonoBehaviour
         {
             circleParticles.Stop();
             verticalParticles.Stop();
+        }
+        
+        if(enemy.currHealth >= 3)
+        {
+            var main = circleParticles.main;
+            main.maxParticles = Mathf.RoundToInt(3);
+        }
+
+        if(enemy.currHealth == 2)
+        {
+            var main = circleParticles.main;
+            main.maxParticles = Mathf.RoundToInt(2);
+        }
+
+        if(enemy.currHealth <= 1)
+        {
+            var main = circleParticles.main;
+            main.maxParticles = Mathf.RoundToInt(1);
         }
 
         if(peiScript.enemyHit == true)
