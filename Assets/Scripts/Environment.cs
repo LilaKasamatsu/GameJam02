@@ -81,6 +81,8 @@ public class Environment : MonoBehaviour
 
 
             rend.material.Lerp(start, end, time);
+            //rend.material.Lerp(rend.material.GetTexture("Normal"), textureEnd, time);
+
             time += Time.deltaTime / lerpDuration;
             rend.material.SetFloat("MinMovement", 0.5f);
             rend.material.SetFloat("MaxMovement", 4f);
