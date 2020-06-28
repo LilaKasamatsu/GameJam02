@@ -219,13 +219,12 @@ MonoBehaviour:
   location:
   - {x: 11.46, y: 4.58, z: 5.47}
   - {x: 4.59, y: 4.58, z: 14.67}
-  isWaiting: 0
   isSleepingEnemy: 0
-  isHoldingPlayer: 0
   isAttacking: 0
   patrollingSpeed: 0
   attackspeed: 6
   stunnedCooldown: 0
+  target: {fileID: 0}
   anim: {fileID: 0}
 --- !u!114 &8638918738914129954
 MonoBehaviour:
@@ -254,6 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa94ec48129be45468a32e379df0f6bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDying: 0
 --- !u!114 &1924597724
 MonoBehaviour:
   m_ObjectHideFlags: 0
