@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DitzelGames.FastIK;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,6 +18,16 @@ public class EnemyController : MonoBehaviour
     [SerializeField] LegStepper frontLeftLeg;
     [SerializeField] LegStepper frontRightLeg;
 
+    [Header("IKs")]
+    [SerializeField] FastIKFabric backLeftIK;
+    [SerializeField] FastIKFabric backMiddleIK;
+    [SerializeField] FastIKFabric backRightIK;
+    [SerializeField] FastIKFabric frontLeftIK;
+    [SerializeField] FastIKFabric frontRightIK;
+
+    [SerializeField] List<FastIKFabric> Iks;
+
+    [SerializeField] Animator anim;
 
     // How fast we can turn and move full throttle
     [SerializeField] float turnSpeed;
@@ -43,7 +54,7 @@ public class EnemyController : MonoBehaviour
     void LateUpdate()
     {
         //HeadTrackingUpdate();
-        RootMotionUpdate();
+        //RootMotionUpdate();
     }
 
 
@@ -179,6 +190,23 @@ public class EnemyController : MonoBehaviour
                 backMiddleLeg.TryMove();
                 yield return null;
             } while (backMiddleLeg.Moving);
+        }
+    }
+
+
+    public void DisableProcedural()
+    {
+        foreach (FastIKFabric ik in Iks)
+        {
+            ik.enabled = false;
+        }
+    }
+
+    public void EnableProcedural()
+    {
+        foreach (FastIKFabric ik in Iks)
+        {
+            ik.enabled = true;
         }
     }
 }

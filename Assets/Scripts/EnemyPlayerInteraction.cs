@@ -40,6 +40,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     public Transform target;
     [SerializeField] Animator anim;
 
+    private EnemyController enemyController;
 
     // Start is called before the first frame update
     void Start()
@@ -51,16 +52,18 @@ public class EnemyPlayerInteraction : MonoBehaviour
         enemyDeath = GetComponent<EnemyDeath>();
 
         enemy = GetComponent<Enemy>().data;
+
+        enemyController = GetComponent<EnemyController>();
     }
 
-    private void OnDrawGizmos()
-    {
-        groundPosition = new Vector3(transform.position.x, 0, transform.position.z);
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(groundPosition, enemy.actionRadius);
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(groundPosition, enemy.attackRadius);
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    groundPosition = new Vector3(transform.position.x, 0, transform.position.z);
+    //    Gizmos.color = Color.yellow;
+    //    Gizmos.DrawWireSphere(groundPosition, enemy.actionRadius);
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawWireSphere(groundPosition, enemy.attackRadius);
+    //}
 
     // Update is called once per frame
     void FixedUpdate()
@@ -242,10 +245,10 @@ public class EnemyPlayerInteraction : MonoBehaviour
         idleFeedback = true;
         holdingFeedback = true;
 
-
         anim.SetBool("holding", false);
         anim.SetBool("moving", true);
         anim.SetBool("sleeping", false);
+        enemyController.EnableProcedural();
 
     }
     void HoldingFeedback()
@@ -255,6 +258,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
       //  Debug.Log("holding");
         movingFeedback = true;
 
+        enemyController.DisableProcedural();
 
         anim.SetBool("moving", false);
         anim.SetBool("holding", true);
@@ -266,6 +270,8 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
         sleepingFeedback = false;
         movingFeedback = false;
+
+        enemyController.DisableProcedural();
 
         anim.SetBool("sleeping", true);
         anim.SetBool("moving", false);
