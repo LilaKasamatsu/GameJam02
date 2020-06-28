@@ -112,12 +112,12 @@ public class PlayerEnemyInteraction : MonoBehaviour
         if (player.data.isMovable)
         {
 
-            Debug.Log("2");
+           // Debug.Log("2");
             player.data.isMovable = false;
             freePlayer = StartCoroutine(EscapeEnemy());
             GetComponent<Rigidbody>().isKinematic = true;
         }
-        Debug.Log("1");
+       // Debug.Log("1");
     }
     void MoveToEnemy(Transform target)
     {
