@@ -7,15 +7,18 @@ public class EnemyDeath : MonoBehaviour
     public bool isDying = false;
     PlayerEnergyLvl playerEnergy;
     PlayerData playerData;
+    EnemyPlayerInteraction enemyPlayer;
     private void Start()
     {
         
         playerEnergy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnergyLvl>();
         playerData = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().data;
+        enemyPlayer = GetComponent<EnemyPlayerInteraction>();
     }
     // Start is called before the first frame update
     public void Kill()
     {
+        enemyPlayer.death = true;
         StartCoroutine(Enemydying());
         isDying = true;
         Debug.Log("kill");
@@ -25,8 +28,8 @@ public class EnemyDeath : MonoBehaviour
 
     IEnumerator Enemydying()
     {
-        yield return new WaitForSecondsRealtime(2f);
-        Destroy(gameObject);
+        yield return new WaitForSecondsRealtime(4f);
+     //   gameObject.SetActive(false);
         gameObject.SetActive(false);
 
     }
