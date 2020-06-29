@@ -225,7 +225,7 @@ MonoBehaviour:
   data:
     actionRadius: 10
     attackRadius: 10
-    maxHealth: 100
+    maxHealth: 3
     currHealth: 0
 --- !u!65 &1496146948410667924
 BoxCollider:
@@ -430,20 +430,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5063424681252401309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8835450461628084144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1564efcabadcf6c4fb6754e4fd8cc6ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time: 0
-  speed: 0.3
 --- !u!1 &7706035710014515317
 GameObject:
   m_ObjectHideFlags: 0
@@ -5313,7 +5299,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 0.8
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5482,7 +5468,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -10010,6 +9996,20 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &5063424681252401309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8835450461628084144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1564efcabadcf6c4fb6754e4fd8cc6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0
+  speed: 0.3
 --- !u!1 &8966428695465529957
 GameObject:
   m_ObjectHideFlags: 0
