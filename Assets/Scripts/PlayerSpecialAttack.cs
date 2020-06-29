@@ -18,7 +18,7 @@ public class PlayerSpecialAttack : MonoBehaviour
     }
 
 
-    float duration = 2f;
+    float duration = 1f;
     float durationInvert = 0.5f;
 
     public IEnumerator Expand()
@@ -39,15 +39,15 @@ public class PlayerSpecialAttack : MonoBehaviour
 
         }
         StartCoroutine(Invert());
-        Debug.Log("5");
         //sphere.localScale = scaleOG;
     }
     IEnumerator Invert()
     {
-        yield return new WaitForSeconds(0.1f);
+       // yield return new WaitForSeconds(0.1f);
         float t = 0f;
         Transform sphere = transform;
-        Vector3 specialAttackVector = new Vector3(0, 0, 0);
+        Vector3 specialAttackVector =  Vector3.zero;
+
 
         while (sphere.localScale.x > specialAttackVector.x)
         {
@@ -55,10 +55,10 @@ public class PlayerSpecialAttack : MonoBehaviour
             Debug.Log("1");
             if (t < 1)
             {
-                Debug.Log("2");
+                Debug.Log(t);
                 t += Time.deltaTime / durationInvert;
             }
-            sphere.localScale = specialAttackVector;
+           // sphere.localScale = specialAttackVector;
             playerEnemy.can2Attack = true;
             yield return null;
         }

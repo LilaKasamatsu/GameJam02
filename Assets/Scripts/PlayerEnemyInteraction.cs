@@ -45,7 +45,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
             this.GetComponent<MeshRenderer>().material.color = Color.gray;
             player.data.isAttacking = false;
         }
-
+        Debug.Log(can2Attack);
         if (Input.GetMouseButtonDown(1))
         {
             if (can2Attack == true)

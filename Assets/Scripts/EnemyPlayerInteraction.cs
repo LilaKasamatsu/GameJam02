@@ -106,7 +106,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     void Rotation(Transform target)
     {
         //transform.LookAt(player.transform);
-        Debug.Log("r");
+      //  Debug.Log("r");
         transform.LookAt(new Vector3(target.position.x, transform.position.y, target.position.z));
 
     }
