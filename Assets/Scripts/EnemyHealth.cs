@@ -26,7 +26,7 @@ public class EnemyHealth : MonoBehaviour
         enemy = GetComponent<Enemy>().data;
        //colorRadius.color = aliveColor;
         enemy.currHealth = enemy.maxHealth;
-        Debug.Log(enemy);
+       // Debug.Log(enemy);
 
 
     }
@@ -34,8 +34,8 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(enemy.currHealth);
-        Debug.Log(enemy.maxHealth);
+        //Debug.Log(enemy.currHealth);
+        //Debug.Log(enemy.maxHealth);
         if (Input.GetKeyDown(KeyCode.E))
         {
             MinusHealth(1);
@@ -50,7 +50,7 @@ public class EnemyHealth : MonoBehaviour
 
         if (enemy.currHealth <= 0)
         {
-            Debug.Log(enemy.currHealth);
+           // Debug.Log(enemy.currHealth);
             enemyDeath.Kill();
         }
 

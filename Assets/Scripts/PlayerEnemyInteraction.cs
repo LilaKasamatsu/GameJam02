@@ -45,7 +45,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
             this.GetComponent<MeshRenderer>().material.color = Color.gray;
             player.data.isAttacking = false;
         }
-
+        Debug.Log(can2Attack);
         if (Input.GetMouseButtonDown(1))
         {
             if (can2Attack == true)
@@ -112,12 +112,12 @@ public class PlayerEnemyInteraction : MonoBehaviour
         if (player.data.isMovable)
         {
 
-            Debug.Log("2");
+           // Debug.Log("2");
             player.data.isMovable = false;
             freePlayer = StartCoroutine(EscapeEnemy());
             GetComponent<Rigidbody>().isKinematic = true;
         }
-        Debug.Log("1");
+       // Debug.Log("1");
     }
     void MoveToEnemy(Transform target)
     {

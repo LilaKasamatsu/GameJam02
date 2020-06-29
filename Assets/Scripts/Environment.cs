@@ -33,7 +33,7 @@ public class Environment : MonoBehaviour
         rend = GetComponent<Renderer>();
         rend.material = health.colorDead;
 
-      //  rend.material.SetTexture("Normal", textureAlive);
+        //  rend.material.SetTexture("Normal", textureAlive);
     }
 
     // Update is called once per frame
@@ -42,16 +42,16 @@ public class Environment : MonoBehaviour
 
         if (isOntop == true)
         {
-           // Debug.Log("jetzte2");
+            // Debug.Log("jetzte2");
             if (isDead == false)
             {
-               // Debug.Log("jetzte1");
+                // Debug.Log("jetzte1");
                 //Debug.Log(isChanging);
-              //  Debug.Log(playerHealth.isDying);
+                //  Debug.Log(playerHealth.isDying);
                 if (isChanging == false && playerHealth.isDying == true)
                 {
 
-                   // Debug.Log("jetzte");
+                    // Debug.Log("jetzte");
                     StartCoroutine(NoAir());
                     isDead = true;
 
@@ -74,33 +74,33 @@ public class Environment : MonoBehaviour
     {
         // Debug.Log("11");
         isChanging = true;
-        end.SetTexture("Normal", textureEnd);
+       // end.SetTexture("Normal", textureEnd);
         while (true)
         {
-          
 
 
+            rend.material = end;
+            //  Debug.Log("start");
             rend.material.Lerp(start, end, time);
             //rend.material.Lerp(rend.material.GetTexture("Normal"), textureEnd, time);
 
             time += Time.deltaTime / lerpDuration;
             rend.material.SetFloat("MinMovement", 0.5f);
             rend.material.SetFloat("MaxMovement", 4f);
-            rend.material.SetVector("Amount", new Vector2 (0.5f,1));
-          
+            rend.material.SetVector("Amount", new Vector2(0.5f, 1));
+
 
             if (time >= 1.2)
             {
-                
-             //   rend.material = end;
-               // rend.material.SetTexture("Normal", textureEnd);
+
+                rend.material.SetTexture("Normal", textureEnd);
                 break;
             }
             yield return new WaitForEndOfFrame();
         }
         time = 0;
         isChanging = false;
-       // Debug.Log("finish");
+        // Debug.Log("finish");
 
         yield return null;
     }
@@ -122,11 +122,11 @@ public class Environment : MonoBehaviour
         }
         if (other.transform.CompareTag("Enemy"))
         {
-             Debug.Log("enemy");
+            Debug.Log("enemy");
             if (isDead == false)
             {
                 isDead = true;
-              //  this.GetComponent<MeshRenderer>().material = health.colorDead;
+                //  this.GetComponent<MeshRenderer>().material = health.colorDead;
                 StartCoroutine(ChangeColor(rend.material, health.colorDead, textureDead));
             }
 
