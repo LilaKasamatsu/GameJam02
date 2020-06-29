@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     EnemyDissolve enemyDissolve;
+    EnemyRadius enemyRadius;
 
     EnemyDeath enemyDeath;
     EnemyData enemy;
@@ -46,6 +47,21 @@ public class EnemyHealth : MonoBehaviour
     {
         enemy.currHealth -= health;
 
+        if (enemy.currHealth == 2)
+        {
+            GameObject particleRadius = transform.Find("particleRadius").gameObject;
+            enemyRadius = particleRadius.GetComponent<EnemyRadius>();
+
+            enemyRadius.circleParticlesTwo.Stop();
+        }
+
+        if (enemy.currHealth == 1)
+        {
+            GameObject particleRadius = transform.Find("particleRadius").gameObject;
+            enemyRadius = particleRadius.GetComponent<EnemyRadius>();
+
+            enemyRadius.circleParticlesOne.Stop();
+        }
 
         if (enemy.currHealth <= 0)
         {
