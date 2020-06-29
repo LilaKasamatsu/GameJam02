@@ -21,16 +21,16 @@ public class CameraRig : MonoBehaviour
     {
         FollowTarget();
         OrbitTarget();
-        if (isHolded == true)
-        {
-            if (holdCoroutineActive == false)
-            {
-                Debug.Log("222");
-                LerpPos(this.transform, posWhenHold);
-                holdCoroutineActive = true;
-            }
+        //if (isHolded == true)
+        //{
+        //    if (holdCoroutineActive == false)
+        //    {
+        //        Debug.Log("222");
+        //        LerpPos(this.transform, posWhenHold);
+        //        holdCoroutineActive = true;
+        //    }
 
-        }
+        //}
 
     }
 
@@ -43,7 +43,7 @@ public class CameraRig : MonoBehaviour
     {
         currentMousePosition = Input.mousePosition;
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(2))
         {
             mouseDelta = lastMousePosition - currentMousePosition;
 
