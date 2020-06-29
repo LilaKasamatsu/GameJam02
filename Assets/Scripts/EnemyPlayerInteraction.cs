@@ -38,6 +38,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     Vector3 groundPosition;
 
     public Transform target;
+    public Transform playerTarget;
     [SerializeField] Animator anim;
 
     private EnemyController enemyController;
@@ -230,7 +231,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     void Hold()
     {
       //  Rotation(player.transform);
-        player.GetComponent<PlayerEnemyInteraction>().OnHold(this.transform, target);
+        player.GetComponent<PlayerEnemyInteraction>().OnHold(this.transform, playerTarget);
         StartCoroutine(OnHold());
 
     }
