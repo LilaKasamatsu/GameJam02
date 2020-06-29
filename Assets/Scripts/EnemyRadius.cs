@@ -11,7 +11,9 @@ public class EnemyRadius : MonoBehaviour
     EnemyDeath enemyDeath;
     EnemyData enemy;
 
-    ParticleSystem circleParticles;
+    public ParticleSystem circleParticles;
+    public ParticleSystem circleParticlesOne;
+    public ParticleSystem circleParticlesTwo;
     ParticleSystem verticalParticles;
     ParticleSystem hitParticles;
 
@@ -26,8 +28,11 @@ public class EnemyRadius : MonoBehaviour
         enemy = transform.parent.GetComponent<Enemy>().data;
 
         circleParticles = transform.GetChild(0).GetComponentInChildren<ParticleSystem>();
-        verticalParticles = transform.GetChild(2).GetComponentInChildren<ParticleSystem>();
+        circleParticlesOne = transform.GetChild(1).GetComponentInChildren<ParticleSystem>();
+        circleParticlesTwo = transform.GetChild(2).GetComponentInChildren<ParticleSystem>();
         hitParticles = transform.GetChild(3).GetComponentInChildren<ParticleSystem>();
+        verticalParticles = transform.GetChild(4).GetComponentInChildren<ParticleSystem>();
+        
     }
 
     // Update is called once per frame
@@ -40,26 +45,17 @@ public class EnemyRadius : MonoBehaviour
             verticalParticles.Stop();
         }
         
-
-        //Enemy loses health
-        if(enemy.currHealth >= 3)
-        {
-            var main = circleParticles.main;
-            main.maxParticles = Mathf.RoundToInt(3);
-        }
-
+        /*
         if(enemy.currHealth == 2)
         {
-            var main = circleParticles.main;
-            main.maxParticles = Mathf.RoundToInt(2);
+            circleParticlesTwo.Stop();
         }
 
-        if(enemy.currHealth <= 1)
+        if(enemy.currHealth == 1)
         {
-            var main = circleParticles.main;
-            main.maxParticles = Mathf.RoundToInt(1);
+            circleParticlesOne.Stop();
         }
-
+        */
         
         //Enemy is hit by player
         if(peiScript.enemyHit == true)

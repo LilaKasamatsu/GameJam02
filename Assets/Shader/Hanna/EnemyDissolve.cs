@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class EnemyDissolve : MonoBehaviour
 {
-    //[SerializeField] float time = 0f;
-    //[SerializeField] float trancparency = 0f;
-    //[SerializeField] float speed = 0.3f;
-
 
     // Start is called before the first frame update
     void Start()
