@@ -11,13 +11,15 @@ public class EnemyPlayerInteraction : MonoBehaviour
     bool isHoldingPlayer;
     public bool isAttacking = false;
 
-   // private bool attackingFeedback;
+    // private bool attackingFeedback;
     private bool movingFeedback = true;
     private bool holdingFeedback;
     private bool idleFeedback;
     private bool sleepingFeedback;
     private bool attackFeedback = true;
     private bool attack;
+
+    [HideInInspector] public bool death;
 
 
     [SerializeField] float patrollingSpeed;
@@ -37,6 +39,8 @@ public class EnemyPlayerInteraction : MonoBehaviour
     Player player;
     PlayerHealth playerHealth;
 
+    CameraRig camRig;
+
     Vector3 groundPosition;
 
     public Transform target;
@@ -46,6 +50,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        camRig = GameObject.Find("CameraRig").GetComponent<CameraRig>();
         rb = GetComponent<Rigidbody>();
         SetNewLocation(0);
 
@@ -102,11 +107,10 @@ public class EnemyPlayerInteraction : MonoBehaviour
         {
             stunnedCooldown -= Time.deltaTime;
         }
+        if (death == true) { KillFeedback(); }
     }
     void Rotation(Transform target)
     {
-        //transform.LookAt(player.transform);
-      //  Debug.Log("r");
         transform.LookAt(new Vector3(target.position.x, transform.position.y, target.position.z));
 
     }
@@ -221,7 +225,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         }
         if (other.CompareTag("EnemyDeath"))
         {
-            // Debug.Log("killlll");
+            Debug.Log("killlll");
             enemyDeath.Kill();
         }
     }
@@ -270,6 +274,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
         anim.SetBool("moving", false);
         anim.SetBool("holding", true);
+        camRig.isHolded = true;
 
     }
     void SleepingFeedback()

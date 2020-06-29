@@ -57,9 +57,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
                 if (player.data.energyLVL >= player.data.energyLVLforSpecialAttack)
                 {
                     OnSpecialAttack();
-                  //  can2Attack = false;
                     playerEnergy.AddEnergy(-player.data.energyLVLforSpecialAttack);
-                    //player.data.energyLVL -= player.data.energyLVLforSpecialAttack;gg
                 }
                 else
                 {
@@ -81,6 +79,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy") && player.data.isAttacking)
         {
             EnemyHealth enemy = collision.gameObject.GetComponent<EnemyHealth>();
+            Debug.Log("urpplayer");
             enemy.MinusHealth(1);
             enemyHit = true;
         }
@@ -126,7 +125,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
     {
 
         Vector3 i = new Vector3(target.position.x, target.position.y, target.position.z);
-        transform.position = Vector3.MoveTowards(transform.position, i, 3 * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, i, 5 * Time.deltaTime);
     }
     private IEnumerator EscapeEnemy()
     {

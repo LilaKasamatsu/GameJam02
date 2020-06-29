@@ -7,6 +7,7 @@ public class PlayerSpecialAttack : MonoBehaviour
     PlayerData player;
     // Vector3 scaleOG;
     PlayerEnemyInteraction playerEnemy;
+    SphereCollider coll;
 
 
     private void Start()
@@ -15,6 +16,8 @@ public class PlayerSpecialAttack : MonoBehaviour
         transform.localScale = Vector3.zero;
         player = GetComponentInParent<Player>().data;
         playerEnemy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnemyInteraction>();
+        coll = GetComponent<SphereCollider>();
+        coll.enabled = false;
     }
 
 
@@ -23,6 +26,8 @@ public class PlayerSpecialAttack : MonoBehaviour
 
     public IEnumerator Expand()
     {
+
+        coll.enabled = true;
         float t = 0f;
         Transform sphere = this.transform;
         Vector3 specialAttackVector = new Vector3(player.specialAttackRadius, player.specialAttackRadius, player.specialAttackRadius);
@@ -34,7 +39,7 @@ public class PlayerSpecialAttack : MonoBehaviour
             {
                 t += Time.deltaTime / duration;
             }
-           // Debug.Log("4");
+            // Debug.Log("4");
             yield return null;
 
         }
@@ -43,23 +48,24 @@ public class PlayerSpecialAttack : MonoBehaviour
     }
     IEnumerator Invert()
     {
-       // yield return new WaitForSeconds(0.1f);
+        // yield return new WaitForSeconds(0.1f);
         float t = 0f;
         Transform sphere = transform;
-        Vector3 specialAttackVector =  Vector3.zero;
+        Vector3 specialAttackVector = Vector3.zero;
 
 
         while (sphere.localScale.x > specialAttackVector.x)
         {
             sphere.localScale = Vector3.Lerp(sphere.localScale, specialAttackVector, t);
-           // Debug.Log("1");
+            // Debug.Log("1");
             if (t < 1)
             {
-              //  Debug.Log(t);
+                //  Debug.Log(t);
                 t += Time.deltaTime / durationInvert;
             }
-           // sphere.localScale = specialAttackVector;
+            // sphere.localScale = specialAttackVector;
             playerEnemy.can2Attack = true;
+            coll.enabled = false;
             yield return null;
         }
 
@@ -69,6 +75,7 @@ public class PlayerSpecialAttack : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
+           // Debug.Log("urp special attack");
             other.GetComponent<EnemyHealth>().MinusHealth(3);
         }
     }

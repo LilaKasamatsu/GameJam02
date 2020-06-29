@@ -7,16 +7,36 @@ public class CameraRig : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] float followSmooth;
     [SerializeField] float orbitSmooth;
+    [SerializeField] Transform posWhenHold;
 
     Vector3 currentMousePosition;
     Vector3 lastMousePosition;
     Vector3 mouseDelta;
     Vector3 lastMouseDelta;
 
+    [HideInInspector] public bool isHolded=false;
+    bool holdCoroutineActive = false;
+    GameObject cam;
+    private void Start()
+    {
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
+    }
+
     private void FixedUpdate()
     {
         FollowTarget();
         OrbitTarget();
+        if (isHolded == true)
+        {
+            if (holdCoroutineActive == false)
+            {
+                Debug.Log("222");
+                LerpPos(cam.transform, posWhenHold);
+                holdCoroutineActive = true;
+            }
+
+        }
+
     }
 
     private void FollowTarget()
@@ -28,7 +48,7 @@ public class CameraRig : MonoBehaviour
     {
         currentMousePosition = Input.mousePosition;
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(2))
         {
             mouseDelta = lastMousePosition - currentMousePosition;
 
@@ -45,5 +65,29 @@ public class CameraRig : MonoBehaviour
 
         lastMouseDelta = mouseDelta;
         lastMousePosition = currentMousePosition;
+    }
+    //public void EnemyHoldPosition()
+    //{
+    //    StartCoroutine(LerpPos());
+    //}
+    void LerpPos(Transform start, Transform end)
+    {
+        //Debug.Log("111");
+        //while (true)
+        //{
+
+
+        transform.position = end.position;
+        transform.position = Vector3.Lerp(start.position, end.position, followSmooth * Time.deltaTime);
+       
+            if (transform.position == end.position)
+            {
+              
+                Debug.Log("fff");
+                isHolded = false;
+
+            }
+        //}
+       // break;
     }
 }
