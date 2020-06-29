@@ -240,6 +240,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     void Hold()
     {
+
         player.GetComponent<PlayerEnemyInteraction>().OnHold(this.transform, playerTarget);
         StartCoroutine(OnHold());
 

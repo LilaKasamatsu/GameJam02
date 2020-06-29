@@ -209,4 +209,42 @@ public class EnemyController : MonoBehaviour
             ik.enabled = true;
         }
     }
+
+    float verticalTime = .2f;
+    float verticalSpeed = 2.5f;
+
+    IEnumerator Rise()
+    {
+        float t = verticalTime;
+        while (t > 0f)
+        {
+            transform.Translate(transform.up * verticalSpeed * Time.deltaTime);
+            t -= Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        StartCoroutine(Fall());
+    }
+
+    IEnumerator Fall()
+    {
+        float t = verticalTime;
+        while (t > 0f)
+        {
+            transform.Translate(-transform.up * verticalSpeed * Time.deltaTime);
+            t -= Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        StartCoroutine(Rise());
+    }
+
+
+    public void StopBumping()
+    {
+        StopAllCoroutines();
+    }
+
+    public void StartBumping()
+    {
+        StartCoroutine(Rise());
+    }
 }
