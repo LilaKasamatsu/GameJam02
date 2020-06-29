@@ -125,7 +125,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
     {
 
         Vector3 i = new Vector3(target.position.x, target.position.y, target.position.z);
-        transform.position = Vector3.MoveTowards(transform.position, i, 3 * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, i, 5 * Time.deltaTime);
     }
     private IEnumerator EscapeEnemy()
     {

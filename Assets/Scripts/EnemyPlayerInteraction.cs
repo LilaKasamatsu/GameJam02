@@ -11,13 +11,15 @@ public class EnemyPlayerInteraction : MonoBehaviour
     bool isHoldingPlayer;
     public bool isAttacking = false;
 
-   // private bool attackingFeedback;
+    // private bool attackingFeedback;
     private bool movingFeedback = true;
     private bool holdingFeedback;
     private bool idleFeedback;
     private bool sleepingFeedback;
     private bool attackFeedback = true;
     private bool attack;
+
+    [HideInInspector] public bool death;
 
 
     [SerializeField] float patrollingSpeed;
@@ -109,6 +111,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         {
             stunnedCooldown -= Time.deltaTime;
         }
+        if (death == true) { KillFeedback(); }
     }
     void Rotation(Vector3 target)
     {
@@ -257,7 +260,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         }
         if (other.CompareTag("EnemyDeath"))
         {
-             Debug.Log("killlll");
+            Debug.Log("killlll");
             enemyDeath.Kill();
         }
     }

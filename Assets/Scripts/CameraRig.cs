@@ -16,21 +16,26 @@ public class CameraRig : MonoBehaviour
 
     [HideInInspector] public bool isHolded=false;
     bool holdCoroutineActive = false;
+    GameObject cam;
+    private void Start()
+    {
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
+    }
 
     private void FixedUpdate()
     {
         FollowTarget();
         OrbitTarget();
-        //if (isHolded == true)
-        //{
-        //    if (holdCoroutineActive == false)
-        //    {
-        //        Debug.Log("222");
-        //        LerpPos(this.transform, posWhenHold);
-        //        holdCoroutineActive = true;
-        //    }
+        if (isHolded == true)
+        {
+            if (holdCoroutineActive == false)
+            {
+                Debug.Log("222");
+                LerpPos(cam.transform, posWhenHold);
+                holdCoroutineActive = true;
+            }
 
-        //}
+        }
 
     }
 
@@ -73,7 +78,7 @@ public class CameraRig : MonoBehaviour
 
 
         transform.position = end.position;
-           // transform.position = Vector3.Lerp(start.position, end.position, followSmooth * Time.deltaTime);
+        transform.position = Vector3.Lerp(start.position, end.position, followSmooth * Time.deltaTime);
        
             if (transform.position == end.position)
             {
