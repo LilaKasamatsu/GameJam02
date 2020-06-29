@@ -17,10 +17,11 @@ public class PlayerData
     public bool isMovable = true;
 
     [Header("Energy")]
-    public int energyLVL;
-    public int maxEnergyLVL;
-    public int energyLVLforSpecialAttack;
-    public int energyGainedByKillingEnemy;
+    public float energyLVL;
+    public float maxEnergyLVL;
+    public float energyLVLforSpecialAttack;
+    public float energyGainedByKillingEnemy;
+    public float energyGainedByEnvironment;
 
     [Header("Movement")]
     public float minVelocity;

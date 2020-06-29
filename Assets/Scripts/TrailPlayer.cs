@@ -17,8 +17,8 @@ public class TrailPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       // tailMaterial = GameObject.Find("Trail").GetComponent<Material>();
-        //beginColor = tailMaterial.color;
+        tailMaterial = GameObject.Find("Trail").GetComponent<Renderer>().material;
+        beginColor = tailMaterial.color;
         rb = GetComponent<Rigidbody>();
         tail = GameObject.Find("Trail").GetComponent<TrailRenderer>();
     }
@@ -30,12 +30,13 @@ public class TrailPlayer : MonoBehaviour
         tail.startWidth = t * maxWidth;
         if (t >= 1)
         {
-            //tailMaterial.color = newColorForTrail;
+            tailMaterial.color = newColorForTrail;
+            Debug.Log("change color");
             t = 1;
         }
         else
         {
-           // tailMaterial.color = beginColor;
+            tailMaterial.color = beginColor;
         }
     }
 }

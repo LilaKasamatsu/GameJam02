@@ -22,6 +22,7 @@ public class Environment : MonoBehaviour
 
     private PlayerEnergyLvl playerEnergy;
     private PlayerHealth playerHealth;
+    private PlayerData playerData;
 
 
     // Start is called before the first frame update
@@ -30,6 +31,7 @@ public class Environment : MonoBehaviour
 
         playerEnergy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnergyLvl>();
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        playerData = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().data;
         rend = GetComponent<Renderer>();
         rend.material = health.colorDead;
 
@@ -45,8 +47,7 @@ public class Environment : MonoBehaviour
             // Debug.Log("jetzte2");
             if (isDead == false)
             {
-                // Debug.Log("jetzte1");
-                //Debug.Log(isChanging);
+
                 //  Debug.Log(playerHealth.isDying);
                 if (isChanging == false && playerHealth.isDying == true)
                 {
@@ -112,11 +113,8 @@ public class Environment : MonoBehaviour
             isOntop = true;
             if (isDead == true)
             {
-
-                //Debug.Log("start coroutne");
-
                 StartCoroutine(ChangeColor(rend.material, health.colorAlive, textureAlive));
-                playerEnergy.AddEnergy(2);
+                playerEnergy.AddEnergy(playerData.energyGainedByEnvironment);
                 isDead = false;
             }
         }

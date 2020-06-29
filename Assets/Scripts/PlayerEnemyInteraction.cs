@@ -10,6 +10,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
 
     private bool isUsingSpecialAttack;
     PlayerSpecialAttack specialAttack;
+    PlayerEnergyLvl playerEnergy;
 
     Transform enemyHold;
     //[HideInInspector] public bool canAttack = true;
@@ -20,6 +21,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerEnergy = GetComponent<PlayerEnergyLvl>();
         specialAttack = GetComponentInChildren<PlayerSpecialAttack>();
 
     }
@@ -55,9 +57,9 @@ public class PlayerEnemyInteraction : MonoBehaviour
                 if (player.data.energyLVL >= player.data.energyLVLforSpecialAttack)
                 {
                     OnSpecialAttack();
-                    can2Attack = false;
-                   // canAttack = false;
-                    player.data.energyLVL -= player.data.energyLVLforSpecialAttack;
+                  //  can2Attack = false;
+                    playerEnergy.AddEnergy(-player.data.energyLVLforSpecialAttack);
+                    //player.data.energyLVL -= player.data.energyLVLforSpecialAttack;gg
                 }
                 else
                 {

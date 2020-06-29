@@ -34,7 +34,7 @@ public class PlayerSpecialAttack : MonoBehaviour
             {
                 t += Time.deltaTime / duration;
             }
-            Debug.Log("4");
+           // Debug.Log("4");
             yield return null;
 
         }
@@ -52,10 +52,10 @@ public class PlayerSpecialAttack : MonoBehaviour
         while (sphere.localScale.x > specialAttackVector.x)
         {
             sphere.localScale = Vector3.Lerp(sphere.localScale, specialAttackVector, t);
-            Debug.Log("1");
+           // Debug.Log("1");
             if (t < 1)
             {
-                Debug.Log(t);
+              //  Debug.Log(t);
                 t += Time.deltaTime / durationInvert;
             }
            // sphere.localScale = specialAttackVector;
