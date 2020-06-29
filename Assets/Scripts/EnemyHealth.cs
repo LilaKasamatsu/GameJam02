@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-
+    EnemyDissolve enemyDissolve;
 
     EnemyDeath enemyDeath;
     EnemyData enemy;
@@ -12,8 +12,8 @@ public class EnemyHealth : MonoBehaviour
 
     //[SerializeField] GameObject visualRadius;
     private SpriteRenderer colorRadius;
-   // [SerializeField] Color aliveColor;
-   //[SerializeField] Color deadColor;
+    // [SerializeField] Color aliveColor;
+    //[SerializeField] Color deadColor;
     float a;
     float b = 0.33f;
 
@@ -24,11 +24,10 @@ public class EnemyHealth : MonoBehaviour
         enemyDeath = GetComponent<EnemyDeath>();
         //colorRadius = visualRadius.GetComponent<SpriteRenderer>();
         enemy = GetComponent<Enemy>().data;
-       //colorRadius.color = aliveColor;
+        //colorRadius.color = aliveColor;
         enemy.currHealth = enemy.maxHealth;
-       // Debug.Log(enemy);
-
-
+        // Debug.Log(enemy);
+        
     }
 
     // Update is called once per frame
@@ -50,8 +49,26 @@ public class EnemyHealth : MonoBehaviour
 
         if (enemy.currHealth <= 0)
         {
-           // Debug.Log(enemy.currHealth);
+            // Debug.Log(enemy.currHealth);
             enemyDeath.Kill();
+
+
+            Transform enemyChild = transform.Find("enemy mit joints");
+
+            foreach (Transform gc in enemyChild)
+            {
+                if(gc.name == "Enemy")
+                {
+                    GameObject enemyGrandchild = gc.gameObject;
+
+                    enemyDissolve = enemyGrandchild.GetComponent<EnemyDissolve>();
+
+                    enemyDissolve.dissolveNow();
+
+                }
+                
+            }
+            
         }
 
         /*
