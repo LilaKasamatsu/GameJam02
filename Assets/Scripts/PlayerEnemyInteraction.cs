@@ -34,6 +34,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       // Debug.Log(IsAttackVelocity());
        // Debug.Log(can2Attack);
         if (IsAttackVelocity())
         {
@@ -45,12 +46,12 @@ public class PlayerEnemyInteraction : MonoBehaviour
             this.GetComponent<MeshRenderer>().material.color = Color.gray;
             player.data.isAttacking = false;
         }
-        Debug.Log(can2Attack);
+       // Debug.Log(can2Attack);
         if (Input.GetMouseButtonDown(1))
         {
             if (can2Attack == true)
             {
-                Debug.Log("no");
+               // Debug.Log("no");
                 if (player.data.energyLVL >= player.data.energyLVLforSpecialAttack)
                 {
                     OnSpecialAttack();

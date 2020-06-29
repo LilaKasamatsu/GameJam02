@@ -122,7 +122,7 @@ public class Environment : MonoBehaviour
         }
         if (other.transform.CompareTag("Enemy"))
         {
-            Debug.Log("enemy");
+           // Debug.Log("enemy");
             if (isDead == false)
             {
                 isDead = true;

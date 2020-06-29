@@ -17,8 +17,10 @@ public class PlayerHealth : MonoBehaviour
     Camera cam;
     Volume camVolume;
 
-    [SerializeField] Material materialToLerpTo;
-    [SerializeField] Material materialStart;
+    //[SerializeField] Material materialToLerpTo;
+   // [SerializeField] Material materialStart;
+
+   // [SerializeField] TrailRenderer trail;
 
     //  public Vignette viginetti = null;
 
@@ -61,7 +63,7 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         //camVolume.weight = b;
-        //  Debug.Log(rb.velocity.magnitude);
+       //Debug.Log(rb.velocity.magnitude);
         if (rb.velocity.magnitude < 0.5)
         {
 
@@ -129,7 +131,7 @@ public class PlayerHealth : MonoBehaviour
     public void ScreenBlink()
     {
         StartCoroutine(ScreenBlinkOnRadiusEnter());
-        Debug.Log("nnn");
+       // Debug.Log("nnn");
     }
     IEnumerator ScreenBlinkOnRadiusEnter()
     {
