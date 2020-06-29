@@ -81,6 +81,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy") && player.data.isAttacking)
         {
             EnemyHealth enemy = collision.gameObject.GetComponent<EnemyHealth>();
+            Debug.Log("urpplayer");
             enemy.MinusHealth(1);
             enemyHit = true;
         }

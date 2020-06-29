@@ -24,7 +24,7 @@ public class CursorEnergyLVL : MonoBehaviour
     {
         // Debug.Log(rend.material.GetFloat("CursorPower"));
         float b = player.energyLVL / 100;
-       Debug.Log(b);
+      // Debug.Log(b);
         rend.material.SetFloat("CursorPower", player.energyLVL / 100);
     }
 }

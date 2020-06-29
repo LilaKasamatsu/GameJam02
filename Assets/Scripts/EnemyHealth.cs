@@ -23,21 +23,16 @@ public class EnemyHealth : MonoBehaviour
     {
         enemyPlayerInteraction = GetComponent<EnemyPlayerInteraction>();
         enemyDeath = GetComponent<EnemyDeath>();
-        //colorRadius = visualRadius.GetComponent<SpriteRenderer>();
         enemy = GetComponent<Enemy>().data;
-        //colorRadius.color = aliveColor;
-        enemy.currHealth = enemy.maxHealth;
-        // Debug.Log(enemy);
-        
+        enemy.currHealth = enemy.maxHealth;    
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(enemy.currHealth);
-        //Debug.Log(enemy.maxHealth);
         if (Input.GetKeyDown(KeyCode.E))
         {
+            Debug.Log("urp e");
             MinusHealth(1);
             enemyPlayerInteraction.DamageFeedback();
             //            Debug.Log(enemy.currHealth);
@@ -67,6 +62,7 @@ public class EnemyHealth : MonoBehaviour
         {
             // Debug.Log(enemy.currHealth);
             enemyDeath.Kill();
+            Debug.Log("urp");
 
 
             Transform enemyChild = transform.Find("enemy mit joints");
