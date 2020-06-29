@@ -6,8 +6,8 @@ using UnityEngine;
 public class PlayerData
 {
     [Header("Health Attributes")]
-    public float deathTimer = 0;
-    public float deathTime = 3;
+    public float deathTimer ;
+    public float deathTime ;
 
 
     public Color32 standardColor;
@@ -17,9 +17,11 @@ public class PlayerData
     public bool isMovable = true;
 
     [Header("Energy")]
-    public int energyLVL;
-    public int maxEnergyLVL;
-    public int energyLVLforSpecialAttack;
+    public float energyLVL;
+    public float maxEnergyLVL;
+    public float energyLVLforSpecialAttack;
+    public float energyGainedByKillingEnemy;
+    public float energyGainedByEnvironment;
 
     [Header("Movement")]
     public float minVelocity;

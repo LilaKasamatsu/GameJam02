@@ -10,6 +10,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
 
     private bool isUsingSpecialAttack;
     PlayerSpecialAttack specialAttack;
+    PlayerEnergyLvl playerEnergy;
 
     Transform enemyHold;
     //[HideInInspector] public bool canAttack = true;
@@ -20,6 +21,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerEnergy = GetComponent<PlayerEnergyLvl>();
         specialAttack = GetComponentInChildren<PlayerSpecialAttack>();
 
     }
@@ -34,7 +36,8 @@ public class PlayerEnemyInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(can2Attack);
+       // Debug.Log(IsAttackVelocity());
+       // Debug.Log(can2Attack);
         if (IsAttackVelocity())
         {
             this.GetComponent<MeshRenderer>().material.color = Color.red;
@@ -45,18 +48,18 @@ public class PlayerEnemyInteraction : MonoBehaviour
             this.GetComponent<MeshRenderer>().material.color = Color.gray;
             player.data.isAttacking = false;
         }
-
+       // Debug.Log(can2Attack);
         if (Input.GetMouseButtonDown(1))
         {
             if (can2Attack == true)
             {
-                Debug.Log("no");
+               // Debug.Log("no");
                 if (player.data.energyLVL >= player.data.energyLVLforSpecialAttack)
                 {
                     OnSpecialAttack();
-                    can2Attack = false;
-                   // canAttack = false;
-                    player.data.energyLVL -= player.data.energyLVLforSpecialAttack;
+                  //  can2Attack = false;
+                    playerEnergy.AddEnergy(-player.data.energyLVLforSpecialAttack);
+                    //player.data.energyLVL -= player.data.energyLVLforSpecialAttack;gg
                 }
                 else
                 {
@@ -78,6 +81,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy") && player.data.isAttacking)
         {
             EnemyHealth enemy = collision.gameObject.GetComponent<EnemyHealth>();
+            Debug.Log("urpplayer");
             enemy.MinusHealth(1);
             enemyHit = true;
         }
@@ -112,12 +116,12 @@ public class PlayerEnemyInteraction : MonoBehaviour
         if (player.data.isMovable)
         {
 
-            Debug.Log("2");
+           // Debug.Log("2");
             player.data.isMovable = false;
             freePlayer = StartCoroutine(EscapeEnemy());
             GetComponent<Rigidbody>().isKinematic = true;
         }
-        Debug.Log("1");
+       // Debug.Log("1");
     }
     void MoveToEnemy(Transform target)
     {

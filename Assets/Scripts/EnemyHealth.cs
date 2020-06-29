@@ -4,28 +4,27 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-
+    EnemyDissolve enemyDissolve;
+    EnemyRadius enemyRadius;
 
     EnemyDeath enemyDeath;
     EnemyData enemy;
+    EnemyPlayerInteraction enemyPlayerInteraction;
 
-    [SerializeField] GameObject visualRadius;
+    //[SerializeField] GameObject visualRadius;
     private SpriteRenderer colorRadius;
-    [SerializeField] Color aliveColor;
-    [SerializeField] Color deadColor;
+    // [SerializeField] Color aliveColor;
+    //[SerializeField] Color deadColor;
     float a;
     float b = 0.33f;
 
     // Start is called before the first frame update
     void Start()
     {
+        enemyPlayerInteraction = GetComponent<EnemyPlayerInteraction>();
         enemyDeath = GetComponent<EnemyDeath>();
-        colorRadius = visualRadius.GetComponent<SpriteRenderer>();
         enemy = GetComponent<Enemy>().data;
-        colorRadius.color = aliveColor;
-        enemy.currHealth = enemy.maxHealth;
-      
-
+        enemy.currHealth = enemy.maxHealth;    
     }
 
     // Update is called once per frame
@@ -33,19 +32,55 @@ public class EnemyHealth : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            Debug.Log("urp e");
             MinusHealth(1);
-            Debug.Log("minushealth");
+            enemyPlayerInteraction.DamageFeedback();
+            //            Debug.Log(enemy.currHealth);
         }
     }
     public void MinusHealth(int health)
     {
         enemy.currHealth -= health;
 
-        
+        if (enemy.currHealth == 2)
+        {
+            GameObject particleRadius = transform.Find("particleRadius").gameObject;
+            enemyRadius = particleRadius.GetComponent<EnemyRadius>();
+
+            enemyRadius.circleParticlesTwo.Stop();
+        }
+
+        if (enemy.currHealth == 1)
+        {
+            GameObject particleRadius = transform.Find("particleRadius").gameObject;
+            enemyRadius = particleRadius.GetComponent<EnemyRadius>();
+
+            enemyRadius.circleParticlesOne.Stop();
+        }
+
         if (enemy.currHealth <= 0)
         {
-           // Debug.Log("enemy Death");
+            // Debug.Log(enemy.currHealth);
             enemyDeath.Kill();
+            Debug.Log("urp");
+
+
+            Transform enemyChild = transform.Find("enemy mit joints");
+
+            foreach (Transform gc in enemyChild)
+            {
+                if(gc.name == "Enemy")
+                {
+                    GameObject enemyGrandchild = gc.gameObject;
+
+                    enemyDissolve = enemyGrandchild.GetComponent<EnemyDissolve>();
+
+                    enemyDissolve.dissolveNow();
+
+                }
+                
+            }
+            
         }
 
         /*

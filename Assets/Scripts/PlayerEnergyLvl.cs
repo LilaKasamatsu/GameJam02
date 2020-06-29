@@ -5,13 +5,15 @@ using UnityEngine;
 public class PlayerEnergyLvl : MonoBehaviour
 {
     PlayerData player;
+    CursorEnergyLVL cursor;
 
     void Start()
     {
         player = GetComponent<Player>().data;
+        cursor = GameObject.Find("Cursor").GetComponent<CursorEnergyLVL>();
     }
 
-    public void AddEnergy(int add)
+    public void AddEnergy(float add)
     {
         if (player.energyLVL <= player.maxEnergyLVL)
         {
@@ -21,5 +23,6 @@ public class PlayerEnergyLvl : MonoBehaviour
         {
             player.energyLVL = player.maxEnergyLVL;
         }
+        cursor.SetCurcorPower();
     }
 }
