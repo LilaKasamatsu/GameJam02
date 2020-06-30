@@ -43,10 +43,8 @@ public class EnemyPlayerInteraction : MonoBehaviour
     Vector3 groundPosition;
 
     public Transform target;
-    public Transform playerTarget;
     [SerializeField] Animator anim;
 
-    private EnemyController enemyController;
 
     // Start is called before the first frame update
     void Start()
@@ -60,11 +58,16 @@ public class EnemyPlayerInteraction : MonoBehaviour
         enemyDeath = GetComponent<EnemyDeath>();
 
         enemy = GetComponent<Enemy>().data;
-
-        enemyController = GetComponent<EnemyController>();
     }
 
-
+    private void OnDrawGizmos()
+    {
+        groundPosition = new Vector3(transform.position.x, 0, transform.position.z);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(groundPosition, enemy.actionRadius);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(groundPosition, enemy.attackRadius);
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -110,42 +113,6 @@ public class EnemyPlayerInteraction : MonoBehaviour
         transform.LookAt(new Vector3(target.position.x, transform.position.y, target.position.z));
 
     }
-
-    float currentAngularVelocity = 0;
-
-    IEnumerator RotateTowards(Vector3 target)
-    {
-        while (true)
-        {
-            Vector3 towardTarget = target - transform.position;
-            Vector3 towardTargetProjected = Vector3.ProjectOnPlane(towardTarget, transform.up);
-            float angToTarget = Vector3.SignedAngle(transform.forward, towardTargetProjected, transform.up);
-
-            float targetAngularVelocity = 0;
-
-            if (Mathf.Abs(angToTarget) > 2)
-            {
-                if (angToTarget > 0)
-                {
-                    targetAngularVelocity = 2;
-                }
-                else
-                {
-                    targetAngularVelocity = -2;
-                }
-            }
-            else
-            {
-                yield break;
-            }
-            currentAngularVelocity = Mathf.Lerp(currentAngularVelocity, targetAngularVelocity, 1 - Mathf.Exp(-2 * Time.deltaTime));
-
-            transform.Rotate(0, Time.deltaTime * currentAngularVelocity, 0, Space.World);
-            yield return null;
-
-        }
-    }
-
     void Attack()
     {
         //Rotation(player.transform);
@@ -192,16 +159,20 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     private void Move()
     {
-        StartCoroutine(RotateTowards(newLocation));
+        // Rotation(player.transform);
         transform.position = Vector3.MoveTowards(transform.position, newLocation, patrollingSpeed * Time.deltaTime);
         if (transform.position == newLocation)
         {
             if (isSleepingEnemy == true)
             {
+
                 if (sleepingFeedback == true) { SleepingFeedback(); }
+
+
             }
             else
             {
+
                 if (idleFeedback == true) { IdleFeedback(); }
                 SetNewLocation(a);
                 StartCoroutine(RandomWait());
@@ -232,13 +203,16 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     void Hold()
     {
+        //  Rotation(player.transform);
         player.GetComponent<PlayerEnemyInteraction>().OnHold(this.transform, target);
         StartCoroutine(OnHold());
+
     }
     IEnumerator OnHold()
     {
         yield return new WaitForSecondsRealtime(1f);
         // transform.position = transform.position;
+        //Debug.Log("qqq");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -246,9 +220,11 @@ public class EnemyPlayerInteraction : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isHoldingPlayer = true;
+            // Debug.Log("CAUGHT");
         }
         if (other.CompareTag("EnemyDeath"))
         {
+            Debug.Log("killlll");
             enemyDeath.Kill();
         }
     }
@@ -259,6 +235,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         {
             //stop
             isHoldingPlayer = false;
+            // Debug.Log("draussen");
         }
     }
 
@@ -266,14 +243,6 @@ public class EnemyPlayerInteraction : MonoBehaviour
     {
         return Vector3.Distance(player.transform.position, groundPosition) < range;
     }
-
-    IEnumerator ReenableAnimation()
-    {
-        yield return new WaitForSecondsRealtime(.6f);
-        enemyController.EnableProcedural();
-
-    }
-
 
     void MovingFeedback()
     {
@@ -288,7 +257,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         anim.SetBool("holding", false);
         anim.SetBool("moving", true);
         anim.SetBool("sleeping", false);
-        StartCoroutine(ReenableAnimation());
+
     }
     //IEnumerator AttackingFeedback()
     //{
@@ -301,7 +270,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         //  Debug.Log("holding");
         movingFeedback = true;
 
-        enemyController.DisableProcedural();
+
         anim.SetBool("moving", false);
         anim.SetBool("holding", true);
         camRig.isHolded = true;
@@ -314,13 +283,10 @@ public class EnemyPlayerInteraction : MonoBehaviour
         sleepingFeedback = false;
         movingFeedback = true;
 
-        enemyController.DisableProcedural();
-
         anim.SetBool("sleeping", true);
         anim.SetBool("moving", false);
 
     }
-
     void IdleFeedback()
     {
         idleFeedback = false;
