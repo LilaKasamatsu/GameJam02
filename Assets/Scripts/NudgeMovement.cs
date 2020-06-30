@@ -58,7 +58,7 @@ public class NudgeMovement : MonoBehaviour
             //float mouseX = Input.GetAxis("Mouse X");
             //float mouseY = Input.GetAxis("Mouse Y");
             //player.rb.velocity = new Vector3(Mathf.Clamp(dir.x* mouseY*pushForce, player.data.minVelocity, player.data.maxVelocity), 0, Mathf.Clamp(dir.z* mouseX*pushForce, player.data.minVelocity, player.data.maxVelocity));
-            Debug.Log("FORCE: " + player.rb.velocity);
+           // Debug.Log("FORCE: " + player.rb.velocity);
         }
     }
 

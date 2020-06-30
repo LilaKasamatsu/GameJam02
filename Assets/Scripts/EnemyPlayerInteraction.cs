@@ -311,7 +311,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     void HoldingFeedback()
     {
-
+       
         holdingFeedback = false;
         movingFeedback = true;
 
@@ -345,6 +345,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     }
     public void KillFeedback()
     {
+        isHoldingPlayer = false;
         enemyController.DisableProcedural();
 
         anim.SetTrigger("death");

@@ -54,7 +54,7 @@ public class Tutorial : MonoBehaviour
                 Debug.Log("Close Tutorial");
 
                 StartCoroutine(CloseTutorial());
-                a++;
+                
                 if (a == 6)
                 {
                     enemy.SetActive(true);
@@ -79,19 +79,22 @@ public class Tutorial : MonoBehaviour
     {
         Debug.Log("open screen");
         yield return new WaitForSecondsRealtime(waitForSecond[a]);
+        Debug.Log("open ssssssscreen");
         EnableScreen(a);
         EnableBlackScreen();
         //Screen is opened
     }
     IEnumerator CloseTutorial()
     {
-        screens[a].SetActive(false);
-        animBlack.SetTrigger("fade");
-        yield return new WaitForSecondsRealtime(1f);
         screenIsActive = false;
+        animBlack.SetTrigger("fade");
+        screens[a].GetComponent<Animator>().SetTrigger("FadeOut");
+        yield return new WaitForSecondsRealtime(1f);
+        screens[a].SetActive(false);
         overLayBlackScreen.SetActive(false);
         Time.timeScale = 1;
         cursor.SetActive(true);
+        a++;
         StartCoroutine(TutorialManager());
     }
     void EnableBlackScreen()
@@ -101,6 +104,6 @@ public class Tutorial : MonoBehaviour
     }
     void LoadNextScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("GroundLevelDONE01");
     }
 }
