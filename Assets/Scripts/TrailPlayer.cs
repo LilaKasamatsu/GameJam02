@@ -10,10 +10,12 @@ public class TrailPlayer : MonoBehaviour
     float t = 0;
     float maxWidth = 1.5f;
     float currWidth;
-    float maxMagnitude = 15f;
+    float maxMagnitude = 10f;
     [SerializeField] Color newColorForTrail;
     Material tailMaterial;
     Color beginColor;
+
+    bool isLerping = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,13 +32,17 @@ public class TrailPlayer : MonoBehaviour
         tail.startWidth = t * maxWidth;
         if (t >= 1)
         {
-            tailMaterial.color = newColorForTrail;
+           // tailMaterial.color = beginColor;
+            tailMaterial.SetColor("_EmissionColor", beginColor);
             Debug.Log("change color");
             t = 1;
         }
         else
         {
-            tailMaterial.color = beginColor;
+            Debug.Log("new color");
+        
+            tailMaterial.SetColor("_EmissionColor", newColorForTrail);
         }
+       
     }
 }
