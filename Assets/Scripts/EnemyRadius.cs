@@ -45,17 +45,6 @@ public class EnemyRadius : MonoBehaviour
             verticalParticles.Stop();
         }
         
-        /*
-        if(enemy.currHealth == 2)
-        {
-            circleParticlesTwo.Stop();
-        }
-
-        if(enemy.currHealth == 1)
-        {
-            circleParticlesOne.Stop();
-        }
-        */
         
         //Enemy is hit by player
         if(peiScript.enemyHit == true)
