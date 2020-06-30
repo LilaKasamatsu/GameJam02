@@ -156,8 +156,7 @@ MonoBehaviour:
   patrollingSpeed: 3
   attackspeed: 6
   stunnedCooldown: 0
-  target: {fileID: 0}
-  playerTarget: {fileID: 6072954130768619280}
+  target: {fileID: 6072954130768619280}
   anim: {fileID: 4591499336964854407}
 --- !u!114 &6072954130480952764
 MonoBehaviour:
