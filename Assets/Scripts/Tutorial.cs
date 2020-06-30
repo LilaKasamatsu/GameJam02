@@ -10,8 +10,8 @@ public class Tutorial : MonoBehaviour
     //[SerializeField] GameObject screen3;
     //[SerializeField] GameObject screen4;
 
-    List<GameObject> screens = new List<GameObject>();
-    List<int> waitForSecond = new List<int>();
+   public List<GameObject> screens = new List<GameObject>();
+   public List<int> waitForSecond = new List<int>();
 
     bool screenIsActive = false;
     int a = 0;
