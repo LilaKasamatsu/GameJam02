@@ -85,7 +85,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6072954130480952761}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.8201714, y: -2.9633665, z: -5.1355095}
+  m_LocalPosition: {x: -2.8201714, y: -2.11, z: -5.1355095}
   m_LocalScale: {x: 1.613, y: 1.0577086, z: 1.613}
   m_Children:
   - {fileID: 3815561523528140860}
@@ -157,6 +157,7 @@ MonoBehaviour:
   attackspeed: 6
   stunnedCooldown: 0
   target: {fileID: 6072954130768619280}
+  playerTarget: {fileID: 0}
   anim: {fileID: 4591499336964854407}
 --- !u!114 &6072954130480952764
 MonoBehaviour:
@@ -24755,6 +24756,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.176
       objectReference: {fileID: 0}
+    - target: {fileID: 7280630989611566747, guid: 83f39b521d85e244ea86667a80d02ed2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 133220e17a54302459f37a4d2eb34efb, type: 2}
     - target: {fileID: 7782008820671998693, guid: 83f39b521d85e244ea86667a80d02ed2,
         type: 3}
       propertyPath: m_Name
