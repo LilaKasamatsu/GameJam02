@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyChild: {fileID: 3815561523528140860}
+  particleRadius: {fileID: 6072954132218111047}
 --- !u!135 &248006457
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -24517,7 +24518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circleParticles: {fileID: 6072954131172644943}
   circleParticlesOne: {fileID: 6072954132005226070}
-  circleParticlesTwo: {fileID: 6072954130827020029}
+  circleParticlesTwo: {fileID: 6072954132121164844}
 --- !u!114 &6072954131832225436
 MonoBehaviour:
   m_ObjectHideFlags: 0
