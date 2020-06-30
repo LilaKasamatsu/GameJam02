@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7113289917297334189}
   - component: {fileID: 7113289917297334188}
   - component: {fileID: 7113289917297334191}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: YarnWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7113289917297334190}
   m_LocalRotation: {x: -0.17979833, y: 0.23910806, z: -0.57347417, w: 0.76264495}
   m_LocalPosition: {x: -16.26, y: 6.37, z: 33.61}
-  m_LocalScale: {x: 16.426931, y: 5.3925, z: 8.083898}
+  m_LocalScale: {x: 16.426931, y: 5.3925, z: 8.190184}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -87,7 +87,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7113289917297334190}
-  m_Material: {fileID: 13400000, guid: 5840ed711ca60e641a57982d10767b87, type: 2}
+  m_Material: {fileID: 13400000, guid: eed3f00e3ce62ca44a87d1f0a0db60ef, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4760778639665612767}
   - component: {fileID: 7346877027315200789}
   - component: {fileID: 2045841536172313383}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hole_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9148400510094938816}
-  m_LocalRotation: {x: -0.22706296, y: 0.09555876, z: -0.23211029, w: 0.94097596}
+  m_LocalRotation: {x: -0.22706106, y: 0.095559314, z: -0.2321108, w: 0.94097626}
   m_LocalPosition: {x: 0.7, y: 3.61, z: -54.5}
-  m_LocalScale: {x: 8.3659, y: 8.3659, z: 8.3659}
+  m_LocalScale: {x: 8.365901, y: 8.3659, z: 8.3659}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -87,7 +87,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9148400510094938816}
-  m_Material: {fileID: 13400000, guid: 5840ed711ca60e641a57982d10767b87, type: 2}
+  m_Material: {fileID: 13400000, guid: eed3f00e3ce62ca44a87d1f0a0db60ef, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
