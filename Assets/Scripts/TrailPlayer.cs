@@ -32,7 +32,7 @@ public class TrailPlayer : MonoBehaviour
         tail.startWidth = t * maxWidth;
         if (t >= 1)
         {
-           // tailMaterial.color = beginColor;
+            // tailMaterial.color = beginColor;
             tailMaterial.SetColor("_EmissionColor", beginColor);
             Debug.Log("change color");
             t = 1;
@@ -40,9 +40,9 @@ public class TrailPlayer : MonoBehaviour
         else
         {
             Debug.Log("new color");
-        
+
             tailMaterial.SetColor("_EmissionColor", newColorForTrail);
         }
-       
+
     }
 }

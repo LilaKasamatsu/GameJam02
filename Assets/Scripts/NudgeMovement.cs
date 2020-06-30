@@ -49,7 +49,7 @@ public class NudgeMovement : MonoBehaviour
             dir = dir.normalized;
             Vector2 acc = endPosition - startPosition;
 
-            player.rb.AddForce(dir * pushForce, ForceMode.VelocityChange);
+            player.rb.AddForce(dir * pushForce, ForceMode.Impulse);
 
             player.rb.velocity = new Vector3(Mathf.Clamp(player.rb.velocity.x, player.data.minVelocity, player.data.maxVelocity), 0, Mathf.Clamp(player.rb.velocity.z, player.data.minVelocity, player.data.maxVelocity));
 

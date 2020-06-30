@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5542846989317849601}
   - component: {fileID: 5542846989317849606}
   - component: {fileID: 5542846989317849607}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bacon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5542846989317849604}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: eed3f00e3ce62ca44a87d1f0a0db60ef, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
