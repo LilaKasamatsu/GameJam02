@@ -95,9 +95,9 @@ public class EnemyPlayerInteraction : MonoBehaviour
                 if (isHoldingPlayer)
                 {
                     Hold();
-                    if (holdingFeedback == true) 
-                    { 
-                        HoldingFeedback(); 
+                    if (holdingFeedback == true)
+                    {
+                        HoldingFeedback();
                     }
                 }
                 else
@@ -294,7 +294,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         {
             enemyController.EnableProcedural();
         }
-        
+
     }
 
     void AwakingFeedback()
@@ -311,7 +311,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     void HoldingFeedback()
     {
-        
+
         holdingFeedback = false;
         movingFeedback = true;
 
