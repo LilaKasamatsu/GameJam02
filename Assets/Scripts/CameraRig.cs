@@ -28,12 +28,12 @@ public class CameraRig : MonoBehaviour
         OrbitTarget();
         if (isHolded == true)
         {
-            if (holdCoroutineActive == false)
-            {
-                Debug.Log("222");
-                LerpPos(cam.transform, posWhenHold);
-                holdCoroutineActive = true;
-            }
+            //if (holdCoroutineActive == false)
+            //{
+            //    Debug.Log("222");
+            //    LerpPos(cam.transform, posWhenHold);
+            //    holdCoroutineActive = true;
+            //}
 
         }
 

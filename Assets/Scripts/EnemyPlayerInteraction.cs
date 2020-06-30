@@ -21,7 +21,6 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     [HideInInspector] public bool death;
 
-
     [SerializeField] float patrollingSpeed;
     [SerializeField] float attackspeed;
 
@@ -65,14 +64,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         enemyController = GetComponent<EnemyController>();
     }
 
-    //private void OnDrawGizmos()
-    //{
-    //    groundPosition = new Vector3(transform.position.x, 0, transform.position.z);
-    //    Gizmos.color = Color.yellow;
-    //    Gizmos.DrawWireSphere(groundPosition, enemy.actionRadius);
-    //    Gizmos.color = Color.red;
-    //    Gizmos.DrawWireSphere(groundPosition, enemy.attackRadius);
-    //}
+
 
     // Update is called once per frame
     void FixedUpdate()
@@ -113,9 +105,9 @@ public class EnemyPlayerInteraction : MonoBehaviour
         }
         if (death == true) { KillFeedback(); }
     }
-    void Rotation(Vector3 target)
+    void Rotation(Transform target)
     {
-        transform.LookAt(new Vector3(target.x, transform.position.y, target.z));
+        transform.LookAt(new Vector3(target.position.x, transform.position.y, target.position.z));
 
     }
 
@@ -157,7 +149,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     void Attack()
     {
         //Rotation(player.transform);
-        Rotation(player.transform.position);
+        Rotation(player.transform);
         if (attack == true)
         {
 
@@ -240,16 +232,13 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     void Hold()
     {
-
-        player.GetComponent<PlayerEnemyInteraction>().OnHold(this.transform, playerTarget);
+        player.GetComponent<PlayerEnemyInteraction>().OnHold(this.transform, target);
         StartCoroutine(OnHold());
-
     }
     IEnumerator OnHold()
     {
         yield return new WaitForSecondsRealtime(1f);
         // transform.position = transform.position;
-        //Debug.Log("qqq");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -257,11 +246,9 @@ public class EnemyPlayerInteraction : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isHoldingPlayer = true;
-            // Debug.Log("CAUGHT");
         }
         if (other.CompareTag("EnemyDeath"))
         {
-            Debug.Log("killlll");
             enemyDeath.Kill();
         }
     }
@@ -272,7 +259,6 @@ public class EnemyPlayerInteraction : MonoBehaviour
         {
             //stop
             isHoldingPlayer = false;
-            // Debug.Log("draussen");
         }
     }
 
@@ -297,6 +283,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         idleFeedback = true;
         holdingFeedback = true;
         attackFeedback = true;
+
 
         anim.SetBool("holding", false);
         anim.SetBool("moving", true);
@@ -333,6 +320,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         anim.SetBool("moving", false);
 
     }
+
     void IdleFeedback()
     {
         idleFeedback = false;
@@ -347,7 +335,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     }
     public void KillFeedback()
     {
-        //anim.SetTrigger("death");
+        anim.SetTrigger("death");
     }
     public void DamageFeedback()
     {
