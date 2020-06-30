@@ -30,13 +30,13 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("urp e");
-            MinusHealth(1);
-            enemyPlayerInteraction.DamageFeedback();
-            //            Debug.Log(enemy.currHealth);
-        }
+    //    if (Input.GetKeyDown(KeyCode.E))
+    //    {
+    //        Debug.Log("urp e");
+    //        MinusHealth(1);
+    //        enemyPlayerInteraction.DamageFeedback();
+    //        //            Debug.Log(enemy.currHealth);
+    //    }
     }
     public void MinusHealth(int health)
     {
@@ -46,7 +46,7 @@ public class EnemyHealth : MonoBehaviour
         {
             GameObject particleRadius = transform.Find("particleRadius").gameObject;
             enemyRadius = particleRadius.GetComponent<EnemyRadius>();
-
+            enemyPlayerInteraction.DamageFeedback();
             enemyRadius.circleParticlesTwo.Stop();
         }
 
@@ -54,7 +54,7 @@ public class EnemyHealth : MonoBehaviour
         {
             GameObject particleRadius = transform.Find("particleRadius").gameObject;
             enemyRadius = particleRadius.GetComponent<EnemyRadius>();
-
+            enemyPlayerInteraction.DamageFeedback();
             enemyRadius.circleParticlesOne.Stop();
         }
 
