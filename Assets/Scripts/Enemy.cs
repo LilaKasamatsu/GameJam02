@@ -6,15 +6,14 @@ public class Enemy : MonoBehaviour
 {
     public EnemyData data;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnDrawGizmos()
     {
-        
-    }
+        Gizmos.color = Color.yellow;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Gizmos.DrawWireSphere(this.transform.position, data.actionRadius);
+
+        Gizmos.color = Color.red;
+
+        Gizmos.DrawWireSphere(this.transform.position, data.attackRadius);
     }
 }

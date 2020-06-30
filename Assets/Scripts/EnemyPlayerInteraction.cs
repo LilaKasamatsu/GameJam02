@@ -95,7 +95,14 @@ public class EnemyPlayerInteraction : MonoBehaviour
                 if (isHoldingPlayer)
                 {
                     Hold();
-                    if (holdingFeedback == true) { HoldingFeedback(); }
+                    if (holdingFeedback == true) 
+                    { 
+                        HoldingFeedback(); 
+                    }
+                }
+                else
+                {
+                    stunnedCooldown = 2f;
                 }
             }
         }
@@ -245,6 +252,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("HI");
             isHoldingPlayer = true;
         }
         if (other.CompareTag("EnemyDeath"))
@@ -267,18 +275,11 @@ public class EnemyPlayerInteraction : MonoBehaviour
         return Vector3.Distance(player.transform.position, groundPosition) < range;
     }
 
-    IEnumerator ReenableAnimation()
-    {
-        yield return new WaitForSecondsRealtime(.6f);
-        enemyController.EnableProcedural();
-
-    }
 
 
     void MovingFeedback()
     {
         movingFeedback = false;
-        // Debug.Log("moving");
         sleepingFeedback = true;
         idleFeedback = true;
         holdingFeedback = true;
@@ -288,17 +289,30 @@ public class EnemyPlayerInteraction : MonoBehaviour
         anim.SetBool("holding", false);
         anim.SetBool("moving", true);
         anim.SetBool("sleeping", false);
-        StartCoroutine(ReenableAnimation());
+
+        if (!isSleepingEnemy)
+        {
+            enemyController.EnableProcedural();
+        }
+        
     }
+
+    void AwakingFeedback()
+    {
+
+        enemyController.DisableProcedural();
+        anim.SetBool("sleeping", false);
+    }
+
     //IEnumerator AttackingFeedback()
     //{
     //    yield return new WaitForEndOfFrame();
     //}
+
     void HoldingFeedback()
     {
-
+        
         holdingFeedback = false;
-        //  Debug.Log("holding");
         movingFeedback = true;
 
         enemyController.DisableProcedural();
@@ -309,10 +323,8 @@ public class EnemyPlayerInteraction : MonoBehaviour
     }
     void SleepingFeedback()
     {
-        // Debug.Log("sleeping");
-
         sleepingFeedback = false;
-        movingFeedback = true;
+        movingFeedback = false;
 
         enemyController.DisableProcedural();
 
@@ -327,18 +339,31 @@ public class EnemyPlayerInteraction : MonoBehaviour
         movingFeedback = true;
         attackFeedback = true;
 
-
         anim.SetBool("moving", false);
         anim.SetBool("sleeping", false);
-
 
     }
     public void KillFeedback()
     {
+        enemyController.DisableProcedural();
+
         anim.SetTrigger("death");
     }
     public void DamageFeedback()
     {
+
+        enemyController.DisableProcedural();
+
         anim.SetTrigger("damage");
+
+        StartCoroutine(ReactivateWithDelay(1.4f));
     }
+
+    IEnumerator ReactivateWithDelay(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        enemyController.EnableProcedural();
+
+    }
+
 }
