@@ -86,9 +86,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - CursorPower: 0
+    - Vector1_42250DAA: 0
     - Vector1_5624625F: 0.224
     - Vector1_BFE3E99E: 0.1
     - Vector1_F65B5070: 0.1
+    - Vector1_F9112F34: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
