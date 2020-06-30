@@ -11,6 +11,8 @@ public class EnemyHealth : MonoBehaviour
     EnemyData enemy;
     EnemyPlayerInteraction enemyPlayerInteraction;
 
+   [SerializeField] Transform enemyChild;
+
     //[SerializeField] GameObject visualRadius;
     private SpriteRenderer colorRadius;
     // [SerializeField] Color aliveColor;
@@ -65,7 +67,7 @@ public class EnemyHealth : MonoBehaviour
             Debug.Log("urp");
 
 
-            Transform enemyChild = transform.Find("enemy mit joints");
+          //  Transform enemyChild = transform.Find("enemy mit joints");
 
             foreach (Transform gc in enemyChild)
             {

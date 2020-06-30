@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 6072954130480952739}
   m_Layer: 0
   m_Name: EnemyController
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 6072954130586060062}
   m_Layer: 0
   m_Name: Target Front Left
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 6072954130728776455}
   m_Layer: 0
   m_Name: Target Back Left
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14671,7 +14671,7 @@ GameObject:
   - component: {fileID: 6072954131643757659}
   m_Layer: 0
   m_Name: RealEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14708,7 +14708,7 @@ GameObject:
   - component: {fileID: 6072954131915716937}
   m_Layer: 0
   m_Name: Target Back Right
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19602,7 +19602,7 @@ GameObject:
   - component: {fileID: 6072954132006580438}
   m_Layer: 0
   m_Name: Target Front Right
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19650,7 +19650,7 @@ GameObject:
   - component: {fileID: 6072954132015397526}
   m_Layer: 0
   m_Name: Target Back Middle
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24686,6 +24686,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.42384732
       objectReference: {fileID: 0}
+    - target: {fileID: 4052852329532677772, guid: 83f39b521d85e244ea86667a80d02ed2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4887696673749283135, guid: 83f39b521d85e244ea86667a80d02ed2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 6968457745782288479, guid: 83f39b521d85e244ea86667a80d02ed2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24765,6 +24775,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyRig
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782008820671998693, guid: 83f39b521d85e244ea86667a80d02ed2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8120538213859035841, guid: 83f39b521d85e244ea86667a80d02ed2,
         type: 3}

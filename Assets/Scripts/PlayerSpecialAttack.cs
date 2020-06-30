@@ -75,7 +75,7 @@ public class PlayerSpecialAttack : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-           // Debug.Log("urp special attack");
+           Debug.Log("urp special attack");
             other.GetComponent<EnemyHealth>().MinusHealth(3);
         }
     }
