@@ -185,7 +185,7 @@ MonoBehaviour:
   data:
     actionRadius: 10
     attackRadius: 10
-    maxHealth: 100
+    maxHealth: 3
     currHealth: 0
 --- !u!65 &6072954130480952738
 BoxCollider:
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de809066e1661f0408c0a6250d910933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyChild: {fileID: 3815561523528140860}
+  enemyChild: {fileID: 0}
 --- !u!1 &6072954130586060056
 GameObject:
   m_ObjectHideFlags: 0
