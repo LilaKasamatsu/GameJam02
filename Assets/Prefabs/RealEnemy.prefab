@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyChild: {fileID: 3815561523528140860}
-  particleRadius: {fileID: 0}
+  particleRadius: {fileID: 6072954132218111047}
 --- !u!114 &6072954130480952736
 MonoBehaviour:
   m_ObjectHideFlags: 0
