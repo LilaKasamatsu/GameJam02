@@ -31,7 +31,6 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     Player player;
     PlayerHealth playerHealth;
-    PlayerEnergyLvl playerenergy;
 
     CameraRig camRig;
 
@@ -47,12 +46,10 @@ public class EnemyPlayerInteraction : MonoBehaviour
         enemy = GetComponent<Enemy>().data;
         enemyDeath = GetComponent<EnemyDeath>();
         enemyController = GetComponent<EnemyController>();
-
         playerEnemy = enemy.playerEnemy;
 
         player = GameObject.FindObjectOfType<Player>();
         playerHealth = FindObjectOfType<PlayerHealth>();
-        playerenergy = FindObjectOfType<PlayerEnergyLvl>();
 
         camRig = GameObject.Find("CameraRig").GetComponent<CameraRig>();
 
@@ -63,7 +60,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     void Update()
     {
-        if (stunnedCooldown <= 0f)
+        if (stunnedCooldown <= 0f || !enemyDeath.isDying)
         {
             groundPosition = new Vector3(transform.position.x, 0, transform.position.z);
 
@@ -91,6 +88,10 @@ public class EnemyPlayerInteraction : MonoBehaviour
                 if (holdingFeedback == true)
                 {
                     HoldingFeedback();
+                }
+                else
+                {
+                    //stunnedCooldown = 1f;
                 }
             }
         }
@@ -179,7 +180,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         {
             a = 0.4f;
         }
-        yield return new WaitForSeconds(a);
+        yield return new WaitForSecondsRealtime(a);
         attack = true;
 
     }
@@ -295,7 +296,6 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     void HoldingFeedback()
     {
-       
         holdingFeedback = false;
         movingFeedback = true;
 
@@ -329,27 +329,24 @@ public class EnemyPlayerInteraction : MonoBehaviour
     }
     public void KillFeedback()
     {
-        isHoldingPlayer = false;
         enemyController.DisableProcedural();
 
         enemy.anim.SetTrigger("death");
-        isWaiting = true;
-        stunnedCooldown = 5f;
     }
 
     public void DamageFeedback()
     {
-        playerenergy.AddEnergy(30);
+
         enemyController.DisableProcedural();
 
         enemy.anim.SetTrigger("damage");
-
+        stunnedCooldown = 1.4f;
         StartCoroutine(ReactivateWithDelay(1.4f));
     }
 
     public IEnumerator ReactivateWithDelay(float seconds)
     {
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSecondsRealtime(seconds);
         enemyController.EnableProcedural();
         wasSleeping = false;
     }

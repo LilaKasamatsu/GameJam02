@@ -48,30 +48,15 @@ public class PlayerEnemyInteraction : MonoBehaviour
             player.data.isAttacking = false;
         }
         // Debug.Log(can2Attack);
-        // Debug.Log(can2Attack);
         if (Input.GetMouseButtonDown(1))
         {
-          //  Debug.Log("isusingspecial ttack ist true");
-            if (isUsingSpecialAttack == false)
+            if (can2Attack == true)
             {
-               // Debug.Log("isusingspecial ttack ist false");
-
-                if (can2Attack == true)
+                // Debug.Log("no");
+                if (player.data.energyLVL >= player.data.energyLVLforSpecialAttack)
                 {
-                    // Debug.Log("no");
-                   // Debug.Log("can2attack ttack ist true");
-                    if (player.data.energyLVL >= player.data.energyLVLforSpecialAttack)
-                    {
-                        can2Attack = false;
-                        isUsingSpecialAttack = false;
-                        OnSpecialAttack();
-                        StartCoroutine(SetToFalse());
-                        playerEnergy.MinusEnergy();
-                    }
-                    else
-                    {
-                       // Debug.Log("no energy :(");
-                    }
+                    OnSpecialAttack();
+                    playerEnergy.AddEnergy(-player.data.energyLVLforSpecialAttack);
                 }
             }
         }
@@ -96,18 +81,15 @@ public class PlayerEnemyInteraction : MonoBehaviour
 
     public void OnSpecialAttack()
     {
-
         // Do some animation magic.
-       // isUsingSpecialAttack = true;
+        isUsingSpecialAttack = true;
         StartCoroutine(specialAttack.Expand());
-       
-
 
     }
     IEnumerator SetToFalse()
     {
        // Debug.Log("aa");
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSecondsRealtime(3f);
         isUsingSpecialAttack = false;
     }
 
@@ -118,16 +100,16 @@ public class PlayerEnemyInteraction : MonoBehaviour
         if(freePlayer != null)
         {
             StopCoroutine(freePlayer);
-
         }
         player.data.isMovable = true;
         if (currentEnemy != null)
         {
             currentEnemy.GetComponent<EnemyPlayerInteraction>().stunnedCooldown = 1f;
+            Debug.Log("ENEMYSTUNNED");
         }
     }
 
-    Transform currentEnemy;
+    public Transform currentEnemy;
 
     public void OnHold(Transform enemy, Transform target)
     {
@@ -149,6 +131,8 @@ public class PlayerEnemyInteraction : MonoBehaviour
         Vector3 i = new Vector3(target.position.x, target.position.y, target.position.z);
         transform.position = Vector3.MoveTowards(transform.position, i, 5 * Time.deltaTime);
     }
+
+
     private IEnumerator EscapeEnemy()
     {
         this.GetComponent<MeshRenderer>().material.color = Color.black;
@@ -164,7 +148,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
             {
                 buttonClickCounter++;
             }
-            if (buttonClickCounter >= 5)
+            if (buttonClickCounter >= 15)
             {
                 OnRelease();
             }

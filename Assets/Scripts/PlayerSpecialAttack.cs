@@ -73,7 +73,7 @@ public class PlayerSpecialAttack : MonoBehaviour
     IEnumerator SetToFalse()
     {
        // Debug.Log("t");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSecondsRealtime(1f);
         playerEnemy.can2Attack = true;
     }
     private void OnTriggerEnter(Collider other)

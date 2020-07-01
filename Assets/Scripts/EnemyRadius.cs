@@ -42,7 +42,9 @@ public class EnemyRadius : MonoBehaviour
         if (enemyDeath.isDying == true)
         {
             circleParticles.Stop();
+            circleParticles.gameObject.SetActive(false);
             verticalParticles.Stop();
+            verticalParticles.gameObject.SetActive(false);
         }
 
 
@@ -59,7 +61,7 @@ public class EnemyRadius : MonoBehaviour
     
     IEnumerator EnemyHit()
     {
-        yield return new WaitForSecondsRealtime(0f);
+        yield return new WaitForSecondsRealtime(1f);
         peiScript.enemyHit = false;
     }
     
