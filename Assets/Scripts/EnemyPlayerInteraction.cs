@@ -207,7 +207,9 @@ public class EnemyPlayerInteraction : MonoBehaviour
     void SetNewLocation(int i)
     {
         // Debug.Log(i);
+
         newLocation = new Vector3(enemy.location[i].x, transform.position.y, enemy.location[i].z);
+        Debug.Log("LOCATION: " + newLocation);
         // target.position = newLocation;
         // Rotation(target);
         a++;
@@ -249,6 +251,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     {
         if(Vector3.Distance(player.gameObject.transform.position, groundPosition) < range)
         {
+            Debug.Log("IN RANGE");
             return true;
         }
         return false;
