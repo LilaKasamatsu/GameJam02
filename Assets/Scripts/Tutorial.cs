@@ -12,7 +12,7 @@ public class Tutorial : MonoBehaviour
     //[SerializeField] GameObject screen4;
 
     public List<GameObject> screens = new List<GameObject>();
-    public List<GameObject> gameObjectstoHighlihgt = new List<GameObject>();
+    //public List<GameObject> gameObjectstoHighlihgt = new List<GameObject>();
     public List<int> waitForSecond = new List<int>();
 
     GameObject cursor;
@@ -75,9 +75,10 @@ public class Tutorial : MonoBehaviour
                         enemy.GetComponent<EnemyPlayerInteraction>().attack = true;
                     }
 
-                    if (a == 10)
+                    if (a == 9)
                     {
-                        end = true;
+                        //end = true;
+                        Debug.Log("end");
                     }
                 }
 

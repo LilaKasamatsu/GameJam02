@@ -158,7 +158,7 @@ MonoBehaviour:
     attackSpeed: 6
     target: {fileID: 6072954130768619280}
     anim: {fileID: 4591499336964854407}
-    actionRadius: 10
+    actionRadius: 6
     attackRadius: 30
     maxHealth: 3
     currHealth: 0
