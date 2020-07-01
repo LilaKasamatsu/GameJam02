@@ -27,8 +27,6 @@ public class EnemyRadius : MonoBehaviour
 
         peiScript = enemy.playerEnemy;
 
-        peiScript = enemy.playerEnemy;
-
         circleParticles = transform.GetChild(0).GetComponentInChildren<ParticleSystem>();
         circleParticlesOne = transform.GetChild(1).GetComponentInChildren<ParticleSystem>();
         circleParticlesTwo = transform.GetChild(2).GetComponentInChildren<ParticleSystem>();
