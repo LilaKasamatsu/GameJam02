@@ -13,9 +13,9 @@ public class CursorEnergyLVL : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<Player>();
         rend = GetComponent<Renderer>();
         SetCursorPower();
-
     }
 
     // Update is called once per frame

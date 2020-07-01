@@ -25,6 +25,8 @@ public class EnemyHealth : MonoBehaviour
         enemy = GetComponent<Enemy>().data;
         enemyPlayerInteraction = GetComponent<EnemyPlayerInteraction>();
         enemyDeath = GetComponent<EnemyDeath>();
+        particleRadius = FindObjectOfType<EnemyRadius>().gameObject;
+
 
         enemy.currHealth = enemy.maxHealth;    
     }

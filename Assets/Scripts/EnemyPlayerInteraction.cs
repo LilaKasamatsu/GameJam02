@@ -47,10 +47,12 @@ public class EnemyPlayerInteraction : MonoBehaviour
         enemy = GetComponent<Enemy>().data;
         enemyDeath = GetComponent<EnemyDeath>();
         enemyController = GetComponent<EnemyController>();
+
         playerEnemy = enemy.playerEnemy;
 
         player = GameObject.FindObjectOfType<Player>();
         playerHealth = FindObjectOfType<PlayerHealth>();
+        playerenergy = FindObjectOfType<PlayerEnergyLvl>();
 
         camRig = GameObject.Find("CameraRig").GetComponent<CameraRig>();
 
@@ -330,7 +332,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         isHoldingPlayer = false;
         enemyController.DisableProcedural();
 
-        anim.SetTrigger("death");
+        enemy.anim.SetTrigger("death");
         isWaiting = true;
         stunnedCooldown = 5f;
     }

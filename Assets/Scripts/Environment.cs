@@ -30,6 +30,10 @@ public class Environment : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<Player>();
+        playerEnergy = FindObjectOfType<PlayerEnergyLvl>();
+        playerHealth = FindObjectOfType<PlayerHealth>();
+
         playerData = player.data;
         rend = GetComponent<Renderer>();
         rend.material = health.colorDead;

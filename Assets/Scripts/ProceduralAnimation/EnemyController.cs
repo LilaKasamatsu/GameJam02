@@ -19,12 +19,6 @@ public class EnemyController : MonoBehaviour
     [SerializeField] LegStepper frontRightLeg;
 
     [Header("IKs")]
-    [SerializeField] FastIKFabric backLeftIK;
-    [SerializeField] FastIKFabric backMiddleIK;
-    [SerializeField] FastIKFabric backRightIK;
-    [SerializeField] FastIKFabric frontLeftIK;
-    [SerializeField] FastIKFabric frontRightIK;
-
     [SerializeField] List<FastIKFabric> Iks;
 
     [SerializeField] Animator anim;

@@ -17,9 +17,9 @@ public class Enemy : MonoBehaviour
         Gizmos.DrawWireSphere(this.transform.position, data.attackRadius);
     }
 
-    private void StartEnemy()
+    private void Start()
     {
-
-
+        data.player = FindObjectOfType<Player>();
+        data.playerEnemy = FindObjectOfType<PlayerEnemyInteraction>();
     }
 }
