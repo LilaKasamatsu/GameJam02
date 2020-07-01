@@ -8,7 +8,7 @@ public class EnemyDissolve : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<Renderer>().sharedMaterial.SetFloat("_dissolve", 0);
+        gameObject.GetComponent<Renderer>().material.SetFloat("_dissolve", 0);
     }
 
     // Update is called once per frame
@@ -34,7 +34,7 @@ public class EnemyDissolve : MonoBehaviour
                 counter += Time.deltaTime;
 
             float val = Mathf.Lerp(fromVal, toVal, counter / duration);
-            gameObject.GetComponent<Renderer>().sharedMaterial.SetFloat("_dissolve", val);
+            gameObject.GetComponent<Renderer>().material.SetFloat("_dissolve", val);
             yield return null;
         }
     }

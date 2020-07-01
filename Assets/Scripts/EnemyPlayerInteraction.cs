@@ -16,7 +16,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     private bool idleFeedback;
     private bool sleepingFeedback;
     private bool attackFeedback = true;
-    private bool attack;
+    public bool attack;
 
     
     private PlayerEnemyInteraction playerEnemy;
@@ -31,6 +31,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     Player player;
     PlayerHealth playerHealth;
+    PlayerEnergyLvl playerenergy;
 
     CameraRig camRig;
 
@@ -292,6 +293,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     void HoldingFeedback()
     {
+       
         holdingFeedback = false;
         movingFeedback = true;
 
@@ -325,14 +327,17 @@ public class EnemyPlayerInteraction : MonoBehaviour
     }
     public void KillFeedback()
     {
+        isHoldingPlayer = false;
         enemyController.DisableProcedural();
 
-        enemy.anim.SetTrigger("death");
+        anim.SetTrigger("death");
+        isWaiting = true;
+        stunnedCooldown = 5f;
     }
 
     public void DamageFeedback()
     {
-
+        playerenergy.AddEnergy(30);
         enemyController.DisableProcedural();
 
         enemy.anim.SetTrigger("damage");

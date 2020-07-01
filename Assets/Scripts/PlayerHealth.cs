@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 //using UnityEngine.Rendering.LWRP;
 
 
@@ -16,6 +17,8 @@ public class PlayerHealth : MonoBehaviour
     // PostProcessingData
     Camera cam;
     Volume camVolume;
+
+    [SerializeField] GameObject blackOut;
 
     //[SerializeField] Material materialToLerpTo;
    // [SerializeField] Material materialStart;
@@ -34,6 +37,7 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        blackOut.SetActive(false);
         rend = GetComponent<Renderer>();
         player = GetComponent<Player>().data;
         respawnScript = GetComponent<Respwan>();
@@ -91,7 +95,7 @@ public class PlayerHealth : MonoBehaviour
             if (player.deathTimer >= player.deathTime)
             {
                 Debug.Log("GAME OVER");
-                // Respawn();
+                Respawn();
                 //GAMEOVER
             }
         }
@@ -121,12 +125,15 @@ public class PlayerHealth : MonoBehaviour
 
     private void Respawn()
     {
-
+        StartCoroutine(Respawning());
+        blackOut.SetActive(true);
     }
     IEnumerator Respawning()
     {
-        yield return new WaitForSecondsRealtime(1f);
-        transform.position = respawnScript.location;
+
+        yield return new WaitForSecondsRealtime(3f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+       // transform.position = respawnScript.location;
     }
     public void ScreenBlink()
     {

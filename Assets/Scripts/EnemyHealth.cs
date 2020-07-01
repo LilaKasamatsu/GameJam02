@@ -14,6 +14,7 @@ public class EnemyHealth : MonoBehaviour
     EnemyRadius enemyRadius;
 
     private SpriteRenderer colorRadius;
+    [SerializeField] GameObject particleRadius;
 
     float a;
     float b = 0.33f;
@@ -45,15 +46,16 @@ public class EnemyHealth : MonoBehaviour
 
         if (enemy.currHealth == 2)
         {
-            GameObject particleRadius = transform.Find("particleRadius").gameObject;
+           // GameObject particleRadius = transform.Find("particleRadius").gameObject;
             enemyRadius = particleRadius.GetComponent<EnemyRadius>();
             enemyPlayerInteraction.DamageFeedback();
+           // player
             enemyRadius.circleParticlesTwo.Stop();
         }
 
         if (enemy.currHealth == 1)
         {
-            GameObject particleRadius = transform.Find("particleRadius").gameObject;
+          //  GameObject particleRadius = transform.Find("particleRadius").gameObject;
             enemyRadius = particleRadius.GetComponent<EnemyRadius>();
             enemyPlayerInteraction.DamageFeedback();
             enemyRadius.circleParticlesOne.Stop();

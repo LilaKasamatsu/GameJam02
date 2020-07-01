@@ -82,8 +82,9 @@ GameObject:
   - component: {fileID: 6072954130480952765}
   - component: {fileID: 6072954130480952739}
   - component: {fileID: 6072954130480952736}
-  - component: {fileID: 6072954130480952767}
-  - component: {fileID: 4969210513583546626}
+  - component: {fileID: 6072954130480952739}
+  - component: {fileID: 248006457}
+  - component: {fileID: 374474739007656220}
   m_Layer: 2
   m_Name: EnemyController
   m_TagString: Enemy
@@ -175,6 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAttacking: 0
+  attack: 0
   death: 0
   stunnedCooldown: 0
 --- !u!114 &6072954130480952739
@@ -215,35 +217,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed2ee9583bc71fa42bca656463deb93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  headBone: {fileID: 1090893375841560578}
-  headMaxTurnAngle: 50
-  headTrackingSpeed: 150
-  backLeftLeg: {fileID: 6072954130728776455}
-  backMiddleLeg: {fileID: 6072954132015397526}
-  backRightLeg: {fileID: 6072954131915716937}
-  frontLeftLeg: {fileID: 6072954130586060062}
-  frontRightLeg: {fileID: 6072954132006580438}
-  backLeftIK: {fileID: 6072954131540910018}
-  backMiddleIK: {fileID: 6072954130565118999}
-  backRightIK: {fileID: 6072954130886034992}
-  frontLeftIK: {fileID: 6072954131057427285}
-  frontRightIK: {fileID: 6072954131832225436}
-  Iks:
-  - {fileID: 6072954131540910018}
-  - {fileID: 6072954130565118999}
-  - {fileID: 6072954130886034992}
-  - {fileID: 6072954131057427285}
-  - {fileID: 6072954131832225436}
-  anim: {fileID: 4591499336964854407}
-  turnSpeed: 150
-  moveSpeed: 10
-  turnAcceleration: 2
-  moveAcceleration: 2
-  minDistToTarget: 10
-  maxDistToTarget: 30
-  maxAngToTarget: 55
---- !u!135 &4969210513583546626
+  enemyChild: {fileID: 3815561523528140860}
+  particleRadius: {fileID: 6072954132218111047}
+--- !u!135 &248006457
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -256,6 +232,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.6
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &374474739007656220
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6072954130480952761}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &6072954130586060056
 GameObject:
   m_ObjectHideFlags: 0
@@ -24533,7 +24525,7 @@ MonoBehaviour:
   peiScript: {fileID: 0}
   circleParticles: {fileID: 6072954131172644943}
   circleParticlesOne: {fileID: 6072954132005226070}
-  circleParticlesTwo: {fileID: 6072954130827020029}
+  circleParticlesTwo: {fileID: 6072954132121164844}
 --- !u!114 &6072954131832225436
 MonoBehaviour:
   m_ObjectHideFlags: 0

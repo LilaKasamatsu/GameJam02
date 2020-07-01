@@ -35,8 +35,8 @@ public class PlayerEnemyInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // Debug.Log(IsAttackVelocity());
-       // Debug.Log(can2Attack);
+        // Debug.Log(IsAttackVelocity());
+        // Debug.Log(can2Attack);
         if (IsAttackVelocity())
         {
             this.GetComponent<MeshRenderer>().material.color = Color.red;
@@ -47,14 +47,16 @@ public class PlayerEnemyInteraction : MonoBehaviour
             this.GetComponent<MeshRenderer>().material.color = Color.gray;
             player.data.isAttacking = false;
         }
-       // Debug.Log(can2Attack);
+        Debug.Log(can2Attack);
+        // Debug.Log(can2Attack);
         if (Input.GetMouseButtonDown(1))
         {
             if (can2Attack == true)
             {
-               // Debug.Log("no");
+                // Debug.Log("no");
                 if (player.data.energyLVL >= player.data.energyLVLforSpecialAttack)
                 {
+                    can2Attack = false;
                     OnSpecialAttack();
                     playerEnergy.AddEnergy(-player.data.energyLVLforSpecialAttack);
                 }
@@ -86,9 +88,11 @@ public class PlayerEnemyInteraction : MonoBehaviour
 
     public void OnSpecialAttack()
     {
-        // Do some animation magic.
-        isUsingSpecialAttack = true;
-        StartCoroutine(specialAttack.Expand());
+       
+            // Do some animation magic.
+            isUsingSpecialAttack = true;
+            StartCoroutine(specialAttack.Expand());
+        
 
     }
 
@@ -113,12 +117,12 @@ public class PlayerEnemyInteraction : MonoBehaviour
         if (player.data.isMovable)
         {
 
-           // Debug.Log("2");
+            // Debug.Log("2");
             player.data.isMovable = false;
             freePlayer = StartCoroutine(EscapeEnemy());
             GetComponent<Rigidbody>().isKinematic = true;
         }
-       // Debug.Log("1");
+        // Debug.Log("1");
     }
     void MoveToEnemy(Transform target)
     {
