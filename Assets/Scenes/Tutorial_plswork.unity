@@ -36721,6 +36721,11 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 715876271495430848, guid: 4d18f69102177bb4aab52f5ca065392a,
+        type: 3}
+      propertyPath: data.deathTime
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 2312552845027254091, guid: 4d18f69102177bb4aab52f5ca065392a,
         type: 3}
       propertyPath: m_LocalPosition.x
