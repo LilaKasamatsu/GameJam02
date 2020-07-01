@@ -89,7 +89,6 @@ public class PlayerEnemyInteraction : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy") && player.data.isAttacking)
         {
             EnemyHealth enemy = collision.gameObject.GetComponent<EnemyHealth>();
-           // Debug.Log("urpplayer");
             enemy.MinusHealth(1);
             enemyHit = true;
         }
@@ -116,7 +115,11 @@ public class PlayerEnemyInteraction : MonoBehaviour
     {
         this.GetComponent<MeshRenderer>().material.color = Color.gray;
         GetComponent<Rigidbody>().isKinematic = false;
-        StopCoroutine(freePlayer);
+        if(freePlayer != null)
+        {
+            StopCoroutine(freePlayer);
+
+        }
         player.data.isMovable = true;
         if (currentEnemy != null)
         {
