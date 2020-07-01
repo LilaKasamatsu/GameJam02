@@ -31,7 +31,6 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     Player player;
     PlayerHealth playerHealth;
-    PlayerEnergyLvl playerenergy;
 
     CameraRig camRig;
 
@@ -47,12 +46,10 @@ public class EnemyPlayerInteraction : MonoBehaviour
         enemy = GetComponent<Enemy>().data;
         enemyDeath = GetComponent<EnemyDeath>();
         enemyController = GetComponent<EnemyController>();
-
         playerEnemy = enemy.playerEnemy;
 
         player = GameObject.FindObjectOfType<Player>();
         playerHealth = FindObjectOfType<PlayerHealth>();
-        playerenergy = FindObjectOfType<PlayerEnergyLvl>();
 
         camRig = GameObject.Find("CameraRig").GetComponent<CameraRig>();
 
@@ -207,9 +204,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     void SetNewLocation(int i)
     {
         // Debug.Log(i);
-
         newLocation = new Vector3(enemy.location[i].x, transform.position.y, enemy.location[i].z);
-        Debug.Log("LOCATION: " + newLocation);
         // target.position = newLocation;
         // Rotation(target);
         a++;
@@ -251,7 +246,6 @@ public class EnemyPlayerInteraction : MonoBehaviour
     {
         if(Vector3.Distance(player.gameObject.transform.position, groundPosition) < range)
         {
-            Debug.Log("IN RANGE");
             return true;
         }
         return false;
@@ -298,7 +292,6 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     void HoldingFeedback()
     {
-       
         holdingFeedback = false;
         movingFeedback = true;
 
@@ -332,17 +325,14 @@ public class EnemyPlayerInteraction : MonoBehaviour
     }
     public void KillFeedback()
     {
-        isHoldingPlayer = false;
         enemyController.DisableProcedural();
 
         enemy.anim.SetTrigger("death");
-        isWaiting = true;
-        stunnedCooldown = 5f;
     }
 
     public void DamageFeedback()
     {
-        playerenergy.AddEnergy(30);
+
         enemyController.DisableProcedural();
 
         enemy.anim.SetTrigger("damage");

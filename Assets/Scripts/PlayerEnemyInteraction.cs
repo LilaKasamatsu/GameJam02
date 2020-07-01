@@ -48,30 +48,15 @@ public class PlayerEnemyInteraction : MonoBehaviour
             player.data.isAttacking = false;
         }
         // Debug.Log(can2Attack);
-        // Debug.Log(can2Attack);
         if (Input.GetMouseButtonDown(1))
         {
-          //  Debug.Log("isusingspecial ttack ist true");
-            if (isUsingSpecialAttack == false)
+            if (can2Attack == true)
             {
-               // Debug.Log("isusingspecial ttack ist false");
-
-                if (can2Attack == true)
+                // Debug.Log("no");
+                if (player.data.energyLVL >= player.data.energyLVLforSpecialAttack)
                 {
-                    // Debug.Log("no");
-                   // Debug.Log("can2attack ttack ist true");
-                    if (player.data.energyLVL >= player.data.energyLVLforSpecialAttack)
-                    {
-                        can2Attack = false;
-                        isUsingSpecialAttack = false;
-                        OnSpecialAttack();
-                        StartCoroutine(SetToFalse());
-                        playerEnergy.MinusEnergy();
-                    }
-                    else
-                    {
-                       // Debug.Log("no energy :(");
-                    }
+                    OnSpecialAttack();
+                    playerEnergy.AddEnergy(-player.data.energyLVLforSpecialAttack);
                 }
             }
         }
@@ -96,30 +81,17 @@ public class PlayerEnemyInteraction : MonoBehaviour
 
     public void OnSpecialAttack()
     {
-
         // Do some animation magic.
-       // isUsingSpecialAttack = true;
+        isUsingSpecialAttack = true;
         StartCoroutine(specialAttack.Expand());
-       
 
-
-    }
-    IEnumerator SetToFalse()
-    {
-       // Debug.Log("aa");
-        yield return new WaitForSeconds(3f);
-        isUsingSpecialAttack = false;
     }
 
     public void OnRelease()
     {
         this.GetComponent<MeshRenderer>().material.color = Color.gray;
         GetComponent<Rigidbody>().isKinematic = false;
-        if(freePlayer != null)
-        {
-            StopCoroutine(freePlayer);
-
-        }
+        StopCoroutine(freePlayer);
         player.data.isMovable = true;
         if (currentEnemy != null)
         {
