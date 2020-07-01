@@ -43,7 +43,6 @@ public class NudgeMovement : MonoBehaviour
         if (other.CompareTag("Pusher"))
         {
             Transform pusher = FindObjectOfType<PusherNudgeMovement>().transform;
-            Debug.Log("PUSHER: " + pusher.name);
             Vector3 dir = transform.position - pusher.position;
             dir.y = 0;
             dir = dir.normalized;
@@ -58,7 +57,6 @@ public class NudgeMovement : MonoBehaviour
             //float mouseX = Input.GetAxis("Mouse X");
             //float mouseY = Input.GetAxis("Mouse Y");
             //player.rb.velocity = new Vector3(Mathf.Clamp(dir.x* mouseY*pushForce, player.data.minVelocity, player.data.maxVelocity), 0, Mathf.Clamp(dir.z* mouseX*pushForce, player.data.minVelocity, player.data.maxVelocity));
-           // Debug.Log("FORCE: " + player.rb.velocity);
         }
     }
 

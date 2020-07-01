@@ -5,36 +5,30 @@ using UnityEngine;
 public class EnemyPlayerInteraction : MonoBehaviour
 {
     Rigidbody rb;
-    [SerializeField] List<Vector3> location = new List<Vector3>();
-    bool isWaiting;
-    [SerializeField] bool isSleepingEnemy;
-    bool isHoldingPlayer;
-    public bool isAttacking = false;
+    EnemyData enemy;
+
 
     // private bool attackingFeedback;
-    private bool movingFeedback = true;
+    private bool isWaiting;
+    public bool isHoldingPlayer;
+    public bool movingFeedback = true;
     private bool holdingFeedback;
     private bool idleFeedback;
     private bool sleepingFeedback;
     private bool attackFeedback = true;
     public bool attack;
 
+    
+    private PlayerEnemyInteraction playerEnemy;
+    [HideInInspector] public bool isAttacking = false;
     [HideInInspector] public bool death;
-
-    [SerializeField] float patrollingSpeed;
-    [SerializeField] float attackspeed;
-
-    EnemyData enemy;
-
-
+    [HideInInspector] public float stunnedCooldown = 0f;
 
     Vector3 currLocation;
     Vector3 newLocation;
     int a;
 
-    public float stunnedCooldown = 0f;
 
-    EnemyDeath enemyDeath;
     Player player;
     PlayerHealth playerHealth;
     PlayerEnergyLvl playerenergy;
@@ -43,42 +37,42 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     Vector3 groundPosition;
 
-    public Transform target;
-    public Transform playerTarget;
-    [SerializeField] Animator anim;
-
     private EnemyController enemyController;
+    private EnemyDeath enemyDeath;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        camRig = GameObject.Find("CameraRig").GetComponent<CameraRig>();
         rb = GetComponent<Rigidbody>();
-        SetNewLocation(0);
-
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
-        playerenergy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnergyLvl>();
-        enemyDeath = GetComponent<EnemyDeath>();
-
         enemy = GetComponent<Enemy>().data;
-
+        enemyDeath = GetComponent<EnemyDeath>();
         enemyController = GetComponent<EnemyController>();
+
+        playerEnemy = enemy.playerEnemy;
+
+        player = GameObject.FindObjectOfType<Player>();
+        playerHealth = FindObjectOfType<PlayerHealth>();
+        playerenergy = FindObjectOfType<PlayerEnergyLvl>();
+
+        camRig = GameObject.Find("CameraRig").GetComponent<CameraRig>();
+
+        SetNewLocation(0);
     }
 
 
 
-    // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-
         if (stunnedCooldown <= 0f)
         {
             groundPosition = new Vector3(transform.position.x, 0, transform.position.z);
+
+            isHoldingPlayer = !playerEnemy.IsAttackVelocity() && IsInRange(enemy.actionRadius);
+
             if (isHoldingPlayer == false)
             {
-                isAttacking = IsInRange(enemy.actionRadius);
-                if (isAttacking == true)
+                isAttacking = IsInRange(enemy.attackRadius);
+                if (isAttacking)
                 {
                     Attack();
                     if (movingFeedback == true) { MovingFeedback(); }
@@ -92,19 +86,11 @@ public class EnemyPlayerInteraction : MonoBehaviour
             }
             else
             {
-                isHoldingPlayer = IsInRange(enemy.attackRadius);
-                isHoldingPlayer = !player.GetComponent<PlayerEnemyInteraction>().IsAttackVelocity();
-                if (isHoldingPlayer)
+                Hold();
+
+                if (holdingFeedback == true)
                 {
-                    Hold();
-                    if (holdingFeedback == true)
-                    {
-                        HoldingFeedback();
-                    }
-                }
-                else
-                {
-                    stunnedCooldown = 2f;
+                    HoldingFeedback();
                 }
             }
         }
@@ -114,6 +100,8 @@ public class EnemyPlayerInteraction : MonoBehaviour
         }
         if (death == true) { KillFeedback(); }
     }
+
+
     void Rotation(Transform target)
     {
         transform.LookAt(new Vector3(target.position.x, transform.position.y, target.position.z));
@@ -164,7 +152,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
             //  attackFeedback = false;
             Vector3 playerPos = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
-            transform.position = Vector3.MoveTowards(transform.position, playerPos, attackspeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, playerPos, enemy.attackSpeed * Time.deltaTime);
         }
         else
         {
@@ -181,11 +169,9 @@ public class EnemyPlayerInteraction : MonoBehaviour
             attackFeedback = false;
 
         }
-        Debug.Log("jetzt");
         float a;
-        if (isSleepingEnemy == true)
+        if (enemy.isSleepingEnemy == true)
         {
-            // Debug.Log("iiii");
             a = 1.6f;
             movingFeedback = true;
         }
@@ -202,10 +188,10 @@ public class EnemyPlayerInteraction : MonoBehaviour
     private void Move()
     {
         StartCoroutine(RotateTowards(newLocation));
-        transform.position = Vector3.MoveTowards(transform.position, newLocation, patrollingSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, newLocation, enemy.patrollingSpeed * Time.deltaTime);
         if (transform.position == newLocation)
         {
-            if (isSleepingEnemy == true)
+            if (enemy.isSleepingEnemy == true)
             {
                 if (sleepingFeedback == true) { SleepingFeedback(); }
             }
@@ -221,11 +207,11 @@ public class EnemyPlayerInteraction : MonoBehaviour
     void SetNewLocation(int i)
     {
         // Debug.Log(i);
-        newLocation = new Vector3(location[i].x, transform.position.y, location[i].z);
+        newLocation = new Vector3(enemy.location[i].x, transform.position.y, enemy.location[i].z);
         // target.position = newLocation;
         // Rotation(target);
         a++;
-        if (a == location.Count)
+        if (a == enemy.location.Count)
         {
             a = 0;
         }
@@ -241,43 +227,34 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     void Hold()
     {
-        player.GetComponent<PlayerEnemyInteraction>().OnHold(this.transform, target);
-        StartCoroutine(OnHold());
+        enemyController.DisableProcedural();
+
+        playerEnemy.OnHold(this.transform, enemy.target);
     }
     IEnumerator OnHold()
     {
         yield return new WaitForSecondsRealtime(1f);
-        // transform.position = transform.position;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("HI");
-            isHoldingPlayer = true;
-        }
         if (other.CompareTag("EnemyDeath"))
         {
             enemyDeath.Kill();
         }
     }
 
-    private void OnTriggerExit(Collider other)
+
+    private bool IsInRange(float range)
     {
-        if (other.CompareTag("Player"))
+        if(Vector3.Distance(player.gameObject.transform.position, groundPosition) < range)
         {
-            //stop
-            isHoldingPlayer = false;
+            return true;
         }
+        return false;
     }
 
-    bool IsInRange(float range)
-    {
-        return Vector3.Distance(player.transform.position, groundPosition) < range;
-    }
-
-
+    private bool wasSleeping;
 
     void MovingFeedback()
     {
@@ -286,25 +263,30 @@ public class EnemyPlayerInteraction : MonoBehaviour
         idleFeedback = true;
         holdingFeedback = true;
         attackFeedback = true;
-
-
-        anim.SetBool("holding", false);
-        anim.SetBool("moving", true);
-        anim.SetBool("sleeping", false);
-
-        if (!isSleepingEnemy)
+        if (enemy.anim.GetBool("sleeping") == true)
         {
-            enemyController.EnableProcedural();
+            AwakeningFeeback();
+            wasSleeping = true;
+        }
+        enemy.anim.SetBool("holding", false);
+        enemy.anim.SetBool("moving", true);
+        enemy.anim.SetBool("sleeping", false);
+
+        if (!wasSleeping)
+        {
+            StartCoroutine(ReactivateWithDelay(.6f));
+
         }
 
-    }
 
-    void AwakingFeedback()
+        //enemyController.EnableProcedural();
+    }
+    void AwakeningFeeback()
     {
-
-        enemyController.DisableProcedural();
-        anim.SetBool("sleeping", false);
+        StartCoroutine(ReactivateWithDelay(1.4f));
+        
     }
+
 
     //IEnumerator AttackingFeedback()
     //{
@@ -318,8 +300,8 @@ public class EnemyPlayerInteraction : MonoBehaviour
         movingFeedback = true;
 
         enemyController.DisableProcedural();
-        anim.SetBool("moving", false);
-        anim.SetBool("holding", true);
+        enemy.anim.SetBool("moving", false);
+        enemy.anim.SetBool("holding", true);
         camRig.isHolded = true;
 
     }
@@ -330,8 +312,8 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
         enemyController.DisableProcedural();
 
-        anim.SetBool("sleeping", true);
-        anim.SetBool("moving", false);
+        enemy.anim.SetBool("sleeping", true);
+        enemy.anim.SetBool("moving", false);
 
     }
 
@@ -341,8 +323,8 @@ public class EnemyPlayerInteraction : MonoBehaviour
         movingFeedback = true;
         attackFeedback = true;
 
-        anim.SetBool("moving", false);
-        anim.SetBool("sleeping", false);
+        enemy.anim.SetBool("moving", false);
+        enemy.anim.SetBool("sleeping", false);
 
     }
     public void KillFeedback()
@@ -350,25 +332,26 @@ public class EnemyPlayerInteraction : MonoBehaviour
         isHoldingPlayer = false;
         enemyController.DisableProcedural();
 
-        anim.SetTrigger("death");
+        enemy.anim.SetTrigger("death");
         isWaiting = true;
         stunnedCooldown = 5f;
     }
+
     public void DamageFeedback()
     {
         playerenergy.AddEnergy(30);
         enemyController.DisableProcedural();
 
-        anim.SetTrigger("damage");
+        enemy.anim.SetTrigger("damage");
 
         StartCoroutine(ReactivateWithDelay(1.4f));
     }
 
-    IEnumerator ReactivateWithDelay(float seconds)
+    public IEnumerator ReactivateWithDelay(float seconds)
     {
         yield return new WaitForSeconds(seconds);
         enemyController.EnableProcedural();
-
+        wasSleeping = false;
     }
 
 }

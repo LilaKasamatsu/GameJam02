@@ -20,18 +20,21 @@ public class Environment : MonoBehaviour
 
     // [SerializeField]
 
-    private PlayerEnergyLvl playerEnergy;
-    private PlayerHealth playerHealth;
-    private PlayerData playerData;
+
+    [SerializeField] PlayerEnergyLvl playerEnergy;
+    [SerializeField] PlayerHealth playerHealth;
+    [SerializeField] Player player;
+    PlayerData playerData;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<Player>();
+        playerEnergy = FindObjectOfType<PlayerEnergyLvl>();
+        playerHealth = FindObjectOfType<PlayerHealth>();
 
-        playerEnergy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnergyLvl>();
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
-        playerData = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().data;
+        playerData = player.data;
         rend = GetComponent<Renderer>();
         rend.material = health.colorDead;
 

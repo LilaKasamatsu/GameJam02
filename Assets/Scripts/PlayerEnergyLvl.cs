@@ -23,6 +23,6 @@ public class PlayerEnergyLvl : MonoBehaviour
         {
             player.energyLVL = player.maxEnergyLVL;
         }
-        cursor.SetCurcorPower();
+        cursor.SetCursorPower();
     }
 }

@@ -14322,7 +14322,7 @@ GameObject:
   - component: {fileID: 662031088}
   m_Layer: 0
   m_Name: Special Attack
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14413,6 +14413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fad40c52adbe2d44b7697e9b4a10825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerEnemy: {fileID: 2567666768602471152}
 --- !u!1 &713772602
 GameObject:
   m_ObjectHideFlags: 0
@@ -33946,6 +33947,7 @@ GameObject:
   - component: {fileID: 4731245787193422623}
   - component: {fileID: 8360690170485976037}
   - component: {fileID: 5715638625011234613}
+  - component: {fileID: 7296332537891670884}
   - component: {fileID: -5408558458813553457}
   - component: {fileID: 715876271495430848}
   - component: {fileID: 2567666768602471152}
@@ -33953,7 +33955,6 @@ GameObject:
   - component: {fileID: 8924153747232320915}
   - component: {fileID: 2072622151}
   - component: {fileID: 1342116496}
-  - component: {fileID: 7296332537891670884}
   - component: {fileID: 1490141420}
   - component: {fileID: 1490141431}
   - component: {fileID: 6292775569626759085}
@@ -34047,6 +34048,19 @@ CapsuleCollider:
   m_Height: 3.7557867
   m_Direction: 1
   m_Center: {x: 0, y: 0.6483491, z: -0.0004761219}
+--- !u!135 &7296332537891670884
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5052043999930341523}
+  m_Material: {fileID: 13400000, guid: 4308e981a2206b24c866530585a4d519, type: 2}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.3484693
+  m_Center: {x: 0, y: -0.7781029, z: 0}
 --- !u!54 &-5408558458813553457
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -34095,6 +34109,7 @@ MonoBehaviour:
     minAttackVelocity: 12
     isAttacking: 0
     specialAttackRadius: 8
+    playerEnergy: {fileID: 0}
   rb: {fileID: 0}
 --- !u!114 &2567666768602471152
 MonoBehaviour:
@@ -34123,7 +34138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f5095d8a8fd96046a1b06cf6d1ed06c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushForce: 2
+  pushForce: 20
 --- !u!114 &8924153747232320915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34163,19 +34178,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9adf23a98626fcc49aad1492481eb784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &7296332537891670884
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5052043999930341523}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2.3484693
-  m_Center: {x: 0, y: -0.7781029, z: 0}
 --- !u!114 &1490141420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48753,7 +48755,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 74748e6d70016df47af8877da725848b,
         type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4518980002003577502, guid: 74748e6d70016df47af8877da725848b,
         type: 3}

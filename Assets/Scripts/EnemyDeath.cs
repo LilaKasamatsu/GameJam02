@@ -5,18 +5,23 @@ using UnityEngine;
 public class EnemyDeath : MonoBehaviour
 {
     public bool isDying = false;
+
+    EnemyData enemy;
+
+    EnemyPlayerInteraction enemyPlayer;
+
     PlayerEnergyLvl playerEnergy;
     PlayerData playerData;
-    EnemyPlayerInteraction enemyPlayer;
     PlayerEnemyInteraction playerENnemy;
     GameEnd gameEnd;
     [SerializeField] bool tutorialScene;
-    private void Start()
-    {
 
+    private void Awake()
+    {
         playerEnergy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnergyLvl>();
         playerData = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().data;
         playerENnemy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnemyInteraction>();
+        enemy = GetComponent<Enemy>().data;
         enemyPlayer = GetComponent<EnemyPlayerInteraction>();
         gameEnd = GameObject.Find("Enemies").GetComponent<GameEnd>();
     }

@@ -18,14 +18,16 @@ public class EnemyRadius : MonoBehaviour
     ParticleSystem hitParticles;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        peiScript = player.transform.GetComponent<PlayerEnemyInteraction>();
 
         enemyHealth = transform.parent.GetComponent<EnemyHealth>();
         enemyDeath = transform.parent.GetComponent<EnemyDeath>();
         enemy = transform.parent.GetComponent<Enemy>().data;
+
+        peiScript = enemy.playerEnemy;
+
+        peiScript = enemy.playerEnemy;
 
         circleParticles = transform.GetChild(0).GetComponentInChildren<ParticleSystem>();
         circleParticlesOne = transform.GetChild(1).GetComponentInChildren<ParticleSystem>();
@@ -39,27 +41,27 @@ public class EnemyRadius : MonoBehaviour
     void Update()
     {
         //enemy dies
-        if(enemyDeath.isDying == true)
+        if (enemyDeath.isDying == true)
         {
             circleParticles.Stop();
             verticalParticles.Stop();
         }
-        
-        
+
+
         //Enemy is hit by player
-        if(peiScript.enemyHit == true)
+        if (peiScript.enemyHit == true)
         {
             hitParticles.Play();
 
             StartCoroutine(EnemyHit());
         }
-        
+
     }
 
     
     IEnumerator EnemyHit()
     {
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(0f);
         peiScript.enemyHit = false;
     }
     

@@ -6,7 +6,7 @@ public class PlayerSpecialAttack : MonoBehaviour
 {
     PlayerData player;
     // Vector3 scaleOG;
-    PlayerEnemyInteraction playerEnemy;
+    [SerializeField] PlayerEnemyInteraction playerEnemy;
     SphereCollider coll;
 
 
@@ -15,7 +15,6 @@ public class PlayerSpecialAttack : MonoBehaviour
         //  scaleOG = transform.localScale;
         transform.localScale = Vector3.zero;
         player = GetComponentInParent<Player>().data;
-        playerEnemy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnemyInteraction>();
         coll = GetComponent<SphereCollider>();
         coll.enabled = false;
     }

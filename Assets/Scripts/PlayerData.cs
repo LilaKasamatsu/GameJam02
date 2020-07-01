@@ -31,6 +31,9 @@ public class PlayerData
     [HideInInspector] public bool isAttacking;
 
     public float specialAttackRadius;
-   // public float breathRadius;
+
+    [Header("Scripts")]
+    public PlayerEnergyLvl playerEnergy;
+    // public float breathRadius;
 
 }
