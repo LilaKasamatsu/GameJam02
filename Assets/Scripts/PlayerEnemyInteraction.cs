@@ -23,7 +23,6 @@ public class PlayerEnemyInteraction : MonoBehaviour
     {
         playerEnergy = GetComponent<PlayerEnergyLvl>();
         specialAttack = GetComponentInChildren<PlayerSpecialAttack>();
-
     }
 
     private void OnDrawGizmos()

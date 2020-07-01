@@ -5,15 +5,19 @@ using UnityEngine;
 public class EnemyDeath : MonoBehaviour
 {
     public bool isDying = false;
-    PlayerEnergyLvl playerEnergy;
-    PlayerData playerData;
+
+    EnemyData enemy;
+
     EnemyPlayerInteraction enemyPlayer;
-    private void Start()
+
+    PlayerEnergyLvl playerEnergy;
+
+    private void Awake()
     {
-        
-        playerEnergy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnergyLvl>();
-        playerData = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().data;
+        enemy = GetComponent<Enemy>().data;
         enemyPlayer = GetComponent<EnemyPlayerInteraction>();
+
+        playerEnergy = enemy.player.GetComponent<PlayerEnergyLvl>();
     }
     // Start is called before the first frame update
     public void Kill()
@@ -22,7 +26,7 @@ public class EnemyDeath : MonoBehaviour
         StartCoroutine(Enemydying());
         isDying = true;
         Debug.Log("kill");
-        playerEnergy.AddEnergy(playerData.energyGainedByKillingEnemy);
+        playerEnergy.AddEnergy(enemy.player.data.energyGainedByKillingEnemy);
         //play
     }
 

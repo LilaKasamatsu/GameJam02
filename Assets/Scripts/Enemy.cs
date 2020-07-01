@@ -16,4 +16,10 @@ public class Enemy : MonoBehaviour
 
         Gizmos.DrawWireSphere(this.transform.position, data.attackRadius);
     }
+
+    private void StartEnemy()
+    {
+
+
+    }
 }

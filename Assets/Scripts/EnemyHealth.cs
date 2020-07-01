@@ -4,28 +4,27 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+   [SerializeField] Transform enemyChild;
+    
+    EnemyData enemy;
+    EnemyPlayerInteraction enemyPlayerInteraction;
+    EnemyDeath enemyDeath;
+    
     EnemyDissolve enemyDissolve;
     EnemyRadius enemyRadius;
 
-    EnemyDeath enemyDeath;
-    EnemyData enemy;
-    EnemyPlayerInteraction enemyPlayerInteraction;
-
-   [SerializeField] Transform enemyChild;
-
-    //[SerializeField] GameObject visualRadius;
     private SpriteRenderer colorRadius;
-    // [SerializeField] Color aliveColor;
-    //[SerializeField] Color deadColor;
+
     float a;
     float b = 0.33f;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        enemy = GetComponent<Enemy>().data;
         enemyPlayerInteraction = GetComponent<EnemyPlayerInteraction>();
         enemyDeath = GetComponent<EnemyDeath>();
-        enemy = GetComponent<Enemy>().data;
+
         enemy.currHealth = enemy.maxHealth;    
     }
 

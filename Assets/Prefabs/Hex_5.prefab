@@ -27,9 +27,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8988873652768711048}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 22.021, y: -0.17, z: 19.212}
-  m_LocalScale: {x: 3.2530353, y: 3.2530353, z: 3.2530353}
+  m_LocalScale: {x: 0.85457546, y: 0.85457546, z: 0.85457546}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -100,6 +100,9 @@ MonoBehaviour:
     currentHealth: 0
     colorAlive: {fileID: 2100000, guid: a3a4bf921f212374bac5837d593613c3, type: 2}
     colorDead: {fileID: 2100000, guid: 42c7a10a8f87e4b49ad4fd506162d5c0, type: 2}
+  playerEnergy: {fileID: 0}
+  playerHealth: {fileID: 0}
+  player: {fileID: 0}
 --- !u!65 &8440585700610963002
 BoxCollider:
   m_ObjectHideFlags: 0

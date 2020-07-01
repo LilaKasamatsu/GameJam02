@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CursorEnergyLVL : MonoBehaviour
 {
-    PlayerData player;
+    [SerializeField] Player player;
+
     Renderer rend;
   //  float maxEnergyLVL;
   //  float curEnergyLVL;
@@ -13,18 +14,17 @@ public class CursorEnergyLVL : MonoBehaviour
     void Start()
     {
         rend = GetComponent<Renderer>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().data;
-        SetCurcorPower();
+        SetCursorPower();
 
     }
 
     // Update is called once per frame
 
-    public void SetCurcorPower()
+    public void SetCursorPower()
     {
         // Debug.Log(rend.material.GetFloat("CursorPower"));
-        float b = player.energyLVL / 100;
+        float b = player.data.energyLVL / 100;
       // Debug.Log(b);
-        rend.material.SetFloat("CursorPower", player.energyLVL / 100);
+        rend.material.SetFloat("CursorPower", player.data.energyLVL / 100);
     }
 }
