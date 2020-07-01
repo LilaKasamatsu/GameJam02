@@ -36835,6 +36835,12 @@ PrefabInstance:
     - {fileID: 1490141431, guid: 4d18f69102177bb4aab52f5ca065392a, type: 3}
     - {fileID: 774676485, guid: 4d18f69102177bb4aab52f5ca065392a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4d18f69102177bb4aab52f5ca065392a, type: 3}
+--- !u!1 &1203451239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5052043999930341523, guid: 4d18f69102177bb4aab52f5ca065392a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1203451238}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1205656986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58772,6 +58778,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c4e2693bc9f2824092416a305f97424, type: 3}
+--- !u!1 &1919453495 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6072954131643757658, guid: 6c4e2693bc9f2824092416a305f97424,
+    type: 3}
+  m_PrefabInstance: {fileID: 1919453494}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1920162221 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1465172708449664063, guid: 0efd4f10cf0c3f240b1af88f55c6ab6b,
@@ -58961,6 +58973,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35310a900ecdfcc49aceb3609cde83bb, type: 3}
+--- !u!1 &1923871813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7911955661285421631, guid: 35310a900ecdfcc49aceb3609cde83bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1923871812}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1924510583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65921,6 +65939,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1782436220124838352, guid: 899867e6503e3924ba6b323dd2117d4c,
         type: 3}
+      propertyPath: gameObjectstoHighlihgt.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782436220124838352, guid: 899867e6503e3924ba6b323dd2117d4c,
+        type: 3}
       propertyPath: enemy
       value: 
       objectReference: {fileID: 1590819038}
@@ -66004,6 +66027,21 @@ PrefabInstance:
       propertyPath: waitForSecond.Array.data[11]
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1782436220124838352, guid: 899867e6503e3924ba6b323dd2117d4c,
+        type: 3}
+      propertyPath: gameObjectstoHighlihgt.Array.data[0]
+      value: 
+      objectReference: {fileID: 1203451239}
+    - target: {fileID: 1782436220124838352, guid: 899867e6503e3924ba6b323dd2117d4c,
+        type: 3}
+      propertyPath: gameObjectstoHighlihgt.Array.data[1]
+      value: 
+      objectReference: {fileID: 1923871813}
+    - target: {fileID: 1782436220124838352, guid: 899867e6503e3924ba6b323dd2117d4c,
+        type: 3}
+      propertyPath: gameObjectstoHighlihgt.Array.data[2]
+      value: 
+      objectReference: {fileID: 1919453495}
     - target: {fileID: 1782436220172984396, guid: 899867e6503e3924ba6b323dd2117d4c,
         type: 3}
       propertyPath: m_FontData.m_Font
