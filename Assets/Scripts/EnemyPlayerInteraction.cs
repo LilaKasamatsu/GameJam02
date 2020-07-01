@@ -180,7 +180,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         {
             a = 0.4f;
         }
-        yield return new WaitForSeconds(a);
+        yield return new WaitForSecondsRealtime(a);
         attack = true;
 
     }
@@ -346,7 +346,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     public IEnumerator ReactivateWithDelay(float seconds)
     {
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSecondsRealtime(seconds);
         enemyController.EnableProcedural();
         wasSleeping = false;
     }
