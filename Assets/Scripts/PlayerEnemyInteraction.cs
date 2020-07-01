@@ -75,7 +75,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
                 }
             }
         }
-    }a
+    }
 
     public bool IsAttackVelocity()
     {
