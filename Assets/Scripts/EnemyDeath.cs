@@ -10,9 +10,10 @@ public class EnemyDeath : MonoBehaviour
     EnemyPlayerInteraction enemyPlayer;
     PlayerEnemyInteraction playerENnemy;
     GameEnd gameEnd;
+    [SerializeField] bool tutorialScene;
     private void Start()
     {
-        
+
         playerEnergy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnergyLvl>();
         playerData = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().data;
         playerENnemy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnemyInteraction>();
@@ -26,7 +27,10 @@ public class EnemyDeath : MonoBehaviour
         StartCoroutine(Enemydying());
         isDying = true;
         Debug.Log("kill");
-        gameEnd.Delete();
+        if (tutorialScene == false)
+        {
+            gameEnd.Delete();
+        }
         playerEnergy.AddEnergy(playerData.energyGainedByKillingEnemy);
         playerENnemy.OnRelease();
         //play
@@ -35,7 +39,7 @@ public class EnemyDeath : MonoBehaviour
     IEnumerator Enemydying()
     {
         yield return new WaitForSecondsRealtime(4f);
-     //   gameObject.SetActive(false);
+        //   gameObject.SetActive(false);
         gameObject.SetActive(false);
 
     }

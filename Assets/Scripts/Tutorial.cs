@@ -57,6 +57,7 @@ public class Tutorial : MonoBehaviour
             {
                 if (end == true)
                 {
+                    Time.timeScale = 1;
                     LoadNextScene();
 
                 }
