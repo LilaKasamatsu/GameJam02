@@ -9,6 +9,7 @@ public class EnemyDeath : MonoBehaviour
     PlayerData playerData;
     EnemyPlayerInteraction enemyPlayer;
     PlayerEnemyInteraction playerENnemy;
+    GameEnd gameEnd;
     private void Start()
     {
         
@@ -16,6 +17,7 @@ public class EnemyDeath : MonoBehaviour
         playerData = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().data;
         playerENnemy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnemyInteraction>();
         enemyPlayer = GetComponent<EnemyPlayerInteraction>();
+        gameEnd = GameObject.Find("Enemies").GetComponent<GameEnd>();
     }
     // Start is called before the first frame update
     public void Kill()
@@ -24,6 +26,7 @@ public class EnemyDeath : MonoBehaviour
         StartCoroutine(Enemydying());
         isDying = true;
         Debug.Log("kill");
+        gameEnd.Delete();
         playerEnergy.AddEnergy(playerData.energyGainedByKillingEnemy);
         playerENnemy.OnRelease();
         //play

@@ -37,6 +37,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     EnemyDeath enemyDeath;
     Player player;
     PlayerHealth playerHealth;
+    PlayerEnergyLvl playerenergy;
 
     CameraRig camRig;
 
@@ -57,6 +58,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        playerenergy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnergyLvl>();
         enemyDeath = GetComponent<EnemyDeath>();
 
         enemy = GetComponent<Enemy>().data;
@@ -349,10 +351,12 @@ public class EnemyPlayerInteraction : MonoBehaviour
         enemyController.DisableProcedural();
 
         anim.SetTrigger("death");
+        isWaiting = true;
+        stunnedCooldown = 5f;
     }
     public void DamageFeedback()
     {
-
+        playerenergy.AddEnergy(30);
         enemyController.DisableProcedural();
 
         anim.SetTrigger("damage");
