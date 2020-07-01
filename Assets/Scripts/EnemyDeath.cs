@@ -23,7 +23,11 @@ public class EnemyDeath : MonoBehaviour
         playerENnemy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnemyInteraction>();
         enemy = GetComponent<Enemy>().data;
         enemyPlayer = GetComponent<EnemyPlayerInteraction>();
-        gameEnd = GameObject.Find("Enemies").GetComponent<GameEnd>();
+        if (GameObject.Find("Enemies"))
+        {
+            gameEnd = GameObject.Find("Enemies").GetComponent<GameEnd>();
+        }
+        
     }
     // Start is called before the first frame update
     public void Kill()
