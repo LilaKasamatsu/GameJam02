@@ -1,5 +1,42 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &155245300061356166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 222338572119903822}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &222338572119903822
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155245300061356166}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1782436219850905956}
+  - {fileID: 1782436220424774079}
+  m_Father: {fileID: 1782436220426780667}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 48.169964, y: 70.00003}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1782436218404611073
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,7 +115,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: If it is filled up you can use your *special attack* through a right click.
+  m_Text: when your nudging tool is brimming full tap right click to unleash it's
+    power.
 --- !u!95 &4402225385399325170
 Animator:
   serializedVersion: 3
@@ -89,7 +127,7 @@ Animator:
   m_GameObject: {fileID: 1782436218404611073}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38ef467011755aa41b3cbc12de186f08, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -176,7 +214,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You are warned if the terrors spotted you.
+  m_Text: you are warned if the terrors spot you.
 --- !u!95 &2764696559618473230
 Animator:
   serializedVersion: 3
@@ -187,7 +225,7 @@ Animator:
   m_GameObject: {fileID: 1782436218466029411}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38ef467011755aa41b3cbc12de186f08, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -274,7 +312,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Escape their hold by clicking fast!
+  m_Text: escape their hold by beating fast!
 --- !u!95 &8921421008195920444
 Animator:
   serializedVersion: 3
@@ -285,7 +323,7 @@ Animator:
   m_GameObject: {fileID: 1782436218549292287}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38ef467011755aa41b3cbc12de186f08, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -320,17 +358,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782436219850905959}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1782436220424774079}
-  m_Father: {fileID: 1782436220426780667}
-  m_RootOrder: 6
+  m_Children: []
+  m_Father: {fileID: 222338572119903822}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 48.17, y: 70}
+  m_AnchoredPosition: {x: 0.000034332275, y: -0.000030517578}
   m_SizeDelta: {x: 327.364, y: 30}
   m_Pivot: {x: 0.5000001, y: 0.50000006}
 --- !u!222 &1782436219850905962
@@ -373,7 +410,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: But never stop moving...
+  m_Text: but never stop moving...
 --- !u!95 &3490369423786170145
 Animator:
   serializedVersion: 3
@@ -384,7 +421,7 @@ Animator:
   m_GameObject: {fileID: 1782436219850905959}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38ef467011755aa41b3cbc12de186f08, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -471,7 +508,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hurt them by quickly dashing your breath against your bodies.
+  m_Text: hurt them by  running your breath against their unnatural bodies.
 --- !u!95 &7651128487765394381
 Animator:
   serializedVersion: 3
@@ -482,7 +519,7 @@ Animator:
   m_GameObject: {fileID: 1782436219890082029}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38ef467011755aa41b3cbc12de186f08, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -580,7 +617,7 @@ Animator:
   m_GameObject: {fileID: 1782436219919577307}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38ef467011755aa41b3cbc12de186f08, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -667,7 +704,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Defeat all enemies to breathe new life into the world!
+  m_Text: defeat all terrors to breathe new life into this world.
 --- !u!95 &132663273421302062
 Animator:
   serializedVersion: 3
@@ -678,7 +715,7 @@ Animator:
   m_GameObject: {fileID: 1782436220103982170}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38ef467011755aa41b3cbc12de186f08, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -824,7 +861,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The revived environment gives power to your *pusher*.
+  m_Text: the recovered climate empowers your nudging willpower.
 --- !u!95 &2332371188004501857
 Animator:
   serializedVersion: 3
@@ -835,7 +872,7 @@ Animator:
   m_GameObject: {fileID: 1782436220172984398}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38ef467011755aa41b3cbc12de186f08, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -933,7 +970,7 @@ Animator:
   m_GameObject: {fileID: 1782436220179056656}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38ef467011755aa41b3cbc12de186f08, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1031,7 +1068,7 @@ Animator:
   m_GameObject: {fileID: 1782436220224732351}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38ef467011755aa41b3cbc12de186f08, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1129,7 +1166,7 @@ Animator:
   m_GameObject: {fileID: 1782436220263484857}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38ef467011755aa41b3cbc12de186f08, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1234,12 +1271,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1782436219850905956}
-  m_RootOrder: 0
+  m_Father: {fileID: 222338572119903822}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25.560043, y: -20}
+  m_AnchoredPosition: {x: 25.559984, y: -20}
   m_SizeDelta: {x: 378.4945, y: 30}
   m_Pivot: {x: 0.5000001, y: 0.50000006}
 --- !u!222 &1782436220424774077
@@ -1293,7 +1330,7 @@ Animator:
   m_GameObject: {fileID: 1782436220424774078}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38ef467011755aa41b3cbc12de186f08, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1338,7 +1375,7 @@ RectTransform:
   - {fileID: 1782436220263484862}
   - {fileID: 1782436220179056657}
   - {fileID: 1782436219919577304}
-  - {fileID: 1782436219850905956}
+  - {fileID: 222338572119903822}
   - {fileID: 1782436220463307529}
   - {fileID: 1782436218549292284}
   - {fileID: 1782436218466029408}
@@ -1492,7 +1529,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Be careful, the terrors want you to suffocate.
+  m_Text: be careful for the terrors want you to suffocate.
 --- !u!95 &1926189990532242690
 Animator:
   serializedVersion: 3
@@ -1503,7 +1540,7 @@ Animator:
   m_GameObject: {fileID: 1782436220463307528}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38ef467011755aa41b3cbc12de186f08, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

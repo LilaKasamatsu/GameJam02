@@ -17,7 +17,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
     private bool idleFeedback;
     private bool sleepingFeedback;
     private bool attackFeedback = true;
-    private bool attack;
+    public bool attack;
 
     [HideInInspector] public bool death;
 
