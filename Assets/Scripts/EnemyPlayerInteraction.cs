@@ -60,46 +60,50 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     void Update()
     {
-        if (stunnedCooldown <= 0f || !enemyDeath.isDying)
+        if (!enemyDeath.isDying)
         {
-            groundPosition = new Vector3(transform.position.x, 0, transform.position.z);
-
-            isHoldingPlayer = !playerEnemy.IsAttackVelocity() && IsInRange(enemy.actionRadius);
-
-            if (isHoldingPlayer == false)
+            if (stunnedCooldown <= 0f)
             {
-                isAttacking = IsInRange(enemy.attackRadius);
-                if (isAttacking)
+                groundPosition = new Vector3(transform.position.x, 0, transform.position.z);
+
+                isHoldingPlayer = !playerEnemy.IsAttackVelocity() && IsInRange(enemy.actionRadius);
+
+                if (isHoldingPlayer == false)
                 {
-                    Attack();
-                    if (movingFeedback == true) { MovingFeedback(); }
+                    isAttacking = IsInRange(enemy.attackRadius);
+                    if (isAttacking)
+                    {
+                        Attack();
+                        if (movingFeedback == true) { MovingFeedback(); }
+                    }
+                    else if (isWaiting == false)
+                    {
+                        if (movingFeedback == true) { MovingFeedback(); }
+                        Move();
+                        attack = false;
+                    }
                 }
-                else if (isWaiting == false)
+                else
                 {
-                    if (movingFeedback == true) { MovingFeedback(); }
-                    Move();
-                    attack = false;
+                    Hold();
+
+                    if (holdingFeedback == true)
+                    {
+                        HoldingFeedback();
+                    }
+                    else
+                    {
+                        //stunnedCooldown = 1f;
+                    }
                 }
             }
             else
             {
-                Hold();
-
-                if (holdingFeedback == true)
-                {
-                    HoldingFeedback();
-                }
-                else
-                {
-                    //stunnedCooldown = 1f;
-                }
+                stunnedCooldown -= Time.deltaTime;
             }
+            if (death == true) { KillFeedback(); }
         }
-        else
-        {
-            stunnedCooldown -= Time.deltaTime;
-        }
-        if (death == true) { KillFeedback(); }
+  
     }
 
 
@@ -229,7 +233,6 @@ public class EnemyPlayerInteraction : MonoBehaviour
     void Hold()
     {
         enemyController.DisableProcedural();
-
         playerEnemy.OnHold(this.transform, enemy.target);
     }
     IEnumerator OnHold()
