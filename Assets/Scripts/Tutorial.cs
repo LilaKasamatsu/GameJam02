@@ -69,16 +69,14 @@ public class Tutorial : MonoBehaviour
 
                     if (a == 5)
                     {
-                        // enemy.SetActive(true);
-                        //  enemy.GetComponent<EnemyPlayerInteraction>().isAttacking = true;
                         enemy.transform.position = enemyTransform.position;
                         enemy.GetComponent<EnemyPlayerInteraction>().attack = true;
                     }
 
-                    if (a == 9)
+                    if (a == 11)
                     {
-                        //end = true;
-                       // Debug.Log("end");
+                        end = true;
+                       Debug.Log("end");
                     }
                 }
 

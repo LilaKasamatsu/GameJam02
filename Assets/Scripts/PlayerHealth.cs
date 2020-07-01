@@ -158,7 +158,7 @@ public class PlayerHealth : MonoBehaviour
             colorAdj.saturation.Override(a);
             if (reducing == false)
             {
-                a -= 5;
+                a -= 2;
                 if (a < -90)
                 {
                     reducing = true;
@@ -169,7 +169,7 @@ public class PlayerHealth : MonoBehaviour
             }
             else
             {
-                a += 5;
+                a += 2;
                 if (a < 0)
                 {
                     colorAdj.saturation.Override(0);
