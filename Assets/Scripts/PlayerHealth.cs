@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
     Rigidbody rb;
     Respwan respawnScript;
 
+
     // PostProcessingData
     Camera cam;
     Volume camVolume;
@@ -21,15 +22,17 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] GameObject blackOut;
 
     //[SerializeField] Material materialToLerpTo;
-   // [SerializeField] Material materialStart;
+    // [SerializeField] Material materialStart;
 
-   // [SerializeField] TrailRenderer trail;
+    // [SerializeField] TrailRenderer trail;
 
     //  public Vignette viginetti = null;
 
     private float b;
     public bool isDying;
     private bool reducing = false;
+    public bool noVignette = false;
+
     //   [SerializeField] GameObject playerVFX;
     UnityEngine.Rendering.Universal.Vignette vignette;
     UnityEngine.Rendering.Universal.ColorAdjustments colorAdj;
@@ -37,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         blackOut.SetActive(false);
         rend = GetComponent<Renderer>();
         player = GetComponent<Player>().data;
@@ -64,62 +68,66 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        //camVolume.weight = b;
-       //Debug.Log(rb.velocity.magnitude);
-        if (rb.velocity.magnitude < 0.5)
+        if (noVignette == false)
         {
 
-            isDying = true;
-            player.deathTimer += Time.deltaTime;
-            vignette.intensity.Override(b);
-            if (reducing == false)
+            //camVolume.weight = b;
+            //Debug.Log(rb.velocity.magnitude);
+            if (rb.velocity.magnitude < 0.5)
             {
 
-                b += Time.deltaTime;
-                if (b > 0.9)
-                {
-                    reducing = true;
-                }
-            }
-            else
-            {
-                b -= Time.deltaTime;
-                if (b < 0.1)
-                {
-                    reducing = false;
-                }
-            }
-
-            if (player.deathTimer >= player.deathTime)
-            {
-                Debug.Log("GAME OVER");
-                Respawn();
-                //GAMEOVER
-            }
-        }
-        else
-        {
-            isDying = false;
-            player.deathTimer = 0;
-            if (b >= 0.1)
-            {
+                isDying = true;
+                player.deathTimer += Time.deltaTime;
                 vignette.intensity.Override(b);
-                //  rend.material.Lerp(materialToLerpTo,materialStart, Time.deltaTime / 2);
-                b -= Time.deltaTime;
+                if (reducing == false)
+                {
+
+                    b += Time.deltaTime;
+                    if (b > 0.9)
+                    {
+                        reducing = true;
+                    }
+                }
+                else
+                {
+                    b -= Time.deltaTime;
+                    if (b < 0.1)
+                    {
+                        reducing = false;
+                    }
+                }
+
+                if (player.deathTimer >= player.deathTime)
+                {
+                    Debug.Log("GAME OVER");
+                    Respawn();
+                    //GAMEOVER
+                }
             }
             else
             {
-                b = 0;
-                // rend.material = materialStart;
+                isDying = false;
+                player.deathTimer = 0;
+                if (b >= 0.1)
+                {
+                    vignette.intensity.Override(b);
+                    //  rend.material.Lerp(materialToLerpTo,materialStart, Time.deltaTime / 2);
+                    b -= Time.deltaTime;
+                }
+                else
+                {
+                    b = 0;
+                    // rend.material = materialStart;
 
+                }
+
+                //if (camVolume.weight >= 1)
+                //{
+                //    vignette.intensity.Override(0f);
+                //}
             }
-
-            //if (camVolume.weight >= 1)
-            //{
-            //    vignette.intensity.Override(0f);
-            //}
         }
     }
 
@@ -133,12 +141,12 @@ public class PlayerHealth : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(3f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-       // transform.position = respawnScript.location;
+        // transform.position = respawnScript.location;
     }
     public void ScreenBlink()
     {
         StartCoroutine(ScreenBlinkOnRadiusEnter());
-       // Debug.Log("nnn");
+        // Debug.Log("nnn");
     }
     IEnumerator ScreenBlinkOnRadiusEnter()
     {
@@ -150,7 +158,7 @@ public class PlayerHealth : MonoBehaviour
             colorAdj.saturation.Override(a);
             if (reducing == false)
             {
-                a-=5;
+                a -= 5;
                 if (a < -90)
                 {
                     reducing = true;
@@ -161,7 +169,7 @@ public class PlayerHealth : MonoBehaviour
             }
             else
             {
-                a+=5;
+                a += 5;
                 if (a < 0)
                 {
                     colorAdj.saturation.Override(0);
