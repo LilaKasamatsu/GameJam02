@@ -126,6 +126,7 @@ public class PlayerHealth : MonoBehaviour
     private void Respawn()
     {
         StartCoroutine(Respawning());
+        blackOut.SetActive(true);
     }
     IEnumerator Respawning()
     {
