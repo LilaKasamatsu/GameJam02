@@ -50,6 +50,7 @@ public class EnemyHealth : MonoBehaviour
            // GameObject particleRadius = transform.Find("particleRadius").gameObject;
             enemyRadius = particleRadius.GetComponent<EnemyRadius>();
             enemyPlayerInteraction.DamageFeedback();
+           // player
             enemyRadius.circleParticlesTwo.Stop();
         }
 
