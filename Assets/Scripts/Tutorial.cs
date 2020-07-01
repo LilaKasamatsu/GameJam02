@@ -12,15 +12,18 @@ public class Tutorial : MonoBehaviour
     //[SerializeField] GameObject screen4;
 
     public List<GameObject> screens = new List<GameObject>();
+    public List<GameObject> gameObjectstoHighlihgt = new List<GameObject>();
     public List<int> waitForSecond = new List<int>();
 
     GameObject cursor;
     [SerializeField] GameObject overLayBlackScreen;
     [SerializeField] GameObject enemy;
+    [SerializeField] Transform enemyTransform;
 
     bool screenIsActive = false;
     int a = 0;
     bool begin = true;
+    bool end = false;
 
     Animator animBlack;
     // Start is called before the first frame update
@@ -32,7 +35,8 @@ public class Tutorial : MonoBehaviour
         {
             screens[i].SetActive(false);
         }
-        enemy.SetActive(false);
+        // enemy.SetActive(false);
+        //enemy.GetComponent<EnemyPlayerInteraction>().isAttacking = false;
         overLayBlackScreen.SetActive(false);
 
 
@@ -51,17 +55,29 @@ public class Tutorial : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log("Close Tutorial");
-
-                StartCoroutine(CloseTutorial());
-                
-                if (a == 6)
-                {
-                    enemy.SetActive(true);
-                }
-                if (a == 10)
+                if (end == true)
                 {
                     LoadNextScene();
+
+                }
+                else
+                {
+                    Debug.Log("Close Tutorial");
+
+                    StartCoroutine(CloseTutorial());
+
+                    if (a == 5)
+                    {
+                        // enemy.SetActive(true);
+                        //  enemy.GetComponent<EnemyPlayerInteraction>().isAttacking = true;
+                        enemy.transform.position = enemyTransform.position;
+                        enemy.GetComponent<EnemyPlayerInteraction>().attack = true;
+                    }
+
+                    if (a == 10)
+                    {
+                        end = true;
+                    }
                 }
 
             }
