@@ -86,6 +86,12 @@ public class PlayerEnemyInteraction : MonoBehaviour
         StartCoroutine(specialAttack.Expand());
 
     }
+    IEnumerator SetToFalse()
+    {
+       // Debug.Log("aa");
+        yield return new WaitForSecondsRealtime(3f);
+        isUsingSpecialAttack = false;
+    }
 
     public void OnRelease()
     {
