@@ -61,7 +61,7 @@ public class Checkpoint : MonoBehaviour
         //  {
 
         // inRadius = false;
-        Debug.Log("Countdown Finished");
+       // Debug.Log("Countdown Finished");
         broken = false;
         finalWinning.SetToTrue();
         setNewRespawn.GetComponent<SetNewRespwan>().SetNewLocation();
@@ -80,7 +80,7 @@ public class Checkpoint : MonoBehaviour
         {
             if (broken == true)
             {
-                Debug.Log("Player");
+              //  Debug.Log("Player");
                 inRadius = true;
                 StartCountdown();
 
@@ -92,7 +92,7 @@ public class Checkpoint : MonoBehaviour
     {
         if (broken == true)
         {
-            Debug.Log("Player");
+           // Debug.Log("Player");
             inRadius = false;
             fixedCheckpoint.SetActive(false);
         }

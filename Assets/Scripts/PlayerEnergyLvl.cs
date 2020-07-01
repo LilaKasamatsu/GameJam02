@@ -18,7 +18,7 @@ public class PlayerEnergyLvl : MonoBehaviour
         if (player.energyLVL <= player.maxEnergyLVL)
         {
             player.energyLVL += add;
-            Debug.Log("add");
+           // Debug.Log("add");
         }
         else
         {

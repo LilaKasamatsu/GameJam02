@@ -35,7 +35,7 @@ public class EnemyDeath : MonoBehaviour
         enemyPlayer.death = true;
         StartCoroutine(Enemydying());
         isDying = true;
-        Debug.Log("kill");
+      //  Debug.Log("kill");
         if (tutorialScene == false)
         {
             gameEnd.Delete();

@@ -67,7 +67,7 @@ public class EnemyHealth : MonoBehaviour
         {
             // Debug.Log(enemy.currHealth);
             enemyDeath.Kill();
-            Debug.Log("urp");
+         //  Debug.Log("urp");
 
 
           //  Transform enemyChild = transform.Find("enemy mit joints");

@@ -216,7 +216,7 @@ Animator:
   m_GameObject: {fileID: 1759531270247169231}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5a5415c211a6a5a4194c93dcd0b20586, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -968,7 +968,6 @@ MonoBehaviour:
   - {fileID: 1782436220172984398}
   - {fileID: 1782436218404611073}
   - {fileID: 1782436220103982170}
-  gameObjectstoHighlihgt: []
   waitForSecond: 010000000600000006000000060000000600000006000000060000000600000006000000060000000600000006000000
   overLayBlackScreen: {fileID: 5831753064171016427}
   enemy: {fileID: 0}
@@ -1755,7 +1754,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2924549595386746361
 Transform:
   m_ObjectHideFlags: 0
@@ -2078,7 +2077,7 @@ Animator:
   m_GameObject: {fileID: 6780662498704174398}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b867c4e6044feb1459e7e1716e92eefd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

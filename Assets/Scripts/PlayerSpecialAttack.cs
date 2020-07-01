@@ -38,7 +38,7 @@ public class PlayerSpecialAttack : MonoBehaviour
             {
                 t += Time.deltaTime / duration;
             }
-            Debug.Log("4");
+           // Debug.Log("4");
             yield return null;
 
         }
@@ -72,7 +72,7 @@ public class PlayerSpecialAttack : MonoBehaviour
 
     IEnumerator SetToFalse()
     {
-        Debug.Log("t");
+       // Debug.Log("t");
         yield return new WaitForSeconds(1f);
         playerEnemy.can2Attack = true;
     }
@@ -80,7 +80,7 @@ public class PlayerSpecialAttack : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-           Debug.Log("urp special attack");
+          // Debug.Log("urp special attack");
             other.GetComponent<EnemyHealth>().MinusHealth(3);
         }
     }

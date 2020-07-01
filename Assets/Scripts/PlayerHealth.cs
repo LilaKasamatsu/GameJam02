@@ -101,7 +101,7 @@ public class PlayerHealth : MonoBehaviour
 
                 if (player.deathTimer >= player.deathTime)
                 {
-                    Debug.Log("GAME OVER");
+                  //  Debug.Log("GAME OVER");
                     Respawn();
                     //GAMEOVER
                 }

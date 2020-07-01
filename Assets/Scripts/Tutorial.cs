@@ -48,7 +48,7 @@ public class Tutorial : MonoBehaviour
         if (begin == true)
         {
             StartCoroutine(TutorialManager());
-            Debug.Log("los");
+           // Debug.Log("los");
             begin = false;
         }
         if (screenIsActive == true)
@@ -63,7 +63,7 @@ public class Tutorial : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Close Tutorial");
+                  //  Debug.Log("Close Tutorial");
 
                     StartCoroutine(CloseTutorial());
 
@@ -78,7 +78,7 @@ public class Tutorial : MonoBehaviour
                     if (a == 9)
                     {
                         //end = true;
-                        Debug.Log("end");
+                       // Debug.Log("end");
                     }
                 }
 
@@ -95,9 +95,9 @@ public class Tutorial : MonoBehaviour
     }
     IEnumerator TutorialManager()
     {
-        Debug.Log("open screen");
+       // Debug.Log("open screen");
         yield return new WaitForSecondsRealtime(waitForSecond[a]);
-        Debug.Log("open ssssssscreen");
+        //Debug.Log("open ssssssscreen");
         EnableScreen(a);
         EnableBlackScreen();
         //Screen is opened

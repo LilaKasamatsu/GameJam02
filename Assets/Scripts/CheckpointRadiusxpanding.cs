@@ -37,14 +37,14 @@ public class CheckpointRadiusxpanding : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("HIT SOMETHING");
+      //  Debug.Log("HIT SOMETHING");
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("enemy tod");
+           // Debug.Log("enemy tod");
         }
         if (other.CompareTag("Environment"))
         {
-            Debug.Log("ENVIRONMENT HIT");
+          //  Debug.Log("ENVIRONMENT HIT");
         }
     }   
     
@@ -52,7 +52,7 @@ public class CheckpointRadiusxpanding : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("enemy tod");
+           // Debug.Log("enemy tod");
         }
     }
 }

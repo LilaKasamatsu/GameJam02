@@ -51,15 +51,15 @@ public class PlayerEnemyInteraction : MonoBehaviour
         // Debug.Log(can2Attack);
         if (Input.GetMouseButtonDown(1))
         {
-            Debug.Log("isusingspecial ttack ist true");
+          //  Debug.Log("isusingspecial ttack ist true");
             if (isUsingSpecialAttack == false)
             {
-                Debug.Log("isusingspecial ttack ist false");
+               // Debug.Log("isusingspecial ttack ist false");
 
                 if (can2Attack == true)
                 {
                     // Debug.Log("no");
-                    Debug.Log("can2attack ttack ist true");
+                   // Debug.Log("can2attack ttack ist true");
                     if (player.data.energyLVL >= player.data.energyLVLforSpecialAttack)
                     {
                         can2Attack = false;
@@ -70,7 +70,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("no energy :(");
+                       // Debug.Log("no energy :(");
                     }
                 }
             }
@@ -89,7 +89,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy") && player.data.isAttacking)
         {
             EnemyHealth enemy = collision.gameObject.GetComponent<EnemyHealth>();
-            Debug.Log("urpplayer");
+           // Debug.Log("urpplayer");
             enemy.MinusHealth(1);
             enemyHit = true;
         }
@@ -107,7 +107,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
     }
     IEnumerator SetToFalse()
     {
-        Debug.Log("aa");
+       // Debug.Log("aa");
         yield return new WaitForSeconds(3f);
         isUsingSpecialAttack = false;
     }

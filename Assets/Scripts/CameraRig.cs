@@ -83,7 +83,7 @@ public class CameraRig : MonoBehaviour
             if (transform.position == end.position)
             {
               
-                Debug.Log("fff");
+               // Debug.Log("fff");
                 isHolded = false;
 
             }
