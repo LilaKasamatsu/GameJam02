@@ -18,9 +18,10 @@ public class EnemyDeath : MonoBehaviour
 
     private void Awake()
     {
-        playerEnergy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnergyLvl>();
-        playerData = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().data;
-        playerENnemy = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerEnemyInteraction>();
+        playerEnergy = FindObjectOfType<PlayerEnergyLvl>();
+        playerData = FindObjectOfType<Player>().data;
+        playerENnemy = FindObjectOfType<PlayerEnemyInteraction>();
+
         enemy = GetComponent<Enemy>().data;
         enemyPlayer = GetComponent<EnemyPlayerInteraction>();
         if (GameObject.Find("Enemies"))
@@ -35,7 +36,11 @@ public class EnemyDeath : MonoBehaviour
         enemyPlayer.death = true;
         StartCoroutine(Enemydying());
         isDying = true;
-      //  Debug.Log("kill");
+        GetComponent<BoxCollider>().enabled = false;
+        playerENnemy.GetComponent<Rigidbody>().isKinematic = false;
+        playerData.isMovable = true;
+
+        //  Debug.Log("kill");
         if (tutorialScene == false)
         {
             gameEnd.Delete();

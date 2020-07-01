@@ -53,6 +53,8 @@ public class EnemyHealth : MonoBehaviour
             enemyPlayerInteraction.DamageFeedback();
            // player
             enemyRadius.circleParticlesTwo.Stop();
+            enemyRadius.circleParticlesTwo.gameObject.SetActive(false);
+
         }
 
         if (enemy.currHealth == 1)
@@ -61,6 +63,7 @@ public class EnemyHealth : MonoBehaviour
             enemyRadius = particleRadius.GetComponent<EnemyRadius>();
             enemyPlayerInteraction.DamageFeedback();
             enemyRadius.circleParticlesOne.Stop();
+            enemyRadius.circleParticlesOne.gameObject.SetActive(false);
         }
 
         if (enemy.currHealth <= 0)

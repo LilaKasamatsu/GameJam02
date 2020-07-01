@@ -91,15 +91,19 @@ public class PlayerEnemyInteraction : MonoBehaviour
     {
         this.GetComponent<MeshRenderer>().material.color = Color.gray;
         GetComponent<Rigidbody>().isKinematic = false;
-        StopCoroutine(freePlayer);
+        if(freePlayer != null)
+        {
+            StopCoroutine(freePlayer);
+        }
         player.data.isMovable = true;
         if (currentEnemy != null)
         {
             currentEnemy.GetComponent<EnemyPlayerInteraction>().stunnedCooldown = 1f;
+            Debug.Log("ENEMYSTUNNED");
         }
     }
 
-    Transform currentEnemy;
+    public Transform currentEnemy;
 
     public void OnHold(Transform enemy, Transform target)
     {
@@ -121,6 +125,8 @@ public class PlayerEnemyInteraction : MonoBehaviour
         Vector3 i = new Vector3(target.position.x, target.position.y, target.position.z);
         transform.position = Vector3.MoveTowards(transform.position, i, 5 * Time.deltaTime);
     }
+
+
     private IEnumerator EscapeEnemy()
     {
         this.GetComponent<MeshRenderer>().material.color = Color.black;
@@ -136,7 +142,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
             {
                 buttonClickCounter++;
             }
-            if (buttonClickCounter >= 5)
+            if (buttonClickCounter >= 15)
             {
                 OnRelease();
             }

@@ -60,7 +60,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
 
     void Update()
     {
-        if (stunnedCooldown <= 0f)
+        if (stunnedCooldown <= 0f || !enemyDeath.isDying)
         {
             groundPosition = new Vector3(transform.position.x, 0, transform.position.z);
 
@@ -88,6 +88,10 @@ public class EnemyPlayerInteraction : MonoBehaviour
                 if (holdingFeedback == true)
                 {
                     HoldingFeedback();
+                }
+                else
+                {
+                    //stunnedCooldown = 1f;
                 }
             }
         }
@@ -336,7 +340,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         enemyController.DisableProcedural();
 
         enemy.anim.SetTrigger("damage");
-
+        stunnedCooldown = 1.4f;
         StartCoroutine(ReactivateWithDelay(1.4f));
     }
 
