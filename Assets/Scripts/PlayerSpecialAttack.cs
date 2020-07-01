@@ -38,7 +38,7 @@ public class PlayerSpecialAttack : MonoBehaviour
             {
                 t += Time.deltaTime / duration;
             }
-            // Debug.Log("4");
+            Debug.Log("4");
             yield return null;
 
         }
@@ -59,17 +59,23 @@ public class PlayerSpecialAttack : MonoBehaviour
             // Debug.Log("1");
             if (t < 1)
             {
-                //  Debug.Log(t);
+               
                 t += Time.deltaTime / durationInvert;
             }
             // sphere.localScale = specialAttackVector;
-            playerEnemy.can2Attack = true;
+            StartCoroutine(SetToFalse());
             coll.enabled = false;
             yield return null;
         }
 
     }
 
+    IEnumerator SetToFalse()
+    {
+        Debug.Log("t");
+        yield return new WaitForSeconds(1f);
+        playerEnemy.can2Attack = true;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))

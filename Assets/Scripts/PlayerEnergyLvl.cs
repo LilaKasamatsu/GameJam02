@@ -18,11 +18,16 @@ public class PlayerEnergyLvl : MonoBehaviour
         if (player.energyLVL <= player.maxEnergyLVL)
         {
             player.energyLVL += add;
+            Debug.Log("add");
         }
         else
         {
             player.energyLVL = player.maxEnergyLVL;
         }
         cursor.SetCursorPower();
+    }
+    public void MinusEnergy()
+    {
+        player.energyLVL -= player.energyLVLforSpecialAttack;
     }
 }

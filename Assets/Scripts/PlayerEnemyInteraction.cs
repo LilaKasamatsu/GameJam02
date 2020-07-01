@@ -47,22 +47,31 @@ public class PlayerEnemyInteraction : MonoBehaviour
             this.GetComponent<MeshRenderer>().material.color = Color.gray;
             player.data.isAttacking = false;
         }
-        Debug.Log(can2Attack);
+        // Debug.Log(can2Attack);
         // Debug.Log(can2Attack);
         if (Input.GetMouseButtonDown(1))
         {
-            if (can2Attack == true)
+            Debug.Log("isusingspecial ttack ist true");
+            if (isUsingSpecialAttack == false)
             {
-                // Debug.Log("no");
-                if (player.data.energyLVL >= player.data.energyLVLforSpecialAttack)
+                Debug.Log("isusingspecial ttack ist false");
+
+                if (can2Attack == true)
                 {
-                    can2Attack = false;
-                    OnSpecialAttack();
-                    playerEnergy.AddEnergy(-player.data.energyLVLforSpecialAttack);
-                }
-                else
-                {
-                    Debug.Log("no energy :(");
+                    // Debug.Log("no");
+                    Debug.Log("can2attack ttack ist true");
+                    if (player.data.energyLVL >= player.data.energyLVLforSpecialAttack)
+                    {
+                        can2Attack = false;
+                        isUsingSpecialAttack = false;
+                        OnSpecialAttack();
+                        StartCoroutine(SetToFalse());
+                        playerEnergy.MinusEnergy();
+                    }
+                    else
+                    {
+                        Debug.Log("no energy :(");
+                    }
                 }
             }
         }
@@ -88,12 +97,19 @@ public class PlayerEnemyInteraction : MonoBehaviour
 
     public void OnSpecialAttack()
     {
-       
-            // Do some animation magic.
-            isUsingSpecialAttack = true;
-            StartCoroutine(specialAttack.Expand());
-        
 
+        // Do some animation magic.
+       // isUsingSpecialAttack = true;
+        StartCoroutine(specialAttack.Expand());
+       
+
+
+    }
+    IEnumerator SetToFalse()
+    {
+        Debug.Log("aa");
+        yield return new WaitForSeconds(3f);
+        isUsingSpecialAttack = false;
     }
 
     public void OnRelease()

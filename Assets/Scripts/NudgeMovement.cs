@@ -43,6 +43,7 @@ public class NudgeMovement : MonoBehaviour
         if (other.CompareTag("Pusher"))
         {
             Transform pusher = FindObjectOfType<PusherNudgeMovement>().transform;
+           // Debug.Log("PUSHER: " + pusher.name);
             Vector3 dir = transform.position - pusher.position;
             dir.y = 0;
             dir = dir.normalized;
