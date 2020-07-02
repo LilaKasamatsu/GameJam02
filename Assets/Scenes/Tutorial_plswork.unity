@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -37688,6 +37688,18 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1106336562, guid: 4d18f69102177bb4aab52f5ca065392a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527441369, guid: 4d18f69102177bb4aab52f5ca065392a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1921119499, guid: 4d18f69102177bb4aab52f5ca065392a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2072622151, guid: 4d18f69102177bb4aab52f5ca065392a, type: 3}
       propertyPath: blackOut
       value: 
@@ -41164,7 +41176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1318633188
 Transform:
   m_ObjectHideFlags: 0
@@ -67802,7 +67814,7 @@ PrefabInstance:
     - target: {fileID: 1782436218549292284, guid: 899867e6503e3924ba6b323dd2117d4c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1782436218549292285, guid: 899867e6503e3924ba6b323dd2117d4c,
         type: 3}
@@ -67983,7 +67995,7 @@ PrefabInstance:
     - target: {fileID: 1782436220103982171, guid: 899867e6503e3924ba6b323dd2117d4c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1782436220103982171, guid: 899867e6503e3924ba6b323dd2117d4c,
         type: 3}
@@ -68275,7 +68287,7 @@ PrefabInstance:
     - target: {fileID: 1782436220179056662, guid: 899867e6503e3924ba6b323dd2117d4c,
         type: 3}
       propertyPath: m_FontData.m_BestFit
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1782436220179056662, guid: 899867e6503e3924ba6b323dd2117d4c,
         type: 3}
@@ -68371,7 +68383,7 @@ PrefabInstance:
     - target: {fileID: 1782436220263484863, guid: 899867e6503e3924ba6b323dd2117d4c,
         type: 3}
       propertyPath: m_Text
-      value: Your willpower nudger will help you ..
+      value: Your willpower nudger will help you ...
       objectReference: {fileID: 0}
     - target: {fileID: 1782436220263484863, guid: 899867e6503e3924ba6b323dd2117d4c,
         type: 3}

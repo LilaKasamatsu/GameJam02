@@ -57,6 +57,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
                 {
                     OnSpecialAttack();
                     playerEnergy.AddEnergy(-player.data.energyLVLforSpecialAttack);
+                    playerEnergy.MinusEnergy();
                 }
             }
         }

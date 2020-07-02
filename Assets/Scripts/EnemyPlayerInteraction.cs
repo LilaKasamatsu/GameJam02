@@ -333,7 +333,6 @@ public class EnemyPlayerInteraction : MonoBehaviour
     public void KillFeedback()
     {
         enemyController.DisableProcedural();
-
         enemy.anim.SetTrigger("death");
     }
 

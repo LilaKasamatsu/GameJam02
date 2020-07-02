@@ -34249,6 +34249,7 @@ MonoBehaviour:
   player: {fileID: 715876271495430848}
   can2Attack: 1
   enemyHit: 0
+  currentEnemy: {fileID: 0}
 --- !u!114 &-814651173068526073
 MonoBehaviour:
   m_ObjectHideFlags: 0

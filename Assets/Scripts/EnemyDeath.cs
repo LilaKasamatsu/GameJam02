@@ -41,8 +41,9 @@ public class EnemyDeath : MonoBehaviour
         playerData.isMovable = true;
 
         //  Debug.Log("kill");
-        if (tutorialScene == false)
+        if (tutorialScene == false && !killedonce)
         {
+            killedonce = true;
             gameEnd.Delete();
         }
         playerEnergy.AddEnergy(playerData.energyGainedByKillingEnemy);
@@ -57,4 +58,6 @@ public class EnemyDeath : MonoBehaviour
         gameObject.SetActive(false);
 
     }
+
+    bool killedonce = false;
 }

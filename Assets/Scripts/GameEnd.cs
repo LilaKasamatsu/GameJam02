@@ -29,17 +29,19 @@ public class GameEnd : MonoBehaviour
 
         spotlight.SetActive(false);
         fadeOut.SetActive(false);
+        enemysInScene = 9;
 
-        for (int i = 0; i < gameObject.transform.childCount; i++)
-        {
-            enemysInScene++;
-        }
+        //for (int i = 0; i < gameObject.transform.childCount; i++)
+        //{
+        //    enemysInScene++;
+        //}
     }
 
     // Update is called once per frame
     public void Delete()
     {
         enemysInScene -= 1;
+        Debug.Log("enemies: " + enemysInScene);
         if (enemysInScene == 0)
         {
             p.data.isMovable = false;
