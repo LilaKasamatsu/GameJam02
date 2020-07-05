@@ -70,6 +70,10 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+        if (Input.GetKey(KeyCode.E))
+        {
+            ScreenBlink();
+        }
         if (noVignette == false)
         {
 
@@ -101,7 +105,7 @@ public class PlayerHealth : MonoBehaviour
 
                 if (player.deathTimer >= player.deathTime)
                 {
-                  //  Debug.Log("GAME OVER");
+                    //  Debug.Log("GAME OVER");
                     Respawn();
                     //GAMEOVER
                 }
@@ -156,9 +160,10 @@ public class PlayerHealth : MonoBehaviour
         while (true)
         {
             colorAdj.saturation.Override(a);
+            Debug.Log(a);
             if (reducing == false)
             {
-                a -= 2;
+                a -= 3;
                 if (a < -90)
                 {
                     reducing = true;
@@ -169,10 +174,10 @@ public class PlayerHealth : MonoBehaviour
             }
             else
             {
-                a += 2;
-                if (a < 0)
+                a += 3;
+                if (a > 0)
                 {
-                    colorAdj.saturation.Override(0);
+                   colorAdj.saturation.Override(0);
                     //a++;
                     break;
 
