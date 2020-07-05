@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     Renderer rend;
     Rigidbody rb;
     Respwan respawnScript;
+    PlayerLightManager playerLight;
 
 
     // PostProcessingData
@@ -29,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
     //  public Vignette viginetti = null;
 
     private float b;
+    private float a;
     public bool isDying;
     private bool reducing = false;
     public bool noVignette = false;
@@ -45,6 +47,7 @@ public class PlayerHealth : MonoBehaviour
         rend = GetComponent<Renderer>();
         player = GetComponent<Player>().data;
         respawnScript = GetComponent<Respwan>();
+        playerLight = GetComponent<PlayerLightManager>();
         rb = GetComponent<Rigidbody>();
         cam = Camera.main;
         UnityEngine.Rendering.VolumeProfile volumeProfile = cam.GetComponent<UnityEngine.Rendering.Volume>()?.profile;
@@ -70,18 +73,12 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        if (Input.GetKey(KeyCode.E))
-        {
-            ScreenBlink();
-        }
+    //    Debug.Log(Time.deltaTime);
         if (noVignette == false)
         {
-
-            //camVolume.weight = b;
-            //Debug.Log(rb.velocity.magnitude);
             if (rb.velocity.magnitude < 0.5)
             {
-
+                ReduceLight();
                 isDying = true;
                 player.deathTimer += Time.deltaTime;
                 vignette.intensity.Override(b);
@@ -89,6 +86,7 @@ public class PlayerHealth : MonoBehaviour
                 {
 
                     b += Time.deltaTime;
+
                     if (b > 0.9)
                     {
                         reducing = true;
@@ -105,32 +103,34 @@ public class PlayerHealth : MonoBehaviour
 
                 if (player.deathTimer >= player.deathTime)
                 {
-                    //  Debug.Log("GAME OVER");
                     Respawn();
                     //GAMEOVER
                 }
             }
             else
             {
+                AddLight();
                 isDying = false;
                 player.deathTimer = 0;
                 if (b >= 0.1)
                 {
                     vignette.intensity.Override(b);
-                    //  rend.material.Lerp(materialToLerpTo,materialStart, Time.deltaTime / 2);
                     b -= Time.deltaTime;
                 }
                 else
                 {
                     b = 0;
-                    // rend.material = materialStart;
-
+                    //a = 1;
                 }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < playerLight.licht.Count; i++)
+            {
 
-                //if (camVolume.weight >= 1)
-                //{
-                //    vignette.intensity.Override(0f);
-                //}
+                playerLight.licht[i].intensity = playerLight.lichtMaxWert[i];
+
             }
         }
     }
@@ -139,6 +139,45 @@ public class PlayerHealth : MonoBehaviour
     {
         StartCoroutine(Respawning());
         blackOut.SetActive(true);
+    }
+    void ReduceLight()
+    {
+        Debug.Log("reduce light");
+        for (int i = 0; i < playerLight.licht.Count; i++)
+        {
+            playerLight.licht[i].intensity = playerLight.lichtMaxWert[i] * a;
+        }
+        if (a <= 0.1)
+        {
+            a = 0.1f;
+        }
+        else
+        {
+            a -= Time.deltaTime/5;
+
+        }
+    }
+    void AddLight()
+    {
+        if (a <= 0.95)
+        {
+            a += Time.deltaTime;
+            for (int i = 0; i < playerLight.licht.Count; i++)
+            {
+
+                playerLight.licht[i].intensity = playerLight.lichtMaxWert[i] * a;
+            }
+        }
+        else
+        {
+            a = 1;
+
+            for (int i = 0; i < playerLight.licht.Count; i++)
+            {
+
+                playerLight.licht[i].intensity = playerLight.lichtMaxWert[i];
+            }
+        }
     }
     IEnumerator Respawning()
     {
@@ -177,7 +216,7 @@ public class PlayerHealth : MonoBehaviour
                 a += 3;
                 if (a > 0)
                 {
-                   colorAdj.saturation.Override(0);
+                    colorAdj.saturation.Override(0);
                     //a++;
                     break;
 

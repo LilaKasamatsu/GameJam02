@@ -7,7 +7,7 @@ public class HighResScreenshot : MonoBehaviour
     public int resHeight = 3300;
     [SerializeField] string pathToScreens;
 
-    private bool takeHiResShot = false;
+    public bool takeHiResShot = false;
 
     public string ScreenShotName(int width, int height)
     {
@@ -34,7 +34,7 @@ public class HighResScreenshot : MonoBehaviour
 
     void LateUpdate()
     {
-        takeHiResShot |= Input.GetKeyDown("k");
+       // takeHiResShot |= Input.GetKeyDown("k");
         if (takeHiResShot)
         {
             RenderTexture rt = new RenderTexture(resWidth, resHeight, 24);

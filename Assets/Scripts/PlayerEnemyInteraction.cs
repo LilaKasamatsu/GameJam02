@@ -149,7 +149,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
             {
                 buttonClickCounter++;
             }
-            if (buttonClickCounter >= 15)
+            if (buttonClickCounter >= 0)
             {
                 OnRelease();
             }
