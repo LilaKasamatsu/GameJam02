@@ -56,7 +56,8 @@ public class PlayerEnemyInteraction : MonoBehaviour
                 if (player.data.energyLVL >= player.data.energyLVLforSpecialAttack)
                 {
                     OnSpecialAttack();
-                    playerEnergy.AddEnergy(-player.data.energyLVLforSpecialAttack);
+                  //  playerEnergy.AddEnergy(-player.data.energyLVLforSpecialAttack);
+                  playerEnergy.MinusEnergy();
                 }
             }
         }
