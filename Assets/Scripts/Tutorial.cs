@@ -121,7 +121,7 @@ public class Tutorial : MonoBehaviour
         if (a == 11)
         {
             end = true;
-            Debug.Log("end");
+          //  Debug.Log("end");
 
         }
         StartCoroutine(TutorialManager());
