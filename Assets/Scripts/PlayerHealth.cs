@@ -142,7 +142,7 @@ public class PlayerHealth : MonoBehaviour
     }
     void ReduceLight()
     {
-        Debug.Log("reduce light");
+      //  Debug.Log("reduce light");
         for (int i = 0; i < playerLight.licht.Count; i++)
         {
             playerLight.licht[i].intensity = playerLight.lichtMaxWert[i] * a;
