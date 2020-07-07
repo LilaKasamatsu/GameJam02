@@ -9,6 +9,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public GameObject gameOverScreen;
+    public GameObject fadeOut;
+
     PlayerData player;
     Renderer rend;
     Rigidbody rb;
@@ -66,7 +69,7 @@ public class PlayerHealth : MonoBehaviour
 
         colorAdj.saturation.Override(0f);
 
-
+        fadeOut.SetActive(false);
 
     }
 
@@ -181,6 +184,11 @@ public class PlayerHealth : MonoBehaviour
     }
     IEnumerator Respawning()
     {
+        yield return new WaitForSecondsRealtime(3f);
+        gameOverScreen.SetActive(true);
+
+        yield return new WaitForSecondsRealtime(3f);
+        fadeOut.SetActive(true);
 
         yield return new WaitForSecondsRealtime(3f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
