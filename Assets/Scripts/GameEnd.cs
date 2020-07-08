@@ -33,6 +33,7 @@ public class GameEnd : MonoBehaviour
         for (int i = 0; i < gameObject.transform.childCount; i++)
         {
             enemysInScene++;
+            //Debug.Log("1");
         }
     }
 
@@ -42,6 +43,7 @@ public class GameEnd : MonoBehaviour
         enemysInScene -= 1;
         if (enemysInScene == 0)
         {
+            Debug.Log(enemysInScene);
             p.data.isMovable = false;
 
             StartCoroutine(Ending());

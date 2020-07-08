@@ -28,14 +28,12 @@ public class TrailPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // Debug.Log(rb.velocity.magnitude);
         t = rb.velocity.magnitude / maxMagnitude;
         tail.startWidth = t * maxWidth;
         if (t >= 1)
         {
             // tailMaterial.color = beginColor;
             tailMaterial.SetColor("_EmissionColor", beginColor);
-           // Debug.Log("change color");
             t = 1;
         }
         else

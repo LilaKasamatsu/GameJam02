@@ -35,6 +35,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       // Debug.Log(can2Attack);
         // Debug.Log(IsAttackVelocity());
         // Debug.Log(can2Attack);
         if (IsAttackVelocity())
@@ -55,9 +56,16 @@ public class PlayerEnemyInteraction : MonoBehaviour
                 // Debug.Log("no");
                 if (player.data.energyLVL >= player.data.energyLVLforSpecialAttack)
                 {
+                    can2Attack = false;
+                   // Debug.Log("click");
                     OnSpecialAttack();
-                    playerEnergy.AddEnergy(-player.data.energyLVLforSpecialAttack);
+                  //  playerEnergy.AddEnergy(-player.data.energyLVLforSpecialAttack);
+                  playerEnergy.MinusEnergy();
                 }
+            }
+            else
+            {
+                //Debug.Log("STOP!");
             }
         }
     }
@@ -148,7 +156,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
             {
                 buttonClickCounter++;
             }
-            if (buttonClickCounter >= 15)
+            if (buttonClickCounter >= 0)
             {
                 OnRelease();
             }
