@@ -7,11 +7,16 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] GameObject blackFadeIn;
     [SerializeField] GameObject blackFadeOut;
+    [SerializeField] GameObject credit;
+    Animator creditAnim;
     [SerializeField] float timer = 2f;
     [SerializeField] float secondTimer = 2f;
 
+    bool creditIsOpen = false;
+
     void Start()
     {
+        creditAnim = credit.GetComponent<Animator>();
     }
 
     void Update()
@@ -21,6 +26,13 @@ public class Menu : MonoBehaviour
         {
             blackFadeIn.SetActive(false);
             timer = 2f;
+        }
+        if (creditIsOpen == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                CloseCredit();
+            }
         }
     }
 
@@ -50,5 +62,13 @@ public class Menu : MonoBehaviour
     public void OpenCredit()
     {
         //open credit
+        creditIsOpen = true;
+        creditAnim.SetTrigger("fadeIn");
+    }
+    public void CloseCredit()
+    {
+        creditIsOpen = false;
+
+        creditAnim.SetTrigger("fadeOut");
     }
 }
