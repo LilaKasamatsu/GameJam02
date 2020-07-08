@@ -33,7 +33,7 @@ public class GameEnd : MonoBehaviour
         for (int i = 0; i < gameObject.transform.childCount; i++)
         {
             enemysInScene++;
-            Debug.Log("1");
+            //Debug.Log("1");
         }
     }
 

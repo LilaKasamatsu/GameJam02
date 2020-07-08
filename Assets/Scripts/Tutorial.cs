@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class Tutorial : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Tutorial : MonoBehaviour
     GameObject cursor;
     [SerializeField] GameObject overLayBlackScreen;
     [SerializeField] GameObject enemy;
+    [SerializeField] GameObject enemy2;
     [SerializeField] Transform enemyTransform;
 
     bool screenIsActive = false;
@@ -48,12 +50,12 @@ public class Tutorial : MonoBehaviour
         if (begin == true)
         {
             StartCoroutine(TutorialManager());
-           // Debug.Log("los");
+            // Debug.Log("los");
             begin = false;
         }
         if (screenIsActive == true)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (end == true)
                 {
@@ -63,7 +65,7 @@ public class Tutorial : MonoBehaviour
                 }
                 else
                 {
-                  //  Debug.Log("Close Tutorial");
+                    //  Debug.Log("Close Tutorial");
 
                     StartCoroutine(CloseTutorial());
 
@@ -71,13 +73,18 @@ public class Tutorial : MonoBehaviour
                     {
                         enemy.transform.position = enemyTransform.position;
                         enemy.GetComponent<EnemyPlayerInteraction>().attack = true;
+                    } 
+                    if (a == 9)
+                    {
+                        enemy2.transform.position = enemyTransform.position;
+                        enemy2.GetComponent<EnemyPlayerInteraction>().attack = true;
                     }
 
-                    if (a == 11)
-                    {
-                        end = true;
-                       Debug.Log("end");
-                    }
+                    //if (a == 11)
+                    //{
+                    //    end = true;
+                    //    Debug.Log("end");
+                    //}
                 }
 
             }
@@ -93,7 +100,7 @@ public class Tutorial : MonoBehaviour
     }
     IEnumerator TutorialManager()
     {
-       // Debug.Log("open screen");
+        // Debug.Log("open screen");
         yield return new WaitForSecondsRealtime(waitForSecond[a]);
         //Debug.Log("open ssssssscreen");
         EnableScreen(a);
@@ -105,12 +112,18 @@ public class Tutorial : MonoBehaviour
         screenIsActive = false;
         animBlack.SetTrigger("fade");
         screens[a].GetComponent<Animator>().SetTrigger("FadeOut");
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(0.8f);
         screens[a].SetActive(false);
         overLayBlackScreen.SetActive(false);
         Time.timeScale = 1;
         cursor.SetActive(true);
         a++;
+        if (a == 11)
+        {
+            end = true;
+          //  Debug.Log("end");
+
+        }
         StartCoroutine(TutorialManager());
     }
     void EnableBlackScreen()
@@ -122,4 +135,25 @@ public class Tutorial : MonoBehaviour
     {
         SceneManager.LoadScene("GroundLevelDONE01");
     }
+    //IEnumerator TimeScalePlus()
+    //{
+    //    float b=0;
+    //    while (true)
+    //    {
+    //        b += 0.1f;
+    //        Time.timeScale = b;
+    //        if (b >=1)
+    //        {
+    //            b = 1;
+    //            break;
+    //        }
+
+    //        yield return new WaitForEndOfFrame();
+    //    }
+    //    yield return null;
+    //}
+    //IEnumerator TimeScaleMinus()
+    //{
+    //    yield return new WaitForEndOfFrame();
+    //}
 }
