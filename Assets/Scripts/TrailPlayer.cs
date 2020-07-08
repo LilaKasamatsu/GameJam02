@@ -28,6 +28,7 @@ public class TrailPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(t);
         t = rb.velocity.magnitude / maxMagnitude;
         tail.startWidth = t * maxWidth;
         if (t >= 1)
