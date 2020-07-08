@@ -16,11 +16,14 @@ public class NudgeMovement : MonoBehaviour
     private Vector3 lastVelocity;
     private Vector3 lastPos;
 
+    ParticleSystem pusherP;
+
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
+        pusherP = GameObject.Find("When pushed").GetComponent<ParticleSystem>();
         player = GetComponent<Player>();
     }
 
@@ -42,6 +45,9 @@ public class NudgeMovement : MonoBehaviour
     {
         if (other.CompareTag("Pusher"))
         {
+            //Debug.Log(player.rb.velocity.magnitude);
+            pusherP.startSpeed = player.rb.velocity.magnitude;
+            pusherP.Play();
             Transform pusher = FindObjectOfType<PusherNudgeMovement>().transform;
            // Debug.Log("PUSHER: " + pusher.name);
             Vector3 dir = transform.position - pusher.position;
