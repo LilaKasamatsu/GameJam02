@@ -199,7 +199,7 @@ public class PlayerHealth : MonoBehaviour
         while (true)
         {
             colorAdj.saturation.Override(a);
-            Debug.Log(a);
+            //Debug.Log(a);
             if (reducing == false)
             {
                 a -= 3;
