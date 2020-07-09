@@ -35,6 +35,7 @@ public class TrailPlayer : MonoBehaviour
         {
             // tailMaterial.color = beginColor;
             tailMaterial.SetColor("_EmissionColor", beginColor);
+           
             t = 1;
         }
         else
