@@ -14326,7 +14326,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &662031084
 Transform:
   m_ObjectHideFlags: 0
@@ -34160,7 +34160,6 @@ GameObject:
   - component: {fileID: 1490141420}
   - component: {fileID: 6292775569626759085}
   - component: {fileID: 2769621445737068591}
-  - component: {fileID: 2042738323}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -34328,6 +34327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffc53fc052cde404d81025d516856289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCircleParticles: {fileID: 4472628758134224306}
   player: {fileID: 715876271495430848}
   can2Attack: 1
   enemyHit: 0

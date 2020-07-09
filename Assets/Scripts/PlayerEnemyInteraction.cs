@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerEnemyInteraction : MonoBehaviour
 {
+    public ParticleSystem playerCircleParticles;
     public Player player;
 
     Coroutine freePlayer;
@@ -145,6 +146,9 @@ public class PlayerEnemyInteraction : MonoBehaviour
     {
         this.GetComponent<MeshRenderer>().material.color = Color.black;
         int buttonClickCounter = 0;
+        var main = playerCircleParticles.main;
+        
+
         while (true)
         {
             if (currentEnemy == null)
@@ -154,12 +158,20 @@ public class PlayerEnemyInteraction : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
+                main.startSize = 5;
+
                 buttonClickCounter++;
             }
+            if (Input.GetMouseButtonUp(0))
+            {
+                main.startSize = 3;
+            }
+
             if (buttonClickCounter >= 0)
             {
                 OnRelease();
             }
+            
             yield return new WaitForFixedUpdate();
         }
 
