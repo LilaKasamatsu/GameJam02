@@ -54,7 +54,7 @@ public class GameEnd : MonoBehaviour
     {
         if(end == true)
         {
-        player.transform.position = Vector3.MoveTowards(player.transform.position, up.transform.position, 10f * Time.deltaTime);
+        player.transform.position = Vector3.MoveTowards(player.transform.position, up.transform.position, 15f * Time.deltaTime);
         }
     }
 
