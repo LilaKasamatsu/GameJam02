@@ -131,6 +131,14 @@ public class PlayerEnemyInteraction : MonoBehaviour
             player.data.isMovable = false;
             freePlayer = StartCoroutine(EscapeEnemy());
             GetComponent<Rigidbody>().isKinematic = true;
+
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                clickFeedback.Play();
+                
+            }
+
         }
         // Debug.Log("1");
     }
@@ -158,15 +166,17 @@ public class PlayerEnemyInteraction : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                main.startSize = 5;
-                main.maxParticles = 20;
+                //main.startSize = 6;
+                //main.maxParticles = 1;
+                //clickFeedback.Play();
 
                 buttonClickCounter++;
             }
             if (Input.GetMouseButtonUp(0))
             {
-                main.startSize = 3;
-                main.maxParticles = 0;
+                //main.startSize = 3;
+                //main.maxParticles = 0;
+                //clickFeedback.Stop();
             }
 
             if (buttonClickCounter >= 0)
