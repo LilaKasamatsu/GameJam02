@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerEnemyInteraction : MonoBehaviour
 {
-    public ParticleSystem playerCircleParticles;
+    public ParticleSystem clickFeedback;
     public Player player;
 
     Coroutine freePlayer;
@@ -146,7 +146,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
     {
         this.GetComponent<MeshRenderer>().material.color = Color.black;
         int buttonClickCounter = 0;
-        var main = playerCircleParticles.main;
+        var main = clickFeedback.main;
         
 
         while (true)
@@ -159,12 +159,14 @@ public class PlayerEnemyInteraction : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 main.startSize = 5;
+                main.maxParticles = 20;
 
                 buttonClickCounter++;
             }
             if (Input.GetMouseButtonUp(0))
             {
                 main.startSize = 3;
+                main.maxParticles = 0;
             }
 
             if (buttonClickCounter >= 0)
