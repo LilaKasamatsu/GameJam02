@@ -29123,7 +29123,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3a61e895ebee8c844bb0bd52dea2cf17, type: 2}
+  - {fileID: 2100000, guid: f7d9388c67146ef44be7a9c3cecc18ad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29172,7 +29172,7 @@ MonoBehaviour:
   maxSize: 4.5
   growFactor: 2
   waitTime: 0.5
-  player: {fileID: 0}
+  player: {fileID: 5052043999930341523}
 --- !u!1 &1310769461789816467
 GameObject:
   m_ObjectHideFlags: 0
