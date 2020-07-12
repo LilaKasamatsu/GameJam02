@@ -201,9 +201,10 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
         player.deathTimer = 0;
         fadeOut.GetComponent<Animator>().SetTrigger("fade");
+        gameOverScreen.SetActive(false);
         transform.position = respawn.transform.position;
         yield return new WaitForSecondsRealtime(1f);
-        gameOverScreen.SetActive(false);
+        
         fadeOut.SetActive(false);
         blackOut.SetActive(false);
         player.deathTimer = 0;
