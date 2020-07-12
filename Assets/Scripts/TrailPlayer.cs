@@ -10,7 +10,7 @@ public class TrailPlayer : MonoBehaviour
     float t = 0;
     float maxWidth = 1.5f;
     float currWidth;
-    float maxMagnitude = 15f;
+    float maxMagnitude = 20f;
     [SerializeField] Color newColorForTrail;
     Material tailMaterial;
     Color beginColor;
@@ -28,12 +28,14 @@ public class TrailPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       // Debug.Log(t);
         t = rb.velocity.magnitude / maxMagnitude;
         tail.startWidth = t * maxWidth;
         if (t >= 1)
         {
             // tailMaterial.color = beginColor;
             tailMaterial.SetColor("_EmissionColor", beginColor);
+           
             t = 1;
         }
         else

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerEnemyInteraction : MonoBehaviour
 {
+    public ParticleSystem clickFeedback;
     public Player player;
 
     Coroutine freePlayer;
@@ -35,6 +36,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       // Debug.Log(can2Attack);
         // Debug.Log(IsAttackVelocity());
         // Debug.Log(can2Attack);
         if (IsAttackVelocity())
@@ -55,10 +57,25 @@ public class PlayerEnemyInteraction : MonoBehaviour
                 // Debug.Log("no");
                 if (player.data.energyLVL >= player.data.energyLVLforSpecialAttack)
                 {
+                    can2Attack = false;
+                   // Debug.Log("click");
                     OnSpecialAttack();
                   //  playerEnergy.AddEnergy(-player.data.energyLVLforSpecialAttack);
                   playerEnergy.MinusEnergy();
                 }
+            }
+            else
+            {
+                //Debug.Log("STOP!");
+            }
+        }
+
+        if(currentEnemy != null)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                clickFeedback.Play();
+
             }
         }
     }
@@ -124,6 +141,8 @@ public class PlayerEnemyInteraction : MonoBehaviour
             player.data.isMovable = false;
             freePlayer = StartCoroutine(EscapeEnemy());
             GetComponent<Rigidbody>().isKinematic = true;
+
+
         }
         // Debug.Log("1");
     }
@@ -139,6 +158,9 @@ public class PlayerEnemyInteraction : MonoBehaviour
     {
         this.GetComponent<MeshRenderer>().material.color = Color.black;
         int buttonClickCounter = 0;
+        var main = clickFeedback.main;
+        
+
         while (true)
         {
             if (currentEnemy == null)
@@ -148,12 +170,19 @@ public class PlayerEnemyInteraction : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
+                //clickFeedback.Play();
+
                 buttonClickCounter++;
             }
+            if (Input.GetMouseButtonUp(0))
+            {
+            }
+
             if (buttonClickCounter >= 0)
             {
                 OnRelease();
             }
+            
             yield return new WaitForFixedUpdate();
         }
 

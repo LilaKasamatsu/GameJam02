@@ -9,6 +9,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public GameObject gameOverScreen;
+    public GameObject fadeOut;
+
     PlayerData player;
     Renderer rend;
     Rigidbody rb;
@@ -66,7 +69,7 @@ public class PlayerHealth : MonoBehaviour
 
         colorAdj.saturation.Override(0f);
 
-
+        fadeOut.SetActive(false);
 
     }
 
@@ -142,7 +145,7 @@ public class PlayerHealth : MonoBehaviour
     }
     void ReduceLight()
     {
-        Debug.Log("reduce light");
+      //  Debug.Log("reduce light");
         for (int i = 0; i < playerLight.licht.Count; i++)
         {
             playerLight.licht[i].intensity = playerLight.lichtMaxWert[i] * a;
@@ -181,6 +184,11 @@ public class PlayerHealth : MonoBehaviour
     }
     IEnumerator Respawning()
     {
+        yield return new WaitForSecondsRealtime(3f);
+        gameOverScreen.SetActive(true);
+
+        yield return new WaitForSecondsRealtime(3f);
+        fadeOut.SetActive(true);
 
         yield return new WaitForSecondsRealtime(3f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -199,7 +207,7 @@ public class PlayerHealth : MonoBehaviour
         while (true)
         {
             colorAdj.saturation.Override(a);
-            Debug.Log(a);
+            //Debug.Log(a);
             if (reducing == false)
             {
                 a -= 3;

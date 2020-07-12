@@ -7,11 +7,16 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] GameObject blackFadeIn;
     [SerializeField] GameObject blackFadeOut;
+    [SerializeField] GameObject credit;
+    Animator creditAnim;
     [SerializeField] float timer = 2f;
     [SerializeField] float secondTimer = 2f;
 
+    bool creditIsOpen = false;
+
     void Start()
     {
+        creditAnim = credit.GetComponent<Animator>();
     }
 
     void Update()
@@ -21,6 +26,13 @@ public class Menu : MonoBehaviour
         {
             blackFadeIn.SetActive(false);
             timer = 2f;
+        }
+        if (creditIsOpen == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                CloseCredit();
+            }
         }
     }
 
@@ -38,17 +50,27 @@ public class Menu : MonoBehaviour
 
     IEnumerator LoadGame()
     {
+        PlayerPrefs.SetInt("scene", 3);
         yield return new WaitForSecondsRealtime(2f);
-        SceneManager.LoadScene("GroundLevelDONE01");
+        SceneManager.LoadScene("LoadingScreen");
     }
 
     IEnumerator LoadTutorial()
     {
+        PlayerPrefs.SetInt("scene", 2);
         yield return new WaitForSecondsRealtime(2f);
-        SceneManager.LoadScene("Tutorial_plswork");
+        SceneManager.LoadScene("LoadingScreen");
     }
     public void OpenCredit()
     {
         //open credit
+        creditIsOpen = true;
+        creditAnim.SetTrigger("fadeIn");
+    }
+    public void CloseCredit()
+    {
+        creditIsOpen = false;
+
+        creditAnim.SetTrigger("fadeOut");
     }
 }
