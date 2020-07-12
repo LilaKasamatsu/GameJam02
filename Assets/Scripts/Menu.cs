@@ -53,6 +53,8 @@ public class Menu : MonoBehaviour
         PlayerPrefs.SetInt("scene", 3);
         yield return new WaitForSecondsRealtime(2f);
         SceneManager.LoadScene("LoadingScreen");
+        //transform.parent.GetChild(1).gameObject.SetActive(true);
+        
     }
 
     IEnumerator LoadTutorial()
@@ -60,6 +62,7 @@ public class Menu : MonoBehaviour
         PlayerPrefs.SetInt("scene", 2);
         yield return new WaitForSecondsRealtime(2f);
         SceneManager.LoadScene("LoadingScreen");
+        //transform.parent.GetChild(1).gameObject.SetActive(true);
     }
     public void OpenCredit()
     {

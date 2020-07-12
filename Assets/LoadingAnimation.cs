@@ -17,19 +17,18 @@ public class LoadingAnimation : MonoBehaviour
     // Update is called once per frame
     IEnumerator Loading()
     {
-
-        yield return new WaitForSeconds(0.8f);
         dotOne.SetActive(true);
         yield return new WaitForSeconds(0.8f);
         dotTwo.SetActive(true);
         yield return new WaitForSeconds(0.8f);
         dotThree.SetActive(true);
         yield return new WaitForSeconds(0.8f);
-        dotThree.SetActive(false);
+        dotOne.SetActive(false);
         yield return new WaitForSeconds(0.8f);
         dotTwo.SetActive(false);
         yield return new WaitForSeconds(0.8f);
-        dotOne.SetActive(false);
+        dotThree.SetActive(false);
+        yield return new WaitForSeconds(0.8f);
         StartCoroutine(Loading());
     }
 }
