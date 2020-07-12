@@ -124,7 +124,8 @@ public class PlayerEnemyInteraction : MonoBehaviour
         player.data.isMovable = true;
         if (currentEnemy != null)
         {
-            currentEnemy.GetComponent<EnemyPlayerInteraction>().stunnedCooldown = 1.5f;
+            currentEnemy.GetComponent<EnemyPlayerInteraction>().stunnedCooldown = 1f;
+          //  Debug.Log("ENEMYSTUNNED");
         }
     }
 

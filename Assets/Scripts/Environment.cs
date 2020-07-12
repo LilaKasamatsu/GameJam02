@@ -30,6 +30,7 @@ public class Environment : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("1");
         player = FindObjectOfType<Player>();
         playerEnergy = FindObjectOfType<PlayerEnergyLvl>();
         playerHealth = FindObjectOfType<PlayerHealth>();
@@ -40,7 +41,11 @@ public class Environment : MonoBehaviour
 
         //  rend.material.SetTexture("Normal", textureAlive);
     }
+    //private void OnEnable()
+    //{
 
+    //    rend.material = health.colorDead;
+    //}
     // Update is called once per frame
     void Update()
     {
@@ -78,7 +83,7 @@ public class Environment : MonoBehaviour
     {
         // Debug.Log("11");
         isChanging = true;
-       // end.SetTexture("Normal", textureEnd);
+        // end.SetTexture("Normal", textureEnd);
         while (true)
         {
 
@@ -123,7 +128,7 @@ public class Environment : MonoBehaviour
         }
         if (other.transform.CompareTag("Enemy"))
         {
-           // Debug.Log("enemy");
+            // Debug.Log("enemy");
             if (isDead == false)
             {
                 isDead = true;
@@ -137,6 +142,10 @@ public class Environment : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         isOntop = false;
+    }
+    public void OnRespwan()
+    {
+        rend.material = health.colorDead;
     }
 
 
