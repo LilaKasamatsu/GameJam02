@@ -36,6 +36,15 @@ public class GameEnd : MonoBehaviour
             //Debug.Log("1");
         }
     }
+    public void OnRespwan()
+    {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(true);
+           
+        }
+
+    }
 
     // Update is called once per frame
     public void Delete()

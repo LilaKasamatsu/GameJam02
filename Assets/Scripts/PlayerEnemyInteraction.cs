@@ -123,7 +123,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
         if (currentEnemy != null)
         {
             currentEnemy.GetComponent<EnemyPlayerInteraction>().stunnedCooldown = 1f;
-            Debug.Log("ENEMYSTUNNED");
+          //  Debug.Log("ENEMYSTUNNED");
         }
     }
 

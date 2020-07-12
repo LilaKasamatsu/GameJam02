@@ -12,6 +12,10 @@ public class PlayerHealth : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject fadeOut;
 
+    GameObject respawn;
+    GameEnd gamEnd;
+    SetAllHexagonsToDefault hex;
+
     PlayerData player;
     Renderer rend;
     Rigidbody rb;
@@ -45,7 +49,9 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        hex = GameObject.Find("Hex").GetComponent<SetAllHexagonsToDefault>();
+        gamEnd = GameObject.Find("Enemies").GetComponent<GameEnd>();
+        respawn = GameObject.Find("Player Respawn");
         blackOut.SetActive(false);
         rend = GetComponent<Renderer>();
         player = GetComponent<Player>().data;
@@ -76,7 +82,7 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-    //    Debug.Log(Time.deltaTime);
+        //    Debug.Log(Time.deltaTime);
         if (noVignette == false)
         {
             if (rb.velocity.magnitude < 0.5)
@@ -145,7 +151,7 @@ public class PlayerHealth : MonoBehaviour
     }
     void ReduceLight()
     {
-      //  Debug.Log("reduce light");
+        //  Debug.Log("reduce light");
         for (int i = 0; i < playerLight.licht.Count; i++)
         {
             playerLight.licht[i].intensity = playerLight.lichtMaxWert[i] * a;
@@ -156,7 +162,7 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
-            a -= Time.deltaTime/5;
+            a -= Time.deltaTime / 5;
 
         }
     }
@@ -185,13 +191,16 @@ public class PlayerHealth : MonoBehaviour
     IEnumerator Respawning()
     {
         yield return new WaitForSecondsRealtime(3f);
+        hex.PlayerRespwan();
         gameOverScreen.SetActive(true);
 
         yield return new WaitForSecondsRealtime(3f);
         fadeOut.SetActive(true);
 
         yield return new WaitForSecondsRealtime(3f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        transform.position = respawn.transform.position;
+        gamEnd.OnRespwan();
+        //  SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         // transform.position = respawnScript.location;
     }
     public void ScreenBlink()
