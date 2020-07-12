@@ -115,7 +115,9 @@ public class PlayerEnemyInteraction : MonoBehaviour
     {
         this.GetComponent<MeshRenderer>().material.color = Color.gray;
         GetComponent<Rigidbody>().isKinematic = false;
-        if(freePlayer != null)
+        player.data.isMovable = true;
+
+        if (freePlayer != null)
         {
             StopCoroutine(freePlayer);
         }
@@ -123,7 +125,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
         if (currentEnemy != null)
         {
             currentEnemy.GetComponent<EnemyPlayerInteraction>().stunnedCooldown = 1f;
-            Debug.Log("ENEMYSTUNNED");
+          //  Debug.Log("ENEMYSTUNNED");
         }
     }
 
