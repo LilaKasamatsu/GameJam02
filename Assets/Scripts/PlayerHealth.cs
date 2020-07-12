@@ -190,19 +190,23 @@ public class PlayerHealth : MonoBehaviour
     }
     IEnumerator Respawning()
     {
-        yield return new WaitForSecondsRealtime(3f);
-     //   hex.PlayerRespwan();
+        yield return new WaitForSecondsRealtime(2f);
+        hex.PlayerRespwan();
         gameOverScreen.SetActive(true);
-
-        yield return new WaitForSecondsRealtime(3f);
+        yield return new WaitForSecondsRealtime(2f);
         fadeOut.SetActive(true);
-
-        yield return new WaitForSecondsRealtime(3f);
-        transform.position = respawn.transform.position;
+        player.deathTimer = 0;
+        yield return new WaitForSecondsRealtime(2f);
         gamEnd.OnRespwan();
-        fadeOut.GetComponent<Animator>().SetTrigger("fade");
-        yield return new WaitForSecondsRealtime(1f);
         gameOverScreen.SetActive(false);
+        yield return new WaitForSecondsRealtime(1f);
+        player.deathTimer = 0;
+        fadeOut.GetComponent<Animator>().SetTrigger("fade");
+        transform.position = respawn.transform.position;
+        yield return new WaitForSecondsRealtime(1f);
+        fadeOut.SetActive(false);
+        player.deathTimer = 0;
+
         Debug.Log("finish");
 
         //  SceneManager.LoadScene(SceneManager.GetActiveScene().name);
