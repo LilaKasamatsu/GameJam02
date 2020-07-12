@@ -31,4 +31,6 @@ public class LoadingAnimation : MonoBehaviour
         yield return new WaitForSeconds(0.8f);
         StartCoroutine(Loading());
     }
+
+    
 }

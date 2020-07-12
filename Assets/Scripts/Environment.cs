@@ -21,21 +21,11 @@ public class Environment : MonoBehaviour
     // [SerializeField]
 
 
-    [SerializeField] PlayerEnergyLvl playerEnergy;
-    [SerializeField] PlayerHealth playerHealth;
-    [SerializeField] Player player;
-    PlayerData playerData;
-
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("1");
-        player = FindObjectOfType<Player>();
-        playerEnergy = FindObjectOfType<PlayerEnergyLvl>();
-        playerHealth = FindObjectOfType<PlayerHealth>();
 
-        playerData = player.data;
         rend = GetComponent<Renderer>();
         rend.material = health.colorDead;
 
@@ -57,7 +47,7 @@ public class Environment : MonoBehaviour
             {
 
                 //  Debug.Log(playerHealth.isDying);
-                if (isChanging == false && playerHealth.isDying == true)
+                if (isChanging == false && EnvironmentManager.Instance.playerHealth.isDying == true)
                 {
 
                     // Debug.Log("jetzte");
@@ -122,7 +112,7 @@ public class Environment : MonoBehaviour
             if (isDead == true)
             {
                 StartCoroutine(ChangeColor(rend.material, health.colorAlive, textureAlive));
-                playerEnergy.AddEnergy(playerData.energyGainedByEnvironment);
+                EnvironmentManager.Instance.playerEnergy.AddEnergy(EnvironmentManager.Instance.playerData.energyGainedByEnvironment);
                 isDead = false;
             }
         }
