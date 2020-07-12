@@ -47,4 +47,8 @@ public class Menu : MonoBehaviour
         yield return new WaitForSecondsRealtime(2f);
         SceneManager.LoadScene("Tutorial_plswork");
     }
+    public void OpenCredit()
+    {
+        //open credit
+    }
 }

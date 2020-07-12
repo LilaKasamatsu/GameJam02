@@ -56,8 +56,8 @@ public class PlayerEnemyInteraction : MonoBehaviour
                 if (player.data.energyLVL >= player.data.energyLVLforSpecialAttack)
                 {
                     OnSpecialAttack();
-                    playerEnergy.AddEnergy(-player.data.energyLVLforSpecialAttack);
-                    playerEnergy.MinusEnergy();
+                  //  playerEnergy.AddEnergy(-player.data.energyLVLforSpecialAttack);
+                  playerEnergy.MinusEnergy();
                 }
             }
         }
@@ -150,7 +150,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
             {
                 buttonClickCounter++;
             }
-            if (buttonClickCounter >= 15)
+            if (buttonClickCounter >= 0)
             {
                 OnRelease();
             }

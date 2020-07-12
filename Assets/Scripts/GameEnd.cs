@@ -31,10 +31,11 @@ public class GameEnd : MonoBehaviour
         fadeOut.SetActive(false);
         enemysInScene = 9;
 
-        //for (int i = 0; i < gameObject.transform.childCount; i++)
-        //{
-        //    enemysInScene++;
-        //}
+        for (int i = 0; i < gameObject.transform.childCount; i++)
+        {
+            enemysInScene++;
+            Debug.Log("1");
+        }
     }
 
     // Update is called once per frame
@@ -44,6 +45,7 @@ public class GameEnd : MonoBehaviour
         Debug.Log("enemies: " + enemysInScene);
         if (enemysInScene == 0)
         {
+            Debug.Log(enemysInScene);
             p.data.isMovable = false;
 
             StartCoroutine(Ending());
