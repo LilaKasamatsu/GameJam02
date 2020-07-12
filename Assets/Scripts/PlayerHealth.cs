@@ -191,7 +191,7 @@ public class PlayerHealth : MonoBehaviour
     IEnumerator Respawning()
     {
         yield return new WaitForSecondsRealtime(3f);
-        hex.PlayerRespwan();
+     //   hex.PlayerRespwan();
         gameOverScreen.SetActive(true);
 
         yield return new WaitForSecondsRealtime(3f);
@@ -200,6 +200,11 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSecondsRealtime(3f);
         transform.position = respawn.transform.position;
         gamEnd.OnRespwan();
+        fadeOut.GetComponent<Animator>().SetTrigger("fade");
+        yield return new WaitForSecondsRealtime(1f);
+        gameOverScreen.SetActive(false);
+        Debug.Log("finish");
+
         //  SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         // transform.position = respawnScript.location;
     }

@@ -22,8 +22,8 @@ public class SetAllHexagonsToDefault : MonoBehaviour
     {
         foreach (Transform child in transform)
         {
-            Debug.Log("1");
-            Debug.Log(child.name);
+          //  Debug.Log("1");
+           // Debug.Log(child.name);
             //    child.gameObject.SetActive(false);
             //    child.gameObject.SetActive(true);
             child.gameObject.GetComponent<Environment>().OnRespwan();
