@@ -34,7 +34,6 @@ public class GameEnd : MonoBehaviour
         for (int i = 0; i < gameObject.transform.childCount; i++)
         {
             enemysInScene++;
-            //Debug.Log("1");
         }
     }
     public void OnRespwan()
@@ -44,6 +43,12 @@ public class GameEnd : MonoBehaviour
             child.gameObject.SetActive(true);
            
         }
+        enemysInScene = 0;
+        for (int i = 0; i < gameObject.transform.childCount; i++)
+        {
+            enemysInScene++;
+        }
+        Debug.Log(enemysInScene);
 
     }
 
