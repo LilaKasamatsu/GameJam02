@@ -69,6 +69,15 @@ public class PlayerEnemyInteraction : MonoBehaviour
                 //Debug.Log("STOP!");
             }
         }
+
+        if(currentEnemy != null)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                clickFeedback.Play();
+
+            }
+        }
     }
 
     public bool IsAttackVelocity()
@@ -133,12 +142,6 @@ public class PlayerEnemyInteraction : MonoBehaviour
             GetComponent<Rigidbody>().isKinematic = true;
 
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                clickFeedback.Play();
-                
-            }
-
         }
         // Debug.Log("1");
     }
@@ -166,17 +169,12 @@ public class PlayerEnemyInteraction : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                //main.startSize = 6;
-                //main.maxParticles = 1;
                 //clickFeedback.Play();
 
                 buttonClickCounter++;
             }
             if (Input.GetMouseButtonUp(0))
             {
-                //main.startSize = 3;
-                //main.maxParticles = 0;
-                //clickFeedback.Stop();
             }
 
             if (buttonClickCounter >= 0)
