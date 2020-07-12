@@ -50,14 +50,16 @@ public class Menu : MonoBehaviour
 
     IEnumerator LoadGame()
     {
+        PlayerPrefs.SetInt("scene", 3);
         yield return new WaitForSecondsRealtime(2f);
-        SceneManager.LoadScene("GroundLevelDONE01");
+        SceneManager.LoadScene("LoadingScreen");
     }
 
     IEnumerator LoadTutorial()
     {
+        PlayerPrefs.SetInt("scene", 2);
         yield return new WaitForSecondsRealtime(2f);
-        SceneManager.LoadScene("Tutorial_plswork");
+        SceneManager.LoadScene("LoadingScreen");
     }
     public void OpenCredit()
     {
