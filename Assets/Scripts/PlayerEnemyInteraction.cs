@@ -142,7 +142,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
             player.data.isMovable = false;
             freePlayer = StartCoroutine(EscapeEnemy());
             GetComponent<Rigidbody>().isKinematic = true;
-
+            
 
         }
         // Debug.Log("1");
@@ -179,7 +179,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
             {
             }
 
-            if (buttonClickCounter >= 0)
+            if (buttonClickCounter >= 7)
             {
                 OnRelease();
             }
