@@ -4056,6 +4056,7 @@ GameObject:
   - component: {fileID: 8755696238156022234}
   - component: {fileID: 1535932012609900885}
   - component: {fileID: 8102258923276649237}
+  - component: {fileID: 8167207093431913412}
   m_Layer: 5
   m_Name: pause blck
   m_TagString: Untagged
@@ -4126,6 +4127,25 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!95 &8167207093431913412
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4579529615889059293}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4d18238d651bf86428262284a25b0913, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5588872485056832840
 GameObject:
   m_ObjectHideFlags: 0
@@ -5376,7 +5396,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4426645743946541242}
   - component: {fileID: 6826444902105694738}
-  - component: {fileID: 2682074999710806373}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -5428,22 +5447,3 @@ MonoBehaviour:
   - dont let your fears take over.
   - dash against enemies to damage them.
   - never stand still or you will suffcate.
---- !u!95 &2682074999710806373
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9213646978847197652}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4d18238d651bf86428262284a25b0913, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

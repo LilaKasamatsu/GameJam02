@@ -27,12 +27,12 @@ public class Pause : MonoBehaviour
             if (menuIsOpen == false)
             {
                 OpenMenu();
-                Debug.Log("open");
+              //  Debug.Log("open");
                 Time.timeScale = 0;
             }
             else
             {
-                Debug.Log("close");
+              //  Debug.Log("close");
                 StartCoroutine(CloseMenu());
                 Time.timeScale = 1;
             }
@@ -55,12 +55,12 @@ public class Pause : MonoBehaviour
     }
     IEnumerator CloseMenu()
     {
-        Debug.Log("1");
+       // Debug.Log("1");
         menuIsOpen = false;
         pauseMenu.GetComponent<Animator>().SetTrigger("fade");
         yield return new WaitForSecondsRealtime(0.1f);
         pauseMenu.SetActive(false);
-        Debug.Log("2");
+      //  Debug.Log("2");
     }
     void OpenMenu()
     {
