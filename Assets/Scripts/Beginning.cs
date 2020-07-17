@@ -15,6 +15,10 @@ public class Beginning : MonoBehaviour
     [SerializeField] GameObject black;
 
     // Update is called once per frame
+    private void Start()
+    {
+        Time.timeScale = 0.7f;
+    }
     void Update()
     {
         StartCoroutine(FadeOut());
