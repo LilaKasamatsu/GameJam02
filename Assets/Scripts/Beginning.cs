@@ -32,7 +32,7 @@ public class Beginning : MonoBehaviour
 
     IEnumerator FadeOut()
     {
-        yield return new WaitForSecondsRealtime(25f);
+        yield return new WaitForSecondsRealtime(26.5f);
         fadeOut.SetActive(true);
     }
 
@@ -42,7 +42,7 @@ public class Beginning : MonoBehaviour
         one.SetActive(true);
 
 
-        yield return new WaitForSecondsRealtime(3.5f);
+        yield return new WaitForSecondsRealtime(5f);
         two.SetActive(true);
 
 
@@ -60,7 +60,7 @@ public class Beginning : MonoBehaviour
         yield return new WaitForSecondsRealtime(2.5f);
         black.SetActive(true);
 
-        yield return new WaitForSecondsRealtime(2.5f);
+        yield return new WaitForSecondsRealtime(4f);
         SceneManager.LoadScene("LoadingScreen");
     }
 
