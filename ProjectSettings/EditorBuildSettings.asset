@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GroundLevelDONE01.unity
     guid: fe79d0f317fa9d2458d6271fd0856397
+  - enabled: 1
+    path: Assets/Scenes/Beginning.unity
+    guid: 64d6796f76388484086e2411eb684ed7
   m_configObjects: {}

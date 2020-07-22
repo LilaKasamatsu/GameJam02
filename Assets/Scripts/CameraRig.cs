@@ -8,6 +8,7 @@ public class CameraRig : MonoBehaviour
     [SerializeField] float followSmooth;
     [SerializeField] float orbitSmooth;
     [SerializeField] Transform posWhenHold;
+    [SerializeField] bool mouseWheelActive = true;
 
     Vector3 currentMousePosition;
     Vector3 lastMousePosition;
@@ -48,7 +49,7 @@ public class CameraRig : MonoBehaviour
     {
         currentMousePosition = Input.mousePosition;
 
-        if (Input.GetMouseButton(2))
+        if (Input.GetMouseButton(2) && mouseWheelActive == true)
         {
             mouseDelta = lastMousePosition - currentMousePosition;
 
