@@ -29,11 +29,12 @@ public class GameEnd : MonoBehaviour
 
         spotlight.SetActive(false);
         fadeOut.SetActive(false);
-        enemysInScene = 9;
+      //  enemysInScene = 9;
 
         for (int i = 0; i < gameObject.transform.childCount; i++)
         {
             enemysInScene++;
+           // Debug.Log("enemy");
         }
     }
     public void OnRespwan()
@@ -41,14 +42,17 @@ public class GameEnd : MonoBehaviour
         foreach (Transform child in transform)
         {
             child.gameObject.SetActive(true);
-           
+            child.GetChild(5).GetComponent<Enemy>().Respawn();
+            
+
+
         }
         enemysInScene = 0;
         for (int i = 0; i < gameObject.transform.childCount; i++)
         {
             enemysInScene++;
         }
-        Debug.Log(enemysInScene);
+       // Debug.Log(enemysInScene);
 
     }
 
@@ -56,10 +60,10 @@ public class GameEnd : MonoBehaviour
     public void Delete()
     {
         enemysInScene -= 1;
-        Debug.Log("enemies: " + enemysInScene);
+      //  Debug.Log("enemies: " + enemysInScene);
         if (enemysInScene == 0)
         {
-            Debug.Log(enemysInScene);
+           // Debug.Log(enemysInScene);
             p.data.isMovable = false;
 
             StartCoroutine(Ending());
