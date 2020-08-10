@@ -22,4 +22,9 @@ public class Enemy : MonoBehaviour
         data.player = FindObjectOfType<Player>();
         data.playerEnemy = FindObjectOfType<PlayerEnemyInteraction>();
     }
+    public void Respawn()
+    {
+        transform.position = data.location[0];
+       // Debug.Log(data.location[0]);
+    } 
 }
