@@ -70,7 +70,6 @@ public class PlayerBreathing : MonoBehaviour
 
                 timer = 0;
                 yield return new WaitForSeconds(0.1f);
-
             }
         }
         

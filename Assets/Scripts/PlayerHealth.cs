@@ -102,7 +102,6 @@ public class PlayerHealth : MonoBehaviour
                 vignette.intensity.Override(b);
                 if (reducing == false)
                 {
-
                     b += Time.deltaTime;
 
                     if (b > 0.9)

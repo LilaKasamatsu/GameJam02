@@ -50,6 +50,7 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField]
     Sound[] sounds;
+    List<AudioSource> sources;
 
     private void Awake()
     {
@@ -64,11 +65,13 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        sources = new List<AudioSource>();
         for (int i = 0; i < sounds.Length; i++)
         {
             GameObject _go = new GameObject("Sound_" + i + "_" + sounds[i].clipName);
             _go.transform.SetParent(this.transform);
             sounds[i].SetSource(_go.AddComponent<AudioSource>());
+            sources.Add(_go.GetComponent<AudioSource>());
         }
 
         PlaySound("Main Music");
@@ -105,6 +108,19 @@ public class AudioManager : MonoBehaviour
             if (sounds[i].clipName == name)
             {
                 sounds[i].volume = 0;
+                return;
+            }
+        }
+    }
+
+    public void ChangePitch(float pitch, string name)
+    {
+        for (int i = 0; i < sounds.Length; i++)
+        {
+            if (sounds[i].clipName == name)
+            {
+                sounds[i].pitch = pitch;
+                sources[i].pitch = pitch;
                 return;
             }
         }
