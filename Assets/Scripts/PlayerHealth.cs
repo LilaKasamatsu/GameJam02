@@ -65,18 +65,21 @@ public class PlayerHealth : MonoBehaviour
 
         vignette.intensity.Override(0f);
 
-
-
-
-
-
-
         if (!volumeProfile.TryGet(out colorAdj)) throw new System.NullReferenceException(nameof(colorAdj));
 
         colorAdj.saturation.Override(0f);
 
         fadeOut.SetActive(false);
 
+    }
+
+    bool isPlayingSound = false;
+    Coroutine soundPlaying;
+
+    IEnumerator WaitForSoundEnd(float seconds)
+    {
+        yield return new WaitForSecondsRealtime(seconds);
+        isPlayingSound = false;
     }
 
     // Update is called once per frame
@@ -87,6 +90,12 @@ public class PlayerHealth : MonoBehaviour
         {
             if (rb.velocity.magnitude < 0.5)
             {
+                if (!isPlayingSound)
+                {
+                    AudioManager.instance.PlaySound("Player Death");
+                    isPlayingSound = true;
+                    soundPlaying = StartCoroutine(WaitForSoundEnd(10f));
+                }
                 ReduceLight();
                 isDying = true;
                 player.deathTimer += Time.deltaTime;
@@ -118,6 +127,12 @@ public class PlayerHealth : MonoBehaviour
             }
             else
             {
+                if (isPlayingSound)
+                {
+                    StopCoroutine(soundPlaying);
+                    isPlayingSound = false;
+                    AudioManager.instance.StopSound("Player Death");
+                }
                 AddLight();
                 isDying = false;
                 player.deathTimer = 0;

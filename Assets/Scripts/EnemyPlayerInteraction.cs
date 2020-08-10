@@ -56,6 +56,7 @@ public class EnemyPlayerInteraction : MonoBehaviour
         SetNewLocation(0);
     }
 
+    bool isPlayingSound = false;
 
 
     void Update()
@@ -73,6 +74,12 @@ public class EnemyPlayerInteraction : MonoBehaviour
                     isAttacking = IsInRange(enemy.attackRadius);
                     if (isAttacking)
                     {
+                        if (!isPlayingSound)
+                        {
+                            isPlayingSound = true;
+                            AudioManager.instance.PlaySound("Enemy Radius");
+                            StartCoroutine(WaitForSeconds(4f));
+                        }
                         Attack();
                         if (movingFeedback == true) { MovingFeedback(); }
                     }
@@ -106,6 +113,11 @@ public class EnemyPlayerInteraction : MonoBehaviour
   
     }
 
+    IEnumerator WaitForSeconds(float seconds)
+    {
+        yield return new WaitForSecondsRealtime(seconds);
+        isPlayingSound = false;
+    }
 
     void Rotation(Transform target)
     {

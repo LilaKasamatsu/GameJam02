@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerSpecialAttack : MonoBehaviour
 {
+    AudioManager audioManager;
+
     PlayerData player;
     // Vector3 scaleOG;
     [SerializeField] PlayerEnemyInteraction playerEnemy;
@@ -14,6 +16,7 @@ public class PlayerSpecialAttack : MonoBehaviour
 
     private void Start()
     {
+        audioManager = AudioManager.instance;
         //  scaleOG = transform.localScale;
         transform.localScale = Vector3.zero;
         player = GetComponentInParent<Player>().data;
@@ -30,6 +33,7 @@ public class PlayerSpecialAttack : MonoBehaviour
     {
         if (isMaking == false)
         {
+            audioManager.PlaySound("Special Attack");
             isMaking = true;
             coll.enabled = true;
             float t = 0f;

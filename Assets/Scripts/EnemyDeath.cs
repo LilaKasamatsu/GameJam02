@@ -53,6 +53,7 @@ public class EnemyDeath : MonoBehaviour
 
     IEnumerator Enemydying()
     {
+        AudioManager.instance.PlaySound("Enemy Death");
         yield return new WaitForSecondsRealtime(4f);
         //   gameObject.SetActive(false);
         gameObject.SetActive(false);
