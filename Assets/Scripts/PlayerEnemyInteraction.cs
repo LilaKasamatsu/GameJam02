@@ -113,6 +113,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
 
     public void OnRelease()
     {
+        AudioManager.instance.PlaySound("Button Press");
         this.GetComponent<MeshRenderer>().material.color = Color.gray;
         GetComponent<Rigidbody>().isKinematic = false;
         player.data.isMovable = true;
@@ -139,6 +140,8 @@ public class PlayerEnemyInteraction : MonoBehaviour
         {
 
             // Debug.Log("2");
+            AudioManager.instance.PlaySound("Button Hover");
+
             player.data.isMovable = false;
             freePlayer = StartCoroutine(EscapeEnemy());
             GetComponent<Rigidbody>().isKinematic = true;
