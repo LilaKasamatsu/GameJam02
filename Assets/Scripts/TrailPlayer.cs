@@ -30,6 +30,8 @@ public class TrailPlayer : MonoBehaviour
     {
        // Debug.Log(t);
         t = rb.velocity.magnitude / maxMagnitude;
+        AudioManager.instance.ChangeVolume(Mathf.Pow(t/2,2f), "Trail Sound");
+
         tail.startWidth = t * maxWidth;
         if (t >= 1)
         {
@@ -40,8 +42,7 @@ public class TrailPlayer : MonoBehaviour
         }
         else
         {
-           // Debug.Log("new color");
-        
+            // Debug.Log("new color");
             tailMaterial.SetColor("_EmissionColor", newColorForTrail);
         }
 

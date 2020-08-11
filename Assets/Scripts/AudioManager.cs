@@ -75,6 +75,7 @@ public class AudioManager : MonoBehaviour
         }
 
         PlaySound("Main Music");
+        PlaySound("Trail Sound");
     }
 
     public void PlaySound(string name)
@@ -121,6 +122,19 @@ public class AudioManager : MonoBehaviour
             {
                 sounds[i].pitch = pitch;
                 sources[i].pitch = pitch;
+                return;
+            }
+        }
+    }
+
+    public void ChangeVolume(float volume, string name)
+    {
+        for (int i = 0; i < sounds.Length; i++)
+        {
+            if (sounds[i].clipName == name)
+            {
+                sounds[i].volume = volume;
+                sources[i].volume = volume;
                 return;
             }
         }
