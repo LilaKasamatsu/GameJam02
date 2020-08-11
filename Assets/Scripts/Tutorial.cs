@@ -57,6 +57,7 @@ public class Tutorial : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                AudioManager.instance.PlaySound("Button Press");
                 if (end == true)
                 {
                     Time.timeScale = 1;
@@ -93,6 +94,7 @@ public class Tutorial : MonoBehaviour
     }
     void EnableScreen(int i)
     {
+        AudioManager.instance.PlaySound("Button Hover");
         screens[a].SetActive(true);
         screenIsActive = true;
         cursor.SetActive(false);

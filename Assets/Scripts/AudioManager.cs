@@ -34,7 +34,7 @@ public class Sound
 
     public void Play()
     {
-        source.Play();
+        source.PlayOneShot(clip);
     }
 
     public void Stop()

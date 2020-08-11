@@ -42,22 +42,22 @@ public class Beginning : MonoBehaviour
         one.SetActive(true);
 
 
-        yield return new WaitForSecondsRealtime(5f);
+        yield return new WaitForSecondsRealtime(5.5f);
         two.SetActive(true);
 
 
-        yield return new WaitForSecondsRealtime(3.5f);
+        yield return new WaitForSecondsRealtime(5f);
         three.SetActive(true);
 
 
-        yield return new WaitForSecondsRealtime(3.5f);
+        yield return new WaitForSecondsRealtime(4f);
         four.SetActive(true);
 
 
         yield return new WaitForSecondsRealtime(3.5f);
         five.SetActive(true);
 
-        yield return new WaitForSecondsRealtime(2.5f);
+        yield return new WaitForSecondsRealtime(3f);
         black.SetActive(true);
 
         yield return new WaitForSecondsRealtime(4f);

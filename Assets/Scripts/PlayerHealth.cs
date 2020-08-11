@@ -42,6 +42,9 @@ public class PlayerHealth : MonoBehaviour
     private bool reducing = false;
     public bool noVignette = false;
 
+    private bool isPlayingSound = false;
+
+
     //   [SerializeField] GameObject playerVFX;
     UnityEngine.Rendering.Universal.Vignette vignette;
     UnityEngine.Rendering.Universal.ColorAdjustments colorAdj;
@@ -73,14 +76,6 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
-    bool isPlayingSound = false;
-    Coroutine soundPlaying;
-
-    IEnumerator WaitForSoundEnd(float seconds)
-    {
-        yield return new WaitForSecondsRealtime(seconds);
-        isPlayingSound = false;
-    }
 
     // Update is called once per frame
     public void Update()
@@ -94,7 +89,6 @@ public class PlayerHealth : MonoBehaviour
                 {
                     AudioManager.instance.PlaySound("Player Death");
                     isPlayingSound = true;
-                    soundPlaying = StartCoroutine(WaitForSoundEnd(10f));
                 }
                 ReduceLight();
                 isDying = true;
@@ -128,10 +122,10 @@ public class PlayerHealth : MonoBehaviour
             {
                 if (isPlayingSound)
                 {
-                    StopCoroutine(soundPlaying);
-                    isPlayingSound = false;
                     AudioManager.instance.StopSound("Player Death");
                 }
+                isPlayingSound = false;
+
                 AddLight();
                 isDying = false;
                 player.deathTimer = 0;

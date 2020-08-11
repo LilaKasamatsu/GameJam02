@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -9669,6 +9669,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac069eb9cf713642b051e5e7e331774, type: 3}
+--- !u!1001 &283796319
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6217406393932367132, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
+        type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 0.509
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217406393932367132, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
+        type: 3}
+      propertyPath: sounds.Array.data[5].volume
+      value: 0.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217406393932367132, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
+        type: 3}
+      propertyPath: sounds.Array.data[9].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217406393932367133, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217406393932367135, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.5999756
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217406393932367135, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217406393932367135, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 22.400024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217406393932367135, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217406393932367135, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217406393932367135, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217406393932367135, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217406393932367135, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217406393932367135, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217406393932367135, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217406393932367135, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 46d8b66c2d4f67b4a88dd28d85da7713, type: 3}
 --- !u!4 &283841270 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8643872624559389490, guid: 0d501f52e8f22ca43bd03c63f92999c4,
@@ -36962,6 +37046,10 @@ PrefabInstance:
     - target: {fileID: 317727297, guid: 4d18f69102177bb4aab52f5ca065392a, type: 3}
       propertyPath: m_VertexStreams.Array.data[2]
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 662031083, guid: 4d18f69102177bb4aab52f5ca065392a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 774676485, guid: 4d18f69102177bb4aab52f5ca065392a, type: 3}
       propertyPath: m_UseGravity

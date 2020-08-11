@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6217406393932367133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6217406393932367135}
+  - component: {fileID: 6217406393932367132}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6217406393932367135
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6217406393932367133}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.5999756, y: 1.25, z: 22.400024}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6217406393932367132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6217406393932367133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 572c152fae77b7149af28d263bc575e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - audioMixerGroup: {fileID: -1030943455105191712, guid: 483878a349876444b848d6a770d2e0cc,
+      type: 2}
+    clipName: Main Music
+    clip: {fileID: 8300000, guid: f97e91c1160ecfb42921ef4d5637b8fc, type: 3}
+    volume: 0.614
+    pitch: 1
+    loop: 1
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: -3681480759270955194, guid: 483878a349876444b848d6a770d2e0cc,
+      type: 2}
+    clipName: Special Attack
+    clip: {fileID: 8300000, guid: c519f7b8f3bc2114f91cac54f5924939, type: 3}
+    volume: 0.787
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: -3681480759270955194, guid: 483878a349876444b848d6a770d2e0cc,
+      type: 2}
+    clipName: Enemy Death
+    clip: {fileID: 8300000, guid: 283bc006eddd3f241a392e44f3cb9c62, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: -3681480759270955194, guid: 483878a349876444b848d6a770d2e0cc,
+      type: 2}
+    clipName: Enemy Radius
+    clip: {fileID: 8300000, guid: f870b673fa3c94c49928d889dff88791, type: 3}
+    volume: 0.412
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: -3681480759270955194, guid: 483878a349876444b848d6a770d2e0cc,
+      type: 2}
+    clipName: Player Death
+    clip: {fileID: 8300000, guid: 05450ef46bab6bb40b76d2785ef9b629, type: 3}
+    volume: 0.623
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: -3681480759270955194, guid: 483878a349876444b848d6a770d2e0cc,
+      type: 2}
+    clipName: Button Hover
+    clip: {fileID: 8300000, guid: 6e24ad585a3a145458a07de4d8030a50, type: 3}
+    volume: 0.623
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: -3681480759270955194, guid: 483878a349876444b848d6a770d2e0cc,
+      type: 2}
+    clipName: Button Press
+    clip: {fileID: 8300000, guid: b589b5b892ebcf641a48ec593ec90b4f, type: 3}
+    volume: 0.623
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: -3681480759270955194, guid: 483878a349876444b848d6a770d2e0cc,
+      type: 2}
+    clipName: Click Free
+    clip: {fileID: 8300000, guid: 6c0a24cd84db4424c9dbe45740b270c3, type: 3}
+    volume: 0.623
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: -3681480759270955194, guid: 483878a349876444b848d6a770d2e0cc,
+      type: 2}
+    clipName: Player Attack
+    clip: {fileID: 8300000, guid: 8384a510417ad9f4ebf95d2223d12498, type: 3}
+    volume: 0.623
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audioMixerGroup: {fileID: 1826484191852820239, guid: 483878a349876444b848d6a770d2e0cc,
+      type: 2}
+    clipName: Pusher
+    clip: {fileID: 8300000, guid: f7dfeaf06946fe9448123154ba5d3798, type: 3}
+    volume: 0.623
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
