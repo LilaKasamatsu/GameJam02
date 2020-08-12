@@ -46,8 +46,9 @@ public class NudgeMovement : MonoBehaviour
         if (other.CompareTag("Pusher"))
         {
             //Debug.Log(player.rb.velocity.magnitude);
-            AudioManager.instance.ChangePitch(Random.Range(.5f, .7f), "Pusher");
-            AudioManager.instance.PlaySound("Pusher");
+            //AudioManager.instance.ChangePitch(Random.Range(.5f, .7f), "Pusher");
+            AudioManager.instance.PlayRandomSound("Pusher");
+            //AudioManager.instance.PlaySound("Pusher");
             pusherP.startSpeed = player.rb.velocity.magnitude;
             pusherP.Play();
             Transform pusher = FindObjectOfType<PusherNudgeMovement>().transform;

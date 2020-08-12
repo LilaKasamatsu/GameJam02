@@ -91,6 +91,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy") && player.data.isAttacking)
         {
+            AudioManager.instance.PlaySound("Player Collision");
             EnemyHealth enemy = collision.gameObject.GetComponent<EnemyHealth>();
             enemy.MinusHealth(1);
             enemyHit = true;
@@ -113,7 +114,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
 
     public void OnRelease()
     {
-        AudioManager.instance.PlaySound("Button Press");
+        AudioManager.instance.PlaySound("Player Release");
         this.GetComponent<MeshRenderer>().material.color = Color.gray;
         GetComponent<Rigidbody>().isKinematic = false;
         player.data.isMovable = true;
@@ -140,7 +141,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
         {
 
             // Debug.Log("2");
-            AudioManager.instance.PlaySound("Button Hover");
+            AudioManager.instance.PlaySound("Player Caught");
 
             player.data.isMovable = false;
             freePlayer = StartCoroutine(EscapeEnemy());
@@ -175,7 +176,8 @@ public class PlayerEnemyInteraction : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 //clickFeedback.Play();
-
+                //AudioManager.instance.ChangePitch(AudioManager.instance.GetPitch("Click Free") + .2f, "Click Free");
+                AudioManager.instance.PlaySound("Click Free");
                 buttonClickCounter++;
             }
             if (Input.GetMouseButtonUp(0))
@@ -184,6 +186,7 @@ public class PlayerEnemyInteraction : MonoBehaviour
 
             if (buttonClickCounter >= 7)
             {
+                //AudioManager.instance.ChangePitch(1, "Click Free");
                 OnRelease();
             }
             

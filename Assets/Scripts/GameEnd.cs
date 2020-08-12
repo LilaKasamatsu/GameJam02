@@ -70,7 +70,7 @@ public class GameEnd : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(end == true)
         {
@@ -80,6 +80,9 @@ public class GameEnd : MonoBehaviour
 
     IEnumerator Ending()
     {
+        AudioManager.instance.StopSound("Main Music");
+        AudioManager.instance.StopSound("Player Death");
+        AudioManager.instance.PlaySound("End Scene");
         yield return new WaitForSecondsRealtime(1f);
         player.GetComponent<Rigidbody>().isKinematic = true;
         cursor.SetActive(false);

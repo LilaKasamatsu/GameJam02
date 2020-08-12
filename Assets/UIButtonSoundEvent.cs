@@ -7,7 +7,7 @@ public class UIButtonSoundEvent : MonoBehaviour, IPointerEnterHandler, IPointerD
 {
     public void OnPointerEnter(PointerEventData eventData)
     {
-        AudioManager.instance.PlaySound("Button Hover");
+        AudioManager.instance.PlayRandomSound("Button Hover");
 
     }
 

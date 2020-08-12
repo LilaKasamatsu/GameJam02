@@ -969,6 +969,7 @@ GameObject:
   - component: {fileID: 767745511}
   - component: {fileID: 767745510}
   - component: {fileID: 767745509}
+  - component: {fileID: 767745512}
   m_Layer: 5
   m_Name: escape
   m_TagString: Untagged
@@ -1087,6 +1088,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767745507}
   m_CullTransparentMesh: 0
+--- !u!114 &767745512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767745507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72dcb06c9ca24824f860466d057ede94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &951667114
 GameObject:
   m_ObjectHideFlags: 0
@@ -2187,9 +2200,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6217406393932367132, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
         type: 3}
+      propertyPath: sounds.Array.data[1].clips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217406393932367132, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
+        type: 3}
       propertyPath: sounds.Array.data[1].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 6e24ad585a3a145458a07de4d8030a50, type: 3}
+      objectReference: {fileID: 8300000, guid: db315c622705d12479bf00d16fd44f8d, type: 3}
     - target: {fileID: 6217406393932367132, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
         type: 3}
       propertyPath: sounds.Array.data[1].clipName
@@ -2208,8 +2226,23 @@ PrefabInstance:
     - target: {fileID: 6217406393932367132, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
         type: 3}
       propertyPath: sounds.Array.data[1].volume
-      value: 0.126
+      value: 0.701
       objectReference: {fileID: 0}
+    - target: {fileID: 6217406393932367132, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
+        type: 3}
+      propertyPath: sounds.Array.data[1].clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: db315c622705d12479bf00d16fd44f8d, type: 3}
+    - target: {fileID: 6217406393932367132, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
+        type: 3}
+      propertyPath: sounds.Array.data[1].clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d0d4eb821636847418856a0d482b088a, type: 3}
+    - target: {fileID: 6217406393932367132, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
+        type: 3}
+      propertyPath: sounds.Array.data[1].clips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 011bd45591466f645acfedc227d5c988, type: 3}
     - target: {fileID: 6217406393932367133, guid: 46d8b66c2d4f67b4a88dd28d85da7713,
         type: 3}
       propertyPath: m_Name
