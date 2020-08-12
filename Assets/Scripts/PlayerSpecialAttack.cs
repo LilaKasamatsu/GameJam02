@@ -33,7 +33,7 @@ public class PlayerSpecialAttack : MonoBehaviour
     {
         if (isMaking == false)
         {
-            audioManager.PlaySound("Special Attack");
+            audioManager.PlaySound("Player Special Attack");
             isMaking = true;
             coll.enabled = true;
             float t = 0f;

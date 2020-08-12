@@ -38,7 +38,7 @@ public class Beginning : MonoBehaviour
 
     IEnumerator Words()
     {
-        yield return new WaitForSecondsRealtime(3.5f);
+        yield return new WaitForSecondsRealtime(5.5f);
         one.SetActive(true);
 
 
@@ -46,15 +46,15 @@ public class Beginning : MonoBehaviour
         two.SetActive(true);
 
 
-        yield return new WaitForSecondsRealtime(5f);
+        yield return new WaitForSecondsRealtime(4f);
         three.SetActive(true);
 
 
-        yield return new WaitForSecondsRealtime(4f);
+        yield return new WaitForSecondsRealtime(3f);
         four.SetActive(true);
 
 
-        yield return new WaitForSecondsRealtime(3.5f);
+        yield return new WaitForSecondsRealtime(3f);
         five.SetActive(true);
 
         yield return new WaitForSecondsRealtime(3f);

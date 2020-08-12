@@ -12,6 +12,7 @@ public class Sound
 
     public string clipName;
     public AudioClip clip;
+    public AudioClip[] clips;
 
     [Range(0f,1f)]
     public float volume;
@@ -34,12 +35,18 @@ public class Sound
 
     public void Play()
     {
+        source.clip = clip;
         source.PlayOneShot(clip);
     }
 
     public void Stop()
     {
         source.Stop();
+    }
+
+    public void RandomPlay()
+    {
+        source.PlayOneShot(clips[Random.Range(0, clips.Length)]);
     }
 }
 
@@ -90,6 +97,18 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void PlayRandomSound(string name)
+    {
+        for (int i = 0; i < sounds.Length; i++)
+        {
+            if (sounds[i].clipName == name)
+            {
+                sounds[i].RandomPlay();
+                return;
+            }
+        }
+    }
+
     public void StopSound(string name)
     {
         for (int i = 0; i < sounds.Length; i++)
@@ -125,6 +144,18 @@ public class AudioManager : MonoBehaviour
                 return;
             }
         }
+    }
+
+    public float GetPitch(string name)
+    {
+        for (int i = 0; i < sounds.Length; i++)
+        {
+            if (sounds[i].clipName == name)
+            {
+                return sounds[i].pitch;
+            }
+        }
+        return 1;
     }
 
     public void ChangeVolume(float volume, string name)

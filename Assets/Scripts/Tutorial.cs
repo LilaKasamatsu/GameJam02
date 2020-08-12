@@ -41,6 +41,7 @@ public class Tutorial : MonoBehaviour
         //enemy.GetComponent<EnemyPlayerInteraction>().isAttacking = false;
         overLayBlackScreen.SetActive(false);
 
+        player = FindObjectOfType<Player>();
 
     }
 
@@ -79,6 +80,7 @@ public class Tutorial : MonoBehaviour
                     {
                         enemy2.transform.position = enemyTransform.position;
                         enemy2.GetComponent<EnemyPlayerInteraction>().attack = true;
+                        player.data.energyLVL = 100;
                     }
 
                     //if (a == 11)
@@ -92,6 +94,9 @@ public class Tutorial : MonoBehaviour
         }
 
     }
+
+    Player player;
+
     void EnableScreen(int i)
     {
         AudioManager.instance.PlaySound("Button Hover");
