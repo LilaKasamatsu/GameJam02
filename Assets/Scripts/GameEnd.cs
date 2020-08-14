@@ -96,7 +96,7 @@ public class GameEnd : MonoBehaviour
         endingScreen.SetActive(true);
 
         yield return new WaitForSecondsRealtime(3f);
-        fadeOut.SetActive(true);
+        //fadeOut.SetActive(true);
 
         yield return new WaitForSecondsRealtime(5f);
         SceneManager.LoadScene("Menu");
