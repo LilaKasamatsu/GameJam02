@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Environment : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class Environment : MonoBehaviour
 
         rend = GetComponent<Renderer>();
         rend.material = health.colorDead;
+        EnvironmentManager.Instance.playerData.energyGainedByEnvironment = .2f;
 
         //  rend.material.SetTexture("Normal", textureAlive);
     }
@@ -112,7 +114,10 @@ public class Environment : MonoBehaviour
             if (isDead == true)
             {
                 StartCoroutine(ChangeColor(rend.material, health.colorAlive, textureAlive));
-                EnvironmentManager.Instance.playerEnergy.AddEnergy(EnvironmentManager.Instance.playerData.energyGainedByEnvironment);
+                if(SceneManager.GetActiveScene().name != "Beginning")
+                {
+                    EnvironmentManager.Instance.playerEnergy.AddEnergy(EnvironmentManager.Instance.playerData.energyGainedByEnvironment);
+                }
                 isDead = false;
             }
         }

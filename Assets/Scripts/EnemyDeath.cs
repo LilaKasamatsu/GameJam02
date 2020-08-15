@@ -46,7 +46,7 @@ public class EnemyDeath : MonoBehaviour
             killedonce = true;
             gameEnd.Delete();
         }
-        playerEnergy.AddEnergy(playerData.energyGainedByKillingEnemy);
+        //playerEnergy.AddEnergy(playerData.energyGainedByKillingEnemy);
         playerENnemy.OnRelease();
         //play
     }
@@ -57,6 +57,7 @@ public class EnemyDeath : MonoBehaviour
         yield return new WaitForSecondsRealtime(4f);
         //   gameObject.SetActive(false);
         gameObject.SetActive(false);
+        playerEnergy.AddEnergy(playerData.energyGainedByKillingEnemy);
 
     }
 

@@ -11,13 +11,14 @@ public class PlayerEnergyLvl : MonoBehaviour
     {
         player = GetComponent<Player>().data;
         cursor = GameObject.Find("Cursor").GetComponent<CursorEnergyLVL>();
+        player.energyLVL = 0;
+        cursor.SetCursorPower();
     }
 
     public void AddEnergy(float add)
     {
         if (player.energyLVL <= player.maxEnergyLVL)
         {
-            Debug.Log("PLayer energy: " + player.energyLVL);
             player.energyLVL += add;
            // Debug.Log("add");
         }

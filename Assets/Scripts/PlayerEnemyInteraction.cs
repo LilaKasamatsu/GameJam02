@@ -57,11 +57,12 @@ public class PlayerEnemyInteraction : MonoBehaviour
                 // Debug.Log("no");
                 if (player.data.energyLVL >= player.data.energyLVLforSpecialAttack)
                 {
+                    playerEnergy.MinusEnergy();
+
                     can2Attack = false;
                    // Debug.Log("click");
                     OnSpecialAttack();
                   //  playerEnergy.AddEnergy(-player.data.energyLVLforSpecialAttack);
-                  playerEnergy.MinusEnergy();
                 }
             }
             else
